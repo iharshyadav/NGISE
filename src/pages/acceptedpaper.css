@@ -1,0 +1,43 @@
+.container_paper {
+    background-image: url("http://icaibe.com/static/media/image7.20159ce14d316125bee3.jpg");
+    height: 100vh;
+    justify-content: center;
+    margin-bottom: 2rem;
+    overflow-x: hidden;
+    width: 100%;
+}
+.container_paper, .title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    text-align: center;
+}
+.title h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.title h3 {
+    color: rgba(214,229,46,.731);
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+.button {
+    background-color: initial;
+    border: 1px solid #fff;
+    border-radius: 45px;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 45px;
+    outline: none;
+    text-transform: uppercase;
+    transition: all .3s ease 0s;
+    transition: all 1s;
+    width: 140px;
+}
