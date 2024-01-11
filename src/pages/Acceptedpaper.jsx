@@ -1,8 +1,19 @@
 import React from 'react'
-
+import './acceptedpaper.css'
 const Acceptedpaper = () => {
   return (
-    <div>Acceptedpaper</div>
+    <div>
+<section className='container_paper'>
+    <div className="title">
+        <h1>WE ARE ALMOST THERE</h1>
+        <h3>Stay tuned for something amazing</h3>
+        <button className='button'>Home</button>
+    </div>
+
+</section>
+
+
+    </div>
   )
 }
 
