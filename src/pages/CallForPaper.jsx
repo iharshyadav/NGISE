@@ -78,5 +78,7 @@ function CallForPaper() {
   );
 }
 
-export default CallForPaper;
+export default CallForPaper
+
+
 
