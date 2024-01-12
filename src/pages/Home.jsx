@@ -1,6 +1,6 @@
 import React from 'react'
 import About from './About'
-import HomeLayout from '../Components/homeLayout'
+import HomeLayout from '../Components/HomeLayout'
 
 const Home = () => {
   return (
