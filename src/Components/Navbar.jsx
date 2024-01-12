@@ -50,13 +50,13 @@ const Navbar=()=> {
           <ul className="inline-flex space-x-8">
             <Link to='/'><li className="text-base font-semibold text-gray-800 hover:text-gray-900">Home</li></Link>
             <Link to='/about'><li className="text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">About</li></Link>
-            <Link to='/contact'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Contact</li></Link> 
-            <Link to='/acceptedpaper'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Accepted Paper</li></Link> 
-            <Link to='/accomodation'><li className="text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
             <Link to='/callforpaper'><li className="text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">Call For Paper</li></Link>
-            <Link to='/commitee'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Commitee</li></Link> 
             <Link to='/papersubmission'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Paper Submission</li></Link>
+            <Link to='/commitee'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Commitee</li></Link> 
+            <Link to='/acceptedpaper'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Accepted Paper</li></Link> 
             <Link to='/Registration'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Registration</li></Link> 
+            <Link to='/accomodation'><li className="text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
+            <Link to='/contact'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Contact Us</li></Link> 
           </ul>
         </div>
         <div className="hidden lg:block">
@@ -93,13 +93,13 @@ const Navbar=()=> {
                   <nav className="grid gap-y-4">
                      <Link to='/'><li className="text-base font-semibold text-gray-800 hover:text-gray-900">Home</li></Link>
                      <Link to='/about'><li className="text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">About</li></Link>
-                     <Link to='/contact'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Contact</li></Link> 
-                     <Link to='/acceptedpaper'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Accepted Paper</li></Link> 
-                     <Link to='/accomodation'><li className="text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
                      <Link to='/callforpaper'><li className="text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">Call For Paper</li></Link>
-                     <Link to='/commitee'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Commitee</li></Link> 
                      <Link to='/papersubmission'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Paper Submission</li></Link>
+                     <Link to='/commitee'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Commitee</li></Link> 
+                     <Link to='/acceptedpaper'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Accepted Paper</li></Link> 
                      <Link to='/Registration'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Registration</li></Link> 
+                     <Link to='/accomodation'><li className="text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
+                     <Link to='/contact'><li className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Contact Us</li></Link> 
                   </nav>
                 </div>
                 {/* <button
