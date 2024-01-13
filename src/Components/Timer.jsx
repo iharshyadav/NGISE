@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 
 const Timer = () => {
 
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [mins, setMinutes] = useState(0);
-  const [secs, setSeconds] = useState(0);
+  const [days, setDays] = useState("");
+  const [hours, setHours] = useState("");
+  const [mins, setMinutes] = useState("");
+  const [secs, setSeconds] = useState("");
   const deadline = "February, 23, 2024";
   const getTime = () => {
      const time = Date.parse(deadline) - Date.now();

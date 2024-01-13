@@ -63,11 +63,11 @@ const HomeLayout = () => {
     <div>
       <div className="w-full relative font-sans">
         <img
-          className="w-full h-[94vh] blur-[1.5px] sm:block hidden"
-          src="https://www.shrm.org/topics-tools/tools/hr-answers/artificial-intelligence-how-used-workplace/_jcr_content/_cq_featuredimage.coreimg.jpeg/1703611633308/istock-1435014643-iowage.jpeg"
+          className="w-full h-[94vh] blur-[1.5px] sm:block hidden object-cover"
+          src="https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
-        <img  className="w-full h-[94vh] blur-[1.5px] sm:hidden block" src="https://images.pexels.com/photos/8728223/pexels-photo-8728223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+        <img  className="w-full h-[94vh] blur-[1.5px] sm:hidden block object-cover" src="https://images.pexels.com/photos/8728223/pexels-photo-8728223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
         <div className="absolute w-full h-[94vh] z-1 bg- bg-black opacity-45 top-0"></div>
         <div className="absolute w-full h-[94vh] z-1 top-0 z-20 flex flex-col items-center justify-start mt-20 text-white">
           <h4 className="text-white uppercase text-3xl sm:text-3xl font-[650] tracking-wide mb-5">
