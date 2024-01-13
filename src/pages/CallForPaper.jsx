@@ -4,7 +4,7 @@ import '../App.css'
 function CallForPaper() {
   return (
    <>
-   <div className='mx-16 md:mx-28 mt-10 text-justify text-base sm:text-lg font-serif flex flex-col '>
+   <div className='mx-16 md:mx-28 mt-10 text-justify text-base sm:text-lg flex flex-col '>
    <p>We are delighted to inform you that Department of 
     Information Technology, Ajay Kumar Garg Engineering College,
      Ghaziabad is hosting an International Conference on Artificial
