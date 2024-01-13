@@ -1,43 +1,64 @@
 import React from 'react'
 import "./CSS/HomeLayout.css"
 import { useState, useEffect } from 'react';
+import Timer from './Timer';
 
 const HomeLayout = () => {
-  const [targetDate] = useState(() => {
-    const newTargetDate = new Date();
-    newTargetDate.setDate(newTargetDate.getDate() + 42);
-    return newTargetDate;
-  });
-
-  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining(targetDate));
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Kolkata');
-        const data = await response.json();
-        const currentTime = new Date(data.utc_datetime);
-        setTimeRemaining(calculateTimeRemaining(currentTime, targetDate));
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-
-  function calculateTimeRemaining(currentTime, targetDate) {
-    const difference = targetDate - currentTime;
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-    return {
-      days,
-      hours,
-      minutes,
-      seconds,
-    };
-  }
-
+  // const [targetDate] = useState(() => {
+  //   const newTargetDate = new Date();
+  //   newTargetDate.setDate(newTargetDate.getDate() + 42);
+  //   return newTargetDate;
+  // });
+  
+  // const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining(new Date(), targetDate));
+  // const [apiCalled, setApiCalled] = useState(false);
+  
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('https://timeapi.io/api/Time/current/zone?timeZone=India');
+  //       const data = await response.json();
+  
+  //       // Ensure the API response contains the expected date information
+  //       if (data.dateString) {
+  //         const currentTime = new Date(data.dateString);
+  //         setTimeRemaining(calculateTimeRemaining(currentTime, targetDate));
+  //       } else {
+  //         console.error('Invalid API response:', data);
+  //       }
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+  
+  //   if (!apiCalled) {
+  //     fetchData();
+  //     setApiCalled(true);
+  //   }
+  
+  //   const updateTimer = setInterval(() => {
+  //     fetchData();
+  //   }, 1000);
+  
+  //   return () => {
+  //     clearInterval(updateTimer);
+  //   };
+  // }, [apiCalled, targetDate]);
+  
+  // function calculateTimeRemaining(currentTime, targetDate) {
+  //   const difference = targetDate - currentTime;
+  //   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  //   const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //   const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  //   const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  
+  //   return {
+  //     days,
+  //     hours,
+  //     minutes,
+  //     seconds,
+  //   };
+  // }
   return (
     <div>
       <div className="w-full relative font-sans">
@@ -64,24 +85,7 @@ const HomeLayout = () => {
               NGISE-2024
             </div>
           </div>
-          <div className="flex sm:mt-0 mt-10 sm:gap-20 gap-7 w-full items-center justify-center">
-            <div className='sm:w-16'>
-              <h1 className='sm:text-[4vw] text-[8vw] font-sans font-semibold'>{`${timeRemaining.days}`}</h1>
-              <h3 className='text-center sm:text-xl font-sans font-semibold'>Days</h3>
-            </div>
-            <div className='sm:w-16'>
-              <h1 className='sm:text-[4vw] text-[8vw] font-sans font-semibold'>{`${timeRemaining.hours}`}</h1>
-              <h3 className='text-center sm:text-xl font-sans font-semibold'>Hours</h3>
-            </div>
-            <div className='sm:w-16'>
-              <h1 className='sm:text-[4vw] text-[8vw] font-sans font-semibold'>{`${timeRemaining.minutes}`}</h1>
-              <h3 className='text-center sm:text-xl font-sans font-semibold'>Minutes</h3>
-            </div>
-            <div className='sm:w-16'>
-              <h1 className='sm:text-[4vw] text-[8vw] font-sans font-semibold'>{`${timeRemaining.seconds}`}</h1>
-              <h3 className='text-center sm:text-xl font-sans font-semibold'>Seconds</h3>
-            </div>
-          </div>
+          <Timer/>
         </div>
       </div>
     </div>
