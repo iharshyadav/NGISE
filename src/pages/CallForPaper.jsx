@@ -76,6 +76,7 @@ function CallForPaper() {
        </div>
    </>
   );
+
 }
 
 export default CallForPaper
