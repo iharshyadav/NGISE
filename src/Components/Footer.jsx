@@ -3,7 +3,7 @@ import React from 'react'
 const Footer= ()=> {
   return (
     <div>
-      <section className="relative h-56 overflow-hidden sm:block hidden  bg-[#f4f3f379] py-8">
+      <section className="relative h-56 overflow-hidden sm:block hidden  bg-[#f4f3f3] py-8">
         <div className="container relative z-10 mx-auto  px-4">
           <div className="-m-8 flex flex-wrap h-28 items-center justify-between">
             <div className="w-auto p-8 flex items-center justify-center">

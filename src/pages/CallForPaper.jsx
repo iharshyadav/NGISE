@@ -4,7 +4,7 @@ import '../App.css'
 function CallForPaper() {
   return (
    <>
-   <div className='mx-16 md:mx-28 mt-10 text-justify text-base sm:text-lg font-serif '>
+   <div className='mx-16 md:mx-28 mt-10 text-justify text-base sm:text-lg font-serif flex flex-col '>
    <p>We are delighted to inform you that Department of 
     Information Technology, Ajay Kumar Garg Engineering College,
      Ghaziabad is hosting an International Conference on Artificial
@@ -32,8 +32,8 @@ function CallForPaper() {
            ICAIBE - 2014 will be sent for SCOPUS publications.</p>
        </div>
 
-       <div className='py-2 '>
-        <h1 className='font-bold text-3xl mb-4'>Conference Track</h1>
+       <div className='py-6 px-10 self-center  linearGradient rounded-xl  shadow-2xl '>
+        <h1 className='font-bold text-3xl mb-4 text-center'>Conference Track</h1>
            <p className='' >1. Applications of Artificial Intelligence</p>
         <p className='' >2. Machine and Deep Learning applications</p>
         <p className='' >3. Big Data Science</p>
@@ -44,8 +44,8 @@ function CallForPaper() {
          <p className='' >8. Soft Computing</p>
        </div>
 
-       <div className='my-6 '>
-       <h1 className='font-bold text-3xl mb-4'>Important Dates</h1>
+       <div className='py-6 px-10 linearGradient self-center shadow-2xl rounded-xl my-8'>
+       <h1 className='font-bold text-3xl mb-4 text-center'>Important Dates</h1>
         <table>
           <tr>
             <td>Invitation for Papers</td>

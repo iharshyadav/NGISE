@@ -43,13 +43,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col pb-10 items-center bg-slate-300">
+      <div className="flex flex-col pb-10 items-center linearGradient">
         <h1 className="sm:text-3xl w-full text-center text-xl mt-10  font-semibold ">
           About the Information Technology Department
         </h1>
       </div>
 
-      <div className="sm:px-20 px-4 pb-10 flex flex-wrap bg-slate-300 ">
+      <div className="sm:px-20 px-4 pb-10 flex flex-wrap linearGradient ">
         <div className="lg:w-[70%] w-full ">
           <p className=" mx-6 text-justify">
             IT has changed the way of our life and the pace of change is very
