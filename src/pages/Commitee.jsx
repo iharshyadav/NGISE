@@ -2,10 +2,13 @@ import React from 'react'
 
 const Commitee = () => {
   return (
-    <div className='overflow-x-hidden mx-4 md:mx-24 lg:mx-40'>
-    <p className='text-xl sm:text-4xl text-center font-bold my-7'>Committee</p>
+    <div className='overflow-x-hidden mx-4 md:mx-24 lg:mx-40 '>
+    <div>
+    <p className='text-xl sm:text-4xl text-center font-bold my-7 hover:underline'>Committee</p>
+    </div>
   
-    <div className='container flex flex-col p-4 sm:p-8'>
+   
+    <div className='container flex flex-col p-4 sm:p-8 shadow-lg bg-slate-300 rounded-2xl'>
     
     <div className='flex flex-col sm:flex-row  my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4'>
@@ -198,7 +201,8 @@ const Commitee = () => {
         </div>
     </div>
   </div>
-  </div>
+    </div>
+
   )
 }
 
