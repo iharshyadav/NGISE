@@ -8,7 +8,7 @@ const Commitee = () => {
     </div>
   
    
-    <div className='container flex flex-col p-4 sm:p-8 shadow-lg bg-slate-300 rounded-2xl'>
+    <div className='container flex flex-col p-4 sm:p-8 shadow-lg bg-slate-300 rounded-2xl my-7'>
     
     <div className='flex flex-col sm:flex-row  my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4'>

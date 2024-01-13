@@ -48,7 +48,8 @@ const Registration = () => {
   ]);
 
   return (
-    <div className="container">
+<div className="bg-slate-300 mx-2 sm:mx-40 my-7 p-7 rounded-2xl">
+<div className="container ">
       <div className="insidecontainer">
         <div style={{ marginTop: "34px" }}>
           <h1>Registration Fees</h1>
@@ -84,6 +85,7 @@ const Registration = () => {
         </div>
       </div>
     </div>
+</div>
   );
 };
 
