@@ -1,5 +1,8 @@
 .container_paper {
-    background-image: url("http://icaibe.com/static/media/image7.20159ce14d316125bee3.jpg");
+    background-image: url("https://blog.rmgoe.org/wp-content/uploads/2022/06/AKG-Engineering-College-Ghaziabad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
     height: 100vh;
     justify-content: center;
     margin-bottom: 2rem;
@@ -40,4 +43,9 @@
     transition: all .3s ease 0s;
     transition: all 1s;
     width: 140px;
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.534);
+    color: black;
 }

@@ -5,10 +5,12 @@ import HomeLayout from '../Components/HomeLayout'
 const Home = () => {
   return (
     <>
-    <HomeLayout/>
-    <About/>
+      <div className='w-full'>
+        <HomeLayout />
+        <About />
+      </div>
     </>
-  )
+  );
 }
 
 export default Home
