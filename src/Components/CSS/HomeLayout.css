@@ -28,3 +28,13 @@
 
     }
   }
+
+  @media (max-width:650px) {
+    /* .wrapper{
+      height: 8vh;
+    } */
+
+    .typing-demo{
+      font-size: 1.2em;
+    }
+  }
