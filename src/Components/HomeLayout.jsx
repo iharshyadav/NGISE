@@ -3,48 +3,57 @@ import "./CSS/HomeLayout.css"
 import { useState, useEffect } from 'react';
 
 const HomeLayout = () => {
+  const [targetDate] = useState(() => {
+    const newTargetDate = new Date();
+    newTargetDate.setDate(newTargetDate.getDate() + 42);
+    return newTargetDate;
+  });
 
-    const getTargetDate = () => {
-        const storedTargetDate = localStorage.getItem('targetDate');
-        if (storedTargetDate) {
-          return new Date(storedTargetDate);
-        } else {
-          const newTargetDate = new Date();
-          newTargetDate.setDate(newTargetDate.getDate() + 42);
-          localStorage.setItem('targetDate', newTargetDate.toString());
-          return newTargetDate;
-        }
-      };
-    
-      const calculateTimeRemaining = () => {
-        const now = new Date();
-        const difference = targetDate - now;
-    
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    
-        return {
-          days,
-          hours,
-          minutes,
-          seconds,
-        };
-      };
-    
-      const [targetDate] = useState(getTargetDate);
-      const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
-    
-      useEffect(() => {
-        const updateTimer = setInterval(() => {
-          setTimeRemaining(calculateTimeRemaining());
-        }, 1000);
-    
-        return () => {
-          clearInterval(updateTimer);
-        };
-      }, [targetDate]);
+  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining(targetDate));
+  const [apiCalled, setApiCalled] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Kolkata');
+        const data = await response.json();
+        const currentTime = new Date(data.utc_datetime);
+        setTimeRemaining(calculateTimeRemaining(currentTime, targetDate));
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    if (!apiCalled) {
+      fetchData();
+      setApiCalled(true); 
+    }
+
+
+    const updateTimer = setInterval(() => {
+      fetchData();
+    }, 1000);
+
+    return () => {
+      clearInterval(updateTimer);
+    };
+  }, [apiCalled,targetDate]);
+
+  function calculateTimeRemaining(currentTime, targetDate) {
+    const difference = targetDate - currentTime;
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    return {
+      days,
+      hours,
+      minutes,
+      seconds,
+    };
+  }
+
   return (
     <div>
       <div className="w-full relative font-sans">
