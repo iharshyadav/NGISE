@@ -9,7 +9,7 @@ const PaperSubmission = () => {
       <p className='my-4 text-xs sm:text-lg  '>All papers will go for blind peer-review and plagiarism check and may be considered for publication in (Scopus, WOS, ADBC or UGC-care Indexed Journals) All presented papers during ICAIBE - 2014 will be sent for SCOPUS publications.</p>
 
     </div>
-    <div className='bg-orange-200 box-border rounded-2xl p-5 my-4 mb-7'>
+    <div className='bg-orange-200 box-border rounded-2xl p-5  my-7'>
     <p className='my-4 sm:text-3xl hover:underline text-xl font-bold '>Conference Track</p>
       <ol type="1" className=''>
         <p className='my-4 text-xs sm:text-lg' >1. Applications of Artificial Intelligence</p>
