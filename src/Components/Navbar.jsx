@@ -1,9 +1,6 @@
-
 import React from 'react'
 import { Menu, X } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
-
-
 
 const Navbar=()=> {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
@@ -15,16 +12,16 @@ const Navbar=()=> {
 
   const currentPathname = location.pathname;
   console.log(currentPathname)
-
+ 
   return (
-    <div className="relative w-full sm:h-20 bg-white border-b-2">
+    <div className="fixed w-full sm:h-20 border-b-2 border-black bg-white bg-opacity-  z-50">
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
          <img className='sm:w-[4.5vw] w-[12vw]' src="https://www.akgec.ac.in/wp-content/themes/twentysixteen/img/AKGEC_1_0.png" alt="" />
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
-            <Link to='/'><li className={`text-base font-semibold ${currentPathname === '/' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Home</li></Link>
+            <Link to='/'><li className={`text-base font-semibold ${currentPathname === '/' ? 'underline' : 'text-[#46ce9c]'} hover:text-gray-900`}>Home</li></Link>
             <Link to='/about'><li className={`text-base font-semibold ${currentPathname === '/about' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>About</li></Link>
             <Link to='/callforpaper'><li className={`text-base font-semibold ${currentPathname === '/callforpaper' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Call For Paper</li></Link>
             <Link to='/papersubmission'><li className={`text-base font-semibold ${currentPathname === '/papersubmission' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Paper Submission</li></Link>
@@ -67,7 +64,7 @@ const Navbar=()=> {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
-                     <Link to='/'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold text-gray-800 hover:text-gray-900">Home</li></Link>
+                     <Link to='/'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold text-[#46ce9c] hover:text-gray-900">Home</li></Link>
                      <Link to='/about'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">About</li></Link>
                      <Link to='/callforpaper'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">Call For Paper</li></Link>
                      <Link to='/papersubmission'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Paper Submission</li></Link>

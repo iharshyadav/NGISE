@@ -1,13 +1,19 @@
 import React from 'react'
-import About from './About'
 import HomeLayout from '../Components/HomeLayout'
+import About from './About';
+import CallForPaper from './CallForPaper';
+import Committee from './Commitee'
+
 
 const Home = () => {
   return (
     <>
       <div className='w-full'>
         <HomeLayout />
-        <About />
+        <About/>
+        <CallForPaper/>
+        <Committee/>
+        
       </div>
     </>
   );
