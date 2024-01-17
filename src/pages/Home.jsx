@@ -3,6 +3,7 @@ import HomeLayout from '../Components/HomeLayout'
 import About from './About';
 import CallForPaper from './CallForPaper';
 import Committee from './Commitee'
+import Registration from './Registration'
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <About/>
         <CallForPaper/>
         <Committee/>
+        <Registration/>
         
       </div>
     </>

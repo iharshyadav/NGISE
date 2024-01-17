@@ -14,36 +14,36 @@ const Commitee = () => {
     
     <div className='flex flex-col sm:flex-row  my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Chief Patron</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Chief Patron</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg sm:w-4/5 ml-4'>
         <p>Dr. R.K. Agarwal, Director General, AKGEC</p>
       </div>
     </div>
   
     <div className='flex flex-col sm:flex-row  my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Patron</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Patron</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. P.K. Chopra, Director, AKGEC</p>
       </div>
     </div>
   
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Conference Chair</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Conference Chair</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4 '>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4 '>
         <p>Dr. Anu Chaudhary, HOD-IT, AKGEC</p>
       </div>
     </div>
   
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Organizing Chair</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Organizing Chair</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Avdhesh Gupta, Professor, AKGEC</p>
         <p>Dr. Anupama Sharma, Associate Professor, AKGEC</p>
         <p>Dr. Ruchi Gupta, Associate Professor, AKGEC</p>
@@ -52,9 +52,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Technical Chair</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Technical Chair</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Rashmi Sharma, Asstt. Prof, AKGEC</p>
         <p>Dr. Shivani Agarwal, Asstt. Prof, AKGEC</p>
       </div>
@@ -62,9 +62,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Finance Chair</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Finance Chair</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Mr. Lucknesh Kumar, Asstt. Prof, AKGEC</p>
         <p>Mr. Madhup Mittal, Asstt. Prof, AKGEC</p>
       </div>
@@ -72,9 +72,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Publicity Chair</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Publicity Chair</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Nidhi Gupta, Asstt. Prof, AKGEC</p>
         <p>Mr. Sandeep Raj, Asstt. Prof, AKGEC</p>
       </div>
@@ -82,9 +82,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Publication Chair</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Publication Chair</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Rashmi Gupta, Asstt. Prof, AKGEC</p>
         <p>Ms. Nandita Singh, Asstt. Prof, AKGEC</p>
         <p>Mr. Achintya Pandey, Asstt. Prof, AKGEC</p>
@@ -93,9 +93,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Sponsorship Committee</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Sponsorship Committee</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg sm:w-4/5 ml-4'>
         <p>Dr. Aditya Pratap Singh, Associate Professor, AKGEC</p>
         <p>Ms. Shilpi Gupta, Asstt. Prof, AKGEC</p>
         <p>Mr. Sachin Tyagi, Asstt. Prof, AKGEC</p>
@@ -104,9 +104,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Registration Committee</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Registration Committee</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Aditya Pratap Singh, Associate Professor, AKGEC</p>
         <p>Ms. Shilpi Gupta, Asstt. Prof, AKGEC</p>
         <p>Mr. Sachin Tyagi, Asstt. Prof, AKGEC</p>
@@ -115,9 +115,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Stage Committee</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Stage Committee</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base  sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Ms. Tahira Mazumder, Asstt. Prof, AKGEC</p>
         <p>Ms. Kamini Tanwar, Asstt. Prof, AKGEC</p>
         <p>Ms. Nandita Singh, Asstt. Prof, AKGEC</p>
@@ -126,9 +126,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Conference Web-Admins:</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Conference Web-Admins:</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Mr. Pankaj Singh, Asstt. Prof, AKGEC</p>
         <p>Mr. Puneet Goyal, Asstt. Prof, AKGEC</p>
         </div>
@@ -136,9 +136,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Honorary Advisory Committee</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Honorary Advisory Committee</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Ashish Seth , University of Inha, Tashkend</p>
         <p>Prof. (Dr.) Phalguni Gupta , VC, GLA Mathura</p>
         <p>Prof. (Dr.) Narendra , Kohli, HBTI Kanpur </p>
@@ -167,9 +167,9 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-xs sm:text-sm lg:text-base text-white'>Technical Program Committee</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Technical Program Committee</p>
       </div>
-      <div className='w-full text-xs sm:text-sm lg:text-base  sm:w-4/5 ml-4'>
+      <div className='w-full text-base lg:text-lg   sm:w-4/5 ml-4'>
         <p>Dr. Zeynep Orhan, Union College USA</p>
         <p>Dr. Elton Domnoni, metropolitan univ. Tirana, Albania</p>
         <p>Dr Zafaryab Rasool, Associate Research Fellow, Deakin University, Geelong, Victoria, Australia</p>
@@ -206,7 +206,6 @@ const Commitee = () => {
   </div>
     </div>
 
-    <hr class="border-t-[1.5px] mb-2  border-[#46ce9c] w-[80%] mx-auto  " />
     </>
   )
 }

@@ -120,7 +120,7 @@ const Footer= ()=> {
             Design & Developed By :{" "}
           </h1>
           <img
-            className="w-[4vw] pb-2"
+            className="w-[3vw] h-[6vh] pb-2"
             src="https://itbt-website.vercel.app/Images/Screenshot_2023-11-29_202207-removebg-preview.png"
             alt=""
           />
