@@ -48,13 +48,17 @@ const Registration = () => {
   ]);
 
   return (
-<div className="bg-slate-300 mx-2 sm:mx-40 my-7 p-7 rounded-2xl">
+<>
+    <div className='linearGradient font flex w-full items-center justify-center pt-12 pb-4'>
+    <h1 className='text-center text-4xl  font-bold border-b-4 inline-block border-[#46ce9c] text-white'>Committee</h1>
+      </div>
+<div className="linearGradient font text-white px-2 sm:px-40 py-7 p-7">
 <div className="container ">
       <div className="insidecontainer">
         <div style={{ marginTop: "34px" }}>
-          <h1>Registration Fees</h1>
+          <h1 className="underline text-3xl font-bold ">Registration Fees</h1>
         </div>
-        <div className="registervalue">
+        <div className="registervalue text-lg ">
           {register.map((e, index) => {
             return (
               <>
@@ -67,10 +71,10 @@ const Registration = () => {
           })}
         </div>
 
-        <div className="fee">
-          <h1>Fee Submission Details</h1>
-          <h3>Details of IMPS/UPI/RTGS/NEFT:</h3>
-          <div className="registervalue">
+        <div className="fee ">
+          <h1 className="text-3xl font-bold underline ">Fee Submission Details</h1>
+          <h3 className="text-lg">Details of IMPS/UPI/RTGS/NEFT:</h3>
+          <div className="registervalue text-lg">
             {fee.map((e, index) => {
               return (
                 <>
@@ -86,6 +90,7 @@ const Registration = () => {
       </div>
     </div>
 </div>
+</>
   );
 };
 

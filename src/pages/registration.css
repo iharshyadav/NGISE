@@ -26,10 +26,7 @@
 .registerdata:nth-child(0){
     width: 50%;
 }
-.insidecontainer h1{
-font-size: 35px;
-font-weight: 450;
-}
+
 .registervalue{
     margin-top: 34px;
 }
@@ -49,10 +46,7 @@ font-weight: 450;
       
       width:95%;
     }
-    .insidecontainer p{
-        font-size: .8rem;
-       
-      }
+   
   }
   @media only screen and (max-width: 1008px) {
 
@@ -68,14 +62,14 @@ font-weight: 450;
       width:95%;
     }
     .insidecontainer p{
-        font-size: .7rem;
+
         width:95%;
       }
       .insidecontainer h1{
         width: 100%;
         text-align: center;
         margin: auto;
-        font-size: 1.4rem;
+        
       }
 
 
