@@ -3,13 +3,19 @@ import React from 'react'
 const About = () => {
   return (
     <>
-      <div className=" flex flex-col mb-10 items-center">
-        <h1 className="sm:text-3xl text-xl mt-10  font-semibold">
+
+   <div className='flex w-full items-center justify-center font mt-10  mb-16'>
+    <h1 className='text-center text-4xl  font-bold border-b-4 inline-block border-[#46ce9c]'>About Us</h1>
+      </div>
+
+  
+      <div className="font flex flex-col mb-10 items-center">
+        <h1 className="sm:text-3xl text-xl  font-semibold">
           Ajay Kumar Garg Engineering College
         </h1>
       </div>
 
-      <div className="sm:mx-20 mx-4 mb-10 flex flex-wrap">
+      <div className="font sm:mx-20 mx-4 mb-10 flex flex-wrap sm:text-[1.05rem] ">
         <div className="lg:w-[35%] sm:m-10 m-4 lg:m-0  ">
           <img src="img2.webp" className="w-full h-full" alt="" />
         </div>
@@ -43,13 +49,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col pb-10 items-center linearGradient">
+      <div className="font flex flex-col pb-10 items-center linearGradient text-white">
         <h1 className="sm:text-3xl w-full text-center text-xl mt-10  font-semibold ">
           About the Information Technology Department
         </h1>
       </div>
 
-      <div className="sm:px-20 px-4 pb-10 flex flex-wrap linearGradient ">
+      <div className="font sm:px-20 px-4 pb-10 flex flex-wrap text-white linearGradient sm:text-[1.05rem]">
         <div className="lg:w-[70%] w-full ">
           <p className=" mx-6 text-justify">
             IT has changed the way of our life and the pace of change is very
@@ -82,13 +88,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col mb-10 items-center">
+      <div className="font flex flex-col mb-10 items-center">
         <h1 className="sm:text-3xl text-xl mt-10  font-semibold">
           AKGEC Conference
         </h1>
       </div>
 
-      <div className="sm:mx-20 mx-4 mb-10 flex flex-wrap items-center justify-center">
+      <div className="font sm:mx-20 mx-4 mb-14 flex flex-wrap items-center justify-center sm:text-[1.05rem]">
         <div className="lg:w-[30%] sm:m-10 m-4   lg:m-0 ">
           <img src="img3.jpg" className="w-full h-full" alt="" />
         </div>
@@ -113,6 +119,8 @@ const About = () => {
           </p>
         </div>
       </div>
+
+      <hr class="border-t-[1.5px] mb-2  border-[#46ce9c] w-[80%] mx-auto  " />
     </>
   );
 }
