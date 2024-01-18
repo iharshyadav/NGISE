@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 function Layout() {
   return (
     <>
-      <Navbar/>
+      <Navbar classname={`z-50 top-0`} />
       <Outlet/>
       <Footer/>
     </>

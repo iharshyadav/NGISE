@@ -14,22 +14,22 @@ const Navbar=()=> {
   console.log(currentPathname)
  
   return (
-    <div className="fixed w-full sm:h-20 border-b-2 border-black bg-white bg-opacity-  z-50">
+    <div className=" w-full sm:h-20 border-b-2 border-black bg-white bg-opacity-  z-50">
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
          <img className='sm:w-[4.5vw] w-[12vw]' src="https://www.akgec.ac.in/wp-content/themes/twentysixteen/img/AKGEC_1_0.png" alt="" />
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
-            <Link to='/'><li className={`text-base font-semibold ${currentPathname === '/' ? 'underline' : 'text-[#46ce9c]'} hover:text-gray-900`}>Home</li></Link>
-            <Link to='/about'><li className={`text-base font-semibold ${currentPathname === '/about' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>About</li></Link>
-            <Link to='/callforpaper'><li className={`text-base font-semibold ${currentPathname === '/callforpaper' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Call For Paper</li></Link>
-            <Link to='/papersubmission'><li className={`text-base font-semibold ${currentPathname === '/papersubmission' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Paper Submission</li></Link>
-            <Link to='/commitee'><li className={`text-base font-semibold ${currentPathname === '/commitee' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Commitee</li></Link> 
-            <Link to='/acceptedpaper'><li className={`text-base font-semibold ${currentPathname === '/acceptedpaper' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Accepted Paper</li></Link> 
-            <Link to='/Registration'><li className={`text-base font-semibold ${currentPathname === '/Registration' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Registration</li></Link> 
-            <Link to='/accomodation'><li className={`text-base font-semibold ${currentPathname === '/accomodation' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Accomodation</li></Link>
-            <Link to='/contact'><li className={`text-base font-semibold ${currentPathname === '/contact' ? 'underline' : 'text-gray-800'} hover:text-gray-900`}>Contact Us</li></Link> 
+            <Link to='/'><li className={`text-base font-semibold ${currentPathname === '/' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Home</li></Link>
+            <Link to='/about'><li className={`text-base font-semibold ${currentPathname === '/about' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>About</li></Link>
+            <Link to='/callforpaper'><li className={`text-base font-semibold ${currentPathname === '/callforpaper' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Call For Paper</li></Link>
+            <Link to='/papersubmission'><li className={`text-base font-semibold ${currentPathname === '/papersubmission' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Paper Submission</li></Link>
+            <Link to='/commitee'><li className={`text-base font-semibold ${currentPathname === '/commitee' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Commitee</li></Link> 
+            <Link to='/acceptedpaper'><li className={`text-base font-semibold ${currentPathname === '/acceptedpaper' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Accepted Paper</li></Link> 
+            <Link to='/Registration'><li className={`text-base font-semibold ${currentPathname === '/Registration' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Registration</li></Link> 
+            <Link to='/accomodation'><li className={`text-base font-semibold ${currentPathname === '/accomodation' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Accomodation</li></Link>
+            <Link to='/contact'><li className={`text-base font-semibold ${currentPathname === '/contact' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-gray-900`}>Contact Us</li></Link> 
           </ul>
         </div>
         <div className="hidden lg:block">

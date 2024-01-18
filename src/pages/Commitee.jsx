@@ -4,7 +4,7 @@ const Commitee = () => {
   return (
      <>
     <div className='font flex w-full items-center justify-center mt-12 mb-10'>
-    <h1 className='text-center text-4xl  font-bold border-b-4 inline-block border-[#46ce9c]'>Committee</h1>
+    <h1 className='text-center text-4xl font-bold border-b-4 inline-block border-[#46ce9c]'>Committee</h1>
       </div>
   
     
