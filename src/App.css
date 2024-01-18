@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+:root{
+    overflow-x: hidden;
+}
+
 table,tr,td{
-    border: 2px solid black;
+    border: 2px solid white;
     padding: 8px;    
 }
 
 .linearGradient{
-    background: linear-gradient(to right, #4464a0c3, #aec2e4a2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #73c8a9, #373b44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.font{
+    font-family: bree-serif;
+}
+
+
+  
+  
