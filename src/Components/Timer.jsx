@@ -13,6 +13,12 @@ const Timer = () => {
      setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
      setMinutes(Math.floor((time / 1000 / 60) % 60));
      setSeconds(Math.floor((time / 1000) % 60));
+
+    if (setDays == 0 && setDays == 0 && setMinutes == 0 && setSeconds==0){
+      setDays(0);
+     setHours(0);
+     setMinutes(0);
+     setSeconds(0);
  };
 
  useEffect (()=>{
