@@ -25,6 +25,7 @@ const Timer = () => {
     const interval = setInterval(()=>getTime(deadline), 1000)
     return ()=> clearInterval(interval)
     }, [])
+  }
   return (
     <div>
         <div className="flex sm:mt-0 mt-10 sm:gap-20 gap-7 w-full items-center justify-center">
