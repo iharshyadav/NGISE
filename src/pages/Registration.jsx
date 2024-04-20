@@ -3,12 +3,15 @@ import "./registration.css";
 const Registration = () => {
   let registrationinfo = [
     {
-      data: "Participants from Industry",
-      fee: "INR 6000",
+      data: "Non-IEEE Professional",
+      fee: "INR 7000",
     },
-    { data: "Participants from Academics", fee: "INR 6000" },
-    { data: "Research Scholars and students", fee: "INR 4000" },
-    { data: "Foreign Participants", fee: "	USD 100" },
+    { data: " IEEE Professional Members", fee: "INR 6000" },
+    { data: " Non-IEEE Students", fee: "INR 6000" },
+    { data: " IEEE Student Members", fee: "INR 5000" },
+    { data: "  Industry Participants", fee: "INR 7000" },
+    { data: " Non-IEEE Foreign Participants", fee: "$300" },
+    { data: "  IEEE Foreign Participants", fee: "$250" },
   ];
   const [register, setregiste] = useState(registrationinfo);
   const [fee, setfee] = useState([

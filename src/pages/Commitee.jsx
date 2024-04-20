@@ -26,7 +26,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Patron</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. P.K. Chopra, Director, AKGEC</p>
+        <p>Dr. Hemant Ahuja, AKGEC</p>
       </div>
     </div>
   
@@ -35,7 +35,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Conference Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4 '>
-        <p>Dr. Anu Chaudhary, HOD-IT, AKGEC</p>
+        <p>Dr. Rahul Sharma, HOD-IT, AKGEC</p>
       </div>
     </div>
   
