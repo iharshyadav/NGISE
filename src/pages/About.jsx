@@ -3,12 +3,12 @@ import React from 'react'
 const About = () => {
   return (
     <>
-
-   <div className='flex w-full items-center justify-center font mt-10  mb-16'>
-    <h1 className='text-center text-4xl  font-bold border-b-4 inline-block border-[#46ce9c]'>About Us</h1>
+      <div className="flex w-full items-center justify-center font mt-10  mb-16">
+        <h1 className="text-center text-4xl  font-bold border-b-4 inline-block border-[#46ce9c]">
+          About Us
+        </h1>
       </div>
 
-  
       <div className="font flex flex-col mb-10 items-center">
         <h1 className="sm:text-3xl text-xl  font-semibold">
           Ajay Kumar Garg Engineering College
@@ -100,22 +100,23 @@ const About = () => {
         </div>
         <div className="lg:w-[70%] w-full ">
           <p className=" mx-6 text-justify">
-            This conference will provide an excellent international forum for
-            sharing knowledge, results, methodology and applications of
-            Artificial Intelligence and Big Data Engineering. The aim of the
-            conference is to provide a platform to the researchers and
-            practitioners from both academia as well as industry to meet and
-            share cutting-edge development in the field.
-          </p>
-
-          <p className=" mx-6 text-justify mt-4">
-            Authors are solicited to contribute to the conference by submitting
-            articles that illustrate research results, projects, surveying works
-            and industrial experiences that describe significant advances in the
-            areas of Artificial Intelligence and Big Data Engineering. This
-            conference will feature a high-quality technical & experiential
-            program dealing with a mix of traditional and contemporary hot
-            topics in paper presentations and high-profile keynotes.
+            The International Conference on Next Generation Information System
+            Engineering (NGISE) offers a dynamic platform for researchers,
+            industry practitioners, and academicians to delve into the forefront
+            of technological innovation across a diverse spectrum of domains.
+            With tracks covering pivotal areas such as Information System
+            Engineering, Machine Learning and Deep Learning, Big Data Analytics
+            and Processing, Data Mining and Knowledge Discovery, Artificial
+            Intelligence in Big Data Engineering, Cloud Computing for Big Data,
+            Advanced-Data Storage and Retrieval, Ethics in Artificial
+            Intelligence and Big Data, Industry Applications and Case Studies,
+            and Emerging Trends and Technologies, NGISE serves as a nexus for
+            exchanging groundbreaking ideas, sharing practical insights, and
+            fostering collaborative endeavors. Through a rich tapestry of
+            presentations, workshops, and discussions, NGISE aims to catalyze
+            advancements in next-generation information systems and propel the
+            evolution of technology-driven solutions in today's rapidly evolving
+            digital landscape.
           </p>
         </div>
       </div>
