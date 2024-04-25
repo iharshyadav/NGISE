@@ -58,28 +58,32 @@ const About = () => {
       <div className="font sm:px-20 px-4 pb-10 flex flex-wrap text-white linearGradient sm:text-[1.05rem]">
         <div className="lg:w-[70%] w-full ">
           <p className=" mx-6 text-justify">
-            IT has changed the way of our life and the pace of change is very
-            fast. This scenario is giving us new opportunity as well as new
-            challenges. IT has enhanced the efficiency and effectiveness of
-            business processes dramatically. ERP solutions have further
-            empowered the organizations to do multi-location, multilingual and
-            multicurrency operation in the global business environment. New ways
-            of marketing, making friends, communication and socialization have
-            come up in the form of blogs, forums, chats, emails etc.
-          </p>
-          <p className="mx-6 text-justify mt-4">
-            IT is working as a hub to drive the businesses to new heights. IT
-            jobs are more paying as well as more demanding. To continuously
-            learn and grasp new technologies is a real challenge for IT
-            professionals. Creating such professionals to take this challenge
-            and rise to the apex of IT profession is our goal. At AKGEC
-            excellence is the way of life. We are committed to give students an
-            environment to nurture their talent in to its fullest potential.
-            This is achieved by learned faculty members, year round conduction
-            of numerous seminars, guest lectures, and industry academia
-            interaction, co-curricular & extracurricular activities. We strive
-            to transform the students not only into good professionals but a
-            good human being and a dutiful citizen.
+            The Department of Information Technology was founded in 1999 and
+            expanded in 2019 with the addition of the CSIT sub-branch.
+            Presently, the department has a total intake of 300 students, with
+            180 enrolled in the IT branch and 120 in the CSIT branch. The
+            department's vision is to produce highly competent and socially
+            sensitive IT professionals and innovators, capable to excel in the
+            multicultural and challenging industry scenario. IT has changed the
+            way of our life and the pace of change is very fast. This scenario
+            is giving us new opportunity as well as new challenges. IT has
+            enhanced the efficiency and effectiveness of business processes
+            dramatically. ERP solutions have further empowered the organizations
+            to do multi-location, multilingual and multicurrency operation in
+            the global business environment. New ways of marketing, making
+            friends, communication and socialization have come up in the form of
+            blogs, forums, chats, emails etc. IT is working as a hub to drive
+            the businesses to new heights. IT jobs are more paying as well as
+            more demanding. To continuously learn and grasp new technologies is
+            a real challenge for IT professionals. Creating such professionals
+            to take this challenge and rise to the apex of IT profession is our
+            goal. At AKGEC excellence is the way of life. We are committed to
+            give students an environment to nurture their talent in to its
+            fullest potential. This is achieved by learned faculty members, year
+            round conduction of numerous seminars, guest lectures, and industry
+            academia interaction, co-curricular & extracurricular activities. We
+            strive to transform the students not only into good professionals
+            but a good human being and a dutiful citizen.
           </p>
         </div>
 
