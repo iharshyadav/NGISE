@@ -45,7 +45,7 @@ const Commitee = () => {
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Rahul Sharma, HOD-IT,  AKGEC GHAZIABAD, INDIA</p>
-        <p>Dr. Drik Draheim Tallinn University, Estonia </p>
+        <p>Dr. Drik Draheim, Tallinn University, Estonia </p>
       </div>
     </div>
 
@@ -54,7 +54,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Conference Convener</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Anupama Sharma, Asstt. Prof,  AKGEC GHAZIABAD, INDIA</p>
+        <p>Dr. Anupama Sharma,  AKGEC GHAZIABAD, INDIA</p>
       </div>
     </div>
 
@@ -63,7 +63,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Conference Co-convener</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Ruchi gupta, Associate Professor,  AKGEC GHAZIABAD, INDIA</p>
+        <p>Dr. Ruchi gupta, AKGEC GHAZIABAD, INDIA</p>
       </div>
     </div>
 
@@ -72,8 +72,8 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Publication Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Anu Chaudhary,  AKGEC GHAZIABAD, INDIA</p>
-        <p>Dr. Rajesh Prasad,  AKGEC GHAZIABAD, INDIA</p>
+        <p>Dr. Anu Chaudhary, AKGEC GHAZIABAD, INDIA</p>
+        <p>Dr. Rajesh Prasad, AKGEC GHAZIABAD, INDIA</p>
       </div>
     </div>
 
@@ -82,7 +82,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Finance Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Sunil Kumar  AKGEC GHAZIABAD, INDIA</p>
+        <p>Dr. Sunil Kumar, AKGEC GHAZIABAD, INDIA</p>
       </div>
     </div>
 
@@ -91,7 +91,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Sponsorship Committee</p>
       </div>
       <div className='w-full text-base lg:text-lg sm:w-4/5 ml-4'>
-        <p>Dr. Ayushi Prakash  AKGEC GHAZIABAD, INDIA</p>
+        <p>Dr. Ayushi Prakash, AKGEC GHAZIABAD, INDIA</p>
       </div>
     </div>
 
@@ -100,7 +100,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Technical Program Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Aditya Pratap Singh, Associate Professor,  AKGEC GHAZIABAD, INDIA</p>
+        <p>Dr. Aditya Pratap Singh, AKGEC GHAZIABAD, INDIA</p>
       </div>
     </div>
 

@@ -51,7 +51,7 @@ const About = () => {
 
       <div className="font flex flex-col pb-10 items-center linearGradient text-white">
         <h1 className="sm:text-3xl w-full text-center text-xl mt-10  font-semibold ">
-          About the Information Technology Department
+          About the Department
         </h1>
       </div>
 
@@ -94,7 +94,7 @@ const About = () => {
 
       <div className="font flex flex-col mb-10 items-center">
         <h1 className="sm:text-3xl text-xl mt-10  font-semibold">
-          AKGEC Conference
+          About The Conference
         </h1>
       </div>
 
