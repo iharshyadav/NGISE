@@ -81,7 +81,7 @@ const HomeLayout = () => {
 
     <div className="absolute flex flex-col bg- bg-black bg-opacity-65 px-16 py-10 mt-20 items-center justify-center text-white z-10">
     <h4 className="text-white uppercase text-xl sm:text-2xl font-[650] tracking-wide mb-2">
-      welcome to
+      welcome to First
     </h4>
      <h1 className="text-[#46ce9c] uppercase text-center text-4xl sm:text-6xl w-full font-bold">
        International Conference
