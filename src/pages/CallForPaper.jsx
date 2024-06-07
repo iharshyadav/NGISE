@@ -93,7 +93,7 @@ function CallForPaper() {
               </tr>
               <tr>
                 <td>Conference Date</td>
-                <td>13-14 December 2024</td>
+                <td>28-29 March 2025</td>
               </tr>
             </table>
           </div>
