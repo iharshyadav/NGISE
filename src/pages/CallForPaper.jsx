@@ -71,25 +71,25 @@ function CallForPaper() {
               Important Dates
             </h1>
             <table className="text-center">
-              <tr>
+              {/* <tr>
                 <td>Invitation for Papers</td>
                 <td>-</td>
+              </tr> */}
+              <tr>
+                <td>Full Paper Submission Date</td>
+                <td>25 Nov 2024</td>
               </tr>
               <tr>
-                <td>Paper Submission Date</td>
-                <td>-</td>
+                <td>Notification of Acceptance Date</td>
+                <td>10 Jan 2025</td>
               </tr>
               <tr>
-                <td>Notification to Authors</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>Final Version of Camera Ready Paper</td>
-                <td>-</td>
+                <td>Final Paper Submission Date</td>
+                <td>22 Jan 2025</td>
               </tr>
               <tr>
                 <td>Registration Deadline</td>
-                <td>-</td>
+                <td>5 Feb 2025</td>
               </tr>
               <tr>
                 <td>Conference Date</td>
