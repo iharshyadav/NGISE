@@ -131,6 +131,52 @@ const Commitee = () => {
       </div>
     </div>
 
+    
+    <div className='flex flex-col sm:flex-row my-4'>
+      <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+        <p className='font-bold text-base lg:text-lg  text-white'>Local Organizing Chair</p>
+      </div>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
+        <p>Dr. Anju Mishra Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Dr. Veena Bharti Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        
+      </div>
+    </div>
+
+    <div className='flex flex-col sm:flex-row my-4'>
+      <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+        <p className='font-bold text-base lg:text-lg  text-white'>Organizing Committee</p>
+      </div>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
+        <p>Dr. Rahul Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Dr. Anu Chaudhary Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Dr. B.K. Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Dr. Pallab Biswas Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Dr. Nilesh Gupta Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Prof. S. L. Kapoor Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Air Cmde. P. Singh Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Dr. Anupama Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Dr. Ruchi Gupta Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+      </div>
+    </div>
+
+    
+    <div className='flex flex-col sm:flex-row my-4'>
+      <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+        <p className='font-bold text-base lg:text-lg  text-white'>Conference Secretary</p>
+      </div>
+      <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
+        <p>Mr. Sumit Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Mr Santosh Verma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Mr. Madhup AgarwalAjay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Ms. Chitra Nasa Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Ms. Tanu Gupta Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Ms. Shikha Agarwal Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Ms. Kamini Tanwar Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        <p>Ms. Sheradha Jauhari Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+      </div>
+    </div>
+
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Track Chair</p>
