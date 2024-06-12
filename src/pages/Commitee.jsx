@@ -70,7 +70,7 @@ const Commitee = () => {
     </div>
 
     <div className='flex flex-col sm:flex-row my-4'>
-      <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+      <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Publication Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
@@ -144,7 +144,7 @@ const Commitee = () => {
     </div>
 
     <div className='flex flex-col sm:flex-row my-4'>
-      <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+      <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Organizing Committee</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
@@ -162,7 +162,7 @@ const Commitee = () => {
 
     
     <div className='flex flex-col sm:flex-row my-4'>
-      <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+      <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Conference Secretary</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
@@ -178,7 +178,7 @@ const Commitee = () => {
     </div>
 
     <div className='flex flex-col sm:flex-row my-4'>
-      <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+      <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Track Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
