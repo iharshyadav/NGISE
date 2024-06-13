@@ -41,7 +41,7 @@ const Commitee = () => {
       </div>
     </div>
   
-    <div className='flex flex-col sm:flex-row my-4'>
+    {/* <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>General/Organizing Chair</p>
       </div>
@@ -49,11 +49,11 @@ const Commitee = () => {
         <p>Dr. Rahul Sharma, HOD-IT,  AKGEC GHAZIABAD, INDIA</p>
         <p>Dr. Drik Draheim, Tallinn University, Estonia </p>
       </div>
-    </div>
+    </div> */}
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-base lg:text-lg  text-white'>Conference Convener</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Convener</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Anupama Sharma,  AKGEC GHAZIABAD, INDIA</p>
@@ -62,7 +62,7 @@ const Commitee = () => {
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
-        <p className='font-bold text-base lg:text-lg  text-white'>Conference Co-convener</p>
+        <p className='font-bold text-base lg:text-lg  text-white'>Co-convener</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Ruchi gupta, AKGEC GHAZIABAD, INDIA</p>
@@ -74,30 +74,29 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Publication Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Anu Chaudhary, AKGEC GHAZIABAD, INDIA</p>
-        <p>Dr. Rajesh Prasad, AKGEC GHAZIABAD, INDIA</p>
+       
         <p>Dr. Markus Bertl Tallinn University, Estonia </p>
         <p>Dr. Rahul Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
       </div>
     </div>
 
-    <div className='flex flex-col sm:flex-row my-4'>
+    {/* <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Finance Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Sunil Kumar, AKGEC GHAZIABAD, INDIA</p>
       </div>
-    </div>
+    </div> */}
 
-    <div className='flex flex-col sm:flex-row my-4'>
+    {/* <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Sponsorship Committee</p>
       </div>
       <div className='w-full text-base lg:text-lg sm:w-4/5 ml-4'>
         <p>Dr. Ayushi Prakash, AKGEC GHAZIABAD, INDIA</p>
       </div>
-    </div>
+    </div> */}
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
@@ -114,7 +113,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Technical Program Chair</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Aditya Pratap Singh, AKGEC GHAZIABAD, INDIA</p>
+       
         <p>Dr. Sunil Kumar Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Dr. Nandita Goyal Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
       </div>
@@ -209,7 +208,7 @@ const Commitee = () => {
       </div>
     </div>
 
-    <div className='flex flex-col sm:flex-row my-4'>
+    {/* <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Member</p>
       </div>
@@ -217,9 +216,9 @@ const Commitee = () => {
         <p>Mr. Pancham Singh  AKGEC GHAZIABAD, INDIA</p>
         <p>Ms. Tahira Mazumder AKGEC GHAZIABAD, INDIA</p>
         </div>
-    </div>
+    </div> */}
 
-    <div className='flex flex-col sm:flex-row my-4'>
+    {/* <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Honorary Advisory Committee</p>
       </div>
@@ -248,7 +247,7 @@ const Commitee = () => {
         <p>Mr. Ajay Prasad , Global Dirctor. AT&T, USA</p>
         <p>Mr. Amit Kumar Head Operations , Swiss Bank , Singapore</p>
         </div>
-    </div>
+    </div> */}
 
     <div className='flex flex-col sm:flex-row my-4'>
       <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
