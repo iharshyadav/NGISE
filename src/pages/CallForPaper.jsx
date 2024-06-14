@@ -14,7 +14,7 @@ function CallForPaper() {
         <p>
           We are delighted to inform you that Department of Information
           Technology, Ajay Kumar Garg Engineering College, Ghaziabad is hosting
-          an Next Generation Information System Engineering (NGISE) on December 13-,14, 2024.
+          an Next Generation Information System Engineering (NGISE) on 28-29 March 2025.
         </p>
         <p className="pt-4">
           The conference will be organized in offline mode only. Only in case of
