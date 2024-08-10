@@ -106,7 +106,7 @@ const Commitee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Track Chairs/ Technical Program Committee</p>
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
-        <p>Dr. Markus Bertl Tallinn University, Estonia </p>
+      
         <p>Dr. Silvia Lips Tallinn University, Estonia </p>
         <p>Dr. Prayag Tiwari Halmstad University, Sweden</p>
         <p>Dr. Colin Atkinson University of Mannheim, Germany</p>
@@ -120,7 +120,7 @@ const Commitee = () => {
         <p>Dr. Anju Mishra Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Dr. Veena Bharti Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Dr. Nitin Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-        <p>Dr. Shailza Kanwar Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+       
         <p>Ms. Tahira Mazumder Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Mr. Sumit Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Mr. Birendra Tiwari Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
@@ -168,7 +168,7 @@ const Commitee = () => {
         <p>Ms. Chitra Nasa Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Ms. Tanu Gupta Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Ms. Shikha Agarwal Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-        <p>Ms. Kamini Tanwar Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+        
         <p>Ms. Sheradha Jauhari Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
       </div>
     </div>
