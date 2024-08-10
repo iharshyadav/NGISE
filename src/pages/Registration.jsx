@@ -10,8 +10,8 @@ const Registration = () => {
     { data: " Non-IEEE Students", fee: "INR 6000" },
     { data: " IEEE Student Members", fee: "INR 5000" },
     { data: "  Industry Participants", fee: "INR 7000" },
-    { data: " Non-IEEE Foreign Participants", fee: "$300" },
-    { data: "  IEEE Foreign Participants", fee: "$250" },
+    { data: " Non-IEEE Foreign Participants", fee: "$400" },
+    { data: "  IEEE Foreign Participants", fee: "$350" },
   ];
   const [register, setregiste] = useState(registrationinfo);
   const [fee, setfee] = useState([
