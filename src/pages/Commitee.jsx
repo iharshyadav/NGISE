@@ -175,7 +175,7 @@ const Commitee = () => {
 
    
 
-    <div className='flex flex-col sm:flex-row my-4'>
+    <div className='flex flex-col sm:flex-row my-4 ' id='organizing-committee'>
       <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
         <p className='font-bold text-base lg:text-lg  text-white'>Organizing Committee</p>
       </div>

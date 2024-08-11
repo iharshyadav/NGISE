@@ -3,9 +3,9 @@ import React from 'react'
 const Footer= ()=> {
   return (
     <div>
-      <section className="relative h-56 overflow-hidden sm:block hidden  bg-[#f4f3f3] py-8">
+      <section className="relative h-56 overflow-hidden  bg-[#f4f3f3] pt-14">
         <div className="container relative z-10 mx-auto  px-4">
-          <div className="-m-8 flex flex-wrap h-28 items-center justify-between">
+          <div className="-m-8 flex h-28 items-center md:justify-between">
             <div className="w-auto p-8 flex items-center justify-center">
               <a href="https://www.akgec.ac.in/">
                 <div className="inline-flex items-center">
@@ -114,17 +114,17 @@ const Footer= ()=> {
             </div>
           </div>
         </div>
-        <hr className=" bg-black w-[80%] ml-28 h-0 absolute top-32 text-black" />
-        <div className="absolute top-36 w-full flex items-center justify-center">
-          <h1 className="uppercase text-lg font-sans font-semibold">
+        <hr className=" bg-black w-[80%] ml-28 h-0 absolute bottom-16 border-t-2 border-t-gray-200" />
+        <div className="absolute bottom-4 w-full flex items-center justify-center">
+          <h1 className="uppercase text-base font-sans font-semibold">
             Design & Developed By :{" "}
           </h1>
           <img
-            className="w-[3vw] h-[6vh] pb-2"
+            className="w-[3vw] h-[5vh] p-1 "
             src="https://itbt-website.vercel.app/Images/Screenshot_2023-11-29_202207-removebg-preview.png"
             alt=""
           />
-          <h1 className="uppercase text-lg font-sans font-semibold">
+          <h1 className="uppercase text-base font-sans font-semibold">
             Big data center of excellence
           </h1>
         </div>
