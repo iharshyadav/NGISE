@@ -100,14 +100,14 @@ const Navbar=()=> {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
-                     <Link to='/'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold text-gray-800 hover:text-[#46ce9c] ">Home</li></Link>
-                     <Link to='/about'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer  hover:text-gray-900">About</li></Link>
-                     <Link to='/callforpaper'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">Call For Paper</li></Link>
-                     <Link to='/papersubmission'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Paper Submission</li></Link>
+                     <Link to='/'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold text-gray-800 hover:text-[#46ce9c] ">Home</li></Link>
+                     <Link to='/about'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  hover:text-gray-900">About</li></Link>
+                     <Link to='/callforpaper'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">Call For Paper</li></Link>
+                     <Link to='/papersubmission'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Paper Submission</li></Link>
                      <li className="relative z-50 flex " >
               <span className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `} onClick={toggleMenu1}>Committee <RiArrowDropDownLine className='text-2xl' />  </span>
               {isMenuOpen1 && (
-                <ul className="bg-white w-[16vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
+                <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
                     <Link to="/commitee#organizing-committee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
                   </li>
@@ -117,10 +117,10 @@ const Navbar=()=> {
                 </ul>
               )}
             </li>    
-                     <Link to='/acceptedpaper'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Accepted Paper</li></Link> 
-                     <Link to='/Registration'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Registration</li></Link> 
-                     <Link to='/accomodation'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
-                     <Link to='/contact'><li onClick={()=>setIsMenuOpen(false)} className="text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Contact Us</li></Link> 
+                     <Link to='/acceptedpaper'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Accepted Paper</li></Link> 
+                     <Link to='/Registration'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Registration</li></Link> 
+                     <Link to='/accomodation'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
+                     <Link to='/contact'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Contact Us</li></Link> 
                   </nav>
                 </div>
                 {/* <button
