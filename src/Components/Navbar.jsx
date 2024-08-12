@@ -6,7 +6,6 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar=()=> {
 
-  
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const location = useLocation();
 
@@ -116,7 +115,8 @@ const Navbar=()=> {
                </li>
                 </ul>
               )}
-            </li>    
+            </li> 
+
                      <Link to='/acceptedpaper'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Accepted Paper</li></Link> 
                      <Link to='/Registration'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Registration</li></Link> 
                      <Link to='/accomodation'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
