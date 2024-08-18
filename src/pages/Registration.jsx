@@ -57,7 +57,7 @@ const Registration = () => {
       </div>
 <div className="linearGradient font text-white px-2 sm:px-40 py-7 p-7">
 <div className="container ">
-      <div className="insidecontainer">
+      <div className="insidecontainer"  id='fees'>
         <div style={{ marginTop: "34px" }}>
           <h1 className="underline text-3xl font-bold ">Registration Fees</h1>
         </div>
@@ -74,7 +74,7 @@ const Registration = () => {
           })}
         </div>
 
-        <div className="fee ">
+        <div className="fee"  id='submission'>
           <h1 className="text-3xl font-bold underline ">Fee Submission Details</h1>
           <h3 className="text-lg">Details of IMPS/UPI/RTGS/NEFT:</h3>
           <div className="registervalue text-lg">
