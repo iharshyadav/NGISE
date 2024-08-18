@@ -25,7 +25,7 @@ const router = createBrowserRouter(
         <Route path="/registration" element={<Registration />} />
         <Route path="/papersubmission" element={<PaperSubmission />} />
         <Route path="/callforpaper" element={<CallForPaper />} />
-        <Route path='/acceptedpaper' element ={<Acceptedpaper/>}/>
+        <Route path='/speakers' element ={<Acceptedpaper/>}/>
     </Route>
   )
 )
