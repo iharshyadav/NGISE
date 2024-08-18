@@ -74,10 +74,10 @@ const Navbar=()=> {
               {isMenuOpen2 && (
                 <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="" onClick={() => { setIsMenuOpen2(false); }} > Query</Link>
+                    <Link to="/contact" onClick={() => { setIsMenuOpen2(false); }} > Query</Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="" onClick={() => setIsMenuOpen2(false)}>Reach Us</Link>
+                 <Link to="/contact" onClick={() => setIsMenuOpen2(false)}>Reach Us</Link>
                </li>
                 </ul>
               )}
@@ -142,10 +142,10 @@ const Navbar=()=> {
               {isMenuOpen2 && (
                 <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                    <Link to="" onClick={() => { setIsMenuOpen2(false); }} > Query </Link>
+                    <Link to="/contact" onClick={() => { setIsMenuOpen2(false); }} > Query </Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                 <Link to="" onClick={() => setIsMenuOpen2(false)}>Reach us</Link>
+                 <Link to="/contact" onClick={() => setIsMenuOpen2(false)}>Reach us</Link>
                </li>
                 </ul>
               )}
