@@ -25,6 +25,21 @@ const Navbar=()=> {
     setIsMenuOpen2(!isMenuOpen2)
   }
 
+  const [isMenuOpen3, setIsMenuOpen3] = React.useState(false)
+  const toggleMenu3 = () => {
+    setIsMenuOpen3(!isMenuOpen3)
+  }
+
+  useEffect(() => { 
+    const hash = location.hash;
+    if (hash === '#fees' || hash === '#submission') {
+      const section = document.getElementById(hash.substring(1));
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   const currentPathname = location.pathname;
   console.log(currentPathname)
 
@@ -66,8 +81,20 @@ const Navbar=()=> {
                 </ul>
               )}
             </li>      
-            <Link to='/acceptedpaper'><li className={`text-base font-semibold ${currentPathname ==='/speakers' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Speakers</li></Link> 
-            <Link to='/Registration'><li className={`text-base font-semibold ${currentPathname === '/Registration' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Registration</li></Link> 
+            <Link to='/speakers'><li className={`text-base font-semibold ${currentPathname ==='/speakers' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Speakers</li></Link> 
+            <li className="relative z-50 ">
+              <span className={`flex items-center text-base font-semibold cursor-pointer ${currentPathname === '/Registration' ? 'text-[#46ce9c]' : 'text-gray-800'}  hover:text-[#00cc99] `} onClick={toggleMenu3}>Registration <RiArrowDropDownLine className='text-2xl' />  </span>
+              {isMenuOpen3 && (
+                <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
+                  <li className="py-1 px-2 hover:text-[#00cc99]">
+                    <Link to="/Registration#fees" onClick={() => { setIsMenuOpen3(false); }} > Registration Fess </Link>
+                  </li>
+               <li className="py-1 px-2 hover:text-[#00cc99]">
+                 <Link to="/Registration#submission" onClick={() => setIsMenuOpen3(false)}>Fee submission</Link>
+               </li>
+                </ul>
+              )}
+            </li>       
             <Link to='/accomodation'><li className={`text-base font-semibold ${currentPathname === '/accomodation' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Accomodation</li></Link>
             <li className="relative z-50 ">
               <span className={`flex items-center text-base font-semibold cursor-pointer ${currentPathname === '/contact' ? 'text-[#46ce9c]' : 'text-gray-800'}  hover:text-[#00cc99] `} onClick={toggleMenu2}>Contact Us <RiArrowDropDownLine className='text-2xl' />  </span>
@@ -135,7 +162,19 @@ const Navbar=()=> {
             </li> 
 
                      <Link to='/speakers'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Speakers</li></Link> 
-                     <Link to='/Registration'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Registration</li></Link> 
+                     <li className="relative z-50 flex " >
+              <span className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `} onClick={toggleMenu3}>Registration<RiArrowDropDownLine className='text-2xl' />  </span>
+              {isMenuOpen3 && (
+                <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                  <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
+                    <Link to="/registration#fees" onClick={() => { setIsMenuOpen3(false); }} >Registration Fees</Link>
+                  </li>
+               <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
+                 <Link to="/registration#submission" onClick={() => setIsMenuOpen3(false)}>Fee Submission</Link>
+               </li>
+                </ul>
+              )}
+            </li>  
                      <Link to='/accomodation'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
                      <li className="relative z-50 flex " >
               <span className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `} onClick={toggleMenu2}>Contact Us<RiArrowDropDownLine className='text-2xl' />  </span>
