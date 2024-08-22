@@ -90,7 +90,7 @@ const HomeLayout = () => {
      <h4 className="text-white uppercase text-center w-full sm:text-3xl font-[650] tracking-wide">
        Next Generation Information System Engineering
      </h4>
-     <h5 className="text-white text-center w-full text-xl sm:text-3xl font-[600] tracking-wide">
+     <h5 className="text-white mt-2 text-center w-full text-xl sm:text-3xl font-[600] tracking-wide">
        Ajay Kumar Garg Engineering College, Ghaziabad, India
      </h5>
      <div className="wrapper">
