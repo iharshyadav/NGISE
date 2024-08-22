@@ -12,16 +12,12 @@ function CallForPaper() {
 
       <div className="font mx-16 md:mx-28 mb-8 mt-10 text-justify text-base sm:text-lg flex flex-col ">
         <p>
-          We are delighted to inform you that Department of Information
-          Technology, Ajay Kumar Garg Engineering College, Ghaziabad is hosting
-          an Next Generation Information System Engineering (NGISE) on 28-29 March 2025.
+          We are delighted to inform you that Department of Information Technology, Ajay Kumar Garg Engineering College,
+          Ghaziabad is hosting the First International Conference on Next Generation Information System Engineering (NGISE2025). 
         </p>
         <p className="pt-4">
-          The conference will be organized in offline mode only. Only in case of
-          genuine reason, we can allow for online presentation. Although the
-          theme of this conference is Artificial Intelligence & Big Data
-          Engineering, but we have various tracks to present or share your
-          ideas/research approach on different areas.
+          The Conference will be organized in Hybrid mode on 28th – 29th March, 2025. The broader theme of the conference is Next Generation Information System Engineering.
+          The conference has different tracks where the researchers can present or share their ideas/research approach in different emerging areas of Information System Engineering.
         </p>
 
         {/* <div className='w-full flex justify-center items-center mt-10'>
@@ -49,13 +45,13 @@ function CallForPaper() {
               Conference Track
             </h1>
             <p className="text-lg">1. Information System Engineering</p>
-            <p className="text-lg">2. Machine Learning and Deep Learning</p>
-            <p className="text-lg">3. Big Data Analytics and Processing</p>
+            <p className="text-lg">2. Artificial Intelligence</p>
+            <p className="text-lg">3. Green and Sustainable IT Systems and Algorithms</p>
             <p className="text-lg">4. Data Mining and Knowledge Discovery</p>
-            <p className="text-lg">5. Artificial Intelligence in Big Data Engineering</p>
-            <p className="text-lg">6. Cloud Computing for Big Data</p>
-            <p className="text-lg">7. Advanced-Data Storage and Retrieval</p>
-            <p className="text-lg">8. Ethics in Artificial Intelligence and Big Data</p>
+            <p className="text-lg">5. Big Data Engineering</p>
+            <p className="text-lg">6. Next Gen Cloud Computing </p>
+            <p className="text-lg">7. GenAI Data Storage and Retrieval Techniques</p>
+            <p className="text-lg">8. Security and Privacy Issues in Next Gen Computing</p>
             <p className="text-lg">9. Industry Applications and Case Studies</p>
             <p className="text-lg">10. Emerging Trends and Technologies</p>
           </div>
