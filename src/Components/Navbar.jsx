@@ -87,7 +87,7 @@ const Navbar=()=> {
               {isMenuOpen3 && (
                 <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="/Registration#fees" onClick={() => { setIsMenuOpen3(false); }} > Registration Fess </Link>
+                    <Link to="/Registration#fees" onClick={() => { setIsMenuOpen3(false); }} > Registration Fees </Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]">
                  <Link to="/Registration#submission" onClick={() => setIsMenuOpen3(false)}>Fee submission</Link>
