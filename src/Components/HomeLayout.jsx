@@ -81,18 +81,21 @@ const HomeLayout = () => {
 
     <div className="absolute flex flex-col bg- bg-black bg-opacity-65 px-16 py-10 mt-20 items-center justify-center text-white z-10">
     <h4 className="text-white uppercase text-xl sm:text-2xl font-[650] tracking-wide mb-2">
-      welcome to First
+      welcome to The
     </h4>
      <h1 className="text-[#46ce9c] uppercase text-center text-4xl sm:text-6xl w-full font-bold">
-       International Conference
+       1<sup>st</sup> International Conference
      </h1>
      <h5 className="mt-2 mb-2 text-xl sm:text-3xl font-[600] tracking-wide">on</h5>
      <h4 className="text-white uppercase text-center w-full sm:text-3xl font-[650] tracking-wide">
        Next Generation Information System Engineering
      </h4>
+     <h5 className="text-white uppercase text-center w-full sm:text-3xl font-[650] tracking-wide">
+       Ajay Kumar Garg Engineering College, Ghaziabad, India
+     </h5>
      <div className="wrapper">
        <div className="typing-demo sm:text-3xl font-[600] tracking-wide text-[#46ce9c]">
-         NGISE-2025
+         NGISE-2025 (28th – 29th March, 2025) 
        </div>
      </div>
      <Timer/>
