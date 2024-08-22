@@ -95,7 +95,7 @@ const HomeLayout = () => {
      </h5>
      <div className="wrapper">
        <div className="typing-demo sm:text-3xl font-[600] tracking-wide text-[#46ce9c]">
-         NGISE-2025 (28th – 29th March, 2025) 
+         NGISE (28th – 29th March, 2025) 
        </div>
      </div>
      <Timer/>
