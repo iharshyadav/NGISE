@@ -118,9 +118,7 @@ const Commitee = () => {
         <p>Dr. Shivani Agrawal Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Dr. Nandita Goyal Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Dr. Anju Mishra Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-        <p>Dr. Veena Bharti Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Dr. Nitin Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-       
         <p>Ms. Tahira Mazumder Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Mr. Sumit Sharma Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         <p>Mr. Birendra Tiwari Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
