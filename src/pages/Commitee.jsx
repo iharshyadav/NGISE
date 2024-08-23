@@ -129,8 +129,7 @@ const Commitee = () => {
          <p>Mr. Pradeep Tripathi Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
          <p>Mr. Achintya Pandey Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
          <p>Mr. Anil Singh Chauhan Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-         <p>Mr. Sanjay Sonkar Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-         
+                  
       </div>
     </div>
 
