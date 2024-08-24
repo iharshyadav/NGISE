@@ -15,18 +15,18 @@ const About = () => {
 
       {path === "/about" && (
         <>
-          <div className="mt-16 flex flex-col mb-12 items-center">
+          <div className="mt-14 flex flex-col mb-12 items-center">
             <h1 className="sm:text-3xl text-xl  font-semibold ">
               Ajay Kumar Garg Engineering College
             </h1>
           </div>
 
-          <div className="font sm:mx-20 mx-4 mb-10 flex flex-wrap sm:text-[1.05rem] ">
-            <div className="lg:w-[35%] sm:m-10 m-4 lg:m-0  ">
+          <div className="font sm:mx-24 mx-4 mb-10 flex flex-wrap sm:text-[1.05rem] ">
+            <div className="lg:w-[40%] sm:m-10 m-4 lg:m-0  ">
               <img src="img2.webp" className="w-[100%] h-[100%]" alt="" />
             </div>
 
-            <div className=" lg:w-[65%] w-full ">
+            <div className=" lg:w-[60%] w-full ">
               <p className=" mx-6 text-justify">
                 Ajay Kumar Garg Engineering College (AKGEC), Ghaziabad, Uttar
                 Pradesh is approved by AICTE and affiliated to Dr. A.P.J. Abdul
@@ -63,8 +63,8 @@ const About = () => {
             </h1>
           </div>
 
-          <div className="font sm:px-20 px-4 pb-10 flex flex-wrap text-white linearGradient sm:text-[1.05rem]">
-            <div className="lg:w-[70%] w-full ">
+          <div className="font sm:px-24 px-4 pb-10 flex flex-wrap text-white linearGradient sm:text-[1.05rem]">
+            <div className="lg:w-[60%] w-full ">
               <p className=" mx-6 text-justify">
                 The Department of Information Technology was founded in 1999 and
                 expanded in 2019 with the addition of the CSIT sub-branch.
@@ -97,7 +97,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="lg:w-[30%] sm:m-10 m-4 lg:m-0   ">
+            <div className="lg:w-[40%] sm:m-10 m-4 lg:m-0   ">
               <img src="img1.jpg" className="w-full h-full" alt="" />
             </div>
           </div>
