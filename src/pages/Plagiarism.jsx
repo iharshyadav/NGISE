@@ -1,5 +1,5 @@
 
-const PlagiarismPolicy = () => {
+function PlagiarismPolicy () {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl ml-4 font-bold mb-4">Plagiarism Policy</h1>
@@ -21,6 +21,6 @@ const PlagiarismPolicy = () => {
       </div>
     </div>
   );
-};
+}
 
 export default PlagiarismPolicy;
