@@ -73,10 +73,10 @@ const Navbar=()=> {
               {isMenuOpen1 && (
                 <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="/commitee#organizing-committee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
+                    <Link to="/organizingcommittee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="/commitee#program-committee" onClick={() => setIsMenuOpen1(false)}>Program Committee</Link>
+                 <Link to="/programcommittee" onClick={() => setIsMenuOpen1(false)}>Program Committee</Link>
                </li>
                 </ul>
               )}
