@@ -16,7 +16,7 @@ import ProgramCommitee from './pages/ProgramCommitee.jsx'
 import OrgCommitee from './pages/OrgCommittee.jsx'
 import Query from './pages/query.jsx'
 import ImportantDates from './pages/ImpDates.jsx'
-import PlagiarismPolicy from './pages/plagiarism.jsx'
+import PlagiarismPolicy from './pages/plagiarism'
 
 
 
