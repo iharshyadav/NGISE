@@ -149,8 +149,6 @@ const Commitee = () => {
       </div>
       <div className='w-full text-base lg:text-lg  sm:w-4/5 ml-4'>
         <p>Dr. Anju Mishra Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-        <p>Dr. Veena Bharti Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-        
       </div>
     </div>
 
