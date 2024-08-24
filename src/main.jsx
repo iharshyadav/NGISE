@@ -8,10 +8,11 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Accomodation from './pages/Accomodation';
-import Registration from './pages/Registration';
 import CallForPaper from './pages/CallForPaper.jsx'
 import Acceptedpaper from './pages/Acceptedpaper.jsx'
 import PaperSubmission from './pages/PaperSubmission.jsx'
+import RegistrationFee from './pages/RegistrationFee.jsx'
+import FeeSubmission from './pages/FeeSubmission.jsx'
 import ProgramCommitee from './pages/ProgramCommitee.jsx'
 import OrgCommitee from './pages/OrgCommittee.jsx'
 
@@ -26,7 +27,8 @@ const router = createBrowserRouter(
         <Route path="/programcommittee" element={<ProgramCommitee/>} />
         <Route path="/organizingcommittee" element={<OrgCommitee/>} />
         <Route path="/accomodation" element={<Accomodation />} />
-        <Route path="/registration" element={<Registration />} />
+        <Route path="/registration" element={<RegistrationFee />} />
+        <Route path="/fee" element={<FeeSubmission />} />
         <Route path="/papersubmission" element={<PaperSubmission />} />
         <Route path="/callforpaper" element={<CallForPaper />} />
         <Route path='/speakers' element ={<Acceptedpaper/>}/>

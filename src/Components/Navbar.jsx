@@ -57,7 +57,7 @@ const Navbar=()=> {
   
   
   return (
-    <div className=" w-full sm:h-20 border-b-2 border-black bg-white bg-opacity-  z-50">
+    <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-white bg-opacity-  z-50">
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
          <img className='sm:w-[4.5vw] w-[12vw]' src="https://www.akgec.ac.in/wp-content/themes/twentysixteen/img/AKGEC_1_0.png" alt="" />
@@ -87,10 +87,10 @@ const Navbar=()=> {
               {isMenuOpen3 && (
                 <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="/Registration#fees" onClick={() => { setIsMenuOpen3(false); }} > Registration Fee </Link>
+                    <Link to="/registration" onClick={() => { setIsMenuOpen3(false); }} > Registration Fee </Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="/Registration#submission" onClick={() => setIsMenuOpen3(false)}>Fee submission</Link>
+                 <Link to="/fee" onClick={() => setIsMenuOpen3(false)}>Fee submission</Link>
                </li>
                 </ul>
               )}
@@ -167,10 +167,10 @@ const Navbar=()=> {
               {isMenuOpen3 && (
                 <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                    <Link to="/registration#fees" onClick={() => { setIsMenuOpen3(false); }} >Registration Fees</Link>
+                    <Link to="/registration" onClick={() => { setIsMenuOpen3(false); }} >Registration Fees</Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                 <Link to="/registration#submission" onClick={() => setIsMenuOpen3(false)}>Fee Submission</Link>
+                 <Link to="/fee" onClick={() => setIsMenuOpen3(false)}>Fee Submission</Link>
                </li>
                 </ul>
               )}
