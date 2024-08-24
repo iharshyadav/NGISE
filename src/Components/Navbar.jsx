@@ -182,7 +182,7 @@ const Navbar=()=> {
               </span>
               <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
               <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
-                  <Link to="/contact">Query</Link>
+                  <Link to="/contact/query">Query</Link>
                 </li>
                 <li className="py-2 px-2 hover:text-[#00cc99]">
                   <Link to="/contact">Reach Us</Link>
@@ -192,6 +192,8 @@ const Navbar=()=> {
           </ul>
         </div>
         <div className="hidden lg:block">
+        <img className="sm:w-[7vw] w-[12vw] bg-transparent" src="/WhatsApp_Image_2024-08-24_at_15.16.55_df7f44ea-removebg-preview.png" alt="" />
+
           {/* <button
             type="button"
             className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"

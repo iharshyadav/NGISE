@@ -15,6 +15,7 @@ import RegistrationFee from './pages/RegistrationFee.jsx'
 import FeeSubmission from './pages/FeeSubmission.jsx'
 import ProgramCommitee from './pages/ProgramCommitee.jsx'
 import OrgCommitee from './pages/OrgCommittee.jsx'
+import Query from './pages/query.jsx'
 
 
 
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
         <Route path="/papersubmission" element={<PaperSubmission />} />
         <Route path="/callforpaper" element={<CallForPaper />} />
         <Route path='/speakers' element ={<Acceptedpaper/>}/>
+        <Route path="/contact/query" element={<Query />} />
     </Route>
   )
 )
