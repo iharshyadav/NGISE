@@ -87,10 +87,10 @@ const Navbar=()=> {
               {isMenuOpen3 && (
                 <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="/Registration#fees" onClick={() => { setIsMenuOpen3(false); }} > Registration Fee </Link>
+                    <Link to="/registration" onClick={() => { setIsMenuOpen3(false); }} > Registration Fee </Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="/Registration#submission" onClick={() => setIsMenuOpen3(false)}>Fee submission</Link>
+                 <Link to="/fee" onClick={() => setIsMenuOpen3(false)}>Fee submission</Link>
                </li>
                 </ul>
               )}
@@ -167,10 +167,10 @@ const Navbar=()=> {
               {isMenuOpen3 && (
                 <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                   <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                    <Link to="/registration#fees" onClick={() => { setIsMenuOpen3(false); }} >Registration Fees</Link>
+                    <Link to="/registration" onClick={() => { setIsMenuOpen3(false); }} >Registration Fees</Link>
                   </li>
                <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                 <Link to="/registration#submission" onClick={() => setIsMenuOpen3(false)}>Fee Submission</Link>
+                 <Link to="/fee" onClick={() => setIsMenuOpen3(false)}>Fee Submission</Link>
                </li>
                 </ul>
               )}
