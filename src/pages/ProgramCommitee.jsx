@@ -4,7 +4,7 @@ const Committee = () => {
   return (
     <>
       <div className="flex w-full items-center justify-center mt-12 mb-10">
-        <h1 className="text-center text-4xl font-bold border-b-4 inline-block border-[#46ce9c]">
+        <h1 className="text-center text-4xl font-bold border-b-4 inline-block border-[#46ce9c] pb-2 ">
           PROGRAM COMMITTEE
         </h1>
       </div>
