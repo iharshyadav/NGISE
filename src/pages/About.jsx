@@ -34,15 +34,15 @@ const About = () => {
             being the first and only college in UP to receive the Academic
             Excellence Award for the Best Engineering College in UPTU (now AKTU)
             from H.E. the Governor of UP for two successive years. The college
-            has been consistently having a large number of students in
+            has been consistently having a large number of students on
             university merit lists. The College students have the honor of being
-            awarded the Chancellor's Medal for highest marks across all B.Tech.
+            awarded the Chancellor's Medal for the highest marks across all B.Tech.
             programs for five consecutive years since the inception of this
             Award in 2016. The college places special emphasis on collaboration
             with industries to groom the students for meeting the industry
-            standards. The college has established a number of Centres of
+            standards. The college has established several Centres of
             Excellence in collaboration with eminent multinational industries.
-            The primary objective of these centres is to provide industry
+            The primary objective of these centers is to provide industry
             relevant training in inter-disciplinary state-of-art technologies as
             well as to promote applied research and industrial consultancy.
           </p>
@@ -63,22 +63,22 @@ const About = () => {
             Presently, the department has a total intake of 300 students, with
             180 enrolled in the IT branch and 120 in the CSIT branch. The
             department's vision is to produce highly competent and socially
-            sensitive IT professionals and innovators, capable to excel in the
+            sensitive IT professionals and innovators, capable of excelling in the
             multicultural and challenging industry scenario. IT has changed the
             way of our life and the pace of change is very fast. This scenario
-            is giving us new opportunity as well as new challenges. IT has
+            is giving us new opportunities as well as new challenges. IT has
             enhanced the efficiency and effectiveness of business processes
-            dramatically. ERP solutions have further empowered the organizations
-            to do multi-location, multilingual and multicurrency operation in
+            dramatically. ERP solutions have further empowered organizations
+            to do multi-location, multilingual and multicurrency operations in
             the global business environment. New ways of marketing, making
-            friends, communication and socialization have come up in the form of
-            blogs, forums, chats, emails etc. IT is working as a hub to drive
+            friends, communication and socializing have come up in the form of
+            blogs, forums, chats, emails, etc. IT is working as a hub to drive
             the businesses to new heights. IT jobs are more paying as well as
             more demanding. To continuously learn and grasp new technologies is
             a real challenge for IT professionals. Creating such professionals
             to take this challenge and rise to the apex of IT profession is our
             goal. At AKGEC excellence is the way of life. We are committed to
-            give students an environment to nurture their talent in to its
+            giving students an environment to nurture their talent to its
             fullest potential. This is achieved by learned faculty members, year
             round conduction of numerous seminars, guest lectures, and industry
             academia interaction, co-curricular & extracurricular activities. We
@@ -109,8 +109,8 @@ const About = () => {
             industry practitioners, and academicians to delve into the forefront
             of technological innovation across a diverse spectrum of domains.
             With tracks covering pivotal areas such as Information System
-            Engineering, Artificial Intelligence, Green and Sustainable IT Systems and Algorithms, Data Mining and Knowledge Discovery,Big Data Engineering,
-            Next Gen Cloud Computing , GenAI Data Storage and Retrieval Techniques, Security and Privacy Issues in Next Gen Computing, Industry Applications and Case Studies,
+            Engineering, Artificial Intelligence, Green and Sustainable IT Systems and Algorithms, Data Mining and Knowledge Discovery, Big Data Engineering,
+            Next Gen Cloud Computing, GenAI Data Storage and Retrieval Techniques, Security and Privacy Issues in Next Gen Computing, Industry Applications and Case Studies,
             and Emerging Trends and Technologies NGISE serves as a nexus for
             exchanging groundbreaking ideas, sharing practical insights, and
             fostering collaborative endeavors. Through a rich tapestry of
