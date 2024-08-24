@@ -7,12 +7,15 @@ import Layout from './Layout.jsx'
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
-import Commitee from './pages/Commitee';
 import Accomodation from './pages/Accomodation';
 import Registration from './pages/Registration';
 import CallForPaper from './pages/CallForPaper.jsx'
 import Acceptedpaper from './pages/Acceptedpaper.jsx'
 import PaperSubmission from './pages/PaperSubmission.jsx'
+import ProgramCommitee from './pages/ProgramCommitee.jsx'
+import OrgCommitee from './pages/OrgCommittee.jsx'
+
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,7 +23,8 @@ const router = createBrowserRouter(
         <Route path="" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="/commitee" element={<Commitee />} />
+        <Route path="/programcommittee" element={<ProgramCommitee/>} />
+        <Route path="/organizingcommittee" element={<OrgCommitee/>} />
         <Route path="/accomodation" element={<Accomodation />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/papersubmission" element={<PaperSubmission />} />

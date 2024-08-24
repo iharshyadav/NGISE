@@ -50,18 +50,18 @@ const Carousel = () => {
             <img src="/pic3.png" className='w-full h-full' alt="" />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <div className='flex w-full  h-[45vh] sm:h-[60vh] md:h-[90vh] justify-center items-center'>
             <img src="/pic4.png" className='w-full h-full' alt="" />
                     
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
+          </SwiperSlide> */}
+          {/* <SwiperSlide>
             <div className='flex w-full  h-[45vh] sm:h-[60vh] md:h-[90vh] justify-center items-center'>
             <img src="/pic5.png" className='w-full h-full' alt="" />
                     
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <div className='flex w-full  h-[45vh] sm:h-[60vh] md:h-[90vh] justify-center items-center'>
             <img src="/pic6.png" className='w-full h-full' alt="" />
