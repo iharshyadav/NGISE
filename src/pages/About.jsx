@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLocation } from 'react-router-dom';
 
 const About = () => {
@@ -24,7 +23,7 @@ const About = () => {
 
           <div className="font sm:mx-20 mx-4 mb-10 flex flex-wrap sm:text-[1.05rem] ">
             <div className="lg:w-[35%] sm:m-10 m-4 lg:m-0  ">
-              <img src="img2.webp" className="w-full h-full" alt="" />
+              <img src="img2.webp" className="w-[100%] h-[100%]" alt="" />
             </div>
 
             <div className=" lg:w-[65%] w-full ">
