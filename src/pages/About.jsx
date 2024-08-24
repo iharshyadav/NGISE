@@ -8,16 +8,16 @@ const About = () => {
   
   return (
     <>
-      <div className="flex w-full items-center justify-center font mt-10  mb-16">
-        <h1 className="text-center text-4xl  font-bold border-b-4 inline-block border-[#46ce9c]">
-          About Us
-        </h1>
+      <div className=" flex w-full items-center justify-center mt-10 ">
+      <h2 className="text-4xl font-semibold text-black sm:text-4xl border-b-4 inline-block border-[#46ce9c] pb-2">
+            About Us
+          </h2>
       </div>
 
       {path === "/about" && (
         <>
-          <div className=" flex flex-col mb-10 items-center">
-            <h1 className="sm:text-3xl text-xl  font-semibold">
+          <div className="mt-16 flex flex-col mb-12 items-center">
+            <h1 className="sm:text-3xl text-xl  font-semibold ">
               Ajay Kumar Garg Engineering College
             </h1>
           </div>

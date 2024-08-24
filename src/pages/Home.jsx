@@ -14,18 +14,18 @@ const Home = () => {
         <Carousel/>
         {/* <HomeLayout /> */}
         
-      <div className="font flex flex-col mb-10 items-center">
-        <h1 className="sm:text-3xl text-xl mt-10  font-semibold">
+      <div className="flex flex-col mb-10 items-center">
+        <h1 className="sm:text-3xl text-xl mt-10  font-bold border-b-4 inline-block border-[#46ce9c] pb-2">
           About The Conference
         </h1>
       </div>
 
-      <div className="font sm:mx-20 mx-4 mb-14 flex flex-wrap items-center justify-center sm:text-[1.05rem]">
-        <div className="lg:w-[30%] sm:m-10 m-4   lg:m-0 ">
+      <div className=" sm:mx-20 mx-4 mb-14 flex flex-wrap items-center justify-center sm:text-[1.05rem]">
+        <div className="lg:w-[35%] sm:m-10 m-4   lg:m-0 ">
           <img src="img3.jpg" className="w-full h-full" alt="" />
         </div>
-        <div className="lg:w-[70%] w-full ">
-          <p className=" mx-6 text-justify">
+        <div className="lg:w-[65%] w-full ">
+          <p className=" mx-6 text-base text-justify">
             The International Conference on Next Generation Information System
             Engineering (NGISE) offers a dynamic platform for researchers,
             industry practitioners, and academicians to delve into the forefront

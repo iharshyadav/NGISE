@@ -200,8 +200,8 @@ function CallForPaper() {
   };
   return (
     <>
-      <div className=" flex w-full items-center justify-center mt-10 mb-16">
-      <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl border-b-4 inline-block border-[#46ce9c] pb-2">
+      <div className=" flex w-full items-center justify-center mt-10 ">
+      <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl border-b-4 inline-block border-[#46ce9c] pb-2">
             Call For Paper
           </h2>
       </div>
