@@ -14,7 +14,6 @@ const Navbar=()=> {
   }
 
   const [isMenuOpen1, setIsMenuOpen1] = React.useState(false)
-  const location1 = useLocation();
 
   const toggleMenu1 = () => {
     setIsMenuOpen1(!isMenuOpen1)
@@ -57,59 +56,139 @@ const Navbar=()=> {
   
   
   return (
-    <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-white bg-opacity-  z-50">
-      <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+    <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-white bg-opacity- z-50">
+      <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2">
         <div className="inline-flex items-center space-x-2">
-         <img className='sm:w-[4.5vw] w-[12vw]' src="https://www.akgec.ac.in/wp-content/themes/twentysixteen/img/AKGEC_1_0.png" alt="" />
+          <img
+            className="sm:w-[7vw] w-[12vw] bg-transparent"
+            src="/WhatsApp_Image_2024-08-24_at_10.25.14_00d5ffd9-removebg-preview.png"
+            alt=""
+          />
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
-            <Link to='/'><li className={`text-base font-semibold ${currentPathname === '/' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Home</li></Link>
-            <Link to='/about'><li className={`text-base font-semibold ${currentPathname === '/about' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>About</li></Link>
-            <Link to='/callforpaper'><li className={`text-base font-semibold ${currentPathname === '/callforpaper' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Call For Paper</li></Link>
-            <Link to='/papersubmission'><li className={`text-base font-semibold ${currentPathname === '/papersubmission' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Paper Submission</li></Link>
-            <li className="relative z-50 ">
-              <span className={`flex items-center text-base font-semibold cursor-pointer ${currentPathname === '/commitee' ? 'text-[#46ce9c]' : 'text-gray-800'}  hover:text-[#00cc99] `} onClick={toggleMenu1}>Committee <RiArrowDropDownLine className='text-2xl' />  </span>
-              {isMenuOpen1 && (
-                <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
-                   <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="/programcommittee" onClick={() => setIsMenuOpen1(false)}>Program Committee</Link>
-               </li>
-                  <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="/organizingcommittee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
-                  </li>
-              
-                </ul>
-              )}
-            </li>      
-            <Link to='/speakers'><li className={`text-base font-semibold ${currentPathname ==='/speakers' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Speakers</li></Link> 
-            <li className="relative z-50 ">
-              <span className={`flex items-center text-base font-semibold cursor-pointer ${currentPathname === '/Registration' ? 'text-[#46ce9c]' : 'text-gray-800'}  hover:text-[#00cc99] `} onClick={toggleMenu3}>Registration <RiArrowDropDownLine className='text-2xl' />  </span>
-              {isMenuOpen3 && (
-                <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
-                  <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="/registration" onClick={() => { setIsMenuOpen3(false); }} > Registration Fee </Link>
-                  </li>
-               <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="/fee" onClick={() => setIsMenuOpen3(false)}>Fee submission</Link>
-               </li>
-                </ul>
-              )}
-            </li>       
-            <Link to='/accomodation'><li className={`text-base font-semibold ${currentPathname === '/accomodation' ? 'text-[#46ce9c]' : 'text-gray-800'} hover:text-[#00cc99]`}>Accomodation</li></Link>
-            <li className="relative z-50 ">
-              <span className={`flex items-center text-base font-semibold cursor-pointer ${currentPathname === '/contact' ? 'text-[#46ce9c]' : 'text-gray-800'}  hover:text-[#00cc99] `} onClick={toggleMenu2}>Contact Us <RiArrowDropDownLine className='text-2xl' />  </span>
-              {isMenuOpen2 && (
-                <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
-                  <li className="py-1 px-2 hover:text-[#00cc99]">
-                    <Link to="/contact" onClick={() => { setIsMenuOpen2(false); }} > Query</Link>
-                  </li>
-               <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="/contact" onClick={() => setIsMenuOpen2(false)}>Reach Us</Link>
-               </li>
-                </ul>
-              )}
-            </li>     
+            <Link to="/">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/" ? "text-[#46ce9c]" : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Home
+              </li>
+            </Link>
+            <Link to="/about">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/about"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                About
+              </li>
+            </Link>
+            <Link to="/callforpaper">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/callforpaper"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Call For Paper
+              </li>
+            </Link>
+            <Link to="/papersubmission">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/papersubmission"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Paper Submission
+              </li>
+            </Link>
+            <li className="relative z-50 group">
+              <button
+                className={`flex items-center text-base font-semibold cursor-pointer ${
+                  currentPathname === "/commitee"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Committee <RiArrowDropDownLine className="text-2xl" />
+              </button>
+              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                  <Link to="/programcommittee">Program Committee</Link>
+                </li>
+                <li className="py-2 px-2 hover:text-[#00cc99]">
+                  <Link to="/organizingcommittee">Organizing Committee</Link>
+                </li>
+              </ul>
+            </li>
+
+            <Link to="/speakers">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/speakers"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Speakers
+              </li>
+            </Link>
+            <li className="relative z-50 group">
+              <span
+                className={`flex items-center text-base font-semibold cursor-pointer ${
+                  currentPathname === "/commitee"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Registration <RiArrowDropDownLine className="text-2xl" />
+              </span>
+              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                  <Link to="/registration">Registration Fee</Link>
+                </li>
+                <li className="py-2 px-2 hover:text-[#00cc99]">
+                  <Link to="/fee">Fee submission</Link>
+                </li>
+              </ul>
+            </li>
+            <Link to="/accomodation">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/accomodation"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Accomodation
+              </li>
+            </Link>
+            <li className="relative z-50 group">
+              <span
+                className={`flex items-center text-base font-semibold cursor-pointer ${
+                  currentPathname === "/contact"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Contact Us <RiArrowDropDownLine className="text-2xl" />
+              </span>
+              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+              <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                  <Link to="/contact">Query</Link>
+                </li>
+                <li className="py-2 px-2 hover:text-[#00cc99]">
+                  <Link to="/contact">Reach Us</Link>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div className="hidden lg:block">
@@ -129,7 +208,11 @@ const Navbar=()=> {
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex w-[9.5vw] items-center space-x-2">
-                    <img className='w-[9.5vw]' src="https://www.akgec.ac.in/wp-content/themes/twentysixteen/img/AKGEC_1_0.png" alt="" />
+                    <img
+                      className="w-[9.5vw]"
+                      src="https://www.akgec.ac.in/wp-content/themes/twentysixteen/img/AKGEC_1_0.png"
+                      alt=""
+                    />
                   </div>
                   <div className="-mr-2">
                     <button
@@ -144,52 +227,167 @@ const Navbar=()=> {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
-                     <Link to='/'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold text-gray-800 hover:text-[#46ce9c] ">Home</li></Link>
-                     <Link to='/about'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  hover:text-gray-900">About</li></Link>
-                     <Link to='/callforpaper'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900">Call For Paper</li></Link>
-                     <Link to='/papersubmission'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Paper Submission</li></Link>
-                     <li className="relative z-50 flex " >
-              <span className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `} onClick={toggleMenu1}>Committee <RiArrowDropDownLine className='text-2xl' />  </span>
-              {isMenuOpen1 && (
-                <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                 <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                 <Link to="/commitee#program-committee" onClick={() => setIsMenuOpen1(false)}>Program Committee</Link>
-               </li>
-               <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                    <Link to="/commitee#organizing-committee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
-                  </li>
-                </ul>
-              )}
-            </li> 
+                    <Link to="/">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold text-gray-800 hover:text-[#46ce9c] "
+                      >
+                        Home
+                      </li>
+                    </Link>
+                    <Link to="/about">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold hover:cursor-pointer  hover:text-gray-900"
+                      >
+                        About
+                      </li>
+                    </Link>
+                    <Link to="/callforpaper">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900"
+                      >
+                        Call For Paper
+                      </li>
+                    </Link>
+                    <Link to="/papersubmission">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900"
+                      >
+                        Paper Submission
+                      </li>
+                    </Link>
+                    <li className="relative z-50 flex ">
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={toggleMenu1}
+                      >
+                        Committee <RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                      {isMenuOpen1 && (
+                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/commitee#program-committee"
+                              onClick={() => setIsMenuOpen1(false)}
+                            >
+                              Program Committee
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/commitee#organizing-committee"
+                              onClick={() => {
+                                setIsMenuOpen1(false);
+                              }}
+                            >
+                              {" "}
+                              Organizing Committee{" "}
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
 
-                     <Link to='/speakers'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900">Speakers</li></Link> 
-                     <li className="relative z-50 flex " >
-              <span className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `} onClick={toggleMenu3}>Registration<RiArrowDropDownLine className='text-2xl' />  </span>
-              {isMenuOpen3 && (
-                <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                  <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                    <Link to="/registration" onClick={() => { setIsMenuOpen3(false); }} >Registration Fees</Link>
-                  </li>
-               <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                 <Link to="/fee" onClick={() => setIsMenuOpen3(false)}>Fee Submission</Link>
-               </li>
-                </ul>
-              )}
-            </li>  
-                     <Link to='/accomodation'><li onClick={()=>setIsMenuOpen(false)} className="flex text-base font-semibold text-gray-800 hover:text-gray-900">Accomodation</li></Link>
-                     <li className="relative z-50 flex " >
-              <span className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `} onClick={toggleMenu2}>Contact Us<RiArrowDropDownLine className='text-2xl' />  </span>
-              {isMenuOpen2 && (
-                <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                  <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                    <Link to="/contact" onClick={() => { setIsMenuOpen2(false); }} > Query </Link>
-                  </li>
-               <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                 <Link to="/contact" onClick={() => setIsMenuOpen2(false)}>Reach us</Link>
-               </li>
-                </ul>
-              )}
-            </li> 
+                    <Link to="/speakers">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900"
+                      >
+                        Speakers
+                      </li>
+                    </Link>
+                    <li className="relative z-50 flex ">
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={toggleMenu3}
+                      >
+                        Registration
+                        <RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                      {isMenuOpen3 && (
+                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/registration"
+                              onClick={() => {
+                                setIsMenuOpen3(false);
+                              }}
+                            >
+                              Registration Fees
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/fee"
+                              onClick={() => setIsMenuOpen3(false)}
+                            >
+                              Fee Submission
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
+                    <Link to="/accomodation">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold text-gray-800 hover:text-gray-900"
+                      >
+                        Accomodation
+                      </li>
+                    </Link>
+                    <li className="relative z-50 flex ">
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={toggleMenu2}
+                      >
+                        Contact Us
+                        <RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                      {isMenuOpen2 && (
+                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/contact"
+                              onClick={() => {
+                                setIsMenuOpen2(false);
+                              }}
+                            >
+                              {" "}
+                              Query{" "}
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/contact"
+                              onClick={() => setIsMenuOpen2(false)}
+                            >
+                              Reach us
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
                   </nav>
                 </div>
                 {/* <button
@@ -204,7 +402,7 @@ const Navbar=()=> {
         )}
       </div>
     </div>
-  )
+  );
 }
 
 export default Navbar
