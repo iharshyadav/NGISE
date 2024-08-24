@@ -28,6 +28,10 @@ const Navbar=()=> {
   const toggleMenu3 = () => {
     setIsMenuOpen3(!isMenuOpen3)
   }
+  const [isMenuOpen4, setIsMenuOpen4] = React.useState(false)
+  const toggleMenu4 = () => {
+    setIsMenuOpen4(!isMenuOpen4)
+  }
 
   useEffect(() => { 
     const hash = location.hash;
@@ -87,17 +91,28 @@ const Navbar=()=> {
                 About
               </li>
             </Link>
-            <Link to="/callforpaper">
-              <li
-                className={`text-base font-semibold ${
+            <li className="relative z-50 group">
+              <button
+                className={`flex items-center text-base font-semibold cursor-pointer ${
                   currentPathname === "/callforpaper"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
                 } hover:text-[#00cc99]`}
               >
-                Call For Paper
-              </li>
-            </Link>
+                Call for paper <RiArrowDropDownLine className="text-2xl" />
+              </button>
+              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                  <Link to="/callforpaper">Paper Submission </Link>
+                </li>
+                <li className="py-2 px-2 hover:text-[#00cc99]">
+                  <Link to="/plagiarism">Plagiarism Policy</Link>
+                </li>
+                <li className="py-1 px-2 hover:text-[#00cc99]">
+                  <Link to="/impDates">Important dates link</Link>
+                </li>
+              </ul>
+            </li>
             {/* <Link to="/papersubmission">
               <li
                 className={`text-base font-semibold ${
@@ -181,7 +196,7 @@ const Navbar=()=> {
                 Contact Us <RiArrowDropDownLine className="text-2xl" />
               </span>
               <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
-              <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
                   <Link to="/contact/query">Query</Link>
                 </li>
                 <li className="py-2 px-2 hover:text-[#00cc99]">
@@ -192,7 +207,11 @@ const Navbar=()=> {
           </ul>
         </div>
         <div className="hidden lg:block">
-        <img className="sm:w-[7vw] w-[12vw] bg-transparent" src="/WhatsApp_Image_2024-08-24_at_15.16.55_df7f44ea-removebg-preview.png" alt="" />
+          <img
+            className="sm:w-[7vw] w-[12vw] bg-transparent"
+            src="/WhatsApp_Image_2024-08-24_at_15.16.55_df7f44ea-removebg-preview.png"
+            alt=""
+          />
 
           {/* <button
             type="button"
@@ -245,14 +264,38 @@ const Navbar=()=> {
                         About
                       </li>
                     </Link>
-                    <Link to="/callforpaper">
-                      <li
-                        onClick={() => setIsMenuOpen(false)}
-                        className="flex text-base font-semibold hover:cursor-pointer text-gray-800 hover:text-gray-900"
+                    <li className="relative z-50 flex ">
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={toggleMenu4}
                       >
-                        Call For Paper
-                      </li>
-                    </Link>
+                        Call For Paper <RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                        
+                      {isMenuOpen4 && (
+                        <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                          <li
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen4(false)}
+                          >
+                            <Link to="/callforpaper">Paper Submission </Link>
+                          </li>
+                          <li
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen4(false)}
+                          >
+                            <Link to="/plagiarism">Plagiarism Policy</Link>
+                          </li>
+                          <li
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen4(false)}
+                          >
+                            <Link to="/impDates">Important Dates</Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
+
                     {/* <Link to="/papersubmission">
                       <li
                         onClick={() => setIsMenuOpen(false)}
@@ -261,7 +304,7 @@ const Navbar=()=> {
                         Paper Submission
                       </li>
                     </Link> */}
-                    <li className="relative z-50 flex ">
+                    <li className="relative z-40 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu1}
@@ -269,7 +312,7 @@ const Navbar=()=> {
                         Committee <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
                       {isMenuOpen1 && (
-                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                        <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                           <li
                             className="py-1 px-2 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen(false)}
@@ -307,7 +350,7 @@ const Navbar=()=> {
                         Speakers
                       </li>
                     </Link>
-                    <li className="relative z-50 flex ">
+                    <li className="relative z-30 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu3}
@@ -316,7 +359,7 @@ const Navbar=()=> {
                         <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
                       {isMenuOpen3 && (
-                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                        <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                           <li
                             className="py-1 px-2 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen(false)}
@@ -352,7 +395,7 @@ const Navbar=()=> {
                         Accomodation
                       </li>
                     </Link>
-                    <li className="relative z-50 flex ">
+                    <li className="relative z-20 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu2}
