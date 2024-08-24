@@ -62,13 +62,13 @@ const Navbar=()=> {
   return (
     <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-white bg-opacity- z-50">
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2">
-        <div className="inline-flex items-center space-x-2">
+        <Link to="/" className="inline-flex items-center space-x-2">
           <img
             className="sm:w-[7vw] w-[12vw] bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_10.25.14_00d5ffd9-removebg-preview.png"
             alt=""
           />
-        </div>
+        </Link>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
             <Link to="/">
@@ -108,8 +108,8 @@ const Navbar=()=> {
                 <li className="py-2 px-2 hover:text-[#00cc99]">
                   <Link to="/plagiarism">Plagiarism Policy</Link>
                 </li>
-                <li className="py-1 px-2 hover:text-[#00cc99]">
-                  <Link to="/impDates">Important dates link</Link>
+                <li className="py-2 px-2 hover:text-[#00cc99]">
+                  <Link to="/impDates">Important dates</Link>
                 </li>
               </ul>
             </li>
