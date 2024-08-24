@@ -318,7 +318,7 @@ const Navbar=()=> {
                             onClick={() => setIsMenuOpen(false)}
                           >
                             <Link
-                              to="/commitee#program-committee"
+                              to="/programcommittee"
                               onClick={() => setIsMenuOpen1(false)}
                             >
                               Program Committee
@@ -329,7 +329,7 @@ const Navbar=()=> {
                             onClick={() => setIsMenuOpen(false)}
                           >
                             <Link
-                              to="/commitee#organizing-committee"
+                              to="/organizingcommittee"
                               onClick={() => {
                                 setIsMenuOpen1(false);
                               }}

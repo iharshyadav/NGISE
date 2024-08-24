@@ -202,21 +202,46 @@ function CallForPaper() {
     <>
       <div className=" flex w-full items-center justify-center mt-10 ">
       <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl border-b-4 inline-block border-[#46ce9c] pb-2">
-            Call For Paper
+      Paper Submission 
           </h2>
       </div>
 
       <div className="mx-16 md:mx-28 mb-8 mt-10 text-justify text-base sm:text-lg flex flex-col ">
         <p>
-          We are delighted to inform you that Department of Information Technology, Ajay Kumar Garg Engineering College,
-          Ghaziabad is hosting the First International Conference on Next Generation Information System Engineering (NGISE2025). 
+        The Conference intends to bring together Professionals, Academicians, Industry Experts, Researchers and Enthusiasts from across the globe and provides a platform to discuss various emerging trends and innovations and share research results and new directions in the field of next generation technologies. 
         </p>
         <p className="pt-4">
-          The Conference will be organized in Hybrid mode on 28th – 29th March, 2025. The broader theme of the conference is Next Generation Information System Engineering.
-          The conference has different tracks where the researchers can present or share their ideas/research approach in different emerging areas of Information System Engineering.
+        Original, unpublished research papers, articles, and working papers, with a maximum length of 6 pages, are invited for presentation and publication in the conference proceedings on topics related to the conference theme. The submission guidelines include a maximum limit of six pages, inclusive of figures and references. All submissions will undergo a plagiarism check and papers with similarity scores of 15% or higher may be rejected without any further review. All the accepted and presented papers will be submitted to IEEE Xplore subject to the fulfilment of the IEEE standards.
         </p>
-
+        <ul className="list-disc mt-12 pl-5 space-y-4 text-lg">
+          <li>
+            To download the template for paper submission, click on the link: 
+            <a 
+              href="https://www.ieee.org/conferences/publishing/templates.html" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline"
+            >
+              Template
+            </a>
+          </li>
+          <li>
+            To submit the paper, click on the link: 
+            <a 
+              href="https://cmt3.research.microsoft.com/NGISE2025" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline"
+            >
+              Submission Link
+            </a>
+          </li>
+          <li>
+          Prospective authors are invited to submit a maximum of 6 pages full paper on the following tracks (but not limited to):
+          </li>
+          </ul>
       </div>
+      
       <section className="mx-auto max-w-7xl px-2 py-10 md:px-0">
       <div>
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -256,44 +281,6 @@ function CallForPaper() {
         </div>
       </div>
     </section>
-
-      <div className="lg:px-52 px-8 justify-center items-center flex flex-wrap text-black pb-4 ">
-        <div className="lg:w-[60%] flex justify-center items-center w-full ">
-        <div className="py-6 px-10 self-center rounded-xl text-black">
-  <h1 className="font-bold text-3xl mb-8 text-center border-b-4 border-[#46ce9c] pb-2">
-    Important Dates
-  </h1>
-  <table className="text-center border border-black">
-    <tbody>
-      <tr className="border border-black">
-        <td className="border border-black p-2">Full Paper Submission Date</td>
-        <td className="border border-black p-2">25 Nov 2024</td>
-      </tr>
-      <tr className="border border-black">
-        <td className="border border-black p-2">Notification of Acceptance Date</td>
-        <td className="border border-black p-2">10 Jan 2025</td>
-      </tr>
-      <tr className="border border-black">
-        <td className="border border-black p-2">Final Paper Submission Date</td>
-        <td className="border border-black p-2">22 Jan 2025</td>
-      </tr>
-      <tr className="border border-black">
-        <td className="border border-black p-2">Registration Deadline</td>
-        <td className="border border-black p-2">5 Feb 2025</td>
-      </tr>
-      <tr className="border border-black">
-        <td className="border border-black p-2">Conference Date</td>
-        <td className="border border-black p-2">28-29 March 2025</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-        </div>
-        {/* <div className="lg:w-[40%] flex justify-center items-center sm:m-10 m-4 lg:m-0   ">
-          <img src="date.jpg" className="w-[400px] h-[250px]" alt="" />
-        </div> */}
-      </div>
     </>
   );
 
