@@ -98,7 +98,7 @@ const Navbar=()=> {
                 Call For Paper
               </li>
             </Link>
-            <Link to="/papersubmission">
+            {/* <Link to="/papersubmission">
               <li
                 className={`text-base font-semibold ${
                   currentPathname === "/papersubmission"
@@ -108,7 +108,7 @@ const Navbar=()=> {
               >
                 Paper Submission
               </li>
-            </Link>
+            </Link> */}
             <li className="relative z-50 group">
               <button
                 className={`flex items-center text-base font-semibold cursor-pointer ${
@@ -251,14 +251,14 @@ const Navbar=()=> {
                         Call For Paper
                       </li>
                     </Link>
-                    <Link to="/papersubmission">
+                    {/* <Link to="/papersubmission">
                       <li
                         onClick={() => setIsMenuOpen(false)}
                         className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900"
                       >
                         Paper Submission
                       </li>
-                    </Link>
+                    </Link> */}
                     <li className="relative z-50 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
