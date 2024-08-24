@@ -109,12 +109,9 @@ const About = () => {
             industry practitioners, and academicians to delve into the forefront
             of technological innovation across a diverse spectrum of domains.
             With tracks covering pivotal areas such as Information System
-            Engineering, Machine Learning and Deep Learning, Big Data Analytics
-            and Processing, Data Mining and Knowledge Discovery, Artificial
-            Intelligence in Big Data Engineering, Cloud Computing for Big Data,
-            Advanced-Data Storage and Retrieval, Ethics in Artificial
-            Intelligence and Big Data, Industry Applications and Case Studies,
-            and Emerging Trends and Technologies, NGISE serves as a nexus for
+            Engineering, Artificial Intelligence, Green and Sustainable IT Systems and Algorithms, Data Mining and Knowledge Discovery,Big Data Engineering,
+            Next Gen Cloud Computing , GenAI Data Storage and Retrieval Techniques, Security and Privacy Issues in Next Gen Computing, Industry Applications and Case Studies,
+            and Emerging Trends and Technologies NGISE serves as a nexus for
             exchanging groundbreaking ideas, sharing practical insights, and
             fostering collaborative endeavors. Through a rich tapestry of
             presentations, workshops, and discussions, NGISE aims to catalyze
