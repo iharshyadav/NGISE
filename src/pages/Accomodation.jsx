@@ -71,9 +71,11 @@ const data = [
 
 const Accomodation = () => {
   return (
-    <section className="py-10">
-       <p className='text-center text-4xl md:text-5xl mb-7 font-bold '> Accomodation</p>
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="py-10">
+       <div className='flex justify-center'>
+       <h1 className='text-4xl md:text-5xl mb-7 font-bold border-b-4 inline-block border-[#46ce9c] pb-2'> Accomodation</h1>
+       </div>
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-2 md:px-4 lg:px-10">
        
         {data.map((item, index) => (
           <div key={index} className=" bg-white shadow-md rounded-lg overflow-hidden">
@@ -82,13 +84,13 @@ const Accomodation = () => {
               <p className="text-lg  mb-2"><span className='font-semibold'>Address: </span>{item.Address}</p>
               <p className="text-lg mb-2"><span className="font-semibold">Tel: </span>{item.Tel}</p>
               <p className="text-lg">
-                <span className="font-semibold">Website:</span> <a href={item.Website} className="text-blue-500" target="_blank" rel="noopener noreferrer">{item.Website}</a>
+                <span className="font-semibold ">Website:</span> <a href={item.Website} className="text-blue-500" target="_blank" rel="noopener noreferrer">{item.Website}</a>
               </p>
             </div>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
