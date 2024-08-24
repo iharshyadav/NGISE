@@ -72,12 +72,13 @@ const Navbar=()=> {
               <span className={`flex items-center text-base font-semibold cursor-pointer ${currentPathname === '/commitee' ? 'text-[#46ce9c]' : 'text-gray-800'}  hover:text-[#00cc99] `} onClick={toggleMenu1}>Committee <RiArrowDropDownLine className='text-2xl' />  </span>
               {isMenuOpen1 && (
                 <ul className="bg-white w-[12vw] ring-1 ring-white ring-opacity-20  absolute mt-4 font-semibold  shadow-lg">
+                   <li className="py-1 px-2 hover:text-[#00cc99]">
+                 <Link to="/programcommittee" onClick={() => setIsMenuOpen1(false)}>Program Committee</Link>
+               </li>
                   <li className="py-1 px-2 hover:text-[#00cc99]">
                     <Link to="/organizingcommittee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
                   </li>
-               <li className="py-1 px-2 hover:text-[#00cc99]">
-                 <Link to="/programcommittee" onClick={() => setIsMenuOpen1(false)}>Program Committee</Link>
-               </li>
+              
                 </ul>
               )}
             </li>      
@@ -151,12 +152,12 @@ const Navbar=()=> {
               <span className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `} onClick={toggleMenu1}>Committee <RiArrowDropDownLine className='text-2xl' />  </span>
               {isMenuOpen1 && (
                 <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                  <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
-                    <Link to="/commitee#organizing-committee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
-                  </li>
-               <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
+                 <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
                  <Link to="/commitee#program-committee" onClick={() => setIsMenuOpen1(false)}>Program Committee</Link>
                </li>
+               <li className="py-1 px-2 hover:text-[#00cc99]" onClick={()=>setIsMenuOpen(false)}>
+                    <Link to="/commitee#organizing-committee" onClick={() => { setIsMenuOpen1(false); }} > Organizing Committee </Link>
+                  </li>
                 </ul>
               )}
             </li> 
