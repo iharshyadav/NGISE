@@ -47,9 +47,13 @@ const data = [
     Tel: "1800 1031 444",
     Website: "https://www.theleela.com/the-leela-palace-new-delhi",
   },
-
- 
-  {
+   {
+    image:img3,
+    Address:"Country Inn & Suites by Radisson, Sahibabad, Distt Ghaziabad",
+    Tel:"1800 1080 333 (IN)",
+    Website:"https://www.radissonhotels.com/en-us/hotels/country-inn-sahibabad",
+   },
+   {
     image: img4,
     Address: "Hayatt Regency, Delhi",
     Tel: "+91 22 7101 1234",
