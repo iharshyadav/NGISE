@@ -8,13 +8,13 @@ const Query = () => {
             Ajay Kumar Garg Engineering College
           </h2>
           <p className="text-md font-semibold text-gray-600">
-            For Conference related Queries Contact:
+            For Conference related queries contact:
           </p>
           <p className="text-md text-gray-600">
-            1. Dr. Anupama Sharma (sharmaanupama@akgec.ac.in) - 919868450322
+            1. Call at 919868450322 (Dr. Anupama Sharma) 
           </p>
           <p className="text-md text-gray-600">
-            2. Dr. Ruchi Gupta (guptaruchi@akgec.ac.in) - 919212728196
+            2. Mail to ngise@akgec.ac.in
           </p>
         </div>
       </div>
