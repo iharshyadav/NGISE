@@ -1,4 +1,4 @@
-import React from 'react'
+,import React from 'react'
 import HomeLayout from '../Components/HomeLayout'
 import About from './About';
 import Carousel from '../Components/Carousel';
@@ -33,10 +33,10 @@ const Home = () => {
             With tracks covering pivotal areas such as Information System
             Engineering, Artificial Intelligence, Green and Sustainable IT Systems and Algorithms, Data Mining and Knowledge Discovery, Big Data Engineering,
             Next Gen Cloud Computing, GenAI Data Storage and Retrieval Techniques, Security and Privacy Issues in Next Gen Computing, Industry Applications and Case Studies,
-            and Emerging Trends and Technologies NGISE serves as a nexus for
+            and Emerging Trends and Technologies, the conference serves as a nexus for
             exchanging groundbreaking ideas, sharing practical insights, and
             fostering collaborative endeavors. Through a rich tapestry of
-            presentations, workshops, and discussions, NGISE aims to catalyze
+            presentations, workshops, and discussions, this conference aims to catalyze
             advancements in next-generation information systems and propel the
             evolution of technology-driven solutions in today&rsquo;s rapidly evolving
             digital landscape.
