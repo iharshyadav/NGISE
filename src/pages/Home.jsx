@@ -2,6 +2,7 @@ import React from 'react'
 import HomeLayout from '../Components/HomeLayout'
 import About from './About';
 import Carousel from '../Components/Carousel';
+import ImportantDates from '../pages/ImpDates'
 // import CallForPaper from './CallForPaper';
 // import Committee from './Commitee'
 // import Registration from './Registration'
@@ -12,10 +13,11 @@ const Home = () => {
     <>
       <div className='w-full'>
         <Carousel/>
+        <ImportantDates/>
         {/* <HomeLayout /> */}
         
       <div className="flex flex-col mb-10 items-center">
-        <h1 className="sm:text-3xl text-xl mt-10  font-bold border-b-4 inline-block border-[#46ce9c] pb-2">
+        <h1 className="sm:text-4xl mb-8 text-xl mt-10  font-bold border-b-4 inline-block border-[#46ce9c] pb-2">
           About The Conference
         </h1>
       </div>
