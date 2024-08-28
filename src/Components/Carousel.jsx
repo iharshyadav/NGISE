@@ -19,7 +19,7 @@ const Carousel = () => {
           <h1 className='font-bold md:text-4xl lg:text-5xl text-center'>WELCOME TO</h1>
           <h1 className='font-bold md:text-4xl lg:text-5xl text-center mb-4'>NGISE-2025</h1>
           <p className='text-md font-semibold text-center '>1st International Conference on Next Generation Information System Engineering
-             in Ajay Kumar Garg Engineering College, 28th-29th Mar, 2025</p>
+             in Ajay Kumar Garg Engineering College,Ghaziabad,India, 28th-29th Mar, 2025</p>
         </div>
       </div> 
 
