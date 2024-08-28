@@ -23,7 +23,7 @@ const About = () => {
 
           <div className="font sm:mx-24 mx-4 mb-10 flex flex-wrap sm:text-[1.05rem] ">
             <div className="lg:w-[40%] sm:m-10 m-4 lg:m-0  ">
-              <img src="img2.webp" className="w-[100%] h-[100%]" alt="" />
+              <img src="/image2.jpg" className="w-[100%] h-[100%]" alt="" />
             </div>
 
             <div className=" lg:w-[60%] w-full ">
