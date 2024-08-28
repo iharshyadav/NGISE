@@ -31,9 +31,9 @@ const About = () => {
                 Ajay Kumar Garg Engineering College (AKGEC), Ghaziabad, Uttar
                 Pradesh is approved by AICTE and affiliated to Dr. A.P.J. Abdul
                 Kalam Technical University, Lucknow. The college, established in
-                1998, has six Engineering Departments offering B.Tech programs
+                1998, has six Engineering Departments offering B.Tech. programs
                 in twelve disciplines. The college also offers postgraduate
-                programs in Computer Application (MCA) and M.Tech. in four
+                programs in Computer Applications (MCA) and Mater of Technology (M.Tech.) in four
                 disciplines. All five major B.Tech. programs are accredited by
                 NBA. The college strives for excellence and has been
                 consistently maintaining excellent academic results and
