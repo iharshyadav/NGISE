@@ -33,6 +33,13 @@ const Navbar=()=> {
     setIsMenuOpen4(!isMenuOpen4)
   }
 
+  const toggleMenu5 = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const [isMenuOpen5, setIsMenuOpen5] = React.useState(false)
+
+
   useEffect(() => { 
     const hash = location.hash;
     if (hash === '#fees' || hash === '#submission') {
@@ -174,17 +181,28 @@ const Navbar=()=> {
                 </li>
               </ul>
             </li>
-            <Link to="/accomodation">
-              <li
-                className={`text-base font-semibold ${
-                  currentPathname === "/accomodation"
+            <li className="relative z-50 group">
+              <span
+                className={`flex items-center text-base font-semibold cursor-pointer ${
+                  currentPathname === "/locale"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
                 } hover:text-[#00cc99]`}
               >
-                Accomodation
-              </li>
-            </Link>
+                Locale <RiArrowDropDownLine className="text-2xl" />
+              </span>
+              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+              <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                  <Link to="/locale/about">About City</Link>
+                </li>
+                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                  <Link to="/locale/place">Place to Visit</Link>
+                </li>
+                <li className="py-2 px-2 hover:text-[#00cc99]">
+                  <Link to="/locale/nearby-hotel">Nearby Hotel</Link>
+                </li>
+              </ul>
+            </li>
             <li className="relative z-50 group">
               <span
                 className={`flex items-center text-base font-semibold cursor-pointer ${
@@ -387,14 +405,55 @@ const Navbar=()=> {
                         </ul>
                       )}
                     </li>
-                    <Link to="/accomodation">
-                      <li
-                        onClick={() => setIsMenuOpen(false)}
-                        className="flex text-base font-semibold text-gray-800 hover:text-gray-900"
+                    <li className="relative z-30 flex ">
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={toggleMenu5}
                       >
-                        Accomodation
-                      </li>
-                    </Link>
+                        Locale
+                        <RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                      {isMenuOpen5 && (
+                        <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/locale/about"
+                              onClick={() => {
+                                setIsMenuOpen5(false);
+                              }}
+                            >
+                              About City
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/locale/place"
+                              onClick={() => setIsMenuOpen5(false)}
+                            >
+                              Place to Visit
+                            </Link>
+                            </li>
+                            <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/locale/nearby-hotel"
+                              onClick={() => setIsMenuOpen5(false)}
+                            >
+                              Nearby Hotel
+                            </Link>
+                            </li>
+                          
+                        </ul>
+                      )}
+                    </li>
                     <li className="relative z-20 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}

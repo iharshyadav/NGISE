@@ -1,30 +1,3 @@
-// import React from 'react'
-// import img1 from "16256-114063-f63653267_3xl.avif"
-
-// const data = [
-//    {
-//     image:img1 ,
-//     Address:"Rajiv Chowk station",
-//     Tel:"+91 120 4300000",
-//     Website:"https://www.radissonhotels.com/en-us/hotels/radisson-blu-noida";
-//    }
-// ]
-
-// const Accomodation = () => {
-//   return (
-//     <section className="py-10">
-//       <div className="">
-//         <img></img>
-//         <p>Address:</p>
-//         <p>Tel:</p>
-//         <p>Website</p>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default Accomodation
-
 import React from 'react';
 import img1 from "/16256-114063-f63653267_3xl.avif";
 import img2 from "/leela.webp";
@@ -77,7 +50,7 @@ const Accomodation = () => {
   return (
     <div className="py-10">
        <div className='flex justify-center'>
-       <h1 className='text-4xl md:text-5xl mb-7 font-bold border-b-4 inline-block border-[#46ce9c] pb-2'> Accomodation</h1>
+       <h1 className='text-4xl md:text-5xl mb-7 font-bold border-b-4 inline-block border-[#46ce9c] pb-2'> Nearby Hotels</h1>
        </div>
        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-2 md:px-4 lg:px-10">
        
