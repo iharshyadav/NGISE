@@ -1,9 +1,11 @@
 
 const ImportantDates = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">Important Dates</h1>
-      <div className="bg-white shadow-md rounded-lg p-6">
+    <div className=" w-full px-20 ">
+  <div className='flex w-full items-center justify-center mt-12 mb-10'>
+        <h1 className='text-center text-4xl font-bold border-b-4 inline-block border-[#46ce9c] pb-2'>Important Dates</h1>
+      </div>      
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <ul className="list-disc pl-5 space-y-4 text-lg">
           <li>25th Nov, 2024: Paper Submission Deadline</li>
           <li>10th Jan, 2025: Acceptance Notification</li>
