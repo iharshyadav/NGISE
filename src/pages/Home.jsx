@@ -1,4 +1,4 @@
-,import React from 'react'
+import React from 'react'
 import HomeLayout from '../Components/HomeLayout'
 import About from './About';
 import Carousel from '../Components/Carousel';
