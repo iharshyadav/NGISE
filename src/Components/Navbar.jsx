@@ -68,11 +68,11 @@ const Navbar=()=> {
   
   
   return (
-    <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-white bg-opacity- z-50">
+    <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-opacity- bg-[#fffce6] z-50">
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2">
         <Link to="/" className="inline-flex items-center space-x-2">
           <img
-            className="sm:w-[7vw] w-[12vw] bg-transparent"
+            className="sm:w-[8vw] w-[13vw] bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_10.25.14_00d5ffd9-removebg-preview.png"
             alt=""
           />
