@@ -57,6 +57,12 @@ const Contact = () => {
               27th KM Milestone, Delhi - Meerut Expy,<br />
               Ghaziabad, Uttar Pradesh 201015
             </p>
+            <p className="text-lg text-gray-700">
+           Call at 919868450322 (Dr. Anupama Sharma) 
+          </p>
+          <p className="text-lg text-gray-700 mb-2">
+            Mail to ngise@akgec.ac.in
+          </p>
             <p className="text-md text-gray-600">
               For more information, visit our website or contact us at info@akgec.ac.in.
             </p>
