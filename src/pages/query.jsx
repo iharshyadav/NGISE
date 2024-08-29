@@ -11,7 +11,7 @@ const Query = () => {
             For Conference related queries contact:
           </p>
           <p className="text-md text-gray-600">
-            1. Call at 919868450322 (Dr. Anupama Sharma) 
+            1. Call at +91-9868450322 (Dr. Anupama Sharma) 
           </p>
           <p className="text-md text-gray-600">
             2. Mail to ngise@akgec.ac.in
