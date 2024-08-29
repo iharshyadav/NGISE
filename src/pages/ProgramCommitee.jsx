@@ -232,7 +232,6 @@ const Committee = () => {
                 Ms. Shikha Agarwal Ajay Kumar Garg Engineering College,
                 Ghaziabad, India
               </li>
-
               <li>
                 Ms. Sheradha Jauhari Ajay Kumar Garg Engineering College,
                 Ghaziabad, India
