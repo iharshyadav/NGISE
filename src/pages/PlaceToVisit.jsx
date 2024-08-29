@@ -26,7 +26,7 @@ const data = [
     image: img3,
     name: "Jama Masjid",
     desc: "Jama Masjid of Delhi, is one of the largest mosques in India. Its builder is the Mughal emperor Shah Jahan.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/jantar_mantar.jsp",
+    website: "https://delhitourism.gov.in/delhitourism/tourist_place/jama_masjid.jsp",
   },
   {
     image: img4,
@@ -60,8 +60,8 @@ const data = [
   },
   {
     image: img9,
-    name: "Gurdwara Bangla Sahib",
-    desc: "Gurdwara Bangla Sahib is one of the most prominent Sikh houses of worship, known for its association with the eighth Sikh Guru.",
+    name: "Gurudwara Bangla Sahib",
+    desc: "Gurudwara Bangla Sahib is one of the most prominent Sikh houses of worship, known for its association with the eighth Sikh Guru.",
     website: "https://delhitourism.gov.in/delhitourism/tourist_place/gurudawra_bangla_sahib.jsp",
   }
 ];
