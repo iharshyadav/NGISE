@@ -221,10 +221,6 @@ const Committee = () => {
                 Ghaziabad, India
               </li>
               <li>
-                Ms. Chitra Nasa Ajay Kumar Garg Engineering College, Ghaziabad,
-                India
-              </li>
-              <li>
                 Ms. Tanu Gupta Ajay Kumar Garg Engineering College, Ghaziabad,
                 India
               </li>
