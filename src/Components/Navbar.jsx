@@ -413,22 +413,14 @@ const Navbar=()=> {
                       >
                        Locale <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
-                      {isMenuOpen2 && (
+                      {isMenuOpen5 && (
                         <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                          {/* <li
-                            className="py-1 px-2 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen(false)}
+                            <li
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link
-                              to="/contact"
-                              onClick={() => {
-                                setIsMenuOpen2(false);
-                              }}
-                            >
-                              {" "}
-                              Query{" "}
-                            </Link>
-                          </li> */}
+                            <Link to="/locale/about">About City</Link>
+                          </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
@@ -455,12 +447,12 @@ const Navbar=()=> {
                         
                       {isMenuOpen2 && (
                         <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                          <li
+                          {/* <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen2(false)}
                           >
                             <Link to="/contact/query">Query </Link>
-                          </li>
+                          </li> */}
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen2(false)}
