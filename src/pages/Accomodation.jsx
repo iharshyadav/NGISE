@@ -52,6 +52,12 @@ const Accomodation = () => {
        <div className='flex justify-center'>
        <h1 className='text-4xl md:text-5xl mb-7 font-bold border-b-4 inline-block border-[#46ce9c] pb-2'> Nearby Hotels</h1>
        </div>
+       <div className="max-w-4xl mx-auto text-center px-4 mb-6">
+        <p className="text-base md:text-lg">
+          There are several nearby good hotels and accommodations conveniently located near the conference venue. 
+          A few of the most popular and close by hotels are listed below for your reference.
+        </p>
+      </div>
        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-2 md:px-4 lg:px-10">
        
         {data.map((item, index) => (
