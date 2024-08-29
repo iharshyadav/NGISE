@@ -406,7 +406,7 @@ const Navbar=()=> {
                         </ul>
                       )}
                     </li>
-                    <li className="relative z-50 flex ">
+                    <li className="relative z-20 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu5}
@@ -434,6 +434,33 @@ const Navbar=()=> {
                           >
                             <Link to="/locale/nearby-hotel">Nearby Hotel</Link>
                           </li>
+                        </ul>
+                      )}
+                    </li>
+
+                    <li className="relative z-10 flex ">
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={toggleMenu2}
+                      >
+                       Contact Us<RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                        
+                      {isMenuOpen2 && (
+                        <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                          <li
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen2(false)}
+                          >
+                            <Link to="/contact/query">Query </Link>
+                          </li>
+                          <li
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen2(false)}
+                          >
+                            <Link to="/contact">Reach Us</Link>
+                          </li>
+                         
                         </ul>
                       )}
                     </li>
