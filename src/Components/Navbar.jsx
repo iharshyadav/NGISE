@@ -33,11 +33,12 @@ const Navbar=()=> {
     setIsMenuOpen4(!isMenuOpen4)
   }
 
+  const [isMenuOpen5, setIsMenuOpen5] = React.useState(false)
   const toggleMenu5 = () => {
-    setIsMenuOpen(!isMenuOpen)
+    setIsMenuOpen5(!isMenuOpen5)
   }
 
-  const [isMenuOpen5, setIsMenuOpen5] = React.useState(false)
+
 
 
   useEffect(() => { 
@@ -405,93 +406,38 @@ const Navbar=()=> {
                         </ul>
                       )}
                     </li>
-                    <li className="relative z-30 flex ">
+                    <li className="relative z-50 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu5}
                       >
-                        Locale
-                        <RiArrowDropDownLine className="text-2xl" />{" "}
+                       Locale <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
+                        
                       {isMenuOpen5 && (
-                        <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                        <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                           <li
-                            className="py-1 px-2 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen(false)}
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link
-                              to="/locale/about"
-                              onClick={() => {
-                                setIsMenuOpen5(false);
-                              }}
-                            >
-                              About City
-                            </Link>
+                            <Link to="/locale/about">About City </Link>
                           </li>
                           <li
-                            className="py-1 px-2 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen(false)}
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link
-                              to="/locale/place"
-                              onClick={() => setIsMenuOpen5(false)}
-                            >
-                              Place to Visit
-                            </Link>
-                            </li>
-                            <li
-                            className="py-1 px-2 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            <Link
-                              to="/locale/nearby-hotel"
-                              onClick={() => setIsMenuOpen5(false)}
-                            >
-                              Nearby Hotel
-                            </Link>
-                            </li>
-                          
-                        </ul>
-                      )}
-                    </li>
-                    <li className="relative z-20 flex ">
-                      <span
-                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
-                        onClick={toggleMenu2}
-                      >
-                        Contact Us
-                        <RiArrowDropDownLine className="text-2xl" />{" "}
-                      </span>
-                      {isMenuOpen2 && (
-                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                          <li
-                            className="py-1 px-2 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            <Link
-                              to="/contact"
-                              onClick={() => {
-                                setIsMenuOpen2(false);
-                              }}
-                            >
-                              {" "}
-                              Query{" "}
-                            </Link>
+                            <Link to="/locale/place">Place to Visit</Link>
                           </li>
                           <li
-                            className="py-1 px-2 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen(false)}
+                            className="py-2 px-4 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link
-                              to="/contact"
-                              onClick={() => setIsMenuOpen2(false)}
-                            >
-                              Reach us
-                            </Link>
+                            <Link to="/locale/nearby-hotel">Nearby Hotel</Link>
                           </li>
                         </ul>
                       )}
                     </li>
+
                   </nav>
                 </div>
                 {/* <button
