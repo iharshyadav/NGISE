@@ -50,7 +50,7 @@ const Accomodation = () => {
   return (
     <div className="py-10">
        <div className='flex justify-center'>
-       <h1 className='text-4xl md:text-5xl mb-7 font-bold border-b-4 inline-block border-[#46ce9c] pb-2'> Nearby Hotels</h1>
+       <h1 className='text-4xl md:text-5xl mb-7 font-bold pb-2'> Nearby Hotels</h1>
        </div>
        <div className="max-w-4xl mx-auto text-center px-4 mb-6">
         <p className="text-base md:text-lg">
