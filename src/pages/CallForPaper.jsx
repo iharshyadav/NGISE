@@ -201,7 +201,7 @@ function CallForPaper() {
   return (
     <>
       <div className=" flex w-full items-center justify-center mt-10 ">
-      <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl border-b-4 inline-block border-[#46ce9c] pb-2">
+      <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl ">
       Paper Submission 
           </h2>
       </div>
@@ -245,7 +245,7 @@ function CallForPaper() {
       <section className="mx-auto max-w-7xl px-2 py-10 md:px-0">
       <div>
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl border-b-4 inline-block border-[#46ce9c] pb-2">
+          <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
             Conference Tracks
           </h2>
         </div>
