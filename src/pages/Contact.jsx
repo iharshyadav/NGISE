@@ -50,7 +50,7 @@ const Contact = () => {
       <div className="mx-auto max-w-7xl py-12 md:py-24">
         <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
           {/* contact from */}
-          <div className="p-8 bg-white rounded-lg shadow-lg">
+          <div className="p-5 bg-white rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Ajay Kumar Garg Engineering College
             </h2>
@@ -62,10 +62,10 @@ const Contact = () => {
             <PhoneCall size={22} /> 919868450322 (Dr. Anupama Sharma) 
           </p>
           <p className="text-lg flex gap-2 items-center justify-start text-gray-700 mb-2">
-          <Mail /> to ngise@akgec.ac.in
+          <Mail /> ngise@akgec.ac.in
           </p>
             <p className="text-md text-gray-600">
-              For more information, visit our website or contact us at <a className='font-semibold' href="https://www.akgec.ac.in/">akgec.ac.in</a>
+              For more information, visit our website or contact us at <a className='font-semibold' href="https://www.akgec.ac.in/">https://www.akgec.ac.in</a>
             </p>
           </div>
           <div className="formMap">
