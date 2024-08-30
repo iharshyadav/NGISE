@@ -14,31 +14,31 @@ const data = [
     image: img1,
     name: "The India Gate",
     desc: "The India Gate is a war memorial located near the Rajpath on the eastern edge of the ceremonial axis of New Delhi.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/india_gate.jsp",
+    website: "https://www.britannica.com/topic/India-Gate",
   },
   {
     image: img2,
     name: "Akshardham Temple",
     desc: "Akshardham means the divine abode of God. It is hailed as an eternal place of devotion, purity, and peace.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/akshardham_temple.jsp",
+    website: "https://akshardham.com/",
   },
   {
     image: img3,
     name: "Jama Masjid",
     desc: "Jama Masjid of Delhi, is one of the largest mosques in India. Its builder is the Mughal emperor Shah Jahan.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/jama_masjid.jsp",
+    website: "https://en.wikipedia.org/wiki/Jama_Masjid,_Delhi",
   },
   {
     image: img4,
     name: "Lotus Temple",
     desc: "The Lotus Temple is notable for its lotus-like shape, it has become a prominent attraction in the city.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/bahai_temple.jsp",
+    website: "https://en.wikipedia.org/wiki/Lotus_Temple",
   },
   {
     image: img5,
     name: "Jantar Mantar",
     desc: "A Jantar Mantar is an assembly of stone-built astronomical instruments, designed to be used with the naked eye.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/jantar_mantar.jsp",
+    website: "https://en.wikipedia.org/wiki/Jantar_Mantar,_New_Delhi",
   },
   {
     image: img6,
@@ -50,7 +50,7 @@ const data = [
     image: img7,
     name: "Humayun's Tomb",
     desc: "Humayun's Tomb was built in the 1560s, with the patronage of Humayun's son, the great Emperor Akbar.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+    website: "https://whc.unesco.org/en/list/232/",
   },
   {
     image: img8,
@@ -62,7 +62,7 @@ const data = [
     image: img9,
     name: "Gurudwara Bangla Sahib",
     desc: "Gurudwara Bangla Sahib is one of the most prominent Sikh houses of worship, known for its association with the eighth Sikh Guru.",
-    website: "https://delhitourism.gov.in/delhitourism/tourist_place/gurudawra_bangla_sahib.jsp",
+    website: "https://en.wikipedia.org/wiki/Gurdwara_Bangla_Sahib",
   }
 ];
 
@@ -71,7 +71,7 @@ const PlaceToVisit = () => {
     <div className="py-10">
        <div className="w-full px-6 md:px-16 lg:px-32 py-8">
       <div className="flex w-full items-center justify-center">
-      <h1 className='text-4xl md:text-5xl mb-7 font-bold border-b-4 inline-block border-[#46ce9c] pb-2'> About City</h1>
+      <h1 className='text-4xl md:text-5xl mb-7 font-bold pb-2'> About City</h1>
       </div>
       <div className="flex flex-col items-center">
         <p className="text-justify text-base md:text-lg leading-relaxed">
@@ -87,12 +87,11 @@ const PlaceToVisit = () => {
       </div>
     </div>
       <div className='flex justify-center'>
-        <h1 className='text-4xl md:text-5xl mb-7 font-bold border-b-4 inline-block border-[#46ce9c] pb-2'>Places To Visit</h1>
+        <h1 className='text-4xl md:text-5xl mb-7 font-bold pb-2'>Places To Visit</h1>
       </div>
-      <div className="max-w-4xl mx-auto text-center px-4 mb-6">
-        <p className="text-base md:text-lg">
-          There are plenty of tourist attractions in nearby areas. 
-          Some popular names are Jantar Mantar, Qutub Minar, Lotus Temple, India Gate, Red Fort, etc.
+      <div className="flex flex-col items-center px-6 md:px-16 lg:px-32 py-8">
+        <p className="text-justify text-base md:text-lg leading-relaxed">
+        Delhi, the current capital of India, is a city that has witnessed various forms of government and rulers throughout history, consistently drawing attention from around the world. . There are plenty of tourist attractions in nearby areas. Some popular names are Jantar Mantar, Qutub Minar, Lotus Temple, Akshardham temple, India Gate, Red Fort, etc.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-2 md:px-4 lg:px-10">
@@ -101,10 +100,10 @@ const PlaceToVisit = () => {
             <img src={item.image} alt={item.name} className="w-full h-64 object-cover"/>
             <div className="p-4">
               <p className="text-lg font-semibold mb-2">{item.name}</p>
-              <p className="text-sm mb-4">{item.desc}</p>
-              <a href={item.website} className="text-blue-500 hover:text-blue-700" target="_blank" rel="noopener noreferrer">
-                Visit Website
-              </a>
+              <p className="text-sm mb-4">{item.desc}<span> <a href={item.website} className="text-blue-500 hover:text-blue-700" target="_blank" rel="noopener noreferrer">
+                More info
+              </a></span></p>
+              
             </div>
           </div>
         ))}
