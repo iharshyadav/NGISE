@@ -13,15 +13,15 @@ const FeeSubmission = () => {
   ];
 
   return (
-    <div className="linearGradient font text-white px-2 sm:px-40 py-7 p-7">
+    <div className="font px-2 sm:px-40 py-7 p-7">
       <div className="container">
-        <h1 className="text-3xl font-bold underline">Fee Submission Details</h1>
+        <h1 className="text-3xl font-bold mt-4">Fee Submission Details</h1>
         <h3 className="text-lg mt-4">Details of IMPS/UPI/RTGS/NEFT:</h3>
-        <table className="registervalue text-lg w-full mt-4">
-          <tbody>
+        <table className="registervalue text-lg w-full mt-8">
+          <tbody className="border-gray-300 border">
             {feeDetails.map((e, index) => (
-              <tr key={index}>
-                <td className="p-2" style={{ width: "30%" }}>{e.data}</td>
+              <tr key={index} className="odd:bg-stone-100 even:bg-white border-b border-gray-300">
+                <td className="p-2 border-r border-gray-300" style={{ width: "30%" }}>{e.data}</td>
                 <td className="p-2">{e.value}</td>
               </tr>
             ))}

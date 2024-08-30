@@ -6,6 +6,7 @@ import ImportantDates from '../pages/ImpDates'
 // import CallForPaper from './CallForPaper';
 // import Committee from './Commitee'
 // import Registration from './Registration'
+import Tracks from './Tracks';
 
 
 const Home = () => {
@@ -16,13 +17,13 @@ const Home = () => {
         <ImportantDates/>
         {/* <HomeLayout /> */}
         
-      <div className="flex flex-col mb-10 items-center">
-        <h1 className="sm:text-4xl mb-8 text-xl mt-10  font-bold  inline-block  pb-2">
+      <div className="flex flex-col mb-6 items-center">
+        <h1 className="sm:text-4xl mb-8 text-xl mt-10  font-bold  inline-block   pb-2">
           About The Conference
         </h1>
       </div>
 
-      <div className=" sm:mx-20 mx-4 mb-14 flex flex-wrap items-center justify-center sm:text-[1.05rem]">
+      <div className=" sm:mx-20 mx-4  flex flex-wrap items-center justify-center sm:text-[1.05rem]">
         <div className="lg:w-[35%] sm:m-10 m-4   lg:m-0 ">
           <img src="img3.jpg" className="w-full h-full" alt="" />
         </div>
@@ -45,11 +46,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-        {/* <About/> */}
-        {/* <CallForPaper/>
-        <Committee/>
-        <Registration/>
-         */}
+       <Tracks/>
       </div>
     </>
   );
