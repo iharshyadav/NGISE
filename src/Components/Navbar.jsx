@@ -1,72 +1,64 @@
-import React , {useEffect} from 'react'
-import { Menu, X } from 'lucide-react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-
-const Navbar=()=> {
-
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-  const [isMenuOpen1, setIsMenuOpen1] = React.useState(false)
+  const [isMenuOpen1, setIsMenuOpen1] = React.useState(false);
 
   const toggleMenu1 = () => {
-    setIsMenuOpen1(!isMenuOpen1)
-  }
+    setIsMenuOpen1(!isMenuOpen1);
+  };
 
-  const [isMenuOpen2, setIsMenuOpen2] = React.useState(false)
+  const [isMenuOpen2, setIsMenuOpen2] = React.useState(false);
   const toggleMenu2 = () => {
-    setIsMenuOpen2(!isMenuOpen2)
-  }
+    setIsMenuOpen2(!isMenuOpen2);
+  };
 
-  const [isMenuOpen3, setIsMenuOpen3] = React.useState(false)
+  const [isMenuOpen3, setIsMenuOpen3] = React.useState(false);
   const toggleMenu3 = () => {
-    setIsMenuOpen3(!isMenuOpen3)
-  }
-  const [isMenuOpen4, setIsMenuOpen4] = React.useState(false)
+    setIsMenuOpen3(!isMenuOpen3);
+  };
+  const [isMenuOpen4, setIsMenuOpen4] = React.useState(false);
   const toggleMenu4 = () => {
-    setIsMenuOpen4(!isMenuOpen4)
-  }
+    setIsMenuOpen4(!isMenuOpen4);
+  };
 
-  const [isMenuOpen5, setIsMenuOpen5] = React.useState(false)
+  const [isMenuOpen5, setIsMenuOpen5] = React.useState(false);
   const toggleMenu5 = () => {
-    setIsMenuOpen5(!isMenuOpen5)
-  }
+    setIsMenuOpen5(!isMenuOpen5);
+  };
 
-
-
-
-  useEffect(() => { 
+  useEffect(() => {
     const hash = location.hash;
-    if (hash === '#fees' || hash === '#submission') {
+    if (hash === "#fees" || hash === "#submission") {
       const section = document.getElementById(hash.substring(1));
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
 
   const currentPathname = location.pathname;
-  console.log(currentPathname)
+  console.log(currentPathname);
 
- 
-  useEffect(() => { 
+  useEffect(() => {
     const hash = location.hash;
-    if (hash === '#organizing-committee') {
-      const section = document.getElementById('organizing-committee');
+    if (hash === "#organizing-committee") {
+      const section = document.getElementById("organizing-committee");
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
 
-  
-  
   return (
     <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-opacity- bg-[#fffce6] z-50">
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2">
@@ -193,7 +185,7 @@ const Navbar=()=> {
                 Locale <RiArrowDropDownLine className="text-2xl" />
               </span>
               <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
-              {/* <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                {/* <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
                   <Link to="/locale/about">About City</Link>
                 </li> */}
                 <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
@@ -205,23 +197,25 @@ const Navbar=()=> {
               </ul>
             </li>
             <li className="relative z-50 group">
-              <span
+              <Link
+                to="/contact"
                 className={`flex items-center text-base font-semibold cursor-pointer ${
                   currentPathname === "/contact"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
                 } hover:text-[#00cc99]`}
               >
-                Contact Us <RiArrowDropDownLine className="text-2xl" />
-              </span>
-              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
-                {/* <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
-                  <Link to="/contact/query">Query</Link>
-                </li> */}
-                <li className="py-2 px-2 hover:text-[#00cc99]">
-                  <Link to="/contact">Reach Us</Link>
-                </li>
-              </ul>
+                Contact Us
+                {/* <RiArrowDropDownLine className="text-2xl" /> */}
+              </Link>
+              {/* <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+     <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+       <Link to="/contact/query">Query</Link>
+     </li>
+     <li className="py-2 px-2 hover:text-[#00cc99]">
+       <Link to="/contact">Reach Us</Link>
+     </li>
+   </ul> */}
             </li>
           </ul>
         </div>
@@ -288,9 +282,10 @@ const Navbar=()=> {
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu4}
                       >
-                        Call For Paper <RiArrowDropDownLine className="text-2xl" />{" "}
+                        Call For Paper{" "}
+                        <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
-                        
+
                       {isMenuOpen4 && (
                         <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                           <li
@@ -411,11 +406,11 @@ const Navbar=()=> {
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu5}
                       >
-                       Locale <RiArrowDropDownLine className="text-2xl" />{" "}
+                        Locale <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
                       {isMenuOpen5 && (
                         <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                            {/* <li
+                          {/* <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
                           >
@@ -438,32 +433,33 @@ const Navbar=()=> {
                     </li>
 
                     <li className="relative z-10 flex ">
-                      <span
+                      <Link
+                        to="/contact"
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu2}
                       >
-                       Contact Us<RiArrowDropDownLine className="text-2xl" />{" "}
-                      </span>
-                        
-                      {isMenuOpen2 && (
-                        <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                          {/* <li
-                            className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen2(false)}
-                          >
-                            <Link to="/contact/query">Query </Link>
-                          </li> */}
-                          <li
-                            className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen2(false)}
-                          >
-                            <Link to="/contact">Reach Us</Link>
-                          </li>
-                         
-                        </ul>
-                      )}
-                    </li>
+                        Contact Us
+                        {/* <RiArrowDropDownLine className="text-2xl" />{" "} */}
+                      </Link>
 
+                      {/* {isMenuOpen2 && (
+      <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+        <li
+          className="py-2 px-4 hover:text-[#00cc99]"
+          onClick={() => setIsMenuOpen2(false)}
+        >
+          <Link to="/contact/query">Query </Link>
+        </li>
+        <li
+          className="py-2 px-4 hover:text-[#00cc99]"
+          onClick={() => setIsMenuOpen2(false)}
+        >
+          <Link to="/contact">Reach Us</Link>
+        </li>
+       
+      </ul>
+    )} */}
+                    </li>
                   </nav>
                 </div>
                 {/* <button
@@ -479,6 +475,6 @@ const Navbar=()=> {
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
