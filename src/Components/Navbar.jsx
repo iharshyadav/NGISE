@@ -193,11 +193,11 @@ const Navbar=()=> {
                 Locale <RiArrowDropDownLine className="text-2xl" />
               </span>
               <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
-              <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+              {/* <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
                   <Link to="/locale/about">About City</Link>
-                </li>
+                </li> */}
                 <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
-                  <Link to="/locale/place">Places to Visit</Link>
+                  <Link to="/locale/place">About City</Link>
                 </li>
                 <li className="py-2 px-2 hover:text-[#00cc99]">
                   <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
@@ -415,17 +415,17 @@ const Navbar=()=> {
                       </span>
                       {isMenuOpen5 && (
                         <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                            <li
+                            {/* <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
                           >
                             <Link to="/locale/about">About City</Link>
-                          </li>
+                          </li> */}
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link to="/locale/place">Places to Visit</Link>
+                            <Link to="/locale/place">About City</Link>
                           </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
