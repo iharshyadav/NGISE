@@ -1,3 +1,4 @@
+import { Mail, PhoneCall } from 'lucide-react'
 import React from 'react'
 
 // const menuItems = [
@@ -57,14 +58,14 @@ const Contact = () => {
               27th KM Milestone, Delhi - Meerut Expy,<br />
               Ghaziabad, Uttar Pradesh 201015
             </p>
-            <p className="text-lg text-gray-700">
-           Call at 919868450322 (Dr. Anupama Sharma) 
+            <p className="text-lg flex gap-2 items-center justify-start text-gray-700">
+            <PhoneCall size={22} /> 919868450322 (Dr. Anupama Sharma) 
           </p>
-          <p className="text-lg text-gray-700 mb-2">
-            Mail to ngise@akgec.ac.in
+          <p className="text-lg flex gap-2 items-center justify-start text-gray-700 mb-2">
+          <Mail /> to ngise@akgec.ac.in
           </p>
             <p className="text-md text-gray-600">
-              For more information, visit our website or contact us at info@akgec.ac.in.
+              For more information, visit our website or contact us at <a className='font-semibold' href="https://www.akgec.ac.in/">akgec.ac.in</a>
             </p>
           </div>
           <div className="formMap">
