@@ -72,13 +72,13 @@ const Navbar=()=> {
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2">
         <Link to="/" className="inline-flex items-center space-x-2">
           <img
-            className="sm:w-[8vw] w-[13vw] bg-transparent"
+            className="sm:w-[13vw] w-[13vw] bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_10.25.14_00d5ffd9-removebg-preview.png"
             alt=""
           />
         </Link>
         <div className="hidden lg:block">
-          <ul className="inline-flex space-x-8">
+          <ul className="inline-flex space-x-6">
             <Link to="/">
               <li
                 className={`text-base font-semibold ${
@@ -114,9 +114,9 @@ const Navbar=()=> {
                   <Link to="/callforpaper">Paper Submission </Link>
                 </li>
                 <li className="py-2 px-2 hover:text-[#00cc99]">
-                  <Link to="/plagiarism">Plagiarism Policy</Link>
+                  <Link to="/plagiarism">Author Guidelines</Link>
                 </li>
-                <li className="py-2 px-2 hover:text-[#00cc99]">
+                <li className="py-1 px-2 hover:text-[#00cc99]">
                   <Link to="/impDates">Important dates</Link>
                 </li>
               </ul>
@@ -227,7 +227,7 @@ const Navbar=()=> {
         </div>
         <div className="hidden lg:block">
           <img
-            className="sm:w-[7vw] w-[12vw] bg-transparent"
+            className="sm:w-[13vw] w-[12vw] bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_15.16.55_df7f44ea-removebg-preview.png"
             alt=""
           />
@@ -303,7 +303,7 @@ const Navbar=()=> {
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen4(false)}
                           >
-                            <Link to="/plagiarism">Plagiarism Policy</Link>
+                            <Link to="/plagiarism">Author Guidelines</Link>
                           </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
