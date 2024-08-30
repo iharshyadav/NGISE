@@ -8,9 +8,9 @@ const About = () => {
   return (
     <>
       <div className=" flex w-full items-center justify-center mt-10 ">
-      <h2 className="text-4xl font-semibold text-black sm:text-4xl border-b-4 inline-block border-[#46ce9c] pb-2">
-            About Us
-          </h2>
+        <h2 className="text-4xl font-semibold text-black sm:text-4xl ">
+          About Us
+        </h2>
       </div>
 
       {path === "/about" && (
@@ -21,38 +21,46 @@ const About = () => {
             </h1>
           </div>
 
-          <div className="font sm:mx-24 mx-4 mb-10 flex flex-wrap sm:text-[1.05rem] ">
-            <div className="lg:w-[40%] sm:m-10 m-4 lg:m-0  ">
-              <img src="/image2.jpg" className="w-[100%] h-[100%]" alt="" />
+          <div className="sm:mx-24 mx-4 mb-10 flex flex-wrap flex-col items-center sm:text-[1.05rem] ">
+            <div className="lg:w-[80%] sm:m-10 m-4 lg:m-0  ">
+              <img src="/image2.jpg" className="w-[100%] " alt="" />
             </div>
 
-            <div className=" lg:w-[60%] w-full ">
+            <div className=" lg:w-full mt-12 w-full ">
               <p className=" mx-6 text-justify">
                 Ajay Kumar Garg Engineering College (AKGEC), Ghaziabad, Uttar
                 Pradesh is approved by AICTE and affiliated to Dr. A.P.J. Abdul
                 Kalam Technical University, Lucknow. The college, established in
                 1998, has six Engineering Departments offering B.Tech. programs
                 in twelve disciplines. The college also offers postgraduate
-                programs in Computer Applications (MCA) and Mater of Technology (M.Tech.) in four
-                disciplines. All five major B.Tech. programs are accredited by
-                NBA. The college strives for excellence and has been
-                consistently maintaining excellent academic results and
-                placements. The college has the distinction of being the first
-                and only college in UP to receive the Academic Excellence Award
-                for the Best Engineering College in UPTU (now AKTU) from H.E.
-                the Governor of UP for two successive years. The college has
-                been consistently having a large number of students on
-                university merit lists. The College students have the honor of
-                being awarded the Chancellor's Medal for the highest marks
-                across all B.Tech. programs for five consecutive years since the
-                inception of this Award in 2016. The college places special
-                emphasis on collaboration with industries to groom the students
-                for meeting the industry standards. The college has established
-                several Centres of Excellence in collaboration with eminent
-                multinational industries. The primary objective of these centers
-                is to provide industry relevant training in inter-disciplinary
-                state-of-art technologies as well as to promote applied research
-                and industrial consultancy.
+                programs in Computer Applications (MCA) and Mater of Technology
+                (M.Tech.) in four disciplines. The college has the distinction
+                of being the first and only college in UP to receive the
+                Academic Excellence Award for the Best Engineering College in
+                UPTU (now AKTU) from H.E. the Governor of UP for two successive
+                years. The College has the honor of being awarded the
+                Chancellor&apos;s Medal for the highest marks across all B.Tech.
+                programs for five consecutive years since the inception of this
+                Award in 2016.
+                <br />
+                <br />
+                The college has established several Centres of Excellence in
+                collaboration with eminent multinational industries with the
+                goal of making students industry ready. The college has set up
+                India&rsquo;s first Industrial Robotic Training Centre in
+                collaboration with Kuka Robotics of Germany. The College has
+                also established the first NI LabVIEW Academy in the state of
+                U.P. in collaboration with National Instruments. The first
+                Centre of Competence in Automation Technologies in North India
+                in collaboration with BOSCH Rexroth AG, Germany is also set up
+                in college. The PLM Centre of Excellence set up in association
+                with SIEMENS aims to develop engineering professionals equipped
+                with next generation technologies. The College has also set up
+                U.P.&rsquo;s first Industrial Pneumatic Knowledge Centre (IPKC)
+                in collaboration with Janatics, Coimbatore. Ajay Kumar Garg
+                Engineering College, jointly with Fronius International GmbH has
+                set up India&rsquo;s first Advanced Welding Technology and
+                Research Centre (AWTRC) in the state of Uttar Pradesh.
               </p>
             </div>
           </div>
@@ -63,42 +71,33 @@ const About = () => {
             </h1>
           </div>
 
-          <div className="font sm:px-24 px-4 pb-10 flex flex-wrap text-white linearGradient sm:text-[1.05rem]">
-            <div className="lg:w-[60%] w-full ">
+          <div className=" sm:px-24 px-4 pb-10 flex items-center flex-wrap text-white linearGradient sm:text-[1.05rem]">
+            <div className="lg:w-[50%] w-full ">
               <p className=" mx-6 text-justify">
                 The Department of Information Technology was founded in 1999 and
-                expanded in 2019 with the addition of the CSIT sub-branch.
+                expanded in 2019 with the addition of the CSIT branch.
                 Presently, the department has a total intake of 300 students,
                 with 180 enrolled in the IT branch and 120 in the CSIT branch.
-                The department's vision is to produce highly competent and
+                The department&apos; vision is to produce highly competent and
                 socially sensitive IT professionals and innovators, capable of
                 excelling in the multicultural and challenging industry
-                scenario. IT has changed the way of our life and the pace of
-                change is very fast. This scenario is giving us new
-                opportunities as well as new challenges. IT has enhanced the
-                efficiency and effectiveness of business processes dramatically.
-                ERP solutions have further empowered organizations to do
-                multi-location, multilingual and multicurrency operations in the
-                global business environment. New ways of marketing, making
-                friends, communication and socializing have come up in the form
-                of blogs, forums, chats, emails, etc. IT is working as a hub to
-                drive the businesses to new heights. IT jobs are more paying as
-                well as more demanding. To continuously learn and grasp new
-                technologies is a real challenge for IT professionals. Creating
-                such professionals to take this challenge and rise to the apex
-                of IT profession is our goal. At AKGEC excellence is the way of
-                life. We are committed to giving students an environment to
-                nurture their talent to its fullest potential. This is achieved
-                by learned faculty members, year round conduction of numerous
-                seminars, guest lectures, and industry academia interaction,
-                co-curricular & extracurricular activities. We strive to
-                transform the students not only into good professionals but a
-                good human being and a dutiful citizen.
+                scenario. The department has excellent laboratories with the
+                latest equipment and relevant licensed software as well as high
+                computing facilities such as Big Data Centre of Excellence,
+                Software Development Centre, Cloud Computing Cell, Metaverse
+                Lab, Google Developer Lab, etc. These centers are run and
+                managed entirely by the students to promote software development
+                for the college as well as external clients, conduct training
+                programs in various technologies and host competitions. The
+                department is having excellent campus placements with our alumni
+                being placed in PSUs and reputed organizations like Infosys, HCL
+                Technologies, L&T, L&T Infotech, Wipro Technologies, NTPC, IBM,
+                Indian Air Force, the Indian Army and many more.
               </p>
             </div>
 
-            <div className="lg:w-[40%] sm:m-10 m-4 lg:m-0   ">
-              <img src="img1.jpg" className="w-full h-full" alt="" />
+            <div className="lg:w-[50%] sm:m-10 m-4 lg:m-0   ">
+              <img src="img1.jpg" className="w-full " alt="" />
             </div>
           </div>
         </>
@@ -134,7 +133,7 @@ const About = () => {
                 Through a rich tapestry of presentations, workshops, and
                 discussions, NGISE aims to catalyze advancements in
                 next-generation information systems and propel the evolution of
-                technology-driven solutions in today's rapidly evolving digital
+                technology-driven solutions in today&apos; rapidly evolving digital
                 landscape.
               </p>
             </div>
