@@ -79,17 +79,15 @@ const PlaceToVisit = () => {
           Ghaziabad district is one of the six districts in Meerut Mandal and is a key industrial hub in Uttar Pradesh. 
           Ghaziabad is also a part of Delhi NCR, which encompasses the area surrounding the National Capital Territory of Delhi 
           and includes cities such as Faridabad, Gurgaon, Noida, and Ghaziabad.
-          <br /><br />
           Delhi, considered the heart of India, is the capital city and is rich in history. Its ancient structures serve as reminders 
-          of our glorious past. Visitors flock to Delhi to explore historic landmarks such as Qutub Minar, Red Fort, Jama Masjid, 
-          Parliament House, the National Museum, Gurudwara Sis Ganj, India Gate, and the Zoo.
+          of our glorious past. 
         </p>
       </div>
     </div>
       <div className='flex justify-center'>
-        <h1 className='text-4xl md:text-5xl mb-7 font-bold pb-2'>Places To Visit</h1>
+        <h1 className='text-4xl md:text-5xl mb-4 font-bold pb-2'>Places To Visit</h1>
       </div>
-      <div className="flex flex-col items-center px-6 md:px-16 lg:px-32 py-8">
+      <div className="flex flex-col items-center px-6 md:px-16 lg:px-32 mb-4">
         <p className="text-justify text-base md:text-lg leading-relaxed">
         Delhi, the current capital of India, is a city that has witnessed various forms of government and rulers throughout history, consistently drawing attention from around the world. . There are plenty of tourist attractions in nearby areas. Some popular names are Jantar Mantar, Qutub Minar, Lotus Temple, Akshardham temple, India Gate, Red Fort, etc.
         </p>
