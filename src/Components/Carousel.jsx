@@ -14,16 +14,27 @@ const Carousel = () => {
     <>
       <div className='w-full linearGradient flex h-[65vh]'>
 
-      <div className='w-[39%] flex items-center justify-center h-[65vh]'>
-        <div className='pl-10 text-white'>
-          <h1 className='font-bold md:text-3xl lg:text-5xl text-center'>WELCOME TO</h1>
-          <h1 className='font-bold md:text-3xl lg:text-5xl text-center mb-4'>NGISE-2025</h1>
-          <p className='text-xl font-bold text-center '>1st International Conference on </p>
-             <p className='text-xl font-bold text-center '>Next Generation Information System Engineering</p>
-             <p className='text-xl font-bold text-center '>being held on 28th-29th March, 2025</p>
-             <p className='text-xl font-bold text-center '>at Ajay Kumar Garg Engineering College, Ghaziabad, Uttar Pradesh, India</p>
-        </div>
-      </div> 
+
+      <div className="relative w-[39%] flex items-center justify-center h-[65vh] text-white">
+  <div
+    className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+    style={{
+      backgroundImage: "url('/bg.png')",
+      opacity: 0.13, // Adjust background opacity here
+    }}
+  ></div>
+  <div className="relative pl-10 z-10">
+    <h1 className="font-bold md:text-3xl lg:text-5xl text-center">WELCOME TO</h1>
+    <h1 className="font-bold md:text-3xl lg:text-5xl text-center mb-4">NGISE-2025</h1>
+    <p className="text-xl font-bold text-center">1st International Conference on</p>
+    <p className="text-xl font-bold text-center">Next Generation Information System Engineering</p>
+    <p className="text-xl font-bold text-center">being held on 28th-29th March, 2025</p>
+    <p className="text-xl font-bold text-center">
+      at Ajay Kumar Garg Engineering College, Ghaziabad, Uttar Pradesh, India
+    </p>
+  </div>
+</div>
+      
 
       <div className="w-[61%] -z-1 flex items-center justify-center h-[65vh]  ">
         <div className='w-[70%] h-[80%] '>

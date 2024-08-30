@@ -116,7 +116,7 @@ const Footer= ()=> {
         <hr className=" bg-black w-[80%] ml-28 h-0 absolute bottom-16 border-t-2 border-t-gray-200" />
         <div className="absolute bottom-4 w-full flex items-center justify-center">
           <h1 className="uppercase text-base font-sans font-semibold">
-            Design & Developed By :{" "}
+            Designed & Developed By :{" "}
           </h1>
           <img
             className="w-[3vw] h-[5vh] p-1 "

@@ -4,10 +4,6 @@
     overflow-x: hidden;
 }
 
-table,tr,td{
-    border: 2px solid ;
-    padding: 8px;    
-}
 
 .linearGradient{
     background: linear-gradient(to right, #73c8a9, #373b44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

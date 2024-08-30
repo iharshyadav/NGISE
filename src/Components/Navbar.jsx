@@ -72,7 +72,7 @@ const Navbar=()=> {
       <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2">
         <Link to="/" className="inline-flex items-center space-x-2">
           <img
-            className="sm:w-[13vw] w-[13vw] bg-transparent"
+            className="sm:w-[10vw] w-[10vw] bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_10.25.14_00d5ffd9-removebg-preview.png"
             alt=""
           />
@@ -227,7 +227,7 @@ const Navbar=()=> {
         </div>
         <div className="hidden lg:block">
           <img
-            className="sm:w-[13vw] w-[12vw] bg-transparent"
+            className="sm:w-[10vw] w-[10vw] bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_15.16.55_df7f44ea-removebg-preview.png"
             alt=""
           />
