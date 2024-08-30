@@ -60,11 +60,11 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <div className=" w-full sm:h-20 border-b-2 border-black sticky bg-opacity- bg-[#fffce6] z-50">
-      <div className="mx-auto sm:h-20 flex max-w-7xl items-center justify-between px-4 py-2">
+    <div className=" w-full sm:h-20 border border-gray-300 sticky bg-opacity- bg-[#fffce6] z-50">
+      <div className="mx-auto sm:h-20 flex max-w-7xl items-center lg:justify-between px-4 py-2">
         <Link to="/" className="inline-flex items-center space-x-2">
           <img
-            className="sm:w-[10vw] w-[10vw] bg-transparent"
+            className="md:w-[10vw] sm:[13vw] w-[25vw] bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_10.25.14_00d5ffd9-removebg-preview.png"
             alt=""
           />
@@ -219,9 +219,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden lg:block">
+        <div className="">
           <img
-            className="sm:w-[10vw] w-[10vw] bg-transparent"
+            className="md:w-[10vw] sm:[13vw] w-[22vw] pl-2 bg-transparent"
             src="/WhatsApp_Image_2024-08-24_at_15.16.55_df7f44ea-removebg-preview.png"
             alt=""
           />
@@ -233,8 +233,8 @@ const Navbar = () => {
             Button text
           </button> */}
         </div>
-        <div className="lg:hidden">
-          <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
+        <div className="lg:hidden absolute right-2">
+          <Menu onClick={toggleMenu} className="h-7 w-7 cursor-pointer" />
         </div>
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">

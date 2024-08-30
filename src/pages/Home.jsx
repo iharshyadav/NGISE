@@ -18,7 +18,7 @@ const Home = () => {
         {/* <HomeLayout /> */}
         
       <div className="flex flex-col mb-6 items-center">
-        <h1 className="sm:text-4xl mb-8 text-xl mt-10  font-bold  inline-block   pb-2">
+        <h1 className="sm:text-4xl sm:mb-8 text-xl sm:mt-10  font-bold  inline-block   pb-2">
           About The Conference
         </h1>
       </div>

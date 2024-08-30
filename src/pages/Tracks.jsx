@@ -203,12 +203,12 @@ const Tracks = () => {
     <div>
        <section className="mx-auto max-w-7xl px-2 py-10 md:px-0 mt-6">
       <div>
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl ">
+        <div className="mx-auto max-w-2xl w-full flex justify-center items-center ">
+          <h2 className="md:text-4xl text-2xl text center font-bold leading-tight text-black sm:text-4xl ">
             Conference Tracks
           </h2>
         </div>
-        <div className="mx-auto mt-8 max-w-3xl space-y-4 md:mt-16">
+        <div className="mx-4 sm:mx-auto  mt-8 max-w-3xl space-y-4 md:mt-16">
           {tracksData.map((track, index) => (
             <div
               key={index}
