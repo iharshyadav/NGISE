@@ -18,7 +18,7 @@ import OrgCommitee from './pages/OrgCommittee.jsx'
 import Query from './pages/query.jsx'
 import ImportantDates from './pages/ImpDates.jsx'
 import PlagiarismPolicy from './pages/Plagarism.jsx'
-import AboutCity from './pages/AboutCity.jsx'
+
 import PlaceToVisit from './pages/PlaceToVisit.jsx'
 
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
         <Route path="/about" element={<About />} />
         <Route path="/programcommittee" element={<ProgramCommitee/>} />
         <Route path="/organizingcommittee" element={<OrgCommitee/>} />
-        <Route path="/locale/about" element={<AboutCity/>} />
+        {/* <Route path="/locale/about" element={<AboutCity/>} /> */}
         <Route path="/locale/place" element={<PlaceToVisit/>} />
         <Route path="/locale/nearby-hotel" element={<Accomodation />} />
         <Route path="/registration" element={<RegistrationFee />} />
