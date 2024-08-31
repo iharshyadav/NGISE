@@ -23,7 +23,7 @@ const About = () => {
 
           <div className="sm:mx-24 mx-4 mb-10 flex flex-wrap flex-col items-center sm:text-[1.05rem] ">
             <div className="lg:w-[80%] sm:m-10 m-4 lg:m-0  ">
-              <img src="/image2.jpg" className="w-[100%] " alt="" />
+              <img src="/lt.jpg" className="w-[100%] " alt="" />
             </div>
 
             <div className=" lg:w-full mt-12 w-full ">
