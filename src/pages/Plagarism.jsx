@@ -23,7 +23,7 @@ function PlagiarismPolicy () {
           submitted through on-line paper submission process using Microsoft CMT
           submission system. Authors are requested to upload the paper by
           clicking the paper submission link:  <a 
-              href="https://www.ieee.org/conferences/publishing/templates.html" 
+              href="https://cmt3.research.microsoft.com/NGISE2025 " 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-blue-600 hover:underline"
@@ -35,8 +35,14 @@ function PlagiarismPolicy () {
           All accepted, registered and presented papers will be included in the
           conference proceedings and will be included in IEEE Xplore, indexed by
           EI, SCOPUS etc. All papers must follow strict formatting instructions.
-          For detailed instructions, kindly visit the following link: (Click
-          here)
+          For detailed instructions, kindly visit the following link: <a 
+              href="https://www.ieee.org/conferences/publishing/templates.html" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline"
+            >
+              Click Here
+            </a>
         </p>
       </div>
     </div>
