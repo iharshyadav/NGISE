@@ -22,7 +22,7 @@ const Footer= ()=> {
             <ul className="space-y-[0.5px]">
                 <li><a href="/" className="hover:text-blue-400 transition-colors text-sm font-normal">Home</a></li>
                 <li><a href="/registration" className="hover:text-blue-400 transition-colors text-sm font-normal">Registrations</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors text-sm font-normal">Downloads</a></li>
+                {/* <li><a href="#" className="hover:text-blue-400 transition-colors text-sm font-normal">Downloads</a></li> */}
                 <li><a href="/callforpaper" className="hover:text-blue-400 transition-colors text-sm font-normal">Paper Submission</a></li>
             </ul>
         </div>
@@ -52,15 +52,15 @@ const Footer= ()=> {
                     About
                   </a>
                 </li> */}
-                <li className="p-5 flex flex-col gap-2 items-center justify-center">
+                <li className="p-5 flex flex-col gap-6 items-center justify-center">
                   <a
                     className="font-medium text-white text-lg"
                     href="/contact"
                   >
-                    Contact Us:
+                    Contact Us
                   </a>
                   <div className="w-auto">
-              <div className="-m-1.5 flex flex-wrap mb-[7vh]">
+              <div className="-m-1.5 flex flex-wrap mb-[1.4vh]">
                 <div className="w-auto p-1.5">
                   <a href="https://www.facebook.com/Official.AKGEC/">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400">
