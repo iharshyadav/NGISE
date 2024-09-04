@@ -181,7 +181,7 @@ const Navbar = () => {
                   <Link to="/registration">Registration Fee</Link>
                 </li>
                 <li className="py-2 px-2 hover:text-[#00cc99]">
-                  <Link to="/fee">Fee submission</Link>
+                  <Link to="/fee">Payment Details</Link>
                 </li>
               </ul>
             </li>
@@ -285,41 +285,17 @@ const Navbar = () => {
                         onClick={() => setIsMenuOpen(false)}
                         className="flex text-base font-semibold hover:cursor-pointer  hover:text-gray-900"
                       >
-                        About
+                        Venue
                       </li>
                     </Link>
-                    <li className="relative z-50 flex ">
-                      <span
-                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
-                        onClick={toggleMenu4}
+                    <Link to="/callforpaper">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold hover:cursor-pointer  hover:text-gray-900"
                       >
-                        Call For Paper{" "}
-                        <RiArrowDropDownLine className="text-2xl" />{" "}
-                      </span>
-
-                      {isMenuOpen4 && (
-                        <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                          <li
-                            className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen4(false)}
-                          >
-                            <Link to="/callforpaper">Paper Submission </Link>
-                          </li>
-                          <li
-                            className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen4(false)}
-                          >
-                            <Link to="/plagiarism">Author Guidelines</Link>
-                          </li>
-                          <li
-                            className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen4(false)}
-                          >
-                            <Link to="/impDates">Important Dates</Link>
-                          </li>
-                        </ul>
-                      )}
-                    </li>
+                        Call for Paper
+                      </li>
+                    </Link>
 
                     {/* <Link to="/papersubmission">
                       <li
@@ -406,7 +382,7 @@ const Navbar = () => {
                               to="/fee"
                               onClick={() => setIsMenuOpen3(false)}
                             >
-                              Fee Submission
+                              Payment Details
                             </Link>
                           </li>
                         </ul>

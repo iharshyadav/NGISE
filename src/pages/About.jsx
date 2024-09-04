@@ -15,10 +15,11 @@ const About = () => {
   
   return (
     <>
-      <div className=" flex w-full items-center justify-center mt-10 ">
-        <h2 className="text-4xl font-bold text-black sm:text-4xl mb-10 ">
+      <div className=" flex w-full items-center justify-center mt-10 flex-col ">
+        <h2 className="text-4xl font-bold text-black sm:text-4xl mb-4 ">
           Conference Venue
         </h2>
+        <p className='mb-8 text-lg font-semibold'>AJAY KUMAR GARG ENGINEERING COLLEGE, GHAZIABAD, INDIA </p>
       </div>
 
       {path === "/about" && (

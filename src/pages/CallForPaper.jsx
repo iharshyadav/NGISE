@@ -17,7 +17,13 @@ function CallForPaper() {
  
   return (
     <>
-
+  <p className='mt-8 sm:px-28'>The International Conference on Next Generation Information System
+     Engineering (NGISE) provides an engaging platform for researchers, 
+     industry experts, and scholars to explore cutting-edge technological 
+     advancements across various fields. This conference seeks to drive progress
+      in next-generation information systems and foster the development of technology-driven 
+      solutions in today's fast-changing digital world through a diverse array of presentations, 
+      workshops, and discussions.</p>
     
 <div className=" w-full flex flex-col items-center justify-center sm:px-20 ">
   <div className='flex w-full items-center justify-center mt-8 '>
@@ -125,8 +131,7 @@ If a paper is accepted, at least one author must register for the conference, at
       <li>Funding acknowledgments should be omitted from both the title page and other sections of the paper.</li>
       <li>Acknowledgments of research group members, colleagues, or collaborators should not be present in the paper.</li>
       <li>Care should be taken when naming source files to prevent revealing the authors' identities through metadata. 
-        For example, if your name is Mathew Smith and you submit a PDF generated from a .dvi file named Mathew-Smith.dvi, 
-        someone could deduce your authorship from the PDF file. All information that could identify the author(s) must be
+          All information that could identify the author(s) must be
          removed from the manuscript and any supplementary files. Additionally, author(s) should refer to their previous work 
          in the third person and ensure all relevant citations are included.</li>
         <li>Submissions that have been previously uploaded as unrefereed preprints (such as on arXiv) are allowed.
@@ -145,14 +150,15 @@ If a paper is accepted, at least one author must register for the conference, at
 
       <div className="mx-16 md:mx-28 mb-8 mt-10  text-base sm:text-lg flex flex-col text-center ">
         <p>
-        To download the template for paper submission, click on the link: 
+        To download the template for paper submission, click on the link :
+        <br/> 
             <a 
               href="https://www.ieee.org/conferences/publishing/templates.html" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-blue-600 hover:underline"
             >
-              Template
+               https://www.ieee.org/conferences/publishing/templates.html
             </a></p>
       </div>
 
@@ -164,13 +170,14 @@ If a paper is accepted, at least one author must register for the conference, at
       <div className="mx-16 md:mx-28 mt-10  text-base sm:text-lg flex flex-col text-center mb-20">
         <p>
         To submit the paper, click on the link: 
+        <br/> 
             <a 
               href="https://cmt3.research.microsoft.com/NGISE2025" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-blue-600 hover:underline"
             >
-              Submission Link
+             https://cmt3.research.microsoft.com/NGISE2025
             </a>
             </p>
       </div>
