@@ -4,7 +4,7 @@ const Committee = () => {
   return (
     <>
       <div className="flex w-full items-center justify-center mt-12 mb-10">
-        <h1 className="text-center text-4xl font-bold border-b-4 inline-block border-[#46ce9c] pb-2 ">
+        <h1 className="text-center text-4xl font-bold inline-block  pb-2 ">
           PROGRAM COMMITTEE
         </h1>
       </div>
@@ -71,7 +71,7 @@ const Committee = () => {
               </li>
             </ul>
           </div>
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4">Treasurer</h2>
             <ul className="list-disc list-inside">
               <li>
@@ -233,7 +233,7 @@ const Committee = () => {
                 Ghaziabad, India
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

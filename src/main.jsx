@@ -36,10 +36,10 @@ const router = createBrowserRouter(
         <Route path="/locale/nearby-hotel" element={<Accomodation />} />
         <Route path="/registration" element={<RegistrationFee />} />
         <Route path="/fee" element={<FeeSubmission />} />
-        <Route path="/papersubmission" element={<PaperSubmission />} />
+        {/* <Route path="/papersubmission" element={<PaperSubmission />} /> */}
         <Route path="/callforpaper" element={<CallForPaper />} />
-        <Route path="/plagiarism" element={<PlagiarismPolicy />} />
-        <Route path="/impDates" element={<ImportantDates />} />
+        {/* <Route path="/plagiarism" element={<PlagiarismPolicy />} />
+        <Route path="/impDates" element={<ImportantDates />} /> */}
         <Route path='/speakers' element ={<Acceptedpaper/>}/>
         <Route path="/contact/query" element={<Query />} />
     </Route>

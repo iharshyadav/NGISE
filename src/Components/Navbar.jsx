@@ -88,10 +88,21 @@ const Navbar = () => {
                     : "text-gray-800"
                 } hover:text-[#00cc99]`}
               >
-                About
+                Venue
               </li>
             </Link>
-            <li className="relative z-50 group">
+            <Link to="/callforpaper">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/callforpaper"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Call for Paper
+              </li>
+              </Link>
+            {/* <li className="relative z-50 group">
               <button
                 className={`flex items-center text-base font-semibold cursor-pointer ${
                   currentPathname === "/callforpaper"
@@ -112,7 +123,7 @@ const Navbar = () => {
                   <Link to="/impDates">Important dates</Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
             {/* <Link to="/papersubmission">
               <li
                 className={`text-base font-semibold ${

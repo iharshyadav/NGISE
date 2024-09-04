@@ -20,7 +20,7 @@ const Carousel = () => {
     className="absolute inset-0 bg-contain bg-center bg-no-repeat"
     style={{
       backgroundImage: "url('/bg.png')",
-      opacity: 0.13, // Adjust background opacity here
+      opacity: 0.2, // Adjust background opacity here
     }}
   ></div>
   <div className="relative md:pl-10 pt-10 md:pt-0 m-1 md:m-0 z-10">
