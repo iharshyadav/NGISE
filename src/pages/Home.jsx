@@ -23,7 +23,7 @@ const Home = () => {
         </h1>
       </div>
 
-      <div className=" sm:mx-20 mx-4  flex flex-wrap items-center justify-center sm:text-[1.05rem]">
+      <div className=" sm:mx-20 mx-4  flex flex-wrap items-center justify-center sm:text-[1.05rem] pb-10">
         <div className="lg:w-[35%] sm:m-10 m-4   lg:m-0 ">
           <img src="img3.jpg" className="w-full h-full" alt="" />
         </div>

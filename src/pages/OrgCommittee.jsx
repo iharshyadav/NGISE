@@ -4,7 +4,7 @@ const Committee = () => {
   return (
     <>
       <div className='flex w-full items-center justify-center mt-12 mb-10'>
-        <h1 className='text-center text-4xl font-bold border-b-4 inline-block border-[#46ce9c] pb-2'>ORGANIZING COMMITTEE</h1>
+        <h1 className='text-center text-4xl font-bold inline-block pb-2'>ORGANIZING COMMITTEE</h1>
       </div>
 
       <div className='w-full flex justify-center p-4 sm:p-8 mb-6'>

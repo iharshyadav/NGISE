@@ -1,4 +1,12 @@
 import { useLocation } from 'react-router-dom';
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Navigation, Pagination,Mousewheel,Autoplay} from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '../Components/Carousel.css'
+
 
 const About = () => {
   const location = useLocation();
@@ -8,64 +16,112 @@ const About = () => {
   return (
     <>
       <div className=" flex w-full items-center justify-center mt-10 ">
-        <h2 className="text-4xl font-semibold text-black sm:text-4xl ">
-          About Us
+        <h2 className="text-4xl font-bold text-black sm:text-4xl mb-10 ">
+          Conference Venue
         </h2>
       </div>
 
       {path === "/about" && (
         <>
-          <div className="mt-14 flex flex-col mb-12 items-center">
+          {/* <div className="mt-14 flex flex-col mb-12 items-center">
             <h1 className="sm:text-3xl text-xl  font-semibold ">
               Ajay Kumar Garg Engineering College
             </h1>
-          </div>
+          </div> */}
 
-          <div className="sm:mx-24 mx-4 mb-10 flex flex-wrap flex-col items-center sm:text-[1.05rem] ">
-            <div className="lg:w-[80%] sm:m-10 m-4 lg:m-0  ">
+          <div className="sm:mx-32 mx-4 mb-10 flex flex-wrap flex-col items-center sm:text-[1.05rem] ">
+           
+            {/* <div className="lg:w-[80%] sm:m-10 m-4 lg:m-0  ">
               <img src="/lt.jpg" className="w-[100%] " alt="" />
+            </div> */}
+
+      <div className='h-[70vh] w-[60vw]'>
+            <Swiper 
+        
+        slidesPerView={1}
+        centeredSlides={true}
+        pagination={{
+          clickable:true,
+        }}
+        loop={true}
+        // cssMode={true}
+        sticky={false}
+        // freeMode={{ enable: true }}
+        // mousewheel={{
+        //   mousewheel: true,
+        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[ Pagination, Navigation, Mousewheel,Autoplay]}
+      >
+        <SwiperSlide>
+            <div className=' flex justify-center items-center'>
+            <img src="/image2.jpg" className='rounded-lg w-full h-full' alt="" />
             </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className=' flex justify-center items-center'>
+              <img src="/image3.jpg" className='rounded-lg w-full h-full' alt="" />
+                
+            </div>
+          </SwiperSlide> 
+          <SwiperSlide>
+            <div className=' flex justify-center items-center'>
+            <img src="/image4.jpg" className='rounded-lg w-full h-full' alt="" />
+            </div>
+          </SwiperSlide>
+         <SwiperSlide>
+            <div className='flex  justify-center items-center'>
+            <img src="/image.jpg" className='rounded-lg w-full h-full' alt="" />
+                    
+            </div>
+          </SwiperSlide> 
+          <SwiperSlide>
+            <div className='flex justify-center items-center'>
+            <img src="/image5.jpg" className='rounded-lg w-full h-full' alt="" />
+                    
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='flex justify-center items-center'>
+            <img src="/image6.jpg" className='rounded-lg w-full h-full' alt="" />
+                    
+            </div>
+          </SwiperSlide>
+        
+      </Swiper>
+      </div>
 
             <div className=" lg:w-full mt-12 w-full ">
               <p className=" mx-6 text-justify">
-                Ajay Kumar Garg Engineering College (AKGEC), Ghaziabad, Uttar
-                Pradesh is approved by AICTE and affiliated to Dr. A.P.J. Abdul
-                Kalam Technical University, Lucknow. The college, established in
-                1998, has six Engineering Departments offering B.Tech. programs
-                in twelve disciplines. The college also offers postgraduate
-                programs in Computer Applications (MCA) and Mater of Technology
-                (M.Tech.) in four disciplines. The college has the distinction
-                of being the first and only college in UP to receive the
-                Academic Excellence Award for the Best Engineering College in
-                UPTU (now AKTU) from H.E. the Governor of UP for two successive
-                years. The College has the honor of being awarded the
-                Chancellor&apos;s Medal for the highest marks across all B.Tech.
-                programs for five consecutive years since the inception of this
-                Award in 2016.
+                
+NGISE-2025 is being organized by the Department of Information Technology,
+ Ajay Kumar Garg Engineering College, Ghaziabad. The Department of Information
+  Technology was founded in 1999 and expanded in 2019 with the addition of the
+   CSIT branch.
+
                 <br />
                 <br />
-                The college has established several Centres of Excellence in
-                collaboration with eminent multinational industries with the
-                goal of making students industry ready. The college has set up
-                India&rsquo;s first Industrial Robotic Training Centre in
-                collaboration with Kuka Robotics of Germany. The College has
-                also established the first NI LabVIEW Academy in the state of
-                U.P. in collaboration with National Instruments. The first
-                Centre of Competence in Automation Technologies in North India
-                in collaboration with BOSCH Rexroth AG, Germany is also set up
-                in college. The PLM Centre of Excellence set up in association
-                with SIEMENS aims to develop engineering professionals equipped
-                with next generation technologies. The College has also set up
-                U.P.&rsquo;s first Industrial Pneumatic Knowledge Centre (IPKC)
-                in collaboration with Janatics, Coimbatore. Ajay Kumar Garg
-                Engineering College, jointly with Fronius International GmbH has
-                set up India&rsquo;s first Advanced Welding Technology and
-                Research Centre (AWTRC) in the state of Uttar Pradesh.
+                Ajay Kumar Garg Engineering College (AKGEC), Ghaziabad, 
+                Uttar Pradesh is approved by AICTE and affiliated to Dr.
+                A.P.J. Abdul Kalam Technical University, Lucknow. The college,
+                 established in 1998, has six Engineering Departments offering B.Tech.
+                  programs in twelve disciplines. The college also offers postgraduate
+                   programs in Computer Applications (MCA) and Mater of Technology (M.Tech.) 
+                   in four disciplines. The college has the distinction of being the first
+                    and only college in UP to receive the Academic Excellence Award for the
+                     Best Engineering College in UPTU (now AKTU) from H.E. the Governor of UP
+                      for two successive years. The College has the honor of being awarded the 
+                      Chancellor's Medal for the highest marks across all B.Tech. programs for 
+                      five consecutive years since the inception of this Award in 2016.
               </p>
             </div>
           </div>
 
-          <div className=" flex flex-col pb-10 items-center linearGradient text-white">
+          {/* <div className=" flex flex-col pb-10 items-center linearGradient text-white">
             <h1 className="sm:text-3xl w-full text-center text-xl mt-10  font-semibold ">
               About the Department
             </h1>
@@ -94,12 +150,12 @@ const About = () => {
                 Technologies, L&T, L&T Infotech, Wipro Technologies, NTPC, IBM,
                 Indian Air Force, the Indian Army and many more.
               </p>
-            </div>
+            </div> */}
 
-            <div className="lg:w-[50%] sm:m-10 m-4 lg:m-0   ">
+            {/* <div className="lg:w-[50%] sm:m-10 m-4 lg:m-0   ">
               <img src="img1.jpg" className="w-full " alt="" />
             </div>
-          </div>
+          </div> */}
         </>
       )}
 
