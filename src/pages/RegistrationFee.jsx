@@ -1,14 +1,18 @@
 import React from "react";
 
 const RegistrationFee = () => {
-  const registrationInfo = [
-    { data: "Non-IEEE Professional", fee: "INR 7000" },
-    { data: "IEEE Professional Members", fee: "INR 6000" },
-    { data: "Non-IEEE Students", fee: "INR 6000" },
-    { data: "IEEE Student Members", fee: "INR 5000" },
-    { data: "Industry Participants", fee: "INR 7000" },
-    { data: "Non-IEEE Foreign Participants", fee: "$400" },
-    { data: "IEEE Foreign Participants", fee: "$350" },
+  const registrationInfo1 = [
+    { data: "Academician/Industry Participant/Others", fee1: "6000" , fee2:"7000" },
+    { data: "Research Scholar/ UG/PG Student", fee1: "5000" , fee2:"6000" },
+    { data: "Attendee", fee1: "5000" , fee2: "6000"},
+    { data: "Non Presenting Author", fee1: "1000" , fee2:"1500" },
+  
+  ];
+
+  const registrationInfo2 = [
+    { data: "Academician/Industry Participant/Others", fee1: "350" , fee2:"400" },
+   
+  
   ];
 
   return (
@@ -17,20 +21,45 @@ const RegistrationFee = () => {
         <h1 className=" text-3xl font-bold mt-4">Registration Fees</h1>
         <table className="registervalue text-lg w-full mt-10 mb-10 border border-gray-300">
           <thead>
-            <tr className="border-b border-gray-300">
-              <th className="text-left p-2 border-r border-gray-300">Category</th>
-              <th className="text-left p-2">Fee</th>
+            <tr className="border-b border-gray-300 bg-stone-300">
+              <th className="text-left p-2 border-r border-gray-300">Indian Authors</th>
+              <th className="text-left p-2  border-r border-gray-300">IEEE Members(INR)</th>
+              <th className="text-left p-2">Non-IEEE Members(INR)</th>
             </tr>
           </thead>
           <tbody>
-            {registrationInfo.map((e, index) => (
-              <tr key={index} className="odd:bg-stone-100 even:bg-white border-b border-gray-300">
+            {registrationInfo1.map((e, index) => (
+              <tr key={index} className="even:bg-stone-100 odd:bg-white border-b border-gray-300">
                 <td className="p-2 border-r border-gray-300">{e.data}</td>
-                <td className="p-2">{e.fee}</td>
+                <td className="p-2 border-r border-gray-300">{e.fee1}</td>
+                <td className="p-2">{e.fee2}</td>
+
               </tr>
             ))}
           </tbody>
         </table>
+
+        <table className="registervalue text-lg w-full mt-10 mb-10 border border-gray-300">
+          <thead>
+            <tr className="border-b border-gray-300 bg-stone-300">
+              <th className="text-left p-2 border-r border-gray-300">Foreign Authors </th>
+              <th className="text-left p-2  border-r border-gray-300">IEEE Members(USD)</th>
+              <th className="text-left p-2">Non-IEEE Members(USD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {registrationInfo2.map((e, index) => (
+              <tr key={index} className="even:bg-stone-100 odd:bg-white border-b border-gray-300">
+                <td className="p-2 border-r border-gray-300">{e.data}</td>
+                <td className="p-2 border-r border-gray-300">{e.fee1}</td>
+                <td className="p-2">{e.fee2}</td>
+
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+
       </div>
     </div>
   );
