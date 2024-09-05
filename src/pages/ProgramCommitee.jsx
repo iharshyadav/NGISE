@@ -15,7 +15,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Chief Patron</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. R. K. Agarwal Director General, Ajay Kumar Garg Engineering{" "}
+                Dr. R. K. Agarwal, Director General, Ajay Kumar Garg Engineering College, Ghaziabad, India {" "}
               </li>
             </ul>
           </div>
@@ -24,7 +24,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Patron</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Hemant Ahuja Director, Ajay Kumar Garg Engineering College,
+                Dr. Hemant Ahuja, Director, Ajay Kumar Garg Engineering College,
                 Ghaziabad, India
               </li>
             </ul>
@@ -34,7 +34,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">General Chair</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Rahul Sharma Ajay Kumar Garg Engineering College, Ghaziabad,
+                Dr. Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad,
                 India{" "}
               </li>
             </ul>
@@ -44,11 +44,11 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Conference Chair</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Rahul Sharma Ajay Kumar Garg Engineering College, Ghaziabad,
+                Dr. Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad,
                 India{" "}
               </li>
               <li>
-                Dr. Anupama Sharma Ajay Kumar Garg Engineering College,
+                Dr. Anupama Sharma, Ajay Kumar Garg Engineering College,
                 Ghaziabad, India
               </li>
             </ul>
@@ -57,7 +57,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Convener</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Anupama Sharma Ajay Kumar Garg Engineering College,
+                Dr. Anupama Sharma, Ajay Kumar Garg Engineering College,
                 Ghaziabad, India
               </li>
             </ul>
@@ -66,7 +66,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Co-convener</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Ruchi Gupta Ajay Kumar Garg Engineering College, Ghaziabad,
+                Dr. Ruchi Gupta, Ajay Kumar Garg Engineering College, Ghaziabad,
                 India
               </li>
             </ul>
