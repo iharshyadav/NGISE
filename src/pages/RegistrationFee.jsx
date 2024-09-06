@@ -4,7 +4,7 @@ const RegistrationFee = () => {
   const registrationInfo1 = [
     { data: "Academician/Industry Participant/Others", fee1: "6000" , fee2:"7000" },
     { data: "Research Scholar/ UG/PG Student", fee1: "5000" , fee2:"6000" },
-    { data: "Attendee", fee1: "5000" , fee2: "6000"},
+    { data: "Attendee", fee1: "4000" , fee2: "5000"},
     { data: "Non Presenting Author", fee1: "1000" , fee2:"1500" },
   
   ];
