@@ -15,7 +15,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Chief Patron</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. R. K. Agarwal, Director General, Ajay Kumar Garg Engineering College, Ghaziabad,UP, India {" "}
+                Dr. R. K. Agarwal, Director General, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}
               </li>
             </ul>
           </div>
@@ -25,7 +25,7 @@ const Committee = () => {
             <ul className="list-disc list-inside">
               <li>
                 Dr. Hemant Ahuja, Director, Ajay Kumar Garg Engineering College,
-                Ghaziabad,UP, India
+                Ghaziabad, UP, India
               </li>
             </ul>
           </div>
@@ -34,7 +34,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">General Chair</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad,UP,
+                Dr. Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, UP,
                 India{" "}
               </li>
             </ul>
@@ -44,12 +44,12 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Conference Chair</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad,UP,
+                Dr. Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, UP,
                 India{" "}
               </li>
               <li>
                 Dr. Anupama Sharma, Ajay Kumar Garg Engineering College,
-                Ghaziabad,UP, India
+                Ghaziabad, UP, India
               </li>
             </ul>
           </div>
@@ -58,7 +58,7 @@ const Committee = () => {
             <ul className="list-disc list-inside">
               <li>
                 Dr. Anupama Sharma, Ajay Kumar Garg Engineering College,
-                Ghaziabad,UP, India
+                Ghaziabad, UP, India
               </li>
             </ul>
           </div>
@@ -66,7 +66,7 @@ const Committee = () => {
             <h2 className="text-2xl font-bold mb-4">Co-convener</h2>
             <ul className="list-disc list-inside">
               <li>
-                Dr. Ruchi Gupta, Ajay Kumar Garg Engineering College, Ghaziabad,UP,
+                Dr. Ruchi Gupta, Ajay Kumar Garg Engineering College, Ghaziabad, UP,
                 India
               </li>
             </ul>
