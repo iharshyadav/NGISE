@@ -14,15 +14,15 @@ const Committee = () => {
           <div className='mb-8'>
             <h2 className='text-3xl font-bold mb-4'>Organizing Committee</h2>
             <ul className='list-disc list-inside'>
-              <li>Dr. Rahul Sharma (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Dr. Anu Chaudhary (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Dr. B.K. Sharma (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Dr. Pallab Biswas (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Dr. Nilesh Gupta (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Prof. S. L. Kapoor (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Air Cmde. P. Singh (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Dr. Anupama Sharma (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
-              <li>Dr. Ruchi Gupta (Ajay Kumar Garg Engineering College, Ghaziabad, India)</li>
+              <li>Dr. Rahul Sharma (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Dr. Anu Chaudhary (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Dr. B.K. Sharma (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Dr. Pallab Biswas (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Dr. Nilesh Gupta (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Prof. S. L. Kapoor (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Air Cmde. P. Singh (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Dr. Anupama Sharma (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
+              <li>Dr. Ruchi Gupta (Ajay Kumar Garg Engineering College, Ghaziabad, UP, India)</li>
             </ul>
           </div>
         </div>
