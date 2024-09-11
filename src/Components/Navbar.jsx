@@ -70,10 +70,10 @@ const Navbar = () => {
           />
         </Link>
         <div className="hidden lg:block">
-          <ul className="inline-flex space-x-6">
+          <ul className="inline-flex space-x-9">
             <Link to="/">
               <li
-                className={`text-base font-semibold ${
+                className={`text-lg font-semibold ${
                   currentPathname === "/" ? "text-[#46ce9c]" : "text-gray-800"
                 } hover:text-[#00cc99]`}
               >
@@ -82,7 +82,7 @@ const Navbar = () => {
             </Link>
             <Link to="/about">
               <li
-                className={`text-base font-semibold ${
+                className={`text-lg font-semibold ${
                   currentPathname === "/about"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -93,7 +93,7 @@ const Navbar = () => {
             </Link>
             <Link to="/callforpaper">
               <li
-                className={`text-base font-semibold ${
+                className={`text-lg font-semibold ${
                   currentPathname === "/callforpaper"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -104,7 +104,7 @@ const Navbar = () => {
               </Link>
             {/* <li className="relative z-50 group">
               <button
-                className={`flex items-center text-base font-semibold cursor-pointer ${
+                className={`flex items-center text-lg font-semibold cursor-pointer ${
                   currentPathname === "/callforpaper"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -126,7 +126,7 @@ const Navbar = () => {
             </li> */}
             {/* <Link to="/papersubmission">
               <li
-                className={`text-base font-semibold ${
+                className={`text-lg font-semibold ${
                   currentPathname === "/papersubmission"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -137,7 +137,7 @@ const Navbar = () => {
             </Link> */}
 {/*             <li className="relative z-50 group">
               <button
-                className={`flex items-center text-base font-semibold cursor-pointer ${
+                className={`flex items-center text-lg font-semibold cursor-pointer ${
                   currentPathname === "/commitee"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -157,7 +157,7 @@ const Navbar = () => {
 
             <Link to="/speakers">
               <li
-                className={`text-base font-semibold ${
+                className={`text-lg font-semibold ${
                   currentPathname === "/speakers"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -168,7 +168,7 @@ const Navbar = () => {
             </Link>
             <li className="relative z-50 group">
               <span
-                className={`flex items-center text-base font-semibold cursor-pointer ${
+                className={`flex items-center text-lg font-semibold cursor-pointer ${
                   currentPathname === "/commitee"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -177,17 +177,17 @@ const Navbar = () => {
                 Registration <RiArrowDropDownLine className="text-2xl" />
               </span>
               <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
-                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/registration">Registration Fee</Link>
                 </li>
-                <li className="py-2 px-2 hover:text-[#00cc99]">
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/fee">Payment Details</Link>
                 </li>
               </ul>
             </li>
             <li className="relative z-50 group">
               <span
-                className={`flex items-center text-base font-semibold cursor-pointer ${
+                className={`flex items-center text-lg font-semibold cursor-pointer ${
                   currentPathname === "/locale"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -199,10 +199,10 @@ const Navbar = () => {
                 {/* <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
                   <Link to="/locale/about">About City</Link>
                 </li> */}
-                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/locale/place">About City</Link>
                 </li>
-                <li className="py-2 px-2 hover:text-[#00cc99]">
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
                 </li>
               </ul>
@@ -210,7 +210,7 @@ const Navbar = () => {
             <li className="relative z-50 group">
               <Link
                 to="/contact"
-                className={`flex items-center text-base font-semibold cursor-pointer ${
+                className={`flex items-center text-lg font-semibold cursor-pointer ${
                   currentPathname === "/contact"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
