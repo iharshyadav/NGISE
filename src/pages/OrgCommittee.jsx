@@ -20,12 +20,15 @@ const Committee = () => {
           </div> 
 
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">International Organizing Chair</h2>
+            <h2 className="text-2xl font-bold mb-4">General Chair</h2>
             <ul className="list-disc list-inside">
               <li>Prof. (Dr.) Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
               <li>Prof. (Dr.) Dirk Draheim, Tallinn University of Technology, Estonia {" "}</li>
-              <li>Prof. (Dr.) Anupama Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
-              <li>Prof. (Dr.) Ruchi Gupta, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
+            </ul>
+          </div> 
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-4">International Organizing Chair</h2>
+            <ul className="list-disc list-inside">
               <li>Dr. Markus Bertl, Tallinn University of Technology, Estonia {" "}</li>
               <li>Dr. Silvia Lips, eID expert at the Estonian Information System Authority, Estonia {" "}</li>
               <li>Dr. Rozha Ahmed, Digital Transformation Expert, Tallin, Estonia {" "}</li>
@@ -35,8 +38,8 @@ const Committee = () => {
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4">Local Organizing Chair</h2>
             <ul className="list-disc list-inside">
-              <li>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
-              <li>Ms. Tahira Majumdar, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
+              <li>Prof. (Dr.) Anupama Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
+              <li>Prof. (Dr.) Ruchi Gupta, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
             </ul>
           </div>
           
