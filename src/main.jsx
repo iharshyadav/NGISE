@@ -13,7 +13,7 @@ import Acceptedpaper from './pages/Acceptedpaper.jsx'
 import PaperSubmission from './pages/PaperSubmission.jsx'
 import RegistrationFee from './pages/RegistrationFee.jsx'
 import FeeSubmission from './pages/FeeSubmission.jsx'
-import ProgramCommitee from './pages/ProgramCommitee.jsx'
+//import ProgramCommitee from './pages/ProgramCommitee.jsx'
 import OrgCommitee from './pages/OrgCommittee.jsx'
 import Query from './pages/query.jsx'
 import ImportantDates from './pages/ImpDates.jsx'
@@ -29,7 +29,7 @@ const router = createBrowserRouter(
         <Route path="" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="/programcommittee" element={<ProgramCommitee/>} />
+      {/* <Route path="/programcommittee" element={<ProgramCommitee/>} /> */}
         <Route path="/organizingcommittee" element={<OrgCommitee/>} /> 
         {/* <Route path="/locale/about" element={<AboutCity/>} /> */}
         <Route path="/locale/place" element={<PlaceToVisit/>} />
