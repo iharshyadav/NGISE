@@ -20,7 +20,7 @@ const Committee = () => {
           </div> 
 
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">International Organising Chair</h2>
+            <h2 className="text-2xl font-bold mb-4">International Organizing Chair</h2>
             <ul className="list-disc list-inside">
               <li>Prof. (Dr.) Rahul Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
               <li>Prof. (Dr.) Dirk Draheim, Tallinn University of Technology, Estonia {" "}</li>
@@ -33,7 +33,7 @@ const Committee = () => {
           </div> 
 
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Local Organising Chair</h2>
+            <h2 className="text-2xl font-bold mb-4">Local Organizing Chair</h2>
             <ul className="list-disc list-inside">
               <li>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
               <li>Ms. Tahira Majumdar, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India {" "}</li>
