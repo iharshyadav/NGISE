@@ -26,10 +26,10 @@ const Navbar = () => {
   const toggleMenu3 = () => {
     setIsMenuOpen3(!isMenuOpen3);
   };
-  const [isMenuOpen4, setIsMenuOpen4] = React.useState(false);
-  const toggleMenu4 = () => {
-    setIsMenuOpen4(!isMenuOpen4);
-  };
+  // const [isMenuOpen4, setIsMenuOpen4] = React.useState(false);
+  // const toggleMenu4 = () => {
+  //   setIsMenuOpen4(!isMenuOpen4);
+  // };
 
   const [isMenuOpen5, setIsMenuOpen5] = React.useState(false);
   const toggleMenu5 = () => {
@@ -137,7 +137,7 @@ const Navbar = () => {
             </Link> */}
            <li className="relative z-50 group">
               <button
-                className={`flex items-center text-lg font-semibold cursor-pointer ${
+                className={`flex items-center text-base font-semibold cursor-pointer ${
                   currentPathname === "/commitee"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
@@ -155,7 +155,7 @@ const Navbar = () => {
               </ul>
             </li> 
 
-            <Link to="/speakers">
+            {/* <Link to="/speakers">
               <li
                 className={`text-base font-semibold ${
                   currentPathname === "/speakers"
@@ -165,7 +165,7 @@ const Navbar = () => {
               >
                 Speakers
               </li>
-            </Link>
+            </Link> */}
             <li className="relative z-50 group">
               <span
                 className={`flex items-center text-base font-semibold cursor-pointer ${
@@ -305,16 +305,16 @@ const Navbar = () => {
                         Paper Submission
                       </li>
                     </Link> */}
-{/*                     <li className="relative z-40 flex ">
+                    <li className="relative z-40 flex ">
                       <span
-                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        className={`flex items-center text-base font-medium cursor-pointer hover:text-[#00cc99] `}
                         onClick={toggleMenu1}
                       >
                         Committee <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
                       {isMenuOpen1 && (
                         <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-                          <li
+                          {/* <li
                             className="py-1 px-2 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -324,7 +324,7 @@ const Navbar = () => {
                             >
                               Program Committee
                             </Link>
-                          </li>
+                          </li> */}
                           <li
                             className="py-1 px-2 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen(false)}
@@ -341,16 +341,16 @@ const Navbar = () => {
                           </li>
                         </ul>
                       )}
-                    </li> */}
+                    </li>
 
-                    <Link to="/speakers">
+                    {/* <Link to="/speakers">
                       <li
                         onClick={() => setIsMenuOpen(false)}
                         className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900"
                       >
                         Speakers
                       </li>
-                    </Link>
+                    </Link> */}
                     <li className="relative z-30 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
@@ -396,7 +396,8 @@ const Navbar = () => {
                         Locale <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
                       {isMenuOpen5 && (
-                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg"
+                        onClick={() => setIsMenuOpen(false)} >
                           {/* <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
@@ -419,7 +420,8 @@ const Navbar = () => {
                       )}
                     </li>
 
-                    <li className="relative z-10 flex ">
+                    <li className="relative z-10 flex "
+                    onClick={() => setIsMenuOpen(false)} >
                       <Link
                         to="/contact"
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}

@@ -15,11 +15,11 @@ const About = () => {
   
   return (
     <>
-      <div className=" flex w-full items-center justify-center mt-10 flex-col ">
+      <div className=" flex w-full text-center items-center justify-center mt-10 flex-col ">
         <h2 className="text-4xl font-bold text-black sm:text-4xl mb-4 ">
           Conference Venue
         </h2>
-        <p className='mb-8 text-lg font-semibold'>AJAY KUMAR GARG ENGINEERING COLLEGE, GHAZIABAD, INDIA </p>
+        <p className='mb-8 px-4 text-lg font-semibold'>AJAY KUMAR GARG ENGINEERING COLLEGE, GHAZIABAD, INDIA </p>
       </div>
 
       {path === "/about" && (
@@ -36,7 +36,7 @@ const About = () => {
               <img src="/lt.jpg" className="w-[100%] " alt="" />
             </div> */}
 
-      <div className='h-[70vh] w-[60vw]'>
+      <div className='h-[32vh] sm:h-[45vh] md:h-[70vh] w-[70vw] sm:w-[60vw] md:w-[60vw]'>
             <Swiper 
         
         slidesPerView={1}
@@ -59,7 +59,7 @@ const About = () => {
         modules={[ Pagination, Navigation, Mousewheel,Autoplay]}
       >
         <SwiperSlide>
-            <div className=' flex justify-center items-center'>
+            <div className=' flex  justify-center items-center'>
             <img src="/image2.jpg" className='rounded-lg w-full h-full' alt="" />
             </div>
           </SwiperSlide>

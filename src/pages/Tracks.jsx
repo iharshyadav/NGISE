@@ -201,7 +201,7 @@ const Tracks = () => {
 
   return (
     <div>
-       <section className="mx-auto max-w-7xl px-2 py-10 md:px-0">
+       <section className=" max-w-7xl px-2 py-10 md:px-0">
       <div>
         <div className="mx-auto max-w-2xl w-full flex justify-center items-center ">
           <h2 className="md:text-4xl text-2xl text center font-bold leading-tight text-black sm:text-4xl ">
@@ -209,7 +209,7 @@ const Tracks = () => {
           </h2>
           
         </div>
-        <p className='mt-6 mx-20'>The conference invites high-quality, original, and previously unpublished papers on topics related advancements 
+        <p className='mt-6 mx-8 text-justify sm:mx-20'>The conference invites high-quality, original, and previously unpublished papers on topics related advancements 
           in next-generation information systems. Areas of interest for submissions include, but are not limited to, the following:</p>
         <div className="mx-4 sm:mx-auto  mt-8 max-w-3xl space-y-4 md:mt-16">
           {tracksData.map((track, index) => (
