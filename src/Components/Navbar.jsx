@@ -141,7 +141,7 @@ const Navbar = () => {
                   currentPathname === "/commitee"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
-                } hover:text-[#00cc99]`}
+                } hover:text-[#00cc99]`} */}
               >
                 Committee <RiArrowDropDownLine className="text-2xl" />
               </button>
@@ -153,7 +153,7 @@ const Navbar = () => {
                   <Link to="/organizingcommittee">Organizing Committee</Link>
                 </li>
               </ul>
-            </li> */}
+            </li> 
 
             <Link to="/speakers">
               <li
