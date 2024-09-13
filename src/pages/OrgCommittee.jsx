@@ -7,7 +7,7 @@ const Committee = () => {
         <h1 className='text-center text-4xl font-bold inline-block pb-2'>ORGANIZING COMMITTEE</h1>
       </div>
 
-      <div className='w-full flex justify-center p-4 sm:p-8 mb-6'>
+      <div className='w-full flex  justify-center px-8 mb-6'>
         <div className='flex flex-col my-4 w-full max-w-3xl'>
           
           <div className="mb-8">

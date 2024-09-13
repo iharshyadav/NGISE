@@ -16,10 +16,10 @@ const RegistrationFee = () => {
   ];
 
   return (
-    <div className=" font px-2 sm:px-40 py-7 p-7">
-      <div className="container">
-        <h1 className=" text-3xl font-bold mt-4">Registration Fees</h1>
-        <table className="registervalue text-lg w-full mt-10 mb-10 border border-gray-300">
+    <div className="px-4 sm:px-40 py-7">
+      <div className="">
+        <h1 className=" text-3xl px-2 font-bold mt-4">Registration Fees</h1>
+        <table className=" text-sm sm:text-lg w-full mt-10 mb-10 border border-gray-300">
           <thead>
             <tr className="border-b border-gray-300 bg-stone-300">
               <th className="text-left p-2 border-r border-gray-300">Indian Authors</th>
@@ -39,7 +39,7 @@ const RegistrationFee = () => {
           </tbody>
         </table>
 
-        <table className="registervalue text-lg w-full mt-10 mb-10 border border-gray-300">
+        <table className="registervalue text-sm sm:text-lg w-full mt-10 mb-10 border border-gray-300">
           <thead>
             <tr className="border-b border-gray-300 bg-stone-300">
               <th className="text-left p-2 border-r border-gray-300">Foreign Authors </th>
