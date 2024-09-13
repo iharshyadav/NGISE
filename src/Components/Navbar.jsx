@@ -135,13 +135,13 @@ const Navbar = () => {
                 Paper Submission
               </li>
             </Link> */}
-{/*             <li className="relative z-50 group">
+           <li className="relative z-50 group">
               <button
                 className={`flex items-center text-lg font-semibold cursor-pointer ${
                   currentPathname === "/commitee"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
-                } hover:text-[#00cc99]`} */}
+                } hover:text-[#00cc99]`}
               >
                 Committee <RiArrowDropDownLine className="text-2xl" />
               </button>
