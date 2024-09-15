@@ -84,7 +84,7 @@ const HomeLayout = () => {
       welcome to The
     </h4>
      <h1 className="text-[#46ce9c] uppercase text-center text-4xl sm:text-6xl w-full font-bold">
-       1<sup>st</sup> International Conference
+        International Conference
      </h1>
      <h5 className="mt-2 mb-2 text-xl sm:text-3xl font-[600] tracking-wide">on</h5>
      <h4 className="text-white uppercase text-center w-full sm:text-3xl font-[650] tracking-wide">
