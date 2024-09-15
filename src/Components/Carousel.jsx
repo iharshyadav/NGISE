@@ -26,7 +26,7 @@ const Carousel = () => {
   <div className="relative md:pl-10 pt-10 md:pt-0 m-1 md:m-0 z-10">
     <h1 className="font-bold text-4xl md:text-3xl lg:text-5xl text-center">WELCOME TO</h1>
     <h1 className="font-bold text-4xl md:text-3xl lg:text-5xl text-center mb-4">NGISE-2025</h1>
-    <p className="sm:text-xl font-bold text-center">International Conference on</p>
+    <p className="sm:text-xl font-bold text-center">IEEE International Conference on</p>
     <p className="sm:text-xl font-bold text-center">Next Generation Information System Engineering</p>
     <p className="sm:text-xl font-bold text-center">being held on 28th-29th March, 2025</p>
     <p className="sm:text-xl font-bold text-center">
