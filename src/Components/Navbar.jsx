@@ -99,7 +99,7 @@ const Navbar = () => {
                     : "text-gray-800"
                 } hover:text-[#00cc99]`}
               >
-                Call for Paper
+                Call for Papers
               </li>
               </Link>
             {/* <li className="relative z-50 group">
@@ -200,7 +200,7 @@ const Navbar = () => {
                   <Link to="/locale/about">About City</Link>
                 </li> */}
                 <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
-                  <Link to="/locale/place">About City</Link>
+                  <Link to="/locale/place">About the City</Link>
                 </li>
                 <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
@@ -293,7 +293,7 @@ const Navbar = () => {
                         onClick={() => setIsMenuOpen(false)}
                         className="flex text-base font-semibold hover:cursor-pointer  hover:text-gray-900"
                       >
-                        Call for Paper
+                        Call for Papers
                       </li>
                     </Link>
 
@@ -408,7 +408,7 @@ const Navbar = () => {
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link to="/locale/place">About City</Link>
+                            <Link to="/locale/place">About the City</Link>
                           </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
