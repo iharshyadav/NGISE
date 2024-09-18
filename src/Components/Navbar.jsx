@@ -200,7 +200,7 @@ const Navbar = () => {
                   <Link to="/locale/about">About City</Link>
                 </li> */}
                 <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
-                  <Link to="/locale/place">About the City</Link>
+                  <Link to="/locale/place">About The City</Link>
                 </li>
                 <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
@@ -408,7 +408,7 @@ const Navbar = () => {
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link to="/locale/place">About the City</Link>
+                            <Link to="/locale/place">About The City</Link>
                           </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
