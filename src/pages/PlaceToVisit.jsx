@@ -3,11 +3,13 @@ import img1 from "/indiagate.jpg";
 import img2 from "/akshadham.jpg";
 import img3 from "/jamamasjid.jpg";
 import img4 from "/lotus_temple.jpg";
-import img5 from "/jantar-mantar.jpg";
+import img5 from "/Gandhi_museum.jpg";
 import img6 from "/redfort.jpg";
 import img7 from "/humanyu_tomb.jpg";
 import img8 from "/lodhi_garden.jpg";
 import img9 from "/gurudwara.jpg";
+import img10 from "/chandni _chowk.jpg";
+import img11 from "/national_museum.jpg";
 
 const data = [
   {
@@ -36,9 +38,9 @@ const data = [
   },
   {
     image: img5,
-    name: "Jantar Mantar",
-    desc: "A Jantar Mantar is an assembly of stone-built astronomical instruments, designed to be used with the naked eye.",
-    website: "https://en.wikipedia.org/wiki/Jantar_Mantar,_New_Delhi",
+    name: "Mahatma Gandhi museum",
+    desc: "The National Gandhi Museum has a very rich collection of original relics, books and other memorabilia closely connected with Mahatma Gandhi",
+    website: "https://www.gandhimuseum.org/museum/",
   },
   {
     image: img6,
@@ -63,6 +65,18 @@ const data = [
     name: "Gurudwara Bangla Sahib",
     desc: "Gurudwara Bangla Sahib is one of the most prominent Sikh houses of worship, known for its association with the eighth Sikh Guru.",
     website: "https://en.wikipedia.org/wiki/Gurdwara_Bangla_Sahib",
+  },
+  {
+    image: img10,
+    name: "Chandni Chowk",
+    desc: "The Chandni Chowk (meaning Moonlight Square) is one of the oldest and busiest markets in Old Delhi, India. ",
+    website: "https://en.wikipedia.org/wiki/Chandni_Chowk",
+  },
+  {
+    image: img11,
+    name: "National Museum",
+    desc: "The National Museum in Delhi is one of India's largest museums. It's in New Delhi, amid the spacious boulevards that are full of government institutions.  ",
+    website: "https://www.nationalmuseumindia.gov.in/en",
   }
 ];
 
@@ -71,7 +85,7 @@ const PlaceToVisit = () => {
     <div className="py-10">
        <div className="w-full px-6 md:px-16 lg:px-32 py-8">
       <div className="flex w-full items-center justify-center">
-      <h1 className='text-4xl md:text-5xl mb-7 font-bold pb-2'> About City</h1>
+      <h1 className='text-4xl md:text-5xl mb-7 font-bold pb-2'> About The City</h1>
       </div>
       <div className="flex flex-col items-center">
         <p className="text-justify text-base md:text-lg leading-relaxed">
