@@ -38,7 +38,7 @@ const data = [
   },
   {
     image: img5,
-    name: "Mahatma Gandhi museum",
+    name: "Mahatma Gandhi Museum",
     desc: "The National Gandhi Museum has a very rich collection of original relics, books and other memorabilia closely connected with Mahatma Gandhi",
     website: "https://www.gandhimuseum.org/museum/",
   },
