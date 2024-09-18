@@ -4,7 +4,7 @@ import { ChevronUp, ChevronDown } from 'lucide-react'
 
 const tracksData = [
   {
-    trackTitle: 'Track 1: Information System Engineering',
+    trackTitle: 'Track 1: Information Systems Engineering',
     subpoints: [
       'Enterprise Architecture and Systems Integration',
       'Data Modeling and Database Design',
