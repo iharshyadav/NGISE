@@ -180,11 +180,10 @@ NGISE-2025 is being organized by the Department of Information Technology,
                 into the forefront of technological innovation across a diverse
                 spectrum of domains. With tracks covering pivotal areas such as
                 Information System Engineering, Artificial Intelligence, Green
-                and Sustainable IT Systems and Algorithms, Data Mining and
+                and Sustainable IT Systems, Data Mining and
                 Knowledge Discovery, Big Data Engineering, Next Gen Cloud
-                Computing, GenAI Data Storage and Retrieval Techniques, Security
-                and Privacy Issues in Next Gen Computing, Industry Applications
-                and Case Studies, and Emerging Trends and Technologies NGISE
+                Computing Solutions, Applications and Future Directions of Large Language Models, Security
+                and Privacy Issues in Next Gen Computing, Emerging Trends and Technologies, and Digital Transformation, Innovation, and Interoperability. NGISE
                 serves as a nexus for exchanging groundbreaking ideas, sharing
                 practical insights, and fostering collaborative endeavors.
                 Through a rich tapestry of presentations, workshops, and
