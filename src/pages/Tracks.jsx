@@ -37,10 +37,10 @@ const tracksData = [
     ],
   },
   {
-    trackTitle: 'Track 3: Green and Sustainable IT Systems and Algorithms',
+    trackTitle: 'Track 3: Green and Sustainable IT Systems',
     subpoints: [
       'Energy-Efficient Computing and Data Centers',
-      'Green Cloud Computing and Virtualization',
+      'Green Cloud Computing',
       'Sustainable Software Engineering Practices',
       'Low-Power and Energy-Aware Algorithms',
       'Green Networking and Communication Technologies',
