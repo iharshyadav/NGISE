@@ -18,7 +18,7 @@ const tracksData = [
     ],
   },
   {
-    trackTitle: 'Track 2: Machine Learning and Deep Learning to Artificial Intelligence',
+    trackTitle: 'Track 2: Machine Learning, Deep Learning and Artificial Intelligence',
     subpoints: [
       'Neural Networks and Deep Learning Architectures',
       'Reinforcement Learning and Autonomous Systems',
