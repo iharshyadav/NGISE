@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <section className="relative h-auto text-white bg-[#383e46] pt-4 pb-6">
+      <section className="relative h-auto text-white bg-gray-500 pt-4 pb-6">
         <div className="container relative z-10 mx-auto px-4">
           <div className="flex flex-col mb-16 lg:flex-row lg:gap-72 justify-center items-center">
             <div className="w-auto p-8  flex items-center justify-center">
@@ -109,7 +109,7 @@ const Footer = () => {
             alt=""
           />
           <h1 className="uppercase text-base font-sans font-semibold">
-            Big data center of excellence
+            Big data centre of excellence
           </h1>
         </div>
       </section>
