@@ -5,10 +5,48 @@ const Committee = () => {
     <>
       <div className="flex w-full items-center justify-center mt-12 mb-10">
         <h1 className="text-center text-4xl font-bold inline-block  pb-2 ">
-          PROGRAM COMMITTEE
+          TECHNICAL PROGRAM COMMITTEE
         </h1>
       </div>
 
+    <div className='flex flex-col sm:flex-row my-4'>
+      <div className='w-full h-[70px] sm:w-1/5 mx-2 sm:mx-4 mb-2 sm:mb-4 p-2 linearGradient rounded-md shadow-lg'>
+        <p className='font-bold text-base lg:text-lg  text-white'>Technical Program Committee</p>
+      </div>
+      <div className='w-full text-base lg:text-lg   sm:w-4/5 ml-4'>
+        <p>Dr. Zeynep Orhan, Union College USA</p>
+        <p>Dr. Elton Domnoni, metropolitan univ. Tirana, Albania</p>
+        <p>Dr Zafaryab Rasool, Associate Research Fellow, Deakin University, Geelong, Victoria, Australia</p>
+        <p>Dr. Ajit Kumar, School of Computer Science and Engineering, Soongsil University, Seoul, South Korea</p>
+        <p>Mr. Aman Abidi, PhD Candidate, Swinburne University of Technology, Melbourne, Victoria, Australia</p>
+        <p>Dr. Sachin Kumar, Research Professor, College of IT Engineering, Kyungpook National University, Daegu, South Korea</p>
+        <p>Mr. Madhu Khurana, Lecturer in cyber Security , University of Gloucestershire, UK</p>
+        <p>Dr. Deepak Gupta, NIT, Arunachal Pradesh</p>
+        <p>Dr. Amit Kumar, Rajkiya Engineering College, Ambedkarnagar</p>
+        <p>Dr. Bala Parkash Rao Killi, NIT Warangal</p>
+        <p>Dr. Venkat Kagita, NIT Warangal</p>
+        <p>Dr. Satish Raj Goyal, NIT, Surat, India</p>
+        <p>Dr. Deepak Verma, Kanpur University, India</p>
+        <p>Dr. Nagendra Kumar, HCU Hyderabad, India</p>
+        <p>Dr. Vibhash Yadav, Rajkiya Engineering College, Banda, U.P. India</p>
+        <p>Dr. Prabhat Sharma, Harcourt Butler Technical University, Kanpur-208002, India</p>
+        <p>Dr. Munesh Chandra, NIT, Tripura, India</p>
+        <p>Dr. Latha banda, ABESEC, Ghaziabad, India</p>
+        <p>Dr. Siddhartha Kumar Arjaria, Rajkiya Eng College, Banda, U.P. India.</p>
+        <p>Dr Krishna Kant Agarwal, Galghotia University, India</p>
+        <p>Dr C S Yadav, NIET, Greater Noida, India</p>
+        <p>Dr. Avinash Dwivedi, Jemtech, Greater Noida, India</p>
+        <p>Dr. Neelendra Badal Advisory REC, Bijnor, India</p>
+        <p>Dr U. C. Jaiswal, Professor, MMMTU, India</p>
+        <p>Dr. B. B. Tiwari, UNSIET, Jaunpur, India</p>
+        <p>Dr. Yudishthir Pandey, REC, Ambedkar Nagar, India</p>
+        <p>Dr Sachin Singh, IET, Lucknow</p>
+        <p>Dr Anshul, NIT Delhi, India</p>
+        <p>Dr Kinsuk Giri, NITTR, Kolkata, India</p>
+        <p>Dr Ankur Parikh, Government Eng College Ajmer, India</p>
+        </div>
+
+      {/* 
       <div className="w-full flex justify-center p-4 sm:p-8 mb-6">
         <div className="flex flex-col my-4 w-full max-w-3xl">
           <div className="mb-8">
@@ -70,7 +108,8 @@ const Committee = () => {
                 India
               </li>
             </ul>
-          </div>
+          </div> */}
+      
           {/* <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4">Treasurer</h2>
             <ul className="list-disc list-inside">
