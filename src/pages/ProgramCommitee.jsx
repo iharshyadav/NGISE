@@ -327,7 +327,6 @@ const Committee = () => {
               </li>
             </ul>
           </div> */}
-        </div>
       </div>
     </>
   );
