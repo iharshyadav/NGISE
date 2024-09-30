@@ -14,36 +14,74 @@ const Committee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Technical Program Committee</p>
       </div>
       <div className='w-full text-base lg:text-lg   sm:w-4/5 ml-4'>
-        <p>Dr. Zeynep Orhan, Union College USA</p>
-        <p>Dr. Elton Domnoni, metropolitan univ. Tirana, Albania</p>
-        <p>Dr Zafaryab Rasool, Associate Research Fellow, Deakin University, Geelong, Victoria, Australia</p>
-        <p>Dr. Ajit Kumar, School of Computer Science and Engineering, Soongsil University, Seoul, South Korea</p>
-        <p>Mr. Aman Abidi, PhD Candidate, Swinburne University of Technology, Melbourne, Victoria, Australia</p>
-        <p>Dr. Sachin Kumar, Research Professor, College of IT Engineering, Kyungpook National University, Daegu, South Korea</p>
-        <p>Mr. Madhu Khurana, Lecturer in cyber Security , University of Gloucestershire, UK</p>
-        <p>Dr. Deepak Gupta, NIT, Arunachal Pradesh</p>
-        <p>Dr. Amit Kumar, Rajkiya Engineering College, Ambedkarnagar</p>
-        <p>Dr. Bala Parkash Rao Killi, NIT Warangal</p>
-        <p>Dr. Venkat Kagita, NIT Warangal</p>
-        <p>Dr. Satish Raj Goyal, NIT, Surat, India</p>
-        <p>Dr. Deepak Verma, Kanpur University, India</p>
-        <p>Dr. Nagendra Kumar, HCU Hyderabad, India</p>
-        <p>Dr. Vibhash Yadav, Rajkiya Engineering College, Banda, U.P. India</p>
-        <p>Dr. Prabhat Sharma, Harcourt Butler Technical University, Kanpur-208002, India</p>
-        <p>Dr. Munesh Chandra, NIT, Tripura, India</p>
-        <p>Dr. Latha banda, ABESEC, Ghaziabad, India</p>
-        <p>Dr. Siddhartha Kumar Arjaria, Rajkiya Eng College, Banda, U.P. India.</p>
-        <p>Dr Krishna Kant Agarwal, Galghotia University, India</p>
-        <p>Dr C S Yadav, NIET, Greater Noida, India</p>
-        <p>Dr. Avinash Dwivedi, Jemtech, Greater Noida, India</p>
-        <p>Dr. Neelendra Badal Advisory REC, Bijnor, India</p>
-        <p>Dr U. C. Jaiswal, Professor, MMMTU, India</p>
-        <p>Dr. B. B. Tiwari, UNSIET, Jaunpur, India</p>
-        <p>Dr. Yudishthir Pandey, REC, Ambedkar Nagar, India</p>
-        <p>Dr Sachin Singh, IET, Lucknow</p>
-        <p>Dr Anshul, NIT Delhi, India</p>
-        <p>Dr Kinsuk Giri, NITTR, Kolkata, India</p>
-        <p>Dr Ankur Parikh, Government Eng College Ajmer, India</p>
+        <p>Dr. Punam Kumari, Amity University, Bangalore</p>
+        <p>Dr. Megha Jain, JSS Academy of Technical Education, Noida</p>
+        <p>Dr. Rashmi Kushwah, Jaypee Institute of Information Technology, Noida</p>
+        <p>Dr. Ramveer Singh, GCET, Gr. Noida</p>
+        <p>Dr. Arvind Kushwah, GCET, Gr. Noida</p>
+        <p>Dr. Shobha Tyagi, Manav Rachna International Institute of Research and Studies, Faridabad</p>
+        <p>Dr. Pushpa Singh, G.L Bajaj Institute of Technology, Grater Noida</p>
+        <p>Dr Sandeep Gupta, Sunder Deep Group of Institution, Ghaziabad</p>
+        <p>Dr. Jitendra Kumar, ABES Engineering College, Ghaziabad</p>
+        <p>Dr. Nidhi Gupta, Sharda University, Gr. Noida</p>
+        <p>Dr. Anupama Kaushik, Maharaja Surajmal Institute of Technology, Delhi</p>
+        <p>Dr. Ajay Kumar Singh, Jain University, Bangalore</p>
+        <p>Dr. Navin Prakash	, IIMT, Greater Noida</p>
+        <p>Dr. Vimal Kumar,	School of Computing Science and Engineering, Galgotias University, Greater Noida</p>
+        <p>Dr. Aanjey Mani Tripathi	School of Computing Science and Engineering, Galgotias University, Greater Noida</p>
+        <p>Dr. Rakesh Kumar Yadav,	Maharishi University of Information Technology, Lucknow</p>
+        <p>Dr S N Rajan, IMSEC, Ghaziabad</p>
+        <p>Dr Sheelesh Kumar Sharma, ABESIT, Ghaziabad</p>
+        <p>Dr Arun Pratap Srivastava, Lloyd Institute of Engineering and Technology, Gr Noida</p>
+        <p>Dr Manish Bharadwaj, KIET, Ghaziabad</p>
+        <p>Dr Anuj Kumar, SRMSCET, Bareilly</p>
+        <p>Dr. Sapna Juneja, KIET, Ghaziabad</p>
+        <p>Dr. Upasana Pandey, ABESIT, Ghaziabad</p>
+        <p>Dr. Sachi Gupta, GCET, Greater Noida</p>
+        <p>Dr. Abhilasha Singh, SRM IST Delhi-NCR Campus, Modinagar</p>
+        <p>Dr. Kalpana Sharma, Sikkim Manipal University, Gangtok</p>
+        <p>Dr Harsh Khatter, KIET, Ghaziabad </p>
+        <p>Dr Payal Garg, G.L Bajaj Institute of Technology, Grater Noida</p>
+        <p>Dr Suchi Mala, Amity University, Noida</p>
+        <p>Dr Ragini Karwayun, IPEC, Ghaziabad</p>
+        <p>Dr Sushruta Mishra, KIIT, Bhubaneshwar</p>
+        <p>Dr Asha Mishra, G.L Bajaj Institute of Technology, Grater Noida</p>
+        <p>Dr. Sajai Vir Singh, JIIT, Noida</p>
+        <p>Dr Jayeeta Chanda, B P Poddar Insitute of Management and Technology, Kolkata</p>
+        <p>Dr. Divya Mishra, ABES Engineering College, Ghaziabad</p>
+        <p>Dr. Deepak Rai, Bennet University, Gr. Noida</p>
+        <p>Dr. Navin Tyagi, MIT, Bulandshahr</p>
+        <p>Ms. Shruti Keshri, ABES Engineering College, Ghaziabad</p>
+        <p>Dr. Sushil Kumar, KIET, Ghaziabad</p>
+        <p>Dr. Vivek Jangra, Amity University Uttar Pradesh, Noida</p>
+        <p>Ms Anjali Kapoor, Galgotias University, Gr. Noida</p>
+        <p>Dr. Nidhi Mishra, Amity University Uttar Pradesh, NoidaDr. Sushil Kumar, KIET, Ghaziabad</p>
+        <p>Dr. BB Sagar, HBTU, Kanpur</p>
+        <p>Dr. Dimple Tiwari, Bennet University, Gr. Noida</p>
+        <p>Dr. Manoj Kumar, Guru Ghasidas University, Bilaspur</p>
+        <p>Dr. Ajitesh Kumar, GLA University, Mathura</p>
+        <p>Dr. Chandra Shekhar Yadav, NIET, Greater Noida</p>
+        <p>Dr. Aditya Saxena, GLA University, Mathura</p>
+        <p>Dr. Veena Bharti, RKGIT, Ghaziabad</p>
+        <p>Dr. Yashveer Singh, Haridwar University, Roorkee</p>
+        <p>Ms. Chitra, RKGIT, Ghaziabad</p>
+        <p>Mr. Ram Krishan Singh, IMS, Ghaziabad</p>
+        <p>Mr. Santosh Ray, Delhi Technical University, Delhi</p>
+        <p>Dr. Sandeep Gupta, ABESIT, Ghaziabad</p>
+        <p>Dr. Manju, Jaypee Institute of Information Technology, Noida</p>
+        <p>Dr. Avinash Dwivedi, Galgotias University, Greater Noida</p>
+        <p>Ms Sumita Lamba	, DIT University, Dehradun</p>
+        <p>Dr. Madan Singh, Christ University, Delhi NCR Campus</p>
+        <p>Dr. Sujata Chauhan, Dronacharya Govt. College, Gurgaon</p>
+        <p>Mr. Ishaan Dawar, DIT University, Dehradun</p>
+        <p>Dr. Abhilasha Chauhan, DIT University, Dehradun</p>
+        <p>Dr. Gaurav Mishra, Amity University, Greater Noida</p>
+        <p>Dr. N.U Khan, IMSEC, Ghaziabad</p>
+        <p>Mrs. Ritu Agarwal, RKGIT, Ghaziabad</p>
+        <p>Dr. Amit Singhal, RKGIT, Ghaziabad</p>
+        <p>Mohd. Vakil, RD Engineering College, Ghaziabad</p>
+        <p>Dr. Harsh Khatter, KIET, Ghaziabad</p>
+        <p>Dr. Kanika Taneja, ABESIT, Ghaziabad</p>
         </div>
 
       {/* 
