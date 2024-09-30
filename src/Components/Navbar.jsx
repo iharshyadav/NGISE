@@ -58,6 +58,16 @@ const Navbar = () => {
       }
     }
   }, [location]);
+  
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash === "#program-committee") {
+      const section = document.getElementById("program-committee");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <div className=" w-full sm:h-20 border border-gray-300 sticky bg-opacity- bg-[#fffce6] z-50">
