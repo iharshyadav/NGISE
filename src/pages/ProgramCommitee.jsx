@@ -5,7 +5,7 @@ const Committee = () => {
     <>
       <div className="flex w-full items-center justify-center mt-12 mb-10">
         <h1 className="text-center text-4xl font-bold inline-block  pb-2 ">
-          PROGRAM COMMITTEE
+         TECHNICAL PROGRAM COMMITTEE
         </h1>
       </div>
 
