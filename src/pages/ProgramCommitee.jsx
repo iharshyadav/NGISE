@@ -82,6 +82,22 @@ const Committee = () => {
         <p>Mohd. Vakil, RD Engineering College, Ghaziabad</p>
         <p>Dr. Harsh Khatter, KIET, Ghaziabad</p>
         <p>Dr. Kanika Taneja, ABESIT, Ghaziabad</p>
+        <p>Dr. Aatif Jamshed, ABES Engineering College, Ghaziabad</p>
+        <p>Ms. Anjali Jain, KIET, Ghaziabad</p>
+        <p>Dr. Bhart Sharma, DIT, Dehradun</p>
+        <p>Dr. O.P. Singh, SRM, Modinagar</p>
+        <p>Dr. Kuldeep Kumar Yogi, Banasthali Vidhyapith, Rajasthan</p>
+        <p>Dr. Shailza Kanwar, Bennett University, Gr. Noida</p>
+        <p>Ms. Ambika Gupta, Galgotias University, Gr. Noida</p>
+        <p>Dr Gagandeep Arora, Vardhaman College of Engineering, Hyderabad</p>
+        <p>Dr Hoshiyar Singh Kanyal, ABES Institute of Technology, Ghaziabad</p>
+        <p>Dr Manoj Kumar Singh, IMS Engineering College, Ghaziabad</p>
+        <p>Dr. Vinish Kumar,	RKGIT, Ghaziabad</p>
+        <p>Dr. J. Naga Padmaja, Vardhaman College of Engineering, Hyderabad</p>
+        <p>Mr Anand Prakash Srivastava, NITRA Technical Campus, Ghaziabad</p>
+        <p>Dr. Prabhat Kumar Srivastava, IMS Engineering College, Ghaziabad</p>
+        <p>Mr Manish Chhabra, Vardhaman College of Engineering, Hyderabad</p>
+        <p>Dr. Neeraj Kumar Singh, RKGIT, Ghaziabad</p>
         </div>
 
       {/* 
