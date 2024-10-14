@@ -14,6 +14,7 @@ const Committee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Program Committee</p>
       </div>*/}
       <div className='w-full text-base sm:text-sm   sm:w-full ml-4'>
+        <p>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</p>
         <p>Dr. Punam Kumari, Amity University, Bangalore</p>
         <p>Dr. Megha Jain, JSS Academy of Technical Education, Noida</p>
         <p>Dr. Rashmi Kushwah, Jaypee Institute of Information Technology, Noida</p>
