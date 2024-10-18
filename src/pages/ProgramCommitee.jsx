@@ -17,6 +17,7 @@ const Committee = () => {
         <p>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</p>
         <p>Dr. Punam Kumari, Amity University, Bangalore</p>
         <p>Dr. Megha Jain, JSS Academy of Technical Education, Noida</p>
+        <p>Dr. Anastasija Nikiforova, University of Tartu, Estonia</p>
         <p>Dr. Rashmi Kushwah, Jaypee Institute of Information Technology, Noida</p>
         <p>Dr. Ramveer Singh, GCET, Gr. Noida</p>
         <p>Dr. Arvind Kushwah, GCET, Gr. Noida</p>
