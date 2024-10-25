@@ -201,7 +201,7 @@ const Tracks = () => {
 
   return (
     <div>
-       <section className=" max-w-7xl px-2 py-10 md:px-0">
+       <section className="flex items-center justify-center w-full px-2 py-10 md:px-0">
       <div>
         <div className="mx-auto max-w-2xl w-full flex justify-center items-center ">
           <h2 className="md:text-4xl text-2xl text center font-bold leading-tight text-black sm:text-4xl ">
