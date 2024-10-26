@@ -4,7 +4,11 @@ const Committee = () => {
   return (
     <>
       <div className="flex w-full items-center justify-center mt-12 mb-10">
-        <h1 className="text-center text-4xl font-bold inline-block  pb-2 ">PROGRAM COMMITTEE</h1>
+        <h1 className="text-center text-4xl font-bold inline-block  pb-2 ">SENIOR PROGRAM COMMITTEE MEMBERS</h1>
+      </div>
+      <div className='w-full text-base sm:text-sm   sm:w-full ml-4'>
+        <p>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</p>
+        <p>Dr. Anastasija Nikiforova, University of Tartu, Estonia</p>
       </div>
       
       <div className="flex w-full items-center justify-center mt-12 mb-10">
@@ -18,10 +22,9 @@ const Committee = () => {
         <p className='font-bold text-base lg:text-lg  text-white'>Program Committee</p>
       </div>*/}
       <div className='w-full text-base sm:text-sm   sm:w-full ml-4'>
-        <p>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</p>
         <p>Dr. Punam Kumari, Amity University, Bangalore</p>
+        <p>Dr. Ranita Ganguly, Delaware State University, New Jersey, US</p>
         <p>Dr. Megha Jain, JSS Academy of Technical Education, Noida</p>
-        <p>Dr. Anastasija Nikiforova, University of Tartu, Estonia</p>
         <p>Dr. Rashmi Kushwah, Jaypee Institute of Information Technology, Noida</p>
         <p>Dr. Ramveer Singh, GCET, Gr. Noida</p>
         <p>Dr. Arvind Kushwah, GCET, Gr. Noida</p>
