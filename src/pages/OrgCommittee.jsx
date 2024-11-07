@@ -29,9 +29,9 @@ const Committee = () => {
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4">International Organizing Chair</h2>
             <ul className="list-disc list-inside">
-              <li>Dr. Markus Bertl, Tallinn University of Technology, Estonia {" "}</li>
+              <li>Dr. Markus Bertl, Vienna University of Economics and Business, Austria {" "}</li>
               <li>Dr. Silvia Lips, eID expert at the Estonian Information System Authority, Estonia {" "}</li>
-              <li>Dr. Rozha Ahmed, Digital Transformation Expert, Tallin, Estonia {" "}</li>
+              <li>Dr. Rozha Kamal Ahmed, Computer Science Institute\Sulaimani Polytechnic University Sulaymaniyah, Iraq. {" "}</li>
             </ul>
           </div> 
 
