@@ -111,6 +111,7 @@ const Committee = () => {
         <p>Dr. Prabhat Kumar Srivastava, IMS Engineering College, Ghaziabad</p>
         <p>Mr. Manish Chhabra, Vardhaman College of Engineering, Hyderabad</p>
         <p>Dr. Neeraj Kumar Singh, RKGIT, Ghaziabad</p>
+        <p>Dr. Nzamba Bignoumba, Tallinn University of Technology, Estonia</p>
         </div>
 
       {/* 

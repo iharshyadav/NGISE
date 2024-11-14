@@ -20,6 +20,7 @@ import ImportantDates from './pages/ImpDates.jsx'
 import PlagiarismPolicy from './pages/Plagarism.jsx'
 
 import PlaceToVisit from './pages/PlaceToVisit.jsx'
+import Form from './pages/Form.jsx'
 
 
 
@@ -42,6 +43,7 @@ const router = createBrowserRouter(
         <Route path="/impDates" element={<ImportantDates />} /> */}
         <Route path='/speakers' element ={<Acceptedpaper/>}/>
         <Route path="/contact/query" element={<Query />} />
+        <Route path="/registrationform" element={<Form />} />
     </Route>
   )
 )
