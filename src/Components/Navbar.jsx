@@ -193,6 +193,9 @@ const Navbar = () => {
                 <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/fee">Payment Details</Link>
                 </li>
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/registrationform">Registration Form</Link>
+                </li>
               </ul>
             </li>
             <li className="relative z-50 group">
