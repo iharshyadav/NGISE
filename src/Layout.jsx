@@ -10,7 +10,7 @@ function Layout() {
   return (
     <>
     {
-      location === "/payment" ?
+      location !== "/payment" ?
       <>
       <Navbar classname={`z-50 top-0`} />
       <Outlet/>
