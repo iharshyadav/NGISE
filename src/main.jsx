@@ -21,6 +21,7 @@ import PlagiarismPolicy from './pages/Plagarism.jsx'
 
 import PlaceToVisit from './pages/PlaceToVisit.jsx'
 import Form from './pages/Form.jsx'
+import PayPalButton from './Components/paypalButton.jsx'
 
 
 
@@ -44,6 +45,7 @@ const router = createBrowserRouter(
         <Route path='/speakers' element ={<Acceptedpaper/>}/>
         <Route path="/contact/query" element={<Query />} />
         <Route path="/registrationform" element={<Form />} />
+        <Route path="/payment" element={<PayPalButton />} />
     </Route>
   )
 )
