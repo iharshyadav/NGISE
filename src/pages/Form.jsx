@@ -123,7 +123,9 @@ export default function Form() {
       console.log("Document written with ID: ", docRef.id);
       localStorage.setItem("id",docRef.id)
       localStorage.setItem("hasAccessedPayPalButton","false")
-      navigate("/payment");
+      if(docRef.id !== ""){
+        navigate("/payment");
+      }
       // Reset form or redirect user
       // setFormData({...initialFormState});
     } catch (error) {
