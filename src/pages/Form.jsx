@@ -58,12 +58,12 @@ export default function Form() {
     } else {
       requiredFields = [
         'categoryType',
-        'category',
+        // 'category',
         'subCategory',
         'paperId',
         'paperTitle',
         'presentationMode',
-        'service',
+        // 'service',
         'name',
         'gender',
         'mobile',
@@ -94,21 +94,20 @@ export default function Form() {
         toast.error('Please enter your IEEE Membership Number');
         setIsSubmitting(false);
         return;
-      }
     }
 
     // Delegate-specific validation
-    if (formData.category === 'delegate') {
-      if (!formData.delegateService) {
-        toast.error('Please select a delegate service');
-        setIsSubmitting(false);
-        return;
-      }
-      if (!formData.delegateName) {
-        toast.error('Please enter the delegate name');
-        setIsSubmitting(false);
-        return;
-      }
+    // if (formData.category === 'delegate') {
+    //   if (!formData.delegateService) {
+    //     toast.error('Please select a delegate service');
+    //     setIsSubmitting(false);
+    //     return;
+    //   }
+    //   if (!formData.delegateName) {
+    //     toast.error('Please enter the delegate name');
+    //     setIsSubmitting(false);
+    //     return;
+    //   }
     }
 
 
@@ -225,7 +224,7 @@ export default function Form() {
           )}
 
           {/* Category */}
-          {formData.associated === "no" && (
+          {/* {formData.associated === "no" && (
             <div className="space-y-2">
               <label className="block text-gray-600">Category</label>
               <div>
@@ -243,9 +242,9 @@ export default function Form() {
                 </label>
               </div>
             </div>
-          )}
+          )} */}
 
-          {formData.category === "delegate" && (
+          {/* {formData.category === "delegate" && (
             <>
               <div className="space-y-2">
                 <label className="block text-gray-600">Service</label>
@@ -312,7 +311,7 @@ export default function Form() {
                 />
               </div>
             </>
-          )}
+          )} */}
           <div className="space-y-2">
             <label className="block text-gray-600">Category Type</label>
             <div className="space-x-4">
@@ -376,7 +375,7 @@ export default function Form() {
               </div>
 
               {/* Service */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="block text-gray-600">Service</label>
                 <div className="space-x-4">
                   <label className="inline-flex items-center">
@@ -419,7 +418,7 @@ export default function Form() {
                     <span className="ml-2">Participant</span>
                   </label>
                 </div>
-              </div>
+              </div> */}
 
               {/* Paper Title */}
               <div className="space-y-2">
