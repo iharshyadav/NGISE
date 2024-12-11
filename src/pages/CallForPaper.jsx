@@ -25,7 +25,7 @@ function CallForPaper() {
         progress in next-generation information systems and foster the
         development of technology-driven solutions in today&apos;s fast-changing
         digital world through a diverse array of presentations, workshops, and
-        discussions.
+        discussions. The Conference will be conducted in <b>Hybrid-Mode</b>.
       </p>
 
       <div className=" w-full flex flex-col items-center justify-center sm:px-20 ">
