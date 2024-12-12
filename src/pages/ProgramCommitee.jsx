@@ -11,6 +11,10 @@ const Committee = () => {
       <div className='w-full text-base sm:text-sm   sm:w-full ml-4'>
         <p>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</p>
         <p>Dr. Anastasija Nikiforova, University of Tartu, Estonia</p>
+        <p>Tania Cerquitelli, Politecnico di Torino, Italy</p>
+        <p>Innar Liiv, Tallinn University of Technology, Tallinn, Estonia</p>
+        <p>Elli Valla, Tallinn University of Technology, Tallinn, Estonia</p>
+
       </div>
       </div>
       </div>
