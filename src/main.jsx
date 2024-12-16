@@ -20,6 +20,7 @@ import ImportantDates from './pages/ImpDates.jsx'
 import PlagiarismPolicy from './pages/Plagarism.jsx'
 
 import PlaceToVisit from './pages/PlaceToVisit.jsx'
+import Visainformation from './pages/visainformation.jsx'
 import Form from './pages/Form.jsx'
 import PayPalButton from './Components/paypalButton.jsx'
 
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
         <Route path="/organizingcommittee" element={<OrgCommitee/>} /> 
         {/* <Route path="/locale/about" element={<AboutCity/>} /> */}
         <Route path="/locale/place" element={<PlaceToVisit/>} />
+        <Route path="/locale/visainformation" element={<Visainformation/>} />
         <Route path="/locale/nearby-hotel" element={<Accomodation />} />
         <Route path="/registration" element={<RegistrationFee />} />
         <Route path="/fee" element={<FeeSubmission />} />
