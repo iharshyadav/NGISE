@@ -23,6 +23,7 @@ import PlaceToVisit from './pages/PlaceToVisit.jsx'
 import Form from './pages/Form.jsx'
 import PayPalButton from './Components/paypalButton.jsx'
 import FAQ from './pages/FAQ.jsx'
+import VisaInformation from './pages/VisaInformation.jsx'
 
 
 
@@ -48,6 +49,7 @@ const router = createBrowserRouter(
         <Route path="/registrationform" element={<Form />} />
         <Route path="/payment" element={<PayPalButton />} />
         <Route path="/locale/faq" element={<FAQ />} />
+        <Route path="/locale/Visainformation" element={<VisaInformation />} />
     </Route>
   )
 )
