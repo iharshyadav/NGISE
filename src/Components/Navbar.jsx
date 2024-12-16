@@ -218,6 +218,12 @@ const Navbar = () => {
                 <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
                 </li>
+                {/* <li
+                            className="px-2 pb-2 font-medium hover:text-[#00cc99] lg:block"
+                            onClick={() => setIsMenuOpen5(false)}
+                          >
+                            <Link to="/locale/faq">FAQ</Link>
+                          </li> */}
               </ul>
             </li>
             <li className="relative z-50 group">
@@ -429,6 +435,13 @@ const Navbar = () => {
                           >
                             <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
                           </li>
+                          {/* <li
+                            className="py-2 px-4 font-medium hover:text-[#00cc99] lg:block"
+                            onClick={() => setIsMenuOpen5(false)}
+                          >
+                            <Link to="/locale/faq">FAQ</Link>
+                          </li> */}
+                        
                         </ul>
                       )}
                     </li>
