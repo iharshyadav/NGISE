@@ -34,6 +34,11 @@ const Footer = () => {
                     Paper Submission
                   </a>
                 </li>
+                <li>
+                  <a href="/locale/faq" className="hover:text-blue-400 transition-colors text-sm font-normal">
+                    FAQ
+                  </a>
+                </li>
               </ul>
             </div>
 
