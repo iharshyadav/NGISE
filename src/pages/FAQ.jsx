@@ -2,13 +2,13 @@ import React from 'react'
 
 const FAQ = () => {
   return (
-     <div className=' ml-[12%] mr-[10%] md:ml-[25%]  md:mr-[19%] '>
+     <div className=' px-[5%] md:ml-[25%]  md:mr-[19%] '>
           <div><h2 class="text-4xl font-bold text-black sm:text-4xl mb-4 text-center mt-5">FAQ</h2></div>
     <div className='flex flex-col gap-y-7 mb-5'>
       
         <div className='flex flex-col gap-y-1'>
             <div className='font-bold'>Q. I need a visa to enter India, how can I get the invitation latter?</div>
-            <div ><div className='text-gray-700'><span className='font-bold text-black'>A.</span>Please visit the page:<a className='text-blue-700' href='https://www.mha.gov.in/MHA1/TourVisa.html'>https://www.mha.gov.in/MHA1/TourVisa.html</a></div> </div>
+            <div ><div className='text-gray-700'><span className='font-bold text-black'>A.</span>Please visit the page:<a className='text-blue-700 pr-8' href='https://www.mha.gov.in/MHA1/TourVisa.html'>https://www.mha.gov.in/MHA1/TourVisa.html</a></div> </div>
         </div>
         <div className='flex flex-col gap-y-1'>
             <div className='font-bold'>Q. I have not received an invitation letter yet. When will it arrive?</div>
