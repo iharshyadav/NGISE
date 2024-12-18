@@ -12,7 +12,7 @@ const FAQ = () => {
         <div className="flex flex-col gap-y-1">
           <div className="font-bold">
             Q. I need a visa to enter India, how can I get the invitation
-            latter?
+            letter?
           </div>
           <div>
             <div className="text-gray-700">
