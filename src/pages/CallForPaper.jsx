@@ -25,7 +25,10 @@ function CallForPaper() {
         progress in next-generation information systems and foster the
         development of technology-driven solutions in today&apos;s fast-changing
         digital world through a diverse array of presentations, workshops, and
-        discussions. The Conference will be conducted in <b>Hybrid-Mode</b>.
+        discussions. The Conference will be conducted in <b>Hybrid-Mode</b>. 
+        <b>All accepted, registered and presented papers will be
+          included in the conference proceedings and will be included in IEEE
+          Xplore, indexed by EI, SCOPUS etc.</b>
       </p>
 
       <div className=" w-full flex flex-col items-center justify-center sm:px-20 ">
@@ -86,9 +89,9 @@ function CallForPaper() {
           conference during the NGISE review process. If a paper is accepted, at
           least one author must register for the conference, attend, and present
           the paper. Papers without a presenting author will not be included in
-          the proceedings. All accepted, registered and presented papers will be
+          the proceedings. <b>All accepted, registered and presented papers will be
           included in the conference proceedings and will be included in IEEE
-          Xplore, indexed by EI, SCOPUS etc. Authors to ensure the originality
+          Xplore, indexed by EI, SCOPUS etc.</b> Authors to ensure the originality
           of their manuscript and strictly follow the IEEE guidelines in this
           regard. Refer to the following link for these guidelines:{" "}
           </p>
