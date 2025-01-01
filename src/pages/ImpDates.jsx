@@ -105,12 +105,5 @@ const ImportantDates = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ImportantDates;
 
- 
-
-
-=======
-export default ImportantDates;
->>>>>>> e0e4644
