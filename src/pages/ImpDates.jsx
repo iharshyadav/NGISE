@@ -2,7 +2,7 @@
 const ImportantDates = () => {
   
   const Dates = [
-    { <s>data: "31st Dec, 2024"</s>, value: "Paper Submission Deadline" },
+    <s>{ data: "31st Dec, 2024"</s>, value: "Paper Submission Deadline" }</s>,
     { data: "10th Jan, 2025", value: "Acceptance Notification" },
     { data: "20th Jan, 2025", value: "Early Bird Registration" },
     { data: "22nd Jan, 2025", value: "Final Paper Submission" },
