@@ -18,7 +18,12 @@ const Speaker = () => {
               className="w-48 h-32 object-cover mb-4" 
             />
             <div className="font-semibold text-lg">Salvatore Sinno</div> 
-            <div className="text-gray-600">Unisys Enterprise Computing Solutions</div>
+            <div className="text-gray-600">
+  Salvatore Sinno<br />
+  VP of ECS Solution<br />
+  Innovation at Unisys
+</div>
+
           </div>
         </div>
       </div>
