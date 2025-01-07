@@ -8,7 +8,7 @@ const Committee = () => {
       </div>
 
       <div className='w-full flex justify-center px-8 mb-6'>
-        <div className='flex flex-col my-4 w-full max-w-3xl'>
+        <div className='flex flex-col my-4 w-full'>
           
           <div className="mb-10">
             <h2 className="text-2xl flex justify-center font-bold mb-4">Honorary General Chair</h2>
@@ -31,10 +31,9 @@ const Committee = () => {
 
             <div className="mb-10">
   <h2 className="text-2xl flex justify-center font-bold mb-4">Honorary Advisory Chair</h2>
-
   
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-10">
- 
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-10">
+    {/* Card 1 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/21f7b439-a4e1-4baa-9b73-1faf2c6dc9e2/-/preview/252x324/"
@@ -47,7 +46,7 @@ const Committee = () => {
       </div>
     </div>
 
-
+    {/* Card 2 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/34d23b2d-5834-4017-816f-911a88cc719e/-/preview/190x191/"
@@ -60,6 +59,7 @@ const Committee = () => {
       </div>
     </div>
 
+    {/* Card 3 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/b4b1e588-b43c-45b8-9ad2-bef10ecbc053/-/preview/328x327/"
@@ -72,7 +72,7 @@ const Committee = () => {
       </div>
     </div>
 
-
+    {/* Card 4 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/1c2b115d-7fcb-44dd-b0e7-d434866b65a2/-/preview/365x475/"
@@ -85,6 +85,7 @@ const Committee = () => {
       </div>
     </div>
 
+    {/* Card 5 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/010113ba-aa70-46a1-8b43-18d0168653fb/-/preview/312x312/"
@@ -97,7 +98,7 @@ const Committee = () => {
       </div>
     </div>
 
- 
+    {/* Card 6 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/1611a4ed-edd3-4c41-a994-4075c26138b0/-/preview/400x400/"
@@ -109,8 +110,10 @@ const Committee = () => {
         <p>National Institute of Solar Energy, New Delhi</p>
       </div>
     </div>
+  </div>
 
-
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-10">
+    {/* Card 7 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/85131930-dae8-412c-84fa-7a17170cafba/-/preview/124x128/"
@@ -123,7 +126,7 @@ const Committee = () => {
       </div>
     </div>
 
- 
+    {/* Card 8 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/3ee5f7fd-572e-4b1d-9bfc-1df01d7c9957/-/preview/434x444/"
@@ -136,7 +139,7 @@ const Committee = () => {
       </div>
     </div>
 
-
+    {/* Card 9 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/ed57c107-03b8-45d5-abce-c137b425a375/-/preview/124x128/"
@@ -149,6 +152,7 @@ const Committee = () => {
       </div>
     </div>
 
+    {/* Card 10 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/6e8dfea6-d9dc-43be-a5d3-bd0b428a42d9/-/preview/128x98/"
@@ -161,7 +165,7 @@ const Committee = () => {
       </div>
     </div>
 
-    
+    {/* Card 11 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/a246a4b0-1390-4f95-9251-2bc4a7936b48/-/preview/103x128/"
@@ -174,7 +178,7 @@ const Committee = () => {
       </div>
     </div>
 
-    
+    {/* Card 12 */}
     <div className="flex flex-col items-center w-full">
       <img
         src="https://ucarecdn.com/22570c1f-7a7e-483b-8447-d18784b2bca9/-/preview/93x128/"
@@ -299,8 +303,48 @@ const Committee = () => {
   </div>
 </div>
 
-          
-        </div>
+<div style={{ display: "flex", justifyContent: "center", padding: "20px"}}>
+      <div style={{ textAlign: "left", maxWidth: "800px" }}>
+        <h2 style={{ fontWeight: "bold", fontSize: "20px" }}>Finance Chair</h2>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li>Dr. Rashmi Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Mr. Santosh Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+        </ul>
+
+        <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>Publicity and Web Chair</h2>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li>Dr. Shivani Agarwal, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Ms. Tahira Majumdar, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+        </ul>
+
+        <hr />
+
+        <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>TECHNICAL PROGRAM COMMITTEE CHAIR</h2>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</li>
+          <li>Dr. Anastasija Nikiforova, University of Tartu, Estonia</li>
+          <li>Dr. Tania Cerquitelli, Politecnico di Torino, Italy</li>
+          <li>Dr. Innar Liiv, Tallinn University of Technology, Tallinn, Estonia</li>
+          <li>Dr. Elli Valla, Tallinn University of Technology, Tallinn, Estonia</li>
+          <li>Dr. Sunil Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Aditya Pratap Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Rashmi Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Shivani Aggarwal, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Nandita Goyal, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+        </ul>
+
+        <h2 style={{ fontWeight: "bold" ,marginTop: "20px", fontSize: "20px"}}>TECHNICAL PROGRAM COMMITTEE CO-CHAIR</h2>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li>Dr. Nitin Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Ms. Tahira Mazumder, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Mr. Sumit Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Mr. Santosh Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Mr. Pancham Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+        </ul>
+      </div>
+    </div>        </div>
       </div>
     </>
   );
