@@ -320,7 +320,7 @@ const Committee = () => {
 
         <hr />
 
-        <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>TECHNICAL PROGRAM COMMITTEE CHAIR</h2>
+        {/* <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>TECHNICAL PROGRAM COMMITTEE CHAIR</h2>
         <ul style={{ listStyleType: "none", padding: 0 }}>
           <li>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</li>
           <li>Dr. Anastasija Nikiforova, University of Tartu, Estonia</li>
@@ -342,7 +342,7 @@ const Committee = () => {
           <li>Mr. Sumit Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
           <li>Mr. Santosh Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
           <li>Mr. Pancham Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
-        </ul>
+        </ul> */}
       </div>
     </div>        </div>
       </div>
