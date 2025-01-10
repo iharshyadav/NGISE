@@ -4,7 +4,7 @@ const Committee = () => {
   return (
     <>
       <div className="flex w-full items-center justify-center mt-12 mb-10">
-        <h1 className="text-center text-4xl font-bold inline-block  pb-2 ">SENIOR PROGRAM COMMITTEE MEMBERS</h1>
+        {/* <h1 className="text-center text-4xl font-bold inline-block  pb-2 ">SENIOR PROGRAM COMMITTEE MEMBERS</h1>*/}
       </div>
        <div className='w-full flex  justify-center px-8 mb-6'>
         <div className='flex flex-col my-4 w-full max-w-3xl'>
