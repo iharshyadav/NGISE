@@ -32,7 +32,7 @@ const Committee = () => {
             <div className="mb-10">
   <h2 className="text-2xl flex justify-center font-bold mb-4 ">Honorary Advisory Chair</h2>
   
-  <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-10  sm:w-full sm:flex sm:justify-center w-full">
+  <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-10">
     {/* Card 1 */}
     <div className="flex flex-col items-center w-48">
       <img
