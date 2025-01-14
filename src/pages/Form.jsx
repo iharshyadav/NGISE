@@ -34,17 +34,19 @@ export default function Form() {
   const [showFields, setShowFields] = useState(true)
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPayment, setShowPayment] = useState(null);
-  const [scriptLoaded, setScriptLoaded] = useState(false);
+  // const [scriptLoaded, setScriptLoaded] = useState(false);
 
 
   useEffect(() => {
     setShowFields(formData.associated === 'no')
   }, [formData.associated])
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
     let requiredFields;
     if (formData.associated === 'yes') {
       requiredFields = ['enrollmentNo', 'categoryType'];
@@ -103,17 +105,32 @@ export default function Form() {
     //   }
     }
 
+  
+
 
     try {
       const docRef = await addDoc(collection(db, "formSubmissions"), {
         ...formData,
         createdAt: new Date(),
       });
+      // loadPayPalScript();
+      // setShowPayment(false);
       toast.success("Form submitted successfully!");
-      console.log("Document written with ID: ", docRef.id);
+      
+      // console.log("Document written with ID: ", docRef.id);
       if(docRef.id !== ""){
         setShowPayment(true);
-        const h = localStorage.removeItem("__paypal_storage__");
+        const paypalData = localStorage.getItem("__paypal_storage__");
+        if (paypalData) {
+          localStorage.removeItem("__paypal_storage__");
+          localStorage.removeItem("cookieFallback");
+          localStorage.removeItem("hasAccessedPayPalButton");
+          localStorage.removeItem("id");
+          localStorage.removeItem("targetDate");
+          localStorage.removeItem("cart");
+          localStorage.removeItem("cartImage");
+        }
+    
       }
       // setFormData({...initialFormState});
     } catch (error) {
@@ -124,43 +141,41 @@ export default function Form() {
     }
   }
 
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    if (urlParams.has('registrationform')) {
+ useEffect(() => {
+    const paypalData = localStorage.getItem("__paypal_storage__");
+    if (paypalData) {
+      localStorage.removeItem("__paypal_storage__");
       window.location.reload();
     }
-  }, [window.location.search]);
+  }, []);
  
   useEffect(() => {
-    if (showPayment && !scriptLoaded) {
-      console.log("first")
+    if (showPayment) {
       const script = document.createElement("script");
       script.src = `https://www.paypal.com/sdk/js?client-id=${import.meta.env.VITE_REACT_PAYPAL_CLIENT_ID}&components=hosted-buttons&currency=USD`;
       script.async = true;
 
       script.onload = () => {
-        setScriptLoaded(true);
+        if (window.paypal?.HostedButtons) {
+          window.paypal
+            .HostedButtons({ 
+              hostedButtonId:import.meta.env.VITE_REACT_PAYPAL_HOST_ID,
+            })
+            .render("#paypal-container"); 
+        } else {
+          console.error("PayPal Hosted Buttons SDK failed to load.");
+          // setShowPayment(false)
+        }
       };
 
       document.body.appendChild(script);
 
       return () => {
         document.body.removeChild(script);
+        setShowPayment(false)
       };
     }
-  }, [showPayment,scriptLoaded]);
-
-  useEffect(() => {
-    if (scriptLoaded && window.paypal?.HostedButtons) {
-      window.paypal
-        .HostedButtons({
-          hostedButtonId: import.meta.env.VITE_REACT_PAYPAL_HOST_ID,
-        })
-        .render("#paypal-container");
-        console.log( window.paypal?.HostedButtons,scriptLoaded)
-    }
-  }, [scriptLoaded]);
+  }, [showPayment]);
 
   const countries = [
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
