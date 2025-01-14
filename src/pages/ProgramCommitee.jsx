@@ -36,6 +36,47 @@ const Committee = () => {
         <p>Mr. Pancham Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
         </div>
       </div>
+
+      <div className="flex w-full items-center justify-center mt-12 mb-10">
+        <h1 className="text-center text-4xl font-bold inline-block pb-2">
+          TECHNICAL PROGRAM COMMITTEE CHAIR
+        </h1>
+      </div>
+      <div className="w-full flex justify-center px-8 mb-6">
+        <div className="flex flex-col my-4 w-full max-w-3xl">
+          <div className="w-full text-base sm:text-sm sm:w-full ml-4">
+            <p>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</p>
+            <p>Dr. Anastasija Nikiforova, University of Tartu, Estonia</p>
+            <p>Dr. Tania Cerquitelli, Politecnico di Torino, Italy</p>
+            <p>Dr. Innar Liiv, Tallinn University of Technology, Tallinn, Estonia</p>
+            <p>Dr. Elli Valla, Tallinn University of Technology, Tallinn, Estonia</p>
+            <p>Dr. Sunil Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Dr. Aditya Pratap Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Dr. Rashmi Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Dr. Shivani Aggarwal, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Dr. Nandita Goyal, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div className="flex w-full items-center justify-center mt-12 mb-10">
+        <h1 className="text-center text-4xl font-bold inline-block pb-2">
+          TECHNICAL PROGRAM COMMITTEE CO-CHAIR
+        </h1>
+      </div>
+      <div className="w-full flex justify-center px-8 mb-6">
+        <div className="flex flex-col my-4 w-full max-w-3xl">
+          <div className="w-full text-base sm:text-sm sm:w-full ml-4">
+            <p>Dr. Nitin Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Ms. Tahira Mazumder, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Mr. Sumit Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Mr. Santosh Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+            <p>Mr. Pancham Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
+          </div>
+        </div>
+      </div>
       </div> 
       
       <div className="flex w-full items-center justify-center mt-12 mb-10">
