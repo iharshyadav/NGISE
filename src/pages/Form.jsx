@@ -3,8 +3,6 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig"; 
-import RenderPayPalButton from '../Components/paypalButton';
-import PayPalButton from '../Components/paypalButton';
 import { useNavigate } from 'react-router-dom';
 
 export default function Form() {
@@ -33,20 +31,15 @@ export default function Form() {
     delegateName: ''
   })
 
-  useEffect(() => {
-    console.log(formData)
-  },[formData])
-
   const [showFields, setShowFields] = useState(true)
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPayment, setShowPayment] = useState(false);
+  const [showPayment, setShowPayment] = useState(null);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
 
   useEffect(() => {
     setShowFields(formData.associated === 'no')
   }, [formData.associated])
-
-  const navigate = useNavigate();
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -116,16 +109,12 @@ export default function Form() {
         ...formData,
         createdAt: new Date(),
       });
-      // loadPayPalScript();
-      setShowPayment(true);
       toast.success("Form submitted successfully!");
       console.log("Document written with ID: ", docRef.id);
-      localStorage.setItem("id",docRef.id)
-      localStorage.setItem("hasAccessedPayPalButton","false")
       if(docRef.id !== ""){
-        navigate("/payment");
+        setShowPayment(true);
+        const h = localStorage.removeItem("__paypal_storage__");
       }
-      // Reset form or redirect user
       // setFormData({...initialFormState});
     } catch (error) {
       console.error('Submission error:', error);
@@ -134,6 +123,44 @@ export default function Form() {
       setIsSubmitting(false);
     }
   }
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.has('registrationform')) {
+      window.location.reload();
+    }
+  }, [window.location.search]);
+ 
+  useEffect(() => {
+    if (showPayment && !scriptLoaded) {
+      console.log("first")
+      const script = document.createElement("script");
+      script.src = `https://www.paypal.com/sdk/js?client-id=${import.meta.env.VITE_REACT_PAYPAL_CLIENT_ID}&components=hosted-buttons&currency=USD`;
+      script.async = true;
+
+      script.onload = () => {
+        setScriptLoaded(true);
+      };
+
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [showPayment,scriptLoaded]);
+
+  useEffect(() => {
+    if (scriptLoaded && window.paypal?.HostedButtons) {
+      window.paypal
+        .HostedButtons({
+          hostedButtonId: import.meta.env.VITE_REACT_PAYPAL_HOST_ID,
+        })
+        .render("#paypal-container");
+        console.log( window.paypal?.HostedButtons,scriptLoaded)
+    }
+  }, [scriptLoaded]);
 
   const countries = [
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
@@ -160,6 +187,8 @@ export default function Form() {
 
   return (
     <div>
+      {
+        !showPayment ? (
       <form onSubmit={handleSubmit} className="max-w-6xl mx-auto p-6 space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* University Association */}
@@ -718,16 +747,15 @@ export default function Form() {
         )}
         <ToastContainer />
       </form>
-        {/* {showPayment && (
-          // <div className="flex mt-4 w-full justify-center mb-10">
-          //   <button className="px-3 pt-1 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
-          //     Payment
-          //     <div id="paypal-container" className="mt-2"></div>
-          //     {loadPayPalScript()}
-          //   </button>
-          // </div>
-          <PayPalButton />
-        )} */}
+        ) : (
+            <div className="flex justify-center items-center h-screen bg-white">
+              <div className="flex flex-col justify-center items-center text-center space-y-4">
+                <h2 className="text-2xl font-semibold">Proceed to Payment</h2>
+                <div id="paypal-container" className="w-full max-w-lg"></div>
+              </div>
+            </div>
+        )
+      }
     </div>
   );
 }
