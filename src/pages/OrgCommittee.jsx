@@ -319,6 +319,32 @@ const Committee = () => {
         </ul>
 
         <hr />
+=======
+        {/*<hr />
+
+        <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>TECHNICAL PROGRAM COMMITTEE CHAIR</h2>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li>Dr. Arun Kumar Sangaiah, National Yunlin University of Science and Technology, Taiwan</li>
+          <li>Dr. Anastasija Nikiforova, University of Tartu, Estonia</li>
+          <li>Dr. Tania Cerquitelli, Politecnico di Torino, Italy</li>
+          <li>Dr. Innar Liiv, Tallinn University of Technology, Tallinn, Estonia</li>
+          <li>Dr. Elli Valla, Tallinn University of Technology, Tallinn, Estonia</li>
+          <li>Dr. Sunil Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Aditya Pratap Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Rashmi Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Shivani Aggarwal, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Dr. Nandita Goyal, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+        </ul>
+
+        <h2 style={{ fontWeight: "bold" ,marginTop: "20px", fontSize: "20px"}}>TECHNICAL PROGRAM COMMITTEE CO-CHAIR</h2>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li>Dr. Nitin Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Ms. Tahira Mazumder, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Mr. Sumit Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Mr. Santosh Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Mr. Pancham Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+        </ul>*/}
       </div>
     </div>        </div>
       </div>
