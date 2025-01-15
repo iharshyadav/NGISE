@@ -8,7 +8,7 @@ const RegistrationFee = () => {
     { data: "Non Presenting Author", fee1: "1000" , fee2:"1500" },
   
   ];
-
+<p>*Additional per page charges INR 1000</p>
   const registrationInfo2 = [
     { data: "Academician/Industry Participant/Others", fee1: "350" , fee2:"400" },
    
