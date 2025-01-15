@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Form from './Form'; 
 
 const RegistrationAndFeeSubmission = () => {
   const [nationality, setNationality] = useState('');
@@ -7,16 +8,15 @@ const RegistrationAndFeeSubmission = () => {
     setNationality(event.target.value);
   };
 
-
   const registrationInfo1 = [
-    { data: "Academician/Industry Participant/Others", fee1: "6000" , fee2:"7000" },
-    { data: "Research Scholar/ UG/PG Student", fee1: "5000" , fee2:"6000" },
-    { data: "Attendee", fee1: "4000" , fee2: "5000"},
-    { data: "Non Presenting Author", fee1: "1000" , fee2:"1500" },
+    { data: "Academician/Industry Participant/Others", fee1: "6000", fee2: "7000" },
+    { data: "Research Scholar/ UG/PG Student", fee1: "5000", fee2: "6000" },
+    { data: "Attendee", fee1: "4000", fee2: "5000" },
+    { data: "Non Presenting Author", fee1: "1000", fee2: "1500" },
   ];
 
   const registrationInfo2 = [
-    { data: "Academician/Industry Participant/Others", fee1: "350" , fee2:"400" },
+    { data: "Academician/Industry Participant/Others", fee1: "350", fee2: "400" },
   ];
 
   const feeDetails = [
@@ -32,11 +32,9 @@ const RegistrationAndFeeSubmission = () => {
 
   return (
     <div className="px-4 sm:px-40 py-7">
-     
-
       {/* Registration Fee Section */}
       <div id="registration-fee">
-        <h1 className="text-3xl font-bold mt-4">Registration Fee</h1>
+        <h1 className="text-3xl flex justify-center font-bold mt-4">Registration Fee</h1>
         <table className="text-sm sm:text-lg w-full mt-10 mb-10 border border-gray-300">
           <thead>
             <tr className="border-b border-gray-300 bg-stone-300">
@@ -80,7 +78,7 @@ const RegistrationAndFeeSubmission = () => {
 
       {/* Fee Submission Details Section */}
       <div id="fee-submission" className="mt-10">
-        <h1 className="text-3xl font-bold mt-4">Payment Details</h1>
+        <h1 className="text-3xl flex justify-center font-bold mt-4">Fee Submission Details</h1>
         <h3 className="text-lg mt-4">Details of IMPS/UPI/RTGS/NEFT:</h3>
         <table className="registervalue text-lg w-full mt-8">
           <tbody className="border-gray-300 border">
@@ -92,10 +90,11 @@ const RegistrationAndFeeSubmission = () => {
             ))}
           </tbody>
         </table>
-     
 
+       
         <div className="mt-6">
-          <label className="text-lg font-semibold">Nationality</label>
+          <h1 className="text-3xl flex justify-center font-bold mb-4">Registration Form</h1>
+          <label className="text-lg mt-10 font-semibold">Nationality</label>
           <div className="flex items-center mt-2">
             <label className="flex items-center mr-6">
               <input
@@ -120,9 +119,14 @@ const RegistrationAndFeeSubmission = () => {
           </div>
         </div>
       </div>
+
+    
+      {nationality && (
+        <div className="mt-10">
+          <Form nationality={nationality} />
+        </div>
+      )}
     </div>
-    
-    
   );
 };
 
