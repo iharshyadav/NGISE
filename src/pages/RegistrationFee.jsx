@@ -38,7 +38,7 @@ const RegistrationFee = () => {
             ))}
           </tbody>
         </table>
-        {/*<p>*Additional per page charges INR 1000</p>*/}
+        <p>*Additional per page charges INR 1000</p>
         <table className="registervalue text-sm sm:text-lg w-full mt-10 mb-10 border border-gray-300">
           <thead>
             <tr className="border-b border-gray-300 bg-stone-300">
