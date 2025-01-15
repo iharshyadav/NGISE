@@ -188,28 +188,17 @@ const Navbar = () => {
                 Speaker
               </li>
             </Link> */}
-            <li className="relative z-50 group">
-              <span
-                className={`flex items-center text-base font-semibold cursor-pointer ${
-                  currentPathname === "/commitee"
-                    ? "text-[#46ce9c]"
-                    : "text-gray-800"
-                } hover:text-[#00cc99]`}
-              >
-                Registration <RiArrowDropDownLine className="text-2xl" />
-              </span>
-              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
-                <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
-                  <Link to="/registration">Registration Fee</Link>
-                </li>
-                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
-                  <Link to="/fee">Payment Details</Link>
-                </li>
-                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
-                  <Link to="/registrationform">Registration Form</Link>
-                </li>
-              </ul>
-            </li>
+           <li className="relative z-50">
+  <span
+    className={`flex items-center text-base font-semibold cursor-pointer ${
+      currentPathname === "/commitee" ? "text-[#46ce9c]" : "text-gray-800"
+    } hover:text-[#00cc99]`}
+    onClick={() => window.location.href = "/registration"}  // Direct navigation on click
+  >
+    Registration
+  </span>
+</li>
+
             <li className="relative z-50 group">
               <span
                 className={`flex items-center text-base font-semibold cursor-pointer ${
