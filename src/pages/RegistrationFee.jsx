@@ -8,7 +8,7 @@ const RegistrationFee = () => {
     { data: "Non Presenting Author", fee1: "1000" , fee2:"1500" },
   
   ];
-<p>*Additional per page charges INR 1000</p>
+
   const registrationInfo2 = [
     { data: "Academician/Industry Participant/Others", fee1: "350" , fee2:"400" },
    
@@ -38,7 +38,7 @@ const RegistrationFee = () => {
             ))}
           </tbody>
         </table>
-
+        <p>*Additional per page charges INR 1000</p>
         <table className="registervalue text-sm sm:text-lg w-full mt-10 mb-10 border border-gray-300">
           <thead>
             <tr className="border-b border-gray-300 bg-stone-300">
