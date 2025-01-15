@@ -58,7 +58,7 @@ const RegistrationFee = () => {
             ))}
           </tbody>
         </table>
-        {/*<p>*Additional per page charges USD 50</p>*/}
+        <p>*Additional per page charges USD 50</p>
 
       </div>
     </div>
