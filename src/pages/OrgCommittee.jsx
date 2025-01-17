@@ -319,7 +319,7 @@ const Committee = () => {
         </ul>
 
         <hr />
-=======
+
         {/*<hr />
 
         <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>TECHNICAL PROGRAM COMMITTEE CHAIR</h2>
