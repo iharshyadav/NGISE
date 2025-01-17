@@ -1,24 +1,32 @@
-// import { useState } from 'react';
-// import '../App.css'
-// import { ChevronUp, ChevronDown } from 'lucide-react'
+import { useState } from 'react';
+import '../App.css';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 import Tracks from './Tracks';
 
-const Dates = [
-  { data: "15th Jan, 2025", value: "Extended Paper Submission Deadline"},
-  { data: "25th Jan, 2025", value: "Acceptance Notification" },
-  { data: "31st Jan, 2025", value: "Early Bird Registration" },
-  { data: "5th Feb, 2025", value: "Final Paper Submission" },
-  /*{ data: "31st Dec, 2024", value: "Paper Submission Deadline" },
-  { data: "10th Jan, 2025", value: "Acceptance Notification" },
-  { data: "20th Jan, 2025", value: "Early Bird Registration" },
-  { data: "22nd Jan, 2025", value: "Final Paper Submission" },*/
-  
-];
+const CallForPaper = () => {
+  const Dates = [
+    {
+      oldDate: "31st Dec, 2024",
+      newDate: "15th Jan, 2025",
+      value: "Extended Paper Submission Deadline",
+    },
+    {
+      oldDate: "10th Jan, 2025",
+      newDate: "25th Jan, 2025",
+      value: "Acceptance Notification",
+    },
+    {
+      oldDate: "20th Jan, 2025",
+      newDate: "31st Jan, 2025",
+      value: "Early Bird Registration",
+    },
+    {
+      oldDate: "22nd Jan, 2025",
+      newDate: "5th Feb, 2025",
+      value: "Final Paper Submission",
+    },
+  ];
 
-
-
-function CallForPaper() {
- 
   return (
     <>
       <p className="mt-8 px-10 text-justify sm:px-28">
@@ -29,20 +37,20 @@ function CallForPaper() {
         progress in next-generation information systems and foster the
         development of technology-driven solutions in today&apos;s fast-changing
         digital world through a diverse array of presentations, workshops, and
-        discussions. The Conference will be conducted in <b>Hybrid-Mode</b>. 
+        discussions. The Conference will be conducted in <b>Hybrid-Mode</b>.
         <b>All accepted, registered and presented papers will be
           included in the conference proceedings and will be included in IEEE
           Xplore, indexed by EI, SCOPUS etc.</b>
       </p>
 
-      <div className=" w-full flex flex-col items-center justify-center sm:px-20 ">
-        <div className="flex w-full items-center justify-center mt-8 ">
-          <h1 className="text-center text-2xl sm:text-4xl font-bold  inline-block ">
+      <div className="w-full flex flex-col items-center justify-center sm:px-20">
+        <div className="flex w-full items-center justify-center mt-8">
+          <h1 className="text-center text-2xl sm:text-4xl font-bold inline-block">
             Important Dates
           </h1>
         </div>
-        <div className="bg-white shadow-xl mt-10 mb-10  w-[87%] sm:[80%] md:w-[55%] lg:w-[50%] border border-gray-300">
-          <table className="registervalue text-lg w-full  ">
+        <div className="bg-white shadow-xl mt-10 mb-10 w-[90%] sm:w-[85%] md:w-[70%] lg:w-[65%] border border-gray-300">
+          <table className="registervalue text-lg w-full">
             <tbody>
               {Dates.map((e, index) => (
                 <tr
@@ -51,10 +59,22 @@ function CallForPaper() {
                 >
                   <td
                     className="p-2 border-r border-gray-300"
-                    style={{ width: "30%" }}
+                    style={{ width: "45%" }}
                   >
-                    {e.data}
+                    <span
+                      className="mr-2"
+                      style={{
+                        textDecoration: "line-through",
+                        textDecorationColor: "red",
+                        textDecorationThickness: "2px",
+                        color: "gray",
+                      }}
+                    >
+                      {e.oldDate}
+                    </span>
+                    <span className="text-black"> {e.newDate}</span>
                   </td>
+
                   <td className="p-2">{e.value}</td>
                 </tr>
               ))}
@@ -65,13 +85,13 @@ function CallForPaper() {
 
       <Tracks />
 
-      <div className=" flex w-full items-center justify-center mt-10 ">
-        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl ">
+      <div className="flex w-full items-center justify-center mt-10">
+        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
           Paper Submission
         </h2>
       </div>
 
-      <div className="mx-10 md:mx-28 mb-8 mt-10 text-justify text-base sm:text-lg flex flex-col ">
+      <div className="mx-10 md:mx-28 mb-8 mt-10 text-justify text-base sm:text-lg flex flex-col">
         <p>
           Papers must be submitted in English and will undergo a double-blind
           review by the Program Committee based on criteria such as technical
@@ -98,8 +118,8 @@ function CallForPaper() {
           Xplore, indexed by EI, SCOPUS etc.</b> Authors to ensure the originality
           of their manuscript and strictly follow the IEEE guidelines in this
           regard. Refer to the following link for these guidelines:{" "}
-          </p>
-          <div className="w-full mt-4 break-words">
+        </p>
+        <div className="w-full mt-4 break-words">
           <a
             href="https://www.ieee.org/publications/rights/plagiarism/plagiarism.html"
             target="_blank"
@@ -108,44 +128,16 @@ function CallForPaper() {
           >
             https://www.ieee.org/publications/rights/plagiarism/plagiarism.html
           </a>
-          </div>
-
-        {/* <ul className="list-disc mt-12 pl-5 space-y-4 text-lg">
-          <li>
-            To download the template for paper submission, click on the link: 
-            <a 
-              href="https://www.ieee.org/conferences/publishing/templates.html" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 hover:underline"
-            >
-              Template
-            </a>
-          </li>
-          <li>
-            To submit the paper, click on the link: 
-            <a 
-              href="https://cmt3.research.microsoft.com/NGISE2025" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 hover:underline"
-            >
-              Submission Link
-            </a>
-          </li>
-          <li>
-          Prospective authors are invited to submit a maximum of 6 pages full paper on the following tracks (but not limited to):
-          </li>
-          </ul> */}
+        </div>
       </div>
 
-      <div className=" flex w-full items-center justify-center mt-20 ">
-        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl ">
+      <div className="flex w-full items-center justify-center mt-20">
+        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
           Double-Blind Review
         </h2>
       </div>
 
-      <div className="mx-12 md:mx-28 mb-8 mt-10 text-justify text-base sm:text-lg flex flex-col ">
+      <div className="mx-12 md:mx-28 mb-8 mt-10 text-justify text-base sm:text-lg flex flex-col">
         <p>
           NGISE-2025 will use a double-blind review process, meaning that the
           Program Committee members and reviewers will not be aware of the
@@ -183,13 +175,13 @@ function CallForPaper() {
         </ul>
       </div>
 
-      <div className=" flex w-full items-center justify-center mt-20 ">
-        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl ">
+      <div className="flex w-full items-center justify-center mt-20">
+        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
           Formatting Template
         </h2>
       </div>
 
-      <div className="mx-16 break-words md:mx-28 mb-8 mt-10  text-base sm:text-lg flex flex-col text-center ">
+      <div className="mx-16 break-words md:mx-28 mb-8 mt-10 text-base sm:text-lg flex flex-col text-center">
         <p>
           To download the template for paper submission, click on the link :
           <br />
@@ -204,13 +196,13 @@ function CallForPaper() {
         </p>
       </div>
 
-      <div className=" flex w-full items-center justify-center mt-20 ">
-        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl ">
+      <div className="flex w-full items-center justify-center mt-20">
+        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
           Submission Website{" "}
         </h2>
       </div>
 
-      <div className="mx-16 break-words md:mx-28 mt-10  text-base sm:text-lg flex flex-col text-center mb-20">
+      <div className="mx-16 break-words md:mx-28 mt-10 text-base sm:text-lg flex flex-col text-center mb-20">
         <p>
           To submit the paper, click on the link:
           <br />
@@ -224,60 +216,8 @@ function CallForPaper() {
           </a>
         </p>
       </div>
-
-      {/* <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl ml-4 font-bold mb-4">Guidelines for Authors</h1>
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <p>
-          The conference is being organized in Hybrid mode. Authors are required
-          to submit their original work related to the themes and the sub-themes
-          (specified under tracks and sub-tracks) and are solicited for
-          presentation in the conference. Authors need to ensure that only the
-          original papers (not submitted elsewhere) must be submitted to the
-          conference. All papers that conform to submission guidelines will be
-          peer reviewed and evaluated based on originality, technical strength,
-          and scientific contribution. Acceptance notification will be
-          communicated to the authors by email. <br />
-          <br />
-          After receiving the reviews, the authors must incorporate the
-          suggestions in accordance with the review comments and submit the
-          final camera-ready papers within the final submission deadline. The
-          total length of the paper must not exceed ‘six’ A4 size pages
-          including bibliography and appendices. All the papers will be
-          submitted through on-line paper submission process using Microsoft CMT
-          submission system. Authors are requested to upload the paper by
-          clicking the paper submission link:  <a 
-              href="https://cmt3.research.microsoft.com/NGISE2025 " 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 hover:underline"
-            >
-              Submit Here
-            </a>
-          <br />
-          <br />
-          All accepted, registered and presented papers will be included in the
-          conference proceedings and will be included in IEEE Xplore, indexed by
-          EI, SCOPUS etc. All papers must follow strict formatting instructions.
-          For detailed instructions, kindly visit the following link: <a 
-              href="https://www.ieee.org/conferences/publishing/templates.html" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 hover:underline"
-            >
-              Click Here
-            </a>
-        </p>
-      </div>
-    </div>
-      
-      */}
     </>
   );
+};
 
-}
-
-export default CallForPaper
-
-
-
+export default CallForPaper;
