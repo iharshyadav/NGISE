@@ -10,7 +10,7 @@ const Speaker = () => {
       </div>
 
       <div className="flex items-center justify-center mt-10 mb-10 w-[90%] sm:w-[85%] md:w-[70%] lg:w-[65%]">
-        <div className="border-4 border-gray-400 rounded-lg p-8 flex flex-col items-center justify-center">
+        <div className=" rounded-lg p-8 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center p-4"> 
             <img
               src="https://ucarecdn.com/3473b0ea-d09a-4641-a15c-c848cbe17bc3/-/preview/398x304/" 
@@ -18,7 +18,7 @@ const Speaker = () => {
               className="w-48 h-32 object-cover mb-4" 
             />
             <div className="font-semibold text-lg">Salvatore Sinno</div> 
-            <div className="text-gray-600">
+            <div className="">
               {/*Salvatore Sinno<br />*/}
   VP of ECS Solution<br />
   Innovation at Unisys

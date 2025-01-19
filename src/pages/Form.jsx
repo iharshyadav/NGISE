@@ -46,19 +46,17 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
+
     let requiredFields;
     if (formData.associated === 'yes') {
       requiredFields = ['enrollmentNo', 'categoryType'];
     } else {
       requiredFields = [
         'categoryType',
-        // 'category',
         'subCategory',
         'paperId',
         'paperTitle',
         'presentationMode',
-        // 'service',
         'name',
         'gender',
         'mobile',
@@ -77,7 +75,7 @@ export default function Form() {
       return;
     }
 
-    // Additional validations
+
     if (formData.associated === 'no') {
       if (formData.nationality === 'international' && !formData.country) {
         toast.error('Please select a country for international participants');
@@ -89,57 +87,39 @@ export default function Form() {
         toast.error('Please enter your IEEE Membership Number');
         setIsSubmitting(false);
         return;
+      }
     }
-
-    // Delegate-specific validation
-    // if (formData.category === 'delegate') {
-    //   if (!formData.delegateService) {
-    //     toast.error('Please select a delegate service');
-    //     setIsSubmitting(false);
-    //     return;
-    //   }
-    //   if (!formData.delegateName) {
-    //     toast.error('Please enter the delegate name');
-    //     setIsSubmitting(false);
-    //     return;
-    //   }
-    }
-
-  
-
 
     try {
       const docRef = await addDoc(collection(db, "formSubmissions"), {
         ...formData,
         createdAt: new Date(),
       });
-      // loadPayPalScript();
-      // setShowPayment(false);
+
       toast.success("Form submitted successfully!");
-      
-      // console.log("Document written with ID: ", docRef.id);
-      if(docRef.id !== ""){
-        setShowPayment(true);
-        const paypalData = localStorage.getItem("__paypal_storage__");
-        if (paypalData) {
-          localStorage.removeItem("__paypal_storage__");
-          localStorage.removeItem("cookieFallback");
-          localStorage.removeItem("hasAccessedPayPalButton");
-          localStorage.removeItem("id");
-          localStorage.removeItem("targetDate");
-          localStorage.removeItem("cart");
-          localStorage.removeItem("cartImage");
+
+      if (docRef.id !== "") {
+        if (formData.nationality === 'national') {
+          
+          navigate('/fee');
+        } else if (formData.nationality === 'international') {
+         
+          if (formData.ieeeMember === 'yes') {
+            window.location.href = "https://wise.com/pay/r/urYZqfgS1gVSVVU";
+          } else {
+            window.location.href = "https://wise.com/pay/r/xa17tkF6gOIlb8A";
+          }
         }
-    
       }
-      // setFormData({...initialFormState});
     } catch (error) {
       console.error('Submission error:', error);
       toast.error("There was a problem submitting your form.");
     } finally { 
       setIsSubmitting(false);
     }
-  }
+}
+
+  
 
  useEffect(() => {
     const paypalData = localStorage.getItem("__paypal_storage__");
@@ -267,95 +247,7 @@ export default function Form() {
             </div>
           )}
 
-          {/* Category */}
-          {/* {formData.associated === "no" && (
-            <div className="space-y-2">
-              <label className="block text-gray-600">Category</label>
-              <div>
-                <label className="inline-flex items-center">
-                  <input
-                    type="radio"
-                    name="category"
-                    value="delegate"
-                    onChange={(e) =>
-                      setFormData({ ...formData, category: e.target.value })
-                    }
-                    className="form-radio text-blue-600"
-                  />
-                  <span className="ml-2">Delegate</span>
-                </label>
-              </div>
-            </div>
-          )} */}
-
-          {/* {formData.category === "delegate" && (
-            <>
-              <div className="space-y-2">
-                <label className="block text-gray-600">Service</label>
-                <div className="space-x-4">
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="delegateService"
-                      value="stall"
-                      checked={formData.delegateService === "stall"}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          delegateService: e.target.value,
-                        })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">Stall Boarding (Rent)</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="delegateService"
-                      value="sponsorship"
-                      checked={formData.delegateService === "sponsorship"}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          delegateService: e.target.value,
-                        })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">Sponsorship</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="delegateService"
-                      value="participant"
-                      checked={formData.delegateService === "participant"}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          delegateService: e.target.value,
-                        })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">Participant</span>
-                  </label>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="block text-gray-600">Name</label>
-                <input
-                  type="text"
-                  value={formData.delegateName}
-                  onChange={(e) =>
-                    setFormData({ ...formData, delegateName: e.target.value })
-                  }
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-            </>
-          )} */}
+          
           <div className="space-y-2">
             <label className="block text-gray-600">Category Type</label>
             <div className="space-x-4">
@@ -418,52 +310,7 @@ export default function Form() {
                 />
               </div>
 
-              {/* Service */}
-              {/* <div className="space-y-2">
-                <label className="block text-gray-600">Service</label>
-                <div className="space-x-4">
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="service"
-                      value="stall"
-                      checked={formData.service === "stall"}
-                      onChange={(e) =>
-                        setFormData({ ...formData, service: e.target.value })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">Stall Boarding (Rent)</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="service"
-                      value="sponsorship"
-                      checked={formData.service === "sponsorship"}
-                      onChange={(e) =>
-                        setFormData({ ...formData, service: e.target.value })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">Sponsorship</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="service"
-                      value="participant"
-                      checked={formData.service === "participant"}
-                      onChange={(e) =>
-                        setFormData({ ...formData, service: e.target.value })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">Participant</span>
-                  </label>
-                </div>
-              </div> */}
-
+            
               {/* Paper Title */}
               <div className="space-y-2">
                 <label className="block text-gray-600">Paper Title</label>
