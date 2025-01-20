@@ -79,6 +79,7 @@ const Registration = () => {
               return (
                 <>
                   <div className="registerdata" key={index}>
+                  
                     <p style={{ width: "30%" }}>{e.data}</p>
                     <p style={{ width: "100%" }}>{e.value}</p>
                   </div>

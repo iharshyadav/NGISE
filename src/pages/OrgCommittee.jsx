@@ -277,7 +277,7 @@ const Committee = () => {
 
     <div className="flex flex-col items-center w-48">
       <img
-        src="https://ucarecdn.com/25333468-99cc-489a-a36d-bed92171fa46/-/preview/291x291/"
+        src="https://ucarecdn.com/50019d99-b51d-4001-b967-a73be301aaa7/-/preview/712x999/"
         alt="Prof. (Dr.) Anupama Sharma"
         className="w-full h-60 sm:h-48 md:h-48 lg:h-48 object-cover mb-4"
       />
