@@ -68,7 +68,8 @@ export default function Form() {
         'email',
         'institution',
         'city',
-        'nationality'
+        'nationality',
+        'ieeeMember'
       ];
     }
 
