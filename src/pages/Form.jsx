@@ -16,7 +16,7 @@ export default function Form() {
     paperTitle: '',
     presentationMode: 'offline',
     service: '',
-    name: '',
+    title: '',
     gender: 'male',
     mobile: '',
     email: '',
@@ -28,7 +28,10 @@ export default function Form() {
     ieeeMember: '',
     ieeeNumber: '',
     delegateService: '',
-    delegateName: ''
+    delegateName: '',
+    middleName: '',
+    firstName: '',
+    lastName:''
   })
 
   const [showFields, setShowFields] = useState(true)
@@ -57,13 +60,16 @@ export default function Form() {
         'paperId',
         'paperTitle',
         'presentationMode',
-        'name',
+        'firstName',
+        'middleName',
+        'lastName',
         'gender',
         'mobile',
         'email',
         'institution',
         'city',
-        'nationality'
+        'nationality',
+        'ieeeMember'
       ];
     }
 
@@ -97,7 +103,6 @@ export default function Form() {
       });
 
       toast.success("Form submitted successfully!");
-
       if (docRef.id !== "") {
         if (formData.nationality === 'national') {
           
@@ -118,44 +123,11 @@ export default function Form() {
       setIsSubmitting(false);
     }
 }
-
-  
-
- useEffect(() => {
-    const paypalData = localStorage.getItem("__paypal_storage__");
-    if (paypalData) {
-      localStorage.removeItem("__paypal_storage__");
-      window.location.reload();
-    }
-  }, []);
- 
   useEffect(() => {
-    if (showPayment) {
-      const script = document.createElement("script");
-      script.src = `https://www.paypal.com/sdk/js?client-id=${import.meta.env.VITE_REACT_PAYPAL_CLIENT_ID}&components=hosted-buttons&currency=USD`;
-      script.async = true;
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
 
-      script.onload = () => {
-        if (window.paypal?.HostedButtons) {
-          window.paypal
-            .HostedButtons({ 
-              hostedButtonId:import.meta.env.VITE_REACT_PAYPAL_HOST_ID,
-            })
-            .render("#paypal-container"); 
-        } else {
-          console.error("PayPal Hosted Buttons SDK failed to load.");
-          // setShowPayment(false)
-        }
-      };
 
-      document.body.appendChild(script);
-
-      return () => {
-        document.body.removeChild(script);
-        setShowPayment(false)
-      };
-    }
-  }, [showPayment]);
 
   const countries = [
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
@@ -182,10 +154,69 @@ export default function Form() {
 
   return (
     <div>
-      {
-        !showPayment ? (
+       <h1 className="text-3xl flex justify-center font-bold mt-4">Registration Form</h1>
+      
       <form onSubmit={handleSubmit} className="max-w-6xl mx-auto p-6 space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+           {/* Nationality */}
+    <div className="space-y-2">
+      <label className="block text-gray-600">Nationality</label>
+      <div className="space-x-4">
+        <label className="inline-flex items-center">
+          <input
+            type="radio"
+            name="nationality"
+            value="national"
+            checked={formData.nationality === "national"}
+            onChange={(e) =>
+              setFormData({
+                ...formData,
+                nationality: e.target.value,
+              })
+            }
+            className="form-radio text-blue-600"
+          />
+          <span className="ml-2">National</span>
+        </label>
+        <label className="inline-flex items-center">
+          <input
+            type="radio"
+            name="nationality"
+            value="international"
+            checked={formData.nationality === "international"}
+            onChange={(e) =>
+              setFormData({
+                ...formData,
+                nationality: e.target.value,
+              })
+            }
+            className="form-radio text-blue-600"
+          />
+          <span className="ml-2">International</span>
+        </label>
+      </div>
+    </div>
+
+    {formData.nationality === "international" && (
+      <div className="space-y-2">
+        <label className="block text-gray-600">Country</label>
+        <select
+          value={formData.country}
+          onChange={(e) =>
+            setFormData({ ...formData, country: e.target.value })
+          }
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="">Select a country</option>
+          {countries.map((country, index) => (
+            <option key={index} value={country}>
+              {country}
+            </option>
+          ))}
+        </select>
+      </div>
+    )}
           {/* University Association */}
           <div className="space-y-2">
             <label className="block text-gray-600">
@@ -323,17 +354,55 @@ export default function Form() {
                 />
               </div>
 
-              {/* Name */}
               <div className="space-y-2">
-                <label className="block text-gray-600">Name</label>
-                <input
-                  type="text"
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
+  <div className="flex items-center space-x-4">
+    <div className="flex flex-col">
+      <label className="block text-gray-600">Title</label>
+      <select
+        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+        className="w-full min-w-[100px] py-2 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option value="Mr">Mr.</option>
+        <option value="Dr">Dr.</option>
+        <option value="Author">Author</option>
+      </select>
+    </div>
+
+    <div className="flex flex-col space-y-2">
+      {/* <label className="block text-gray-600">Name</label> */}
+      <div className="grid grid-cols-3 gap-4">
+        <div className="col-span-1">
+          <label className="block text-gray-600">First Name</label>
+          <input
+            type="text"
+            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+
+        <div className="col-span-1">
+          <label className="block text-gray-600">Middle Name</label>
+          <input
+            type="text"
+            onChange={(e) => setFormData({ ...formData, middleName: e.target.value })}
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+
+        <div className="col-span-1">
+          <label className="block text-gray-600">Last Name</label>
+          <input
+            type="text"
+            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
               {/* Paper Presentation Mode */}
               <div className="space-y-2">
@@ -459,94 +528,8 @@ export default function Form() {
                 />
               </div>
 
-              {/* Nationality */}
-              <div className="space-y-2">
-                <label className="block text-gray-600">Nationality</label>
-                <div className="space-x-4">
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="nationality"
-                      value="national"
-                      checked={formData.nationality === "national"}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          nationality: e.target.value,
-                        })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">National</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="nationality"
-                      value="international"
-                      checked={formData.nationality === "international"}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          nationality: e.target.value,
-                        })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">International</span>
-                  </label>
-                </div>
-              </div>
-
-              {formData.nationality === "international" && (
-                <div className="space-y-2">
-                  <label className="block text-gray-600">Country</label>
-                  <select
-                    value={formData.country}
-                    onChange={(e) =>
-                      setFormData({ ...formData, country: e.target.value })
-                    }
-                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a country</option>
-                    {countries.map((country, index) => (
-                      <option key={index} value={country}>
-                        {country}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              )}
-
-              {/* Affiliation */}
+         
               {/* <div className="space-y-2">
-              <label className="block text-gray-600">Affiliation</label>
-              <div className="space-x-4">
-                <label className="inline-flex items-center">
-                  <input
-                    type="radio"
-                    name="affiliation"
-                    value="national"
-                    onChange={e => setFormData({...formData, affiliation: e.target.value})}
-                    className="form-radio text-blue-600"
-                  />
-                  <span className="ml-2">National</span>
-                </label>
-                <label className="inline-flex items-center">
-                  <input
-                    type="radio"
-                    name="affiliation"
-                    value="international"
-                    onChange={e => setFormData({...formData, affiliation: e.target.value})}
-                    className="form-radio text-blue-600"
-                  />
-                  <span className="ml-2">International</span>
-                </label>
-              </div>
-            </div> */}
-
-              {/* IEEE Member */}
-              <div className="space-y-2">
                 <label className="block text-gray-600">IEEE Member</label>
                 <div className="space-x-4">
                   <label className="inline-flex items-center">
@@ -594,9 +577,90 @@ export default function Form() {
               )}
             </>
           )}
-        </div>
+        </div> */}
 
-        {/* Submit Button */}
+         {/* IEEE Member Section */}
+         <div className="space-y-2">
+            <label className="block text-gray-600">IEEE Member</label>
+            <div className="space-x-4">
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="ieeeMember"
+                  value="yes"
+                  onChange={(e) =>
+                    setFormData({ ...formData, ieeeMember: e.target.value })
+                  }
+                  className="form-radio text-blue-600"
+                />
+                <span className="ml-2">Yes</span>
+              </label>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="ieeeMember"
+                  value="no"
+                  onChange={(e) =>
+                    setFormData({ ...formData, ieeeMember: e.target.value })
+                  }
+                  className="form-radio text-blue-600"
+                />
+                <span className="ml-2">No</span>
+              </label>
+            </div>
+          </div>
+
+         
+          {formData.ieeeMember === "yes" && (
+            <>
+            
+              <div className="space-y-2">
+                <label className="block text-gray-600">
+                  IEEE Membership No.
+                </label>
+                <input
+                  type="text"
+                  value={formData.ieeeNumber}
+                  onChange={(e) =>
+                    setFormData({ ...formData, ieeeNumber: e.target.value })
+                  }
+                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter IEEE Membership No."
+                />
+              </div>
+
+           
+              <div className="space-y-2">
+                <label className="block text-gray-600">Payable Amount</label>
+                <input
+                  type="text"
+                  value="350 EUR"
+                  disabled
+                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </>
+          )}
+
+        
+          {formData.ieeeMember === "no" && (
+            <div className="space-y-2">
+              <label className="block text-gray-600">Payable Amount</label>
+              <input
+                type="text"
+                value="400 EUR"
+                disabled
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+          )}
+           </>
+          )}
+        </div> 
+
+          
+
+  
         {!showPayment && (
         <div className="flex justify-end">
           <button
@@ -609,15 +673,7 @@ export default function Form() {
         )}
         <ToastContainer />
       </form>
-        ) : (
-            <div className="flex justify-center items-center h-screen bg-white">
-              <div className="flex flex-col justify-center items-center text-center space-y-4">
-                <h2 className="text-2xl font-semibold">Proceed to Payment</h2>
-                <div id="paypal-container" className="w-full max-w-lg"></div>
-              </div>
-            </div>
-        )
-      }
+       
     </div>
   );
 }

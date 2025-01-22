@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import Form from './Form'; 
+import { useNavigate } from 'react-router-dom'; 
 
 const RegistrationAndFeeSubmission = () => {
-  const [nationality, setNationality] = useState('');
+  // const [nationality, setNationality] = useState('');
+  const navigate = useNavigate(); 
 
-  const handleNationalityChange = (event) => {
-    setNationality(event.target.value);
-  };
 
   const registrationInfo1 = [
     { data: "Academician/Industry Participant/Others", fee1: "6000", fee2: "7000" },
@@ -29,6 +27,19 @@ const RegistrationAndFeeSubmission = () => {
     { data: "RTGS/NEFT/IFSC Code", value: "KKBK0005295" },
     { data: "Contact No.", value: "0120-2790969" },
   ];
+
+  const authorFeeInfo = [
+    { category: "Regular Author", indiaFee: "INR 8,100.00", foreignFee: "USD 300.00" },
+    { category: "Regular Authors (IEEE Members)", indiaFee: "INR 7,200.00", foreignFee: "USD 240.00" },
+    { category: "Student Authors - UG & PG", indiaFee: "INR 6,300.00", foreignFee: "USD 150.00" },
+    { category: "Student Author - UG & PG (IEEE Member)", indiaFee: "INR 5,400.00", foreignFee: "USD 120.00" },
+    { category: "Invited Presentation", indiaFee: "INR 4,500.00", foreignFee: "USD 90.00" },
+  ];
+
+  
+  const handleRegistersNow = () => {
+    navigate('/registrationform'); 
+  };
 
   return (
     <div className="px-4 sm:px-40 py-7">
@@ -76,6 +87,39 @@ const RegistrationAndFeeSubmission = () => {
         <p>*Additional per page charges USD 50</p>
       </div>
 
+     
+      {/* <div id="authors-fee" className="mt-10 relative">
+        <h1 className="text-3xl flex justify-center font-bold mt-4">Author's Fee</h1> */}
+
+     
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={handleRegistersNow} 
+            className="px-6 py-2 bg-blue-600 text-2xl text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Register Now
+          </button>
+        </div>
+
+        {/* <table className="text-sm sm:text-lg w-full mt-10 mb-10 ">
+          <thead>
+            <tr className="">
+              <th className="text-left p-2  ">Category</th>
+              <th className="text-left p-2 ">Affiliated within India</th>
+              <th className="text-left p-2">Affiliated outside India</th>
+            </tr>
+          </thead>
+          <tbody>
+            {authorFeeInfo.map((e, index) => (
+              <tr key={index} className="bg-white ">
+                <td className="p-2 ">{e.category}</td>
+                <td className="p-2 ">{e.indiaFee}</td>
+                <td className="p-2">{e.foreignFee}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table> 
+      </div>*/}
       {/* Fee Submission Details Section 
       <div id="fee-submission" className="mt-10">
         <h1 className="text-3xl flex justify-center font-bold mt-4">Fee Submission Details</h1>
@@ -91,41 +135,7 @@ const RegistrationAndFeeSubmission = () => {
           </tbody>
         </table> */}
 
-       
-        <div className="mt-6">
-          <h1 className="text-3xl flex justify-center font-bold mb-4">Registration Form</h1>
-          <label className="text-lg mt-10 font-semibold">Nationality</label>
-          <div className="flex items-center mt-2">
-            <label className="flex items-center mr-6">
-              <input
-                type="radio"
-                value="National"
-                checked={nationality === 'National'}
-                onChange={handleNationalityChange}
-                className="mr-2"
-              />
-              National
-            </label>
-            <label className="flex items-center">
-              <input
-                type="radio"
-                value="International"
-                checked={nationality === 'International'}
-                onChange={handleNationalityChange}
-                className="mr-2"
-              />
-              International
-            </label>
-          </div>
-        </div>
-      </div>
 
-    
-      {nationality && (
-        <div className="mt-10">
-          <Form nationality={nationality} />
-        </div>
-      )}
     </div>
   );
 };
