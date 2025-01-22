@@ -122,6 +122,9 @@ export default function Form() {
       setIsSubmitting(false);
     }
 }
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
 
 
 
@@ -150,6 +153,7 @@ export default function Form() {
 
   return (
     <div>
+       <h1 className="text-3xl flex justify-center font-bold mt-4">Registration Form</h1>
       
       <form onSubmit={handleSubmit} className="max-w-6xl mx-auto p-6 space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -355,7 +359,7 @@ export default function Form() {
       <label className="block text-gray-600">Title</label>
       <select
         onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-        className="w-full py-2 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        className="w-full min-w-[100px] py-2 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
       >
         <option value="Mr">Mr.</option>
         <option value="Dr">Dr.</option>
