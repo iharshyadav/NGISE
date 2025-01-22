@@ -87,9 +87,9 @@ const RegistrationAndFeeSubmission = () => {
         <p>*Additional per page charges USD 50</p>
       </div>
 
-      {/* Author's Fee Section */}
-      <div id="authors-fee" className="mt-10 relative">
-        <h1 className="text-3xl flex justify-center font-bold mt-4">Author's Fee</h1>
+     
+      {/* <div id="authors-fee" className="mt-10 relative">
+        <h1 className="text-3xl flex justify-center font-bold mt-4">Author's Fee</h1> */}
 
      
         <div className="flex justify-center mt-4">
@@ -101,7 +101,7 @@ const RegistrationAndFeeSubmission = () => {
           </button>
         </div>
 
-        <table className="text-sm sm:text-lg w-full mt-10 mb-10 ">
+        {/* <table className="text-sm sm:text-lg w-full mt-10 mb-10 ">
           <thead>
             <tr className="">
               <th className="text-left p-2  ">Category</th>
@@ -118,8 +118,8 @@ const RegistrationAndFeeSubmission = () => {
               </tr>
             ))}
           </tbody>
-        </table>
-      </div>
+        </table> 
+      </div>*/}
 
     </div>
   );
