@@ -92,40 +92,12 @@ const RegistrationAndFeeSubmission = () => {
         </table>
 
        
-        <div className="mt-6">
-          <h1 className="text-3xl flex justify-center font-bold mb-4">Registration Form</h1>
-          <label className="text-lg mt-10 font-semibold">Nationality</label>
-          <div className="flex items-center mt-2">
-            <label className="flex items-center mr-6">
-              <input
-                type="radio"
-                value="National"
-                checked={nationality === 'National'}
-                onChange={handleNationalityChange}
-                className="mr-2"
-              />
-              National
-            </label>
-            <label className="flex items-center">
-              <input
-                type="radio"
-                value="International"
-                checked={nationality === 'International'}
-                onChange={handleNationalityChange}
-                className="mr-2"
-              />
-              International
-            </label>
-          </div>
+        
+    </div>
+    <div id="form" className="mt-10">
+        <h1 className="text-3xl flex justify-center font-bold mt-4">Registration Form</h1>
         </div>
-      </div>
-
-    
-      {nationality && (
-        <div className="mt-10">
-          <Form nationality={nationality} />
-        </div>
-      )}
+    <Form />
     </div>
   );
 };
