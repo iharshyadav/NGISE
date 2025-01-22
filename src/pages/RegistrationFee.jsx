@@ -76,7 +76,7 @@ const RegistrationAndFeeSubmission = () => {
         <p>*Additional per page charges USD 50</p>
       </div>
 
-      {/* Fee Submission Details Section */}
+      {/* Fee Submission Details Section 
       <div id="fee-submission" className="mt-10">
         <h1 className="text-3xl flex justify-center font-bold mt-4">Fee Submission Details</h1>
         <h3 className="text-lg mt-4">Details of IMPS/UPI/RTGS/NEFT:</h3>
@@ -89,7 +89,7 @@ const RegistrationAndFeeSubmission = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
 
        
         <div className="mt-6">
