@@ -4,6 +4,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig"; 
 import { useNavigate } from 'react-router-dom';
+import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { ID } from 'appwrite';
+import {storage} from "../appwrite"
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -37,6 +40,10 @@ export default function Form() {
   const [showFields, setShowFields] = useState(true)
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPayment, setShowPayment] = useState(null);
+  const [pdfFile, setPdfFile] = useState(null);
+  const [uploading, setUploading] = useState(false);
+  const [isUploaded, setIsUploaded] = useState(false);
+  const [uploadError, setUploadError] = useState(null);
   // const [scriptLoaded, setScriptLoaded] = useState(false);
 
 
@@ -81,6 +88,12 @@ export default function Form() {
       return;
     }
 
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.mobile)) {
+      toast.error("Please enter a valid 10-digit phone number.");
+      setIsSubmitting(false);
+      return;
+    }
 
     if (formData.associated === 'no') {
       if (formData.nationality === 'international' && !formData.country) {
@@ -89,8 +102,8 @@ export default function Form() {
         return;
       }
 
-      if (formData.ieeeMember === 'yes' && !formData.ieeeNumber) {
-        toast.error('Please enter your IEEE Membership Number');
+      if (formData.ieeeMember === 'yes' && !isUploaded) {
+        toast.error('Please uppload your IEEE Membership document');
         setIsSubmitting(false);
         return;
       }
@@ -152,71 +165,104 @@ export default function Form() {
     "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
   ]
 
+  const handleFileChange = (event) => {
+    setPdfFile(event.target.files[0]);
+    setUploadError(null); 
+  };
+
+  const handleUpload = async () => {
+    if (!pdfFile) {
+        setUploadError("Please select a PDF file first.");
+        return;
+    }
+
+    setUploading(true);
+    setUploadError(null);
+
+    const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
+    try {
+        const response = await storage.createFile(
+            bucketId,
+            ID.unique(),
+            pdfFile
+        );
+        setIsUploaded(true);
+        toast.success("Document submitted successfully!");
+    } catch (error) {
+        console.error("Error uploading PDF:", error);
+        setUploadError(error.message);
+    } finally { 
+        setUploading(false);
+    }
+};
+
+
   return (
     <div>
-       <h1 className="text-3xl flex justify-center font-bold mt-4">Registration Form</h1>
-      
+      <h1 className="text-3xl flex justify-center font-bold mt-4">
+        Registration Form
+      </h1>
+
       <form onSubmit={handleSubmit} className="max-w-6xl mx-auto p-6 space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Nationality */}
+          <div className="space-y-2">
+            <label className="block text-gray-600">Nationality</label>
+            <div className="space-x-4">
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="nationality"
+                  value="national"
+                  checked={formData.nationality === "national"}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      nationality: e.target.value,
+                    })
+                  }
+                  className="form-radio text-blue-600"
+                />
+                <span className="ml-2">National</span>
+              </label>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="nationality"
+                  value="international"
+                  checked={formData.nationality === "international"}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      nationality: e.target.value,
+                    })
+                  }
+                  className="form-radio text-blue-600"
+                />
+                <span className="ml-2">International</span>
+              </label>
+            </div>
+          </div>
 
-           {/* Nationality */}
-    <div className="space-y-2">
-      <label className="block text-gray-600">Nationality</label>
-      <div className="space-x-4">
-        <label className="inline-flex items-center">
-          <input
-            type="radio"
-            name="nationality"
-            value="national"
-            checked={formData.nationality === "national"}
-            onChange={(e) =>
-              setFormData({
-                ...formData,
-                nationality: e.target.value,
-              })
-            }
-            className="form-radio text-blue-600"
-          />
-          <span className="ml-2">National</span>
-        </label>
-        <label className="inline-flex items-center">
-          <input
-            type="radio"
-            name="nationality"
-            value="international"
-            checked={formData.nationality === "international"}
-            onChange={(e) =>
-              setFormData({
-                ...formData,
-                nationality: e.target.value,
-              })
-            }
-            className="form-radio text-blue-600"
-          />
-          <span className="ml-2">International</span>
-        </label>
-      </div>
-    </div>
-
-    {formData.nationality === "international" && (
-      <div className="space-y-2">
-        <label className="block text-gray-600">Country</label>
-        <select
-          value={formData.country}
-          onChange={(e) =>
-            setFormData({ ...formData, country: e.target.value })
-          }
-          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        >
-          <option value="">Select a country</option>
-          {countries.map((country, index) => (
-            <option key={index} value={country}>
-              {country}
-            </option>
-          ))}
-        </select>
-      </div>
-    )}
+          {formData.nationality === "international" && (
+            <div className="space-y-2">
+              <label className="block text-gray-600">Country</label>
+              <select
+                value={formData.country}
+                onChange={(e) =>
+                  setFormData({ ...formData, country: e.target.value })
+                }
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="">Select a country</option>
+                {countries.map((country, index) => (
+                  <option key={index} value={country}>
+                    {country}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           {/* University Association */}
           <div className="space-y-2">
             <label className="block text-gray-600">
@@ -278,7 +324,6 @@ export default function Form() {
             </div>
           )}
 
-          
           <div className="space-y-2">
             <label className="block text-gray-600">Category Type</label>
             <div className="space-x-4">
@@ -341,7 +386,6 @@ export default function Form() {
                 />
               </div>
 
-            
               {/* Paper Title */}
               <div className="space-y-2">
                 <label className="block text-gray-600">Paper Title</label>
@@ -355,54 +399,73 @@ export default function Form() {
               </div>
 
               <div className="space-y-2">
-  <div className="flex items-center space-x-4">
-    <div className="flex flex-col">
-      <label className="block text-gray-600">Title</label>
-      <select
-        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-        className="w-full min-w-[100px] py-2 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      >
-        <option value="Mr">Mr.</option>
-        <option value="Dr">Dr.</option>
-        <option value="Author">Author</option>
-      </select>
-    </div>
+                <div className="flex items-center space-x-4">
+                  <div className="flex flex-col">
+                    <label className="block text-gray-600">Title</label>
+                    <select
+                      onChange={(e) =>
+                        setFormData({ ...formData, title: e.target.value })
+                      }
+                      className="w-full min-w-[100px] py-2 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    >
+                      <option value="Mr">Mr.</option>
+                      <option value="Dr">Dr.</option>
+                      <option value="Author">Author</option>
+                    </select>
+                  </div>
 
-    <div className="flex flex-col space-y-2">
-      {/* <label className="block text-gray-600">Name</label> */}
-      <div className="grid grid-cols-3 gap-4">
-        <div className="col-span-1">
-          <label className="block text-gray-600">First Name</label>
-          <input
-            type="text"
-            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-        </div>
+                  <div className="flex flex-col space-y-2">
+                    {/* <label className="block text-gray-600">Name</label> */}
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="col-span-1">
+                        <label className="block text-gray-600">
+                          First Name
+                        </label>
+                        <input
+                          type="text"
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              firstName: e.target.value,
+                            })
+                          }
+                          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
 
-        <div className="col-span-1">
-          <label className="block text-gray-600">Middle Name</label>
-          <input
-            type="text"
-            onChange={(e) => setFormData({ ...formData, middleName: e.target.value })}
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-        </div>
+                      <div className="col-span-1">
+                        <label className="block text-gray-600">
+                          Middle Name
+                        </label>
+                        <input
+                          type="text"
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              middleName: e.target.value,
+                            })
+                          }
+                          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
 
-        <div className="col-span-1">
-          <label className="block text-gray-600">Last Name</label>
-          <input
-            type="text"
-            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+                      <div className="col-span-1">
+                        <label className="block text-gray-600">Last Name</label>
+                        <input
+                          type="text"
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              lastName: e.target.value,
+                            })
+                          }
+                          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               {/* Paper Presentation Mode */}
               <div className="space-y-2">
@@ -482,7 +545,7 @@ export default function Form() {
               <div className="space-y-2">
                 <label className="block text-gray-600">Mobile No.</label>
                 <input
-                  type="tel"
+                  type="number"
                   onChange={(e) =>
                     setFormData({ ...formData, mobile: e.target.value })
                   }
@@ -528,7 +591,6 @@ export default function Form() {
                 />
               </div>
 
-         
               {/* <div className="space-y-2">
                 <label className="block text-gray-600">IEEE Member</label>
                 <div className="space-x-4">
@@ -579,101 +641,113 @@ export default function Form() {
           )}
         </div> */}
 
-         {/* IEEE Member Section */}
-         <div className="space-y-2">
-            <label className="block text-gray-600">IEEE Member</label>
-            <div className="space-x-4">
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="ieeeMember"
-                  value="yes"
-                  onChange={(e) =>
-                    setFormData({ ...formData, ieeeMember: e.target.value })
-                  }
-                  className="form-radio text-blue-600"
-                />
-                <span className="ml-2">Yes</span>
-              </label>
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="ieeeMember"
-                  value="no"
-                  onChange={(e) =>
-                    setFormData({ ...formData, ieeeMember: e.target.value })
-                  }
-                  className="form-radio text-blue-600"
-                />
-                <span className="ml-2">No</span>
-              </label>
-            </div>
-          </div>
-
-         
-          {formData.ieeeMember === "yes" && (
-            <>
-            
+              {/* IEEE Member Section */}
               <div className="space-y-2">
-                <label className="block text-gray-600">
-                  IEEE Membership No.
-                </label>
-                <input
-                  type="text"
-                  value={formData.ieeeNumber}
-                  onChange={(e) =>
-                    setFormData({ ...formData, ieeeNumber: e.target.value })
-                  }
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter IEEE Membership No."
-                />
+                <label className="block text-gray-600">IEEE Member</label>
+                <div className="space-x-4">
+                  <label className="inline-flex items-center">
+                    <input
+                      type="radio"
+                      name="ieeeMember"
+                      value="yes"
+                      onChange={(e) =>
+                        setFormData({ ...formData, ieeeMember: e.target.value })
+                      }
+                      className="form-radio text-blue-600"
+                    />
+                    <span className="ml-2">Yes</span>
+                  </label>
+                  <label className="inline-flex items-center">
+                    <input
+                      type="radio"
+                      name="ieeeMember"
+                      value="no"
+                      onChange={(e) =>
+                        setFormData({ ...formData, ieeeMember: e.target.value })
+                      }
+                      className="form-radio text-blue-600"
+                    />
+                    <span className="ml-2">No</span>
+                  </label>
+                </div>
               </div>
 
-           
-              <div className="space-y-2">
-                <label className="block text-gray-600">Payable Amount</label>
-                <input
-                  type="text"
-                  value="350 EUR"
-                  disabled
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
+              {formData.ieeeMember === "yes" && (
+                <>
+                  <div className="space-y-2">
+                    <label className="block text-gray-600">
+                      IEEE Document Upload
+                    </label>
+                    {
+                      !isUploaded ? (
+                        <>
+                        <input
+                          type="file"
+                          accept=".pdf"
+                          onChange={handleFileChange}
+                          className='border-2 p-1'
+                          // name='ieeemember'
+                        />
+                        {uploadError && (
+                          <p style={{ color: "red" }}>{uploadError}</p>
+                        )}{" "}
+                    <button
+                      onClick={handleUpload}
+                      disabled={uploading}
+                      className={`px-6 py-2 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                        uploading
+                          ? "bg-gray-400 cursor-not-allowed"
+                          : "bg-blue-600 hover:bg-blue-700 focus:ring-blue-500"
+                      }`}
+                    >
+                      {uploading ? "Uploading..." : "Upload PDF"}
+                    </button>
+                    </>
+                      ) : <p className='text-green-600'>Document Uploaded</p>
+                    }
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="block text-gray-600">
+                      Payable Amount
+                    </label>
+                    <input
+                      type="text"
+                      value="350 EUR"
+                      disabled
+                      className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                </>
+              )}
+
+              {formData.ieeeMember === "no" && (
+                <div className="space-y-2">
+                  <label className="block text-gray-600">Payable Amount</label>
+                  <input
+                    type="text"
+                    value="400 EUR"
+                    disabled
+                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+              )}
             </>
           )}
-
-        
-          {formData.ieeeMember === "no" && (
-            <div className="space-y-2">
-              <label className="block text-gray-600">Payable Amount</label>
-              <input
-                type="text"
-                value="400 EUR"
-                disabled
-                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-          )}
-           </>
-          )}
-        </div> 
-
-          
-
-  
-        {!showPayment && (
-        <div className="flex justify-end">
-          <button
-            type="submit"
-            className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          >
-            {isSubmitting ? "Submitting..." : "Submit"}
-          </button>
         </div>
+
+        {!showPayment && (
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </button>
+          </div>
         )}
         <ToastContainer />
       </form>
-       
     </div>
   );
 }
