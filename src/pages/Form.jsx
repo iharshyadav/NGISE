@@ -34,7 +34,8 @@ export default function Form() {
     delegateName: '',
     middleName: '',
     firstName: '',
-    lastName:''
+    lastName:'',
+    amount : ''
   })
 
   const [showFields, setShowFields] = useState(true)
@@ -63,7 +64,7 @@ export default function Form() {
     } else {
       requiredFields = [
         'categoryType',
-        'subCategory',
+        // 'subCategory',
         'paperId',
         'paperTitle',
         'presentationMode',
@@ -76,7 +77,8 @@ export default function Form() {
         'institution',
         'city',
         'nationality',
-        'ieeeMember'
+        'ieeeMember',
+        'amount'
       ];
     }
 
@@ -103,7 +105,7 @@ export default function Form() {
       }
 
       if (formData.ieeeMember === 'yes' && !isUploaded) {
-        toast.error('Please uppload your IEEE Membership document');
+        toast.error('Please upload your IEEE Membership document');
         setIsSubmitting(false);
         return;
       }
@@ -324,7 +326,7 @@ export default function Form() {
             </div>
           )}
 
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <label className="block text-gray-600">Category Type</label>
             <div className="space-x-4">
               <label className="inline-flex items-center">
@@ -352,25 +354,40 @@ export default function Form() {
                 <span className="ml-2">Faculty / Staff</span>
               </label>
             </div>
-          </div>
+          </div> */}
 
           {showFields && (
             <>
               {/* Sub-Category */}
               <div className="space-y-2">
-                <label className="block text-gray-600">Sub-Category</label>
+                <label className="block text-gray-600">Category-type</label>
                 <select
                   onChange={(e) =>
-                    setFormData({ ...formData, subCategory: e.target.value })
+                    setFormData({ ...formData, categoryType: e.target.value })
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option value="">--Select Sub-Category--</option>
-                  <option value="Student / Research Scholar (Full Time)">
-                    Student / Research Scholar (Full Time)
-                  </option>
-                  <option value="Academician">Academician</option>
-                  <option value="Industry">Industry</option>
+                  {
+                    formData.nationality === "national" && (
+                      <>
+                      <option value="">--Select Category--</option>
+                      <option value="Academician/Industry Participant/Others">
+                        Academician/Industry Participant/Others
+                      </option>
+                      <option value="Research Scholar/ UG/PG Student">Research Scholar/ UG/PG Student</option>
+                      <option value="Attendee">Attendee</option>
+                      <option value="Non Presenting Author">Non Presenting Author</option>
+                      </>
+                    )
+                  }
+                  {
+                    formData.nationality === "international" && (
+                      <>
+                      <option value="">--Select Category--</option>
+                      <option value="Academician/Industry Participant/Others">Academician/Industry Participant/Others</option>
+                      </>
+                    )
+                  }
                 </select>
               </div>
 
@@ -707,21 +724,25 @@ export default function Form() {
                     }
                   </div>
 
+                </>
+              )}
                   <div className="space-y-2">
                     <label className="block text-gray-600">
                       Payable Amount
                     </label>
                     <input
-                      type="text"
-                      value="350 EUR"
-                      disabled
+                      type="number"
+                      // value="350 EUR"
+                      name='amount'
+                      onChange={(e) =>
+                        setFormData({ ...formData, amount: e.target.value })
+                      }
+                      // disabled
                       className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
-                </>
-              )}
 
-              {formData.ieeeMember === "no" && (
+              {/* {formData.ieeeMember === "no" && (
                 <div className="space-y-2">
                   <label className="block text-gray-600">Payable Amount</label>
                   <input
@@ -731,7 +752,7 @@ export default function Form() {
                     className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-              )}
+              )} */}
             </>
           )}
         </div>
