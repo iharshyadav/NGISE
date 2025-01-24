@@ -116,30 +116,23 @@ export default function Form() {
         ...formData,
         createdAt: new Date(),
       });
-
+    
       toast.success("Form submitted successfully!");
       if (docRef.id !== "") {
-        if (formData.nationality === 'national') {
-          
-          navigate('/fee');
-        } else if (formData.nationality === 'international') {
+        if (formData.nationality === 'national' || formData.nationality === 'international') {
          
-          if (formData.ieeeMember === 'yes') {
-            window.location.href = "https://wise.com/pay/r/urYZqfgS1gVSVVU";
-          } else {
-            window.location.href = "https://wise.com/pay/r/xa17tkF6gOIlb8A";
-          }
+          window.location.href = "https://wise.com/pay/me/rahuls1014";
         }
       }
     } catch (error) {
       console.error('Submission error:', error);
       toast.error("There was a problem submitting your form.");
-    } finally { 
+    } finally {
       setIsSubmitting(false);
     }
-}
+  }    
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    window.scrollTo(0, 0); 
   }, []);
 
 
