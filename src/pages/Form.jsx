@@ -45,6 +45,7 @@ export default function Form() {
   const [isUploaded, setIsUploaded] = useState(false);
   const [uploadError, setUploadError] = useState(null);
   const [idFile, setIdFile] = useState(null); 
+  const [studentUpload, setStudentUpload] = useState(false);
 
   useEffect(() => {
     setShowFields(formData.associated === 'no');
@@ -100,6 +101,13 @@ export default function Form() {
         setIsSubmitting(false);
         return;
       }
+      
+      if (formData.categoryType === "Research Scholar/ UG/PG Student" && !studentUpload) {
+        toast.error('Please upload your Student ID');
+        setIsSubmitting(false);
+        return;
+      }
+
 
       if (formData.ieeeMember === 'yes' && !isUploaded) {
         toast.error('Please upload your IEEE Membership document');
@@ -116,8 +124,14 @@ export default function Form() {
 
       toast.success("Form submitted successfully!");
       if (docRef.id !== "") {
-        if (formData.nationality === 'national' || formData.nationality === 'international') {
-          window.location.href = "https://wise.com/pay/me/rahuls1014";
+        if (formData.nationality === 'national') {
+          
+          navigate('/fee');
+        } else if (formData.nationality === 'international') {
+         
+          if (docRef.id !== "") {
+            window.location.href = "https://wise.com/pay/me/rahuls1014";
+          }
         }
       }
     } catch (error) {
@@ -128,6 +142,7 @@ export default function Form() {
     }
   };
 
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -170,7 +185,7 @@ export default function Form() {
     setIdFile(event.target.files[0]);
     setUploadError(null);
   };
-
+ 
   const handleIdUpload = async () => {
     if (!idFile) {
       setUploadError("Please select an ID image first.");
@@ -187,6 +202,7 @@ export default function Form() {
         ID.unique(),
         idFile
       );
+      setStudentUpload(true)
       toast.success("ID Image uploaded successfully!");
     } catch (error) {
       console.error("Error uploading ID image:", error);
