@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig"; 
+import { db } from "../firebaseConfig";
 import { useNavigate } from 'react-router-dom';
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { storage } from "../appwrite";
 import { ID } from 'appwrite';
-import {storage} from "../appwrite"
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -34,23 +33,23 @@ export default function Form() {
     delegateName: '',
     middleName: '',
     firstName: '',
-    lastName:'',
-    amount : ''
-  })
+    lastName: '',
+    amount: ''
+  });
 
-  const [showFields, setShowFields] = useState(true)
+  const [showFields, setShowFields] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPayment, setShowPayment] = useState(null);
   const [pdfFile, setPdfFile] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [isUploaded, setIsUploaded] = useState(false);
   const [uploadError, setUploadError] = useState(null);
-  // const [scriptLoaded, setScriptLoaded] = useState(false);
-
+  const [idFile, setIdFile] = useState(null); 
+  const [studentUpload, setStudentUpload] = useState(false);
 
   useEffect(() => {
-    setShowFields(formData.associated === 'no')
-  }, [formData.associated])
+    setShowFields(formData.associated === 'no');
+  }, [formData.associated]);
 
   const navigate = useNavigate();
 
@@ -64,7 +63,6 @@ export default function Form() {
     } else {
       requiredFields = [
         'categoryType',
-        // 'subCategory',
         'paperId',
         'paperTitle',
         'presentationMode',
@@ -103,6 +101,13 @@ export default function Form() {
         setIsSubmitting(false);
         return;
       }
+      
+      if (formData.categoryType === "Research Scholar/ UG/PG Student" && !studentUpload) {
+        toast.error('Please upload your Student ID');
+        setIsSubmitting(false);
+        return;
+      }
+
 
       if (formData.ieeeMember === 'yes' && !isUploaded) {
         toast.error('Please upload your IEEE Membership document');
@@ -124,25 +129,88 @@ export default function Form() {
           navigate('/fee');
         } else if (formData.nationality === 'international') {
          
-          if (formData.ieeeMember === 'yes') {
-            window.location.href = "https://wise.com/pay/r/urYZqfgS1gVSVVU";
-          } else {
-            window.location.href = "https://wise.com/pay/r/xa17tkF6gOIlb8A";
+          if (docRef.id !== "") {
+            window.location.href = "https://wise.com/pay/me/rahuls1014";
           }
         }
       }
     } catch (error) {
       console.error('Submission error:', error);
       toast.error("There was a problem submitting your form.");
-    } finally { 
+    } finally {
       setIsSubmitting(false);
     }
-}
+  };
+
+  
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    window.scrollTo(0, 0);
   }, []);
 
+    //pdf
+  const handleFileChange = (event) => {
+    setPdfFile(event.target.files[0]);
+    setUploadError(null);
+  };
 
+
+  const handleUpload = async () => {
+    if (!pdfFile) {
+      setUploadError("Please select a PDF file first.");
+      return;
+    }
+
+    setUploading(true);
+    setUploadError(null);
+
+    const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
+    try {
+      const response = await storage.createFile(
+        bucketId,
+        ID.unique(),
+        pdfFile
+      );
+      setIsUploaded(true);
+      toast.success("PDF document uploaded successfully!");
+    } catch (error) {
+      console.error("Error uploading PDF:", error);
+      setUploadError(error.message);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  // ID 
+  const handleIdFileChange = (event) => {
+    setIdFile(event.target.files[0]);
+    setUploadError(null);
+  };
+ 
+  const handleIdUpload = async () => {
+    if (!idFile) {
+      setUploadError("Please select an ID image first.");
+      return;
+    }
+
+    setUploading(true);
+    setUploadError(null);
+
+    const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
+    try {
+      const response = await storage.createFile(
+        bucketId,
+        ID.unique(),
+        idFile
+      );
+      setStudentUpload(true)
+      toast.success("ID Image uploaded successfully!");
+    } catch (error) {
+      console.error("Error uploading ID image:", error);
+      setUploadError(error.message);
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const countries = [
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
@@ -165,39 +233,7 @@ export default function Form() {
     "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
     "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu",
     "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
-  ]
-
-  const handleFileChange = (event) => {
-    setPdfFile(event.target.files[0]);
-    setUploadError(null); 
-  };
-
-  const handleUpload = async () => {
-    if (!pdfFile) {
-        setUploadError("Please select a PDF file first.");
-        return;
-    }
-
-    setUploading(true);
-    setUploadError(null);
-
-    const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
-    try {
-        const response = await storage.createFile(
-            bucketId,
-            ID.unique(),
-            pdfFile
-        );
-        setIsUploaded(true);
-        toast.success("Document submitted successfully!");
-    } catch (error) {
-        console.error("Error uploading PDF:", error);
-        setUploadError(error.message);
-    } finally { 
-        setUploading(false);
-    }
-};
-
+  ];
 
   return (
     <div>
@@ -326,39 +362,11 @@ export default function Form() {
             </div>
           )}
 
-          {/* <div className="space-y-2">
-            <label className="block text-gray-600">Category Type</label>
-            <div className="space-x-4">
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="categoryType"
-                  value="student"
-                  onChange={(e) =>
-                    setFormData({ ...formData, categoryType: e.target.value })
-                  }
-                  className="form-radio text-blue-600"
-                />
-                <span className="ml-2">Student</span>
-              </label>
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="categoryType"
-                  value="faculty"
-                  onChange={(e) =>
-                    setFormData({ ...formData, categoryType: e.target.value })
-                  }
-                  className="form-radio text-blue-600"
-                />
-                <span className="ml-2">Faculty / Staff</span>
-              </label>
-            </div>
-          </div> */}
+         
 
           {showFields && (
             <>
-              {/* Sub-Category */}
+              {/* Sub-Category
               <div className="space-y-2">
                 <label className="block text-gray-600">Category-type</label>
                 <select
@@ -389,7 +397,75 @@ export default function Form() {
                     )
                   }
                 </select>
-              </div>
+              </div> */}
+
+              {/* Sub-Category */}
+<div className="space-y-2">
+  <label className="block text-gray-600">Category-type</label>
+  <select
+    onChange={(e) =>
+      setFormData({ ...formData, categoryType: e.target.value })
+    }
+    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+  >
+    {formData.nationality === "national" && (
+      <>
+        <option value="">--Select Category--</option>
+        <option value="Academician/Industry Participant/Others">
+          Academician/Industry Participant/Others
+        </option>
+        <option value="Research Scholar/ UG/PG Student">
+          Research Scholar/ UG/PG Student
+        </option>
+        <option value="Attendee">Attendee</option>
+        <option value="Non Presenting Author">Non Presenting Author</option>
+      </>
+    )}
+    {formData.nationality === "international" && (
+      <>
+        <option value="">--Select Category--</option>
+        <option value="Academician/Industry Participant/Others">
+          Academician/Industry Participant/Others
+        </option>
+      </>
+    )}
+  </select>
+</div>
+
+{/* ID Image */}
+{formData.categoryType === "Research Scholar/ UG/PG Student" && (
+  <>
+    <div className="space-y-2">
+      <label className="block text-gray-600">Upload ID Image</label>
+      {!isUploaded ? (
+        <>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleIdFileChange}
+            className="border-2 p-1"
+          />
+          {uploadError && <p style={{ color: "red" }}>{uploadError}</p>}
+
+          <button
+            onClick={handleIdUpload}
+            disabled={uploading}
+            className={`px-6 py-2 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+              uploading
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700 focus:ring-blue-500"
+            }`}
+          >
+            {uploading ? "Uploading..." : "Upload ID"}
+          </button>
+        </>
+      ) : (
+        <p className="text-green-600">ID Image Uploaded</p>
+      )}
+    </div>
+  </>
+)}
+
 
               {/* Paper ID */}
               <div className="space-y-2">
@@ -608,55 +684,7 @@ export default function Form() {
                 />
               </div>
 
-              {/* <div className="space-y-2">
-                <label className="block text-gray-600">IEEE Member</label>
-                <div className="space-x-4">
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="ieeeMember"
-                      value="yes"
-                      onChange={(e) =>
-                        setFormData({ ...formData, ieeeMember: e.target.value })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">Yes</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="ieeeMember"
-                      value="no"
-                      onChange={(e) =>
-                        setFormData({ ...formData, ieeeMember: e.target.value })
-                      }
-                      className="form-radio text-blue-600"
-                    />
-                    <span className="ml-2">No</span>
-                  </label>
-                </div>
-              </div>
-
-              {formData.ieeeMember === "yes" && (
-                <div className="space-y-2">
-                  <label className="block text-gray-600">
-                    IEEE Membership No.
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.ieeeNumber}
-                    onChange={(e) =>
-                      setFormData({ ...formData, ieeeNumber: e.target.value })
-                    }
-                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter IEEE Membership No."
-                  />
-                </div>
-              )}
-            </>
-          )}
-        </div> */}
+              
 
               {/* IEEE Member Section */}
               <div className="space-y-2">
