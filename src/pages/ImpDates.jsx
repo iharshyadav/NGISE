@@ -46,8 +46,8 @@ const ImportantDates = () => {
       value: "Extended Paper Submission Deadline",
     },
     {
-      oldDate: "10th Jan, 2025",
-      newDate: "25th Jan, 2025",
+      oldDate: "25th Jan, 2025",
+      newDate: "31st Jan, 2025",
       value: "Acceptance Notification",
     },
     {
