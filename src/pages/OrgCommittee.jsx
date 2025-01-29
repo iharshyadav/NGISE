@@ -318,6 +318,31 @@ const Committee = () => {
           <li>Ms. Tahira Majumdar, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
         </ul>
 
+        <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>Organizing Committee Members</h2>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          <li>Mr. Sarvachan Verma, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Akanksha Shukla, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Birendra Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Mili Srivastava, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Achintya Pandey, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Shikha Agarwal, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Aarti Chaudhary, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Pankaj Singh, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Madhup Agarwal, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Chelsi Sen, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Priti Choudhary, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Shraddha Jauhari, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Tanu Gupta, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Pradeep Tripathi, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Amit Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr Nikhil Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Anushka Tyagi, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Sudhakar Dwivedi, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Rinki Tyagi, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Rupak Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Mr. Anupam Kumar Saini, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
+          <li>Ms. Tahira Majumdar, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+        </ul>
         <hr />
 
         {/*<hr />
