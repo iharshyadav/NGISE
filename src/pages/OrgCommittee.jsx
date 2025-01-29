@@ -341,7 +341,6 @@ const Committee = () => {
           <li>Ms. Rinki Tyagi, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
           <li>Mr. Rupak Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
           <li>Mr. Anupam Kumar Saini, Ajay Kumar Garg Engineering College, Ghaziabad, UP, India</li>
-          <li>Ms. Tahira Majumdar, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
         </ul>
         <hr />
 
