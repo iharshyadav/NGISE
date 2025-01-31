@@ -26,7 +26,8 @@ const FeeSubmission = () => {
               </tr>
             ))}
           </tbody>
-        </table> **Please Pay Using Above Details.
+        </table> 
+        <marquee width="60%" direction="right" height="100px">**Please Pay Using Above Details.</marquee>
       </div>
     </div>
   );
