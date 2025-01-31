@@ -26,7 +26,7 @@ const FeeSubmission = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> **Please Pay Using Above Details.
       </div>
     </div>
   );
