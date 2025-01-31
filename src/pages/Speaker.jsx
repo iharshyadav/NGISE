@@ -12,7 +12,7 @@ const Speaker = () => {
       <div className="flex flex-col md:flex-row justify-center md:space-x-20 space-y-6 md:space-y-0 mb-10">
 
         {/* First Speaker */}
-        <div className="flex flex-col w-48">
+        <div className="flex flex-col w-60">
           <img
             src="https://ucarecdn.com/3473b0ea-d09a-4641-a15c-c848cbe17bc3/-/preview/398x304/"
             alt="Salvatore Sinno"
@@ -26,7 +26,7 @@ const Speaker = () => {
         </div>
 
         {/* Second Speaker */}
-        <div className="flex flex-col w-48">
+        <div className="flex flex-col w-60">
           <img
             src="https://ucarecdn.com/8423d646-9fe7-44cb-b9e9-54e526f587e3/-/preview/457x305/"
             alt="Prof. Chuan-Yu Chang"

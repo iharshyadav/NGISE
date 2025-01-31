@@ -31,7 +31,7 @@ export default function Form() {
     ieeeNumber: '',
     delegateService: '',
     delegateName: '',
-    middleName: '',
+    // middleName: '',
     firstName: '',
     lastName: '',
     amount: ''
@@ -67,7 +67,7 @@ export default function Form() {
         'paperTitle',
         'presentationMode',
         'firstName',
-        'middleName',
+        // 'middleName',
         'lastName',
         'gender',
         'mobile',
@@ -509,7 +509,7 @@ export default function Form() {
 
                   <div className="flex flex-col space-y-2">
                     {/* <label className="block text-gray-600">Name</label> */}
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 gap-4">
                       <div className="col-span-1">
                         <label className="block text-gray-600">
                           First Name
@@ -526,7 +526,7 @@ export default function Form() {
                         />
                       </div>
 
-                      <div className="col-span-1">
+                      {/* <div className="col-span-1">
                         <label className="block text-gray-600">
                           Middle Name
                         </label>
@@ -540,7 +540,7 @@ export default function Form() {
                           }
                           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
-                      </div>
+                      </div> */}
 
                       <div className="col-span-1">
                         <label className="block text-gray-600">Last Name</label>
