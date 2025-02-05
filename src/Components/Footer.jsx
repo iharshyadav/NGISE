@@ -104,19 +104,27 @@ const Footer = () => {
           </div>
         </div>
         <hr className=" bg-black w-[70%] sm:w-[80%] ml-16 mb-5 md:ml-20 lg:ml-28 h-0 absolute bottom-16 border-t-2 border-t-gray-200" />
-        <div className="absolute bottom-4 w-full flex flex-wrap items-center justify-center">
-          <h1 className="uppercase text-base font-sans font-semibold">
-            Designed & Developed By :{" "}
-          </h1>
-          <img
-            className="w-[10vw] sm:w-[4vw]  p-1 "
-            src="https://itbt-website.vercel.app/Images/Screenshot_2023-11-29_202207-removebg-preview.png"
-            alt=""
-          />
-          <h1 className="uppercase text-base font-sans font-semibold">
-            Big data centre of excellence
-          </h1>
-        </div>
+
+<div className="absolute bottom-4 w-full flex flex-wrap items-center justify-center">
+  <h1 className="uppercase text-base font-sans font-semibold">
+    Designed & Developed By :{" "}
+  </h1>
+
+  <a href="https://bdcoe.co.in" target="_blank" rel="noopener noreferrer">
+    <img
+      className="w-[10vw] sm:w-[4vw] p-1"
+      src="https://itbt-website.vercel.app/Images/Screenshot_2023-11-29_202207-removebg-preview.png"
+      alt="Big Data Centre of Excellence"
+    />
+  </a>
+
+  <a href="https://bdcoe.co.in" target="_blank" rel="noopener noreferrer">
+    <h1 className="uppercase text-base font-sans font-semibold">
+      Big Data Centre of Excellence
+    </h1>
+  </a>
+</div>
+
       </section>
     </div>
   );
