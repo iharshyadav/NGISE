@@ -18,7 +18,7 @@ const CallForPaper = () => {
     {
       oldDate: "31st Jan, 2025",
       newDate: "8th Feb, 2025",
-      value: "Early Bird Registration",
+      value: "Last Date of Registration",
     },
     {
       oldDate: "5th Feb, 2025",
