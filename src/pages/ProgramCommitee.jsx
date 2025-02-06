@@ -19,7 +19,6 @@ const Committee = () => {
             <p>Dr. Elli Valla, Tallinn University of Technology, Tallinn, Estonia</p>
             <p>Dr. Sunil Kumar, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
             <p>Dr. Aditya Pratap Singh, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
-            <p>Dr. Rashmi Sharma, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
             <p>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
             <p>Dr. Shivani Aggarwal, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
             <p>Dr. Nandita Goyal, Ajay Kumar Garg Engineering College, Ghaziabad, India</p>
