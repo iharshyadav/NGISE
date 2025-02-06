@@ -88,38 +88,56 @@ const RegistrationAndFeeSubmission = () => {
       </div>
 
      
-      {/* <div id="authors-fee" className="mt-10 relative">
-        <h1 className="text-3xl flex justify-center font-bold mt-4">Author's Fee</h1> */}
+      <div className="mt-10 bg-yellow-300">
+  <div className="overflow-hidden">
+    <div className="whitespace-nowrap animate-marquee-forward flex">
+      <p className="text-red-600 text-lg font-semibold inline-block mr-32">
+        After registration, please fill out the Google form: 
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHh4NZD4xjlet-cRtAvMqONx8rlsIMC_6Nt2RwWei-n-ds9w/viewform?usp=dialog" 
+          className="text-blue-600 hover:underline ml-2"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Click here
+        </a>
+      </p>
+      <p className="text-red-600 text-lg font-semibold inline-block mr-32">
+        After registration, please fill out the Google form: 
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHh4NZD4xjlet-cRtAvMqONx8rlsIMC_6Nt2RwWei-n-ds9w/viewform?usp=dialog" 
+          className="text-blue-600 hover:underline ml-2"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Click here
+        </a>
+      </p>
+      <p className="text-red-600 text-lg font-semibold inline-block mr-32">
+        After registration, please fill out the Google form: 
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHh4NZD4xjlet-cRtAvMqONx8rlsIMC_6Nt2RwWei-n-ds9w/viewform?usp=dialog" 
+          className="text-blue-600 hover:underline ml-2"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Click here
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
 
-     
-        <div className="flex justify-center mt-4">
+
+
+        <div className="flex justify-center mt-8">
           <button
             onClick={handleRegistersNow} 
-            className="px-6 py-2 bg-blue-600 text-2xl text-white rounded-md hover:bg-blue-700 transition-colors"
+            className="px-8 py-3 bg-blue-600 text-xl text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
           >
             Register Now
           </button>
         </div>
-
-        {/* <table className="text-sm sm:text-lg w-full mt-10 mb-10 ">
-          <thead>
-            <tr className="">
-              <th className="text-left p-2  ">Category</th>
-              <th className="text-left p-2 ">Affiliated within India</th>
-              <th className="text-left p-2">Affiliated outside India</th>
-            </tr>
-          </thead>
-          <tbody>
-            {authorFeeInfo.map((e, index) => (
-              <tr key={index} className="bg-white ">
-                <td className="p-2 ">{e.category}</td>
-                <td className="p-2 ">{e.indiaFee}</td>
-                <td className="p-2">{e.foreignFee}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table> 
-      </div>*/}
       {/* Fee Submission Details Section 
       <div id="fee-submission" className="mt-10">
         <h1 className="text-3xl flex justify-center font-bold mt-4">Fee Submission Details</h1>

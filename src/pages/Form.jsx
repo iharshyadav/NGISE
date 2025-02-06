@@ -237,6 +237,46 @@ export default function Form() {
 
   return (
     <div>
+
+<div className="mt-10 bg-yellow-300">
+  <div className="overflow-hidden">
+    <div className="whitespace-nowrap animate-marquee-forward flex">
+      <p className="text-red-600 text-lg font-semibold inline-block mr-32">
+        After registration, please fill out the Google form: 
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHh4NZD4xjlet-cRtAvMqONx8rlsIMC_6Nt2RwWei-n-ds9w/viewform?usp=dialog" 
+          className="text-blue-600 hover:underline ml-2"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Click here
+        </a>
+      </p>
+      <p className="text-red-600 text-lg font-semibold inline-block mr-32">
+        After registration, please fill out the Google form: 
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHh4NZD4xjlet-cRtAvMqONx8rlsIMC_6Nt2RwWei-n-ds9w/viewform?usp=dialog" 
+          className="text-blue-600 hover:underline ml-2"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Click here
+        </a>
+      </p>
+      <p className="text-red-600 text-lg font-semibold inline-block mr-32">
+        After registration, please fill out the Google form: 
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHh4NZD4xjlet-cRtAvMqONx8rlsIMC_6Nt2RwWei-n-ds9w/viewform?usp=dialog" 
+          className="text-blue-600 hover:underline ml-2"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Click here
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
       <h1 className="text-3xl flex justify-center font-bold mt-4">
         Registration Form
       </h1>
