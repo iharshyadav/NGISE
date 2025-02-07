@@ -52,7 +52,7 @@ const ImportantDates = () => {
     },
     {
       oldDate: "31st Jan, 2025",
-      newDate: "8th Feb, 2025",
+      newDate: "10th Feb, 2025",
       value: "Last Date of Registration",
     },
     {
