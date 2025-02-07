@@ -34,7 +34,8 @@ export default function Form() {
     // middleName: '',
     firstName: '',
     lastName: '',
-    amount: ''
+    amount: '',
+    state:''
   });
 
   const [showFields, setShowFields] = useState(true);
@@ -65,7 +66,7 @@ export default function Form() {
         'categoryType',
         'paperId',
         'paperTitle',
-        'presentationMode',
+        // 'presentationMode',
         'firstName',
         // 'middleName',
         'lastName',
@@ -76,7 +77,8 @@ export default function Form() {
         'city',
         'nationality',
         'ieeeMember',
-        'amount'
+        'amount',
+        'state'
       ];
     }
 
@@ -601,7 +603,7 @@ export default function Form() {
               </div>
 
               {/* Paper Presentation Mode */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="block text-gray-600">
                   Paper Presentation Mode
                 </label>
@@ -639,7 +641,7 @@ export default function Form() {
                     <span className="ml-2">Offline</span>
                   </label>
                 </div>
-              </div>
+              </div> */}
 
               {/* Gender */}
               <div className="space-y-2">
@@ -719,6 +721,16 @@ export default function Form() {
                   type="text"
                   onChange={(e) =>
                     setFormData({ ...formData, city: e.target.value })
+                  }
+                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="block text-gray-600">State</label>
+                <input
+                  type="text"
+                  onChange={(e) =>
+                    setFormData({ ...formData, state: e.target.value })
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
