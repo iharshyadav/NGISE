@@ -90,14 +90,21 @@ export default function Form() {
       return;
     }
 
-    const phoneRegex = /^\d{10}$/;
+  
+    // const phoneRegex = /^\d{10}$/;
+    // if (!phoneRegex.test(formData.mobile)) {
+    //   toast.error("Please enter a valid 10-digit phone number.");
+    //   setIsSubmitting(false);
+    //   return;
+    // }
+
+    if (formData.associated === 'no') {
+      const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(formData.mobile)) {
       toast.error("Please enter a valid 10-digit phone number.");
       setIsSubmitting(false);
       return;
     }
-
-    if (formData.associated === 'no') {
       if (formData.nationality === 'international' && !formData.country) {
         toast.error('Please select a country for international participants');
         setIsSubmitting(false);
@@ -345,39 +352,74 @@ export default function Form() {
           )}
           {/* University Association */}
           <div className="space-y-2">
-            <label className="block text-gray-600">
-              Are you currently associated with AKGEC?
-            </label>
-            <div className="space-x-4">
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="associated"
-                  value="yes"
-                  checked={formData.associated === "yes"}
-                  onChange={(e) =>
-                    setFormData({ ...formData, associated: e.target.value })
-                  }
-                  className="form-radio text-blue-600"
-                  // onClick={!formData.associated}
-                />
-                <span className="ml-2">Yes</span>
-              </label>
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="associated"
-                  value="no"
-                  checked={formData.associated === "no"}
-                  onChange={(e) =>
-                    setFormData({ ...formData, associated: e.target.value })
-                  }
-                  className="form-radio text-blue-600"
-                />
-                <span className="ml-2">No</span>
-              </label>
-            </div>
-          </div>
+  <label className="block text-gray-600">
+    Are you currently associated with AKGEC?
+  </label>
+  <div className="space-x-4">
+    <label className="inline-flex items-center">
+      <input
+        type="radio"
+        name="associated"
+        value="yes"
+        checked={formData.associated === "yes"}
+        onChange={(e) =>
+          setFormData({ ...formData, associated: e.target.value })
+        }
+        className="form-radio text-blue-600"
+      />
+      <span className="ml-2">Yes</span>
+    </label>
+    <label className="inline-flex items-center">
+      <input
+        type="radio"
+        name="associated"
+        value="no"
+        checked={formData.associated === "no"}
+        onChange={(e) =>
+          setFormData({ ...formData, associated: e.target.value })
+        }
+        className="form-radio text-blue-600"
+      />
+      <span className="ml-2">No</span>
+    </label>
+  </div>
+</div>
+
+ {formData.associated === "yes" && (
+  <div className="space-y-2">
+    <label className="block text-gray-600">Category-type</label>
+    <select
+    onChange={(e) =>
+      setFormData({ ...formData, categoryType: e.target.value })
+    }
+    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+  >
+    {formData.nationality === "national" && (
+      <>
+        <option value="">--Select Category--</option>
+        <option value="Academician/Industry Participant/Others">
+          Academician/Industry Participant/Others
+        </option>
+        <option value="Research Scholar/ UG/PG Student">
+          Research Scholar/ UG/PG Student
+        </option>
+        <option value="Attendee">Attendee</option>
+        <option value="Non Presenting Author">Non Presenting Author</option>
+      </>
+    )}
+    {formData.nationality === "international" && (
+      <>
+        <option value="">--Select Category--</option>
+        <option value="Academician/Industry Participant/Others">
+          Academician/Industry Participant/Others
+        </option>
+      </>
+    )}
+  </select>
+  </div>
+)} 
+
+          
 
           {formData.associated === "yes" && (
             <div className="space-y-2">
@@ -408,38 +450,6 @@ export default function Form() {
 
           {showFields && (
             <>
-              {/* Sub-Category
-              <div className="space-y-2">
-                <label className="block text-gray-600">Category-type</label>
-                <select
-                  onChange={(e) =>
-                    setFormData({ ...formData, categoryType: e.target.value })
-                  }
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {
-                    formData.nationality === "national" && (
-                      <>
-                      <option value="">--Select Category--</option>
-                      <option value="Academician/Industry Participant/Others">
-                        Academician/Industry Participant/Others
-                      </option>
-                      <option value="Research Scholar/ UG/PG Student">Research Scholar/ UG/PG Student</option>
-                      <option value="Attendee">Attendee</option>
-                      <option value="Non Presenting Author">Non Presenting Author</option>
-                      </>
-                    )
-                  }
-                  {
-                    formData.nationality === "international" && (
-                      <>
-                      <option value="">--Select Category--</option>
-                      <option value="Academician/Industry Participant/Others">Academician/Industry Participant/Others</option>
-                      </>
-                    )
-                  }
-                </select>
-              </div> */}
 
               {/* Sub-Category */}
 <div className="space-y-2">
