@@ -1,79 +1,79 @@
-// import React from 'react';
-import img1 from "/indiagate.jpg";
-import img2 from "/akshadham.jpg";
-import img3 from "/jamamasjid.jpg";
-import img4 from "/lotus_temple.jpg";
-import img5 from "/Gandhi_museum.jpg";
-import img6 from "/redfort.jpg";
-import img7 from "/humanyu_tomb.jpg";
-import img8 from "/lodhi_garden.jpg";
-import img9 from "/gurudwara.jpg";
-import img10 from "/chandni _chowk.jpg";
-import img11 from "/national_museum.jpg";
+import React from 'react';
+// import img1 from "/indiagate.jpg";
+// import img2 from "/akshadham.jpg";
+// import img3 from "/jamamasjid.jpg";
+// import img4 from "/lotus_temple.jpg";
+// import img5 from "/Gandhi_museum.jpg";
+// import img6 from "/redfort.jpg";
+// import img7 from "/humanyu_tomb.jpg";
+// import img8 from "/lodhi_garden.jpg";
+// import img9 from "/gurudwara.jpg";
+// import img10 from "/chandni _chowk.jpg";
+// import img11 from "/national_museum.jpg";
 
 const data = [
   {
-    image: img1,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4f3w3wYEnLmKwaHBYRXjZnVf8kpTecI2PGQ46S",
     name: "The India Gate",
     desc: "The India Gate is a war memorial located near the Rajpath on the eastern edge of the ceremonial axis of New Delhi.",
     website: "https://www.britannica.com/topic/India-Gate",
   },
   {
-    image: img2,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4fDZg5WqceXYQ4fZLMqi0hJwUIN17BlFGm8Kvb",
     name: "Akshardham Temple",
     desc: "Akshardham means the divine abode of God. It is hailed as an eternal place of devotion, purity, and peace.",
     website: "https://akshardham.com/",
   },
   {
-    image: img3,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4fYeTtR042bMlcG8jh1CBzkFidxHNSnOUK5J9u",
     name: "Jama Masjid",
     desc: "Jama Masjid of Delhi, is one of the largest mosques in India. Its builder is the Mughal emperor Shah Jahan.",
     website: "https://en.wikipedia.org/wiki/Jama_Masjid,_Delhi",
   },
   {
-    image: img4,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4fuzNuNFnVSwamgn6oGEpF2tOVeNlX7ujCMqv1",
     name: "Lotus Temple",
     desc: "The Lotus Temple is notable for its lotus-like shape, it has become a prominent attraction in the city.",
     website: "https://en.wikipedia.org/wiki/Lotus_Temple",
   },
   {
-    image: img5,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4f5HW7OJPwSlgEmvjDYx8LZ1BIqCtVfnoAzyP2",
     name: "Mahatma Gandhi Museum",
     desc: "The National Gandhi Museum has a very rich collection of original relics, books and other memorabilia closely connected with Mahatma Gandhi",
     website: "https://www.gandhimuseum.org/museum/",
   },
   {
-    image: img6,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4faFOQCZihe42A7U1nbIstPMcD3pkYZ8HNQVov",
     name: "Red Fort",
     desc: "The Red Fort, also known as Lal Qila, is a historic fort in Delhi, India, that historically served as the main residence of the Mughal emperors.",
     website: "https://whc.unesco.org/en/list/231/",
   },
   {
-    image: img7,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4fMqEWPH7nvG1A9Z8lPHgL60VKjUmoJsc2zYfB",
     name: "Humayun's Tomb",
     desc: "Humayun's Tomb was built in the 1560s, with the patronage of Humayun's son, the great Emperor Akbar.",
     website: "https://whc.unesco.org/en/list/232/",
   },
   {
-    image: img8,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4fXGJWQmE3loYPtJ6q2LNey0uAUZ4daGwzETR1",
     name: "Lodhi Garden",
     desc: "Lodi Garden is a city park situated in New Delhi, India, spread over 90 acres.",
     website: "https://en.wikipedia.org/wiki/Lodi_Gardens",
   },
   {
-    image: img9,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4fOhibVUZls60ok32MaN5pbvIYQKiPJEz4A1Ve",
     name: "Gurudwara Bangla Sahib",
     desc: "Gurudwara Bangla Sahib is one of the most prominent Sikh houses of worship, known for its association with the eighth Sikh Guru.",
     website: "https://en.wikipedia.org/wiki/Gurdwara_Bangla_Sahib",
   },
   {
-    image: img10,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4f5uzjcqwSlgEmvjDYx8LZ1BIqCtVfnoAzyP2O",
     name: "Chandni Chowk",
     desc: "The Chandni Chowk (meaning Moonlight Square) is one of the oldest and busiest markets in Old Delhi, India. ",
     website: "https://en.wikipedia.org/wiki/Chandni_Chowk",
   },
   {
-    image: img11,
+    image: "https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4fYjT82b42bMlcG8jh1CBzkFidxHNSnOUK5J9u",
     name: "National Museum",
     desc: "The National Museum in Delhi is one of India's largest museums. It's in New Delhi, amid the spacious boulevards that are full of government institutions.  ",
     website: "https://www.nationalmuseumindia.gov.in/en",
