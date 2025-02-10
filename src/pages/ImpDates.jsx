@@ -56,8 +56,8 @@ const ImportantDates = () => {
       value: "Last Date of Registration",
     },
     {
-      oldDate: "5th Feb, 2025",
-      newDate: "15th Feb, 2025",
+      oldDate: "15th Feb, 2025",
+      newDate: "20th Feb, 2025",
       value: "Final Paper Submission",
     },
   ];
