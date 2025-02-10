@@ -42,12 +42,9 @@ const VisaInformation = () => {
       <section>
         <h2 className="text-2xl font-semibold mb-2">FAQ</h2>
         <p className="text-lg text-gray-600">
-          Please see <a href="/locale/faq" className='text-blue-600 underline'>the FAQ</a> if you have any questions about your invitation letter.
+          Please see <a href="/locale/faq" className='text-blue-600 underline'>the FAQ</a> if you have any questions about your invitation letter <a className='font-semibold' href="/locale/Visainformation/contact">Contact Us</a>.
         </p>
       </section>
-
-      {/* Integrating the Visainfocontact component below FAQ */}
-      <VisaInfoContact />  {/* New page integration */}
       
     </div>
   );

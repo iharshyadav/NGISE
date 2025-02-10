@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
-const Visainfocontact = () => {
+const VisaInfocontact = () => {
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -23,45 +23,6 @@ const Visainfocontact = () => {
     }));
   };
 
-  const validateForm = () => {
-    const { firstName, lastName, email, phoneNumber, message } = formData;
-    if (!firstName || !lastName || !email || !phoneNumber || !message) {
-      alert('Fill in the required details');
-      return false;
-    }
-    return true;
-  };
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (validateForm()) {
-      try {
-        setLoading(true); 
-        await addDoc(collection(db, 'contacts'), {
-          ...formData, 
-          timestamp: new Date(), 
-        });
-
-        alert('Form submitted successfully!');
-        
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phoneNumber: '',
-          message: '',
-        });
-      } catch (error) {
-        console.error("Error adding document: ", error);
-        alert('There was an error submitting the form. Please try again.');
-      } finally {
-        setLoading(false); 
-      }
-    }
-  };
-
   return (
     <div className="bg-gray-50 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4">
@@ -73,13 +34,14 @@ const Visainfocontact = () => {
             <p className="mt-4 text-lg text-gray-600">
               Our friendly team would love to hear from you.
             </p>
-            <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+            <form action={`https://formsubmit.co/${import.meta.env.VITE_REACT_EMAIL_ID}`} method="POST" className="mt-8 space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="grid items-center gap-1.5">
                   <label htmlFor="firstName" className="text-sm font-medium text-gray-700">First Name</label>
                   <input
                     type="text"
                     id="firstName"
+                    name='firstName'
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="First Name"
@@ -91,6 +53,7 @@ const Visainfocontact = () => {
                   <input
                     type="text"
                     id="lastName"
+                    name='lastName'
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Last Name"
@@ -103,6 +66,7 @@ const Visainfocontact = () => {
                 <input
                   type="email"
                   id="email"
+                  name='email'
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email"
@@ -114,6 +78,7 @@ const Visainfocontact = () => {
                 <input
                   type="tel"
                   id="phoneNumber"
+                  name='phoneNumber'
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="Phone number"
@@ -124,6 +89,7 @@ const Visainfocontact = () => {
                 <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
                 <textarea
                   id="message"
+                  name='message'
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Leave us a message"
@@ -154,4 +120,4 @@ const Visainfocontact = () => {
         </div>
           );
         };
-        export default Visainfocontact;
+export default VisaInfocontact;
