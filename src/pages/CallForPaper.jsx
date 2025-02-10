@@ -16,8 +16,8 @@ const CallForPaper = () => {
       value: "Acceptance Notification",
     },
     {
-      oldDate: "31st Jan, 2025",
-      newDate: "10th Feb, 2025",
+      oldDate: "10th Feb, 2025",
+      newDate: "15th Feb, 2025",
       value: "Last Date of Registration",
     },
     {
