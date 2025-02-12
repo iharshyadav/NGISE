@@ -554,8 +554,9 @@ export default function Form() {
                       className="w-full min-w-[100px] py-2 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="Mr">Mr.</option>
+                      <option value="Ms">Ms.</option>
                       <option value="Dr">Dr.</option>
-                      <option value="Author">Author</option>
+                      
                     </select>
                   </div>
 
