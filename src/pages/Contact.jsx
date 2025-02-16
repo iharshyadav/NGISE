@@ -1,47 +1,9 @@
 import { Mail, PhoneCall } from 'lucide-react'
 import React from 'react'
 
-// const menuItems = [
-//   {
-//     name: 'Home',
-//     href: '#',
-//   },
-//   {
-//     name: 'About',
-//     href: '#',
-//   },
-//   {
-//     name: 'Contact',
-//     href: '#',
-//   },
-// ]
-
-// const locations = [
-//   {
-//     title: 'Bengaluru office',
-//     timings: 'Mon-Sat 9am to 5pm.',
-//     address: '100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN',
-//   },
-//   {
-//     title: 'Head office',
-//     timings: 'Mon-Sat 9am to 5pm.',
-//     address: '12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN',
-//   },
-//   {
-//     title: 'Karnataka office',
-//     timings: 'Mon-Sat 9am to 5pm.',
-//     address: '42, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 IN',
-//   },
-// ]
 
 const Contact = () => {
 
-
-  // const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
-  // const toggleMenu = () => {
-  //   setIsMenuOpen(!isMenuOpen)
-  // }
   
   return (
     <div>
@@ -62,8 +24,11 @@ const Contact = () => {
             <PhoneCall size={22} /> 919868450322 (Dr. Anupama Sharma) 
           </p>
           <p className="text-lg flex gap-2 items-center justify-start text-gray-700 mb-2">
-          <Mail /> ngise@akgec.ac.in
-          </p>
+  <Mail /> 
+  <a href="mailto:ngise@akgec.ac.in" className="text-black hover:underline">
+    ngise@akgec.ac.in
+  </a>
+</p>
             <p className="text-md text-gray-600">
               For more information, visit our website or contact us at <a className='font-semibold' href="https://www.akgec.ac.in/">https://www.akgec.ac.in</a>
             </p>
@@ -71,10 +36,10 @@ const Contact = () => {
           <div className="formMap">
               <iframe
               className=' hidden max-h-full w-full rounded-lg object-cover lg:block sm:w-[40vw] sm:h-[32vw] h-44'
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.467007802247!2d77.49981541461779!3d28.67567358240077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf30885b1e2a5%3A0x9983675e24c6638b!2sAKGEC%3A%20Ajay%20Kumar%20Garg%20Engineering%20College%2C%20Ghaziabad!5e0!3m2!1sen!2sin!4v1676826055930!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.467007802247!2d77.503329!3d28.6749973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf3e5f579762d%3A0x3b56cd68178e2f29!2sCSIT%20BLOCK%20AKGEC!5e0!3m2!1sen!2sin!4v1676826055930!5m2!1sen!2sin"
                 width=""
                 height=""
-                title="location"
+                title=""
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
