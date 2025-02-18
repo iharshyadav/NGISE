@@ -19,7 +19,7 @@ const Speaker = () => {
             className="w-full h-60 object-cover mb-6 rounded-lg "
           />
           <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-1">Salvatore Sinno</h3>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-1">Salvatore Sinno</h3>
             <p className="text-sm">VP of Innovation at Unisys</p>
             <p className="text-sm">University of Durham, United Kingdom</p>
           </div>
@@ -33,7 +33,7 @@ const Speaker = () => {
             className="w-full h-60 object-cover mb-6 rounded-lg "
           />
           <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-1">Prof. Chuan-Yu Chang</h3>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-1">Prof. Chuan-Yu Chang</h3>
             <p className="text-sm ">Distinguished Professor</p>
             <p className="text-sm">IET Fellow, IEEE Senior Member</p>
             <p className="text-sm">Department of Computer Science and Information Engineering</p>
@@ -49,7 +49,7 @@ const Speaker = () => {
             className="w-full h-60  mb-6 rounded-lg "
           />
           <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-1">Pavan Kumar Adepu</h3>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-1">Pavan Kumar Adepu</h3>
             <p className="text-sm">Engineer Leader</p>
             <p className="text-sm">Amazon, USA</p>
           </div>
