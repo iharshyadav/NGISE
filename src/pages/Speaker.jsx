@@ -20,8 +20,8 @@ const Speaker = () => {
           />
           <div className="text-center">
             <h3 className="text-2xl font-semibold text-gray-800 mb-1">Salvatore Sinno</h3>
-            <p className="text-sm">VP of ECS Solution</p>
-            <p className="text-sm">Innovation at Unisys</p>
+            <p className="text-sm">VP of Innovation at Unisys</p>
+            <p className="text-sm">University of Durham, United Kingdom</p>
           </div>
         </div>
 
@@ -50,8 +50,8 @@ const Speaker = () => {
           />
           <div className="text-center">
             <h3 className="text-2xl font-semibold text-gray-800 mb-1">Pavan Kumar Adepu</h3>
-            <p className="text-sm">Engineering Leader</p>
-            <p className="text-sm">Amazon.com Inc.</p>
+            <p className="text-sm">Engineer Leader</p>
+            <p className="text-sm">Amazon, USA</p>
           </div>
         </div>
 
