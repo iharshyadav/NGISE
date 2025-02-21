@@ -55,6 +55,19 @@ const Speaker = () => {
           </div>
         </div>
 
+        <div className="flex flex-col items-center w-80 p-4 bg-white border border-gray-200 rounded-lg shadow-xl">
+            <img
+              src="https://ucarecdn.com/3ee5f7fd-572e-4b1d-9bfc-1df01d7c9957/-/preview/434x444/"
+              alt="Dr. Varun Kakkar"
+              className="w-full h-60 mb-4"
+            />
+            <div className="text-center w-full">
+              <h3 className="text-xl font-bold">Dr. Varun Kakkar</h3>
+              <p>B. T. Kumaon Institute of Technology, Dwarahat</p>
+            </div>
+          </div>
+
+
       </div>
     </div>
   );
