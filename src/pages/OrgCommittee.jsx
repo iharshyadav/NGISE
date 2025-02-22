@@ -135,7 +135,6 @@ const Committee = () => {
       />
       <div className="text-center w-full">
         <h3 className="text-xl font-bold">Dr. Varun Kakkar</h3>
-        <p>Joint Secretary, IEEE U.P. Section</p>
         <p>B. T. Kumaon Institute of Technology, Dwarahat, India</p>
       </div>
     </div>
