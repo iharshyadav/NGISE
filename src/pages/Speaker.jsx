@@ -59,12 +59,12 @@ const Speaker = () => {
             <img
               src="https://ucarecdn.com/3ee5f7fd-572e-4b1d-9bfc-1df01d7c9957/-/preview/434x444/"
               alt="Dr. Varun Kakkar"
-              className="w-full h-60 mb-4"
+              className="w-full h-60  mb-6 rounded-lg"
             />
-            <div className="text-center w-full">
-              <h3 className="text-xl font-bold">Dr. Varun Kakkar</h3>
-              <p>Joint Secretary, IEEE U.P. Section</p>
-              <p>B. T. Kumaon Institute of Technology, Dwarahat</p>
+            <div className="text-center">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-1">Dr. Varun Kakkar</h3>
+              <p className="text-sm">Joint Secretary, IEEE U.P. Section</p>
+              <p className="text-sm">B. T. Kumaon Institute of Technology, Dwarahat</p>
             </div>
           </div>
 
