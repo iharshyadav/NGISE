@@ -13,12 +13,12 @@ const Contact = () => {
                 Ajay Kumar Garg Engineering College
               </h2>
               <p className="text-lg text-gray-700 mb-2">
-                27th KM Milestone, Delhi - Meerut Expy,
+                27th KM Milestone, Delhi - Meerut Expressway,
                 <br />
                 Ghaziabad, Uttar Pradesh 201015
               </p>
               <p className="text-lg flex gap-2 items-center justify-start text-gray-700">
-                <PhoneCall size={22} /> 919868450322 (Dr. Anupama Sharma)
+                <PhoneCall size={22} /> +91 9868450322 (Dr. Anupama Sharma)
               </p>
               <p className="text-lg flex gap-2 items-center justify-start text-gray-600 mb-2">
                 <Mail />
