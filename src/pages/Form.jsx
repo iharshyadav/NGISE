@@ -168,11 +168,19 @@ export default function Form() {
         console.log(fileType)
     
      
+
+        if (fileType === "application/pdf" || fileType === "image/jpeg" || fileType !== "image/svg" || fileType === "image/png") {
+          setPdfFile(file);
+          setUploadError(null); 
+        } else {
+          setUploadError("Please upload a PDF,PNG or JPEG file."); 
+
         if (fileType === "application/pdf" || fileType === "image/jpeg") {
           setPdfFile(file);
           setUploadError(null); 
         } else {
           setUploadError("Please upload a PDF or JPEG file."); 
+
           setPdfFile(null); 
         }
       }
@@ -219,8 +227,17 @@ export default function Form() {
 
   // ID 
   const handleIdFileChange = (event) => {
-    setIdFile(event.target.files[0]);
-    setUploadError(null);
+    const file = event.target.files[0];
+    if (file) {
+      const fileType = file.type;
+      if (fileType === "image/svg+xml"  || fileType !== "image/png") {
+        toast.error("Please upload a PDF,PNG or JPEG file.");
+        return;
+      }else{
+        setIdFile(event.target.files[0]);
+        setUploadError(null);
+      }
+    }
   };
  
   const handleIdUpload = async () => {
@@ -228,6 +245,7 @@ export default function Form() {
       setUploadError("Please select an ID image first.");
       return;
     }
+    
 
     setUploading(true);
     setUploadError(null);
