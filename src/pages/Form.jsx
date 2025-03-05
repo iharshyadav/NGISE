@@ -54,6 +54,15 @@ export default function Form() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if(formData.nationality === 'international' && formData.associated === 'yes') {
+      setFormData(prevData => ({
+        ...prevData,
+        associated: 'no'
+      }));
+    }
+  },[formData.nationality])
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -89,14 +98,6 @@ export default function Form() {
       setIsSubmitting(false);
       return;
     }
-
-  
-    // const phoneRegex = /^\d{10}$/;
-    // if (!phoneRegex.test(formData.mobile)) {
-    //   toast.error("Please enter a valid 10-digit phone number.");
-    //   setIsSubmitting(false);
-    //   return;
-    // }
 
     if (formData.associated === 'no') {
       const phoneRegex = /^\d{10}$/;
@@ -162,13 +163,16 @@ export default function Form() {
     
       if (file) {
         const fileType = file.type;
+
+
+        console.log(fileType)
     
      
-        if (fileType === "application/pdf" || fileType === "image/jpeg") {
+        if (fileType === "application/pdf" || fileType === "image/jpeg" || fileType !== "image/svg" || fileType === "image/png") {
           setPdfFile(file);
           setUploadError(null); 
         } else {
-          setUploadError("Please upload a PDF or JPEG file."); 
+          setUploadError("Please upload a PDF,PNG or JPEG file."); 
           setPdfFile(null); 
         }
       }
@@ -215,8 +219,17 @@ export default function Form() {
 
   // ID 
   const handleIdFileChange = (event) => {
-    setIdFile(event.target.files[0]);
-    setUploadError(null);
+    const file = event.target.files[0];
+    if (file) {
+      const fileType = file.type;
+      if (fileType === "image/svg+xml"  || fileType !== "image/png") {
+        toast.error("Please upload a PDF,PNG or JPEG file.");
+        return;
+      }else{
+        setIdFile(event.target.files[0]);
+        setUploadError(null);
+      }
+    }
   };
  
   const handleIdUpload = async () => {
@@ -224,6 +237,7 @@ export default function Form() {
       setUploadError("Please select an ID image first.");
       return;
     }
+    
 
     setUploading(true);
     setUploadError(null);
@@ -819,7 +833,7 @@ export default function Form() {
                         <>
                         <input
                           type="file"
-                          accept=".pdf"
+                          // accept=".pdf"
                           onChange={handleFileChange}
                           className='border-2 p-1'
                           // name='ieeemember'
