@@ -168,11 +168,19 @@ export default function Form() {
         console.log(fileType)
     
      
+
         if (fileType === "application/pdf" || fileType === "image/jpeg" || fileType !== "image/svg" || fileType === "image/png") {
           setPdfFile(file);
           setUploadError(null); 
         } else {
           setUploadError("Please upload a PDF,PNG or JPEG file."); 
+
+        if (fileType === "application/pdf" || fileType === "image/jpeg") {
+          setPdfFile(file);
+          setUploadError(null); 
+        } else {
+          setUploadError("Please upload a PDF or JPEG file."); 
+
           setPdfFile(null); 
         }
       }
