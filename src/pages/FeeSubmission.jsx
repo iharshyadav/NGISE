@@ -14,7 +14,7 @@ const FeeSubmission = () => {
 
   return (
     <div className="font px-2 sm:px-40 py-7 p-7">
-      <div className="mt-10 bg-yellow-300">
+      {/* <div className="mt-10 bg-yellow-300">
   <div className="overflow-hidden">
     <div className="whitespace-nowrap animate-marquee-forward flex">
       <p className="text-red-600 text-lg font-semibold inline-block mr-32">
@@ -52,7 +52,7 @@ const FeeSubmission = () => {
       </p>
     </div>
   </div>
-</div>
+</div> */}
       <div className="container">
         <h1 className="text-3xl font-bold mt-4">Fee Submission Details</h1>
         <h3 className="text-lg mt-4">Details of IMPS/UPI/RTGS/NEFT:</h3>

@@ -6,7 +6,7 @@ import { db } from "../firebaseConfig";
 import { useNavigate } from 'react-router-dom';
 import { storage } from "../appwrite";
 import { ID } from 'appwrite';
-import Closeform from './closeform';
+import ClosedRegistration from './closeform';
 
 export default function Form() {
   const [closeForm, setcloseForm] = useState(true)
@@ -289,7 +289,7 @@ export default function Form() {
       {
         !closeForm ? (
           <>
-            <div className="mt-10 bg-yellow-300">
+            {/* <div className="mt-10 bg-yellow-300">
   <div className="overflow-hidden">
     <div className="whitespace-nowrap animate-marquee-forward flex">
       <p className="text-red-600 text-lg font-semibold inline-block mr-32">
@@ -327,7 +327,7 @@ export default function Form() {
       </p>
     </div>
   </div>
-</div>
+</div> */}
 <h1 className="text-3xl flex justify-center font-bold mt-4">
   Registration Form
 </h1>
@@ -907,7 +907,7 @@ export default function Form() {
         <ToastContainer />
       </form>
           </>
-        ) : <Closeform />
+        ) : <ClosedRegistration />
       }
 
     </div>

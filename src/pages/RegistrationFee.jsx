@@ -88,7 +88,7 @@ const RegistrationAndFeeSubmission = () => {
       </div>
 
      
-      <div className="mt-10 bg-yellow-300">
+      {/* <div className="mt-10 bg-yellow-300">
   <div className="overflow-hidden">
     <div className="whitespace-nowrap animate-marquee-forward flex">
       <p className="text-red-600 text-lg font-semibold inline-block mr-32">
@@ -126,7 +126,7 @@ const RegistrationAndFeeSubmission = () => {
       </p>
     </div>
   </div>
-</div>
+</div> */}
 
 
 
