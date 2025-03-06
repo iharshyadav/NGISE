@@ -6,276 +6,290 @@ import { db } from "../firebaseConfig";
 import { useNavigate } from 'react-router-dom';
 import { storage } from "../appwrite";
 import { ID } from 'appwrite';
+import Closeform from './closeform';
 
 export default function Form() {
-  const [formData, setFormData] = useState({
-    associated: 'no',
-    enrollmentNo: '',
-    categoryType: '',
-    category: '',
-    subCategory: '',
-    paperId: '',
-    paperTitle: '',
-    presentationMode: 'offline',
-    service: '',
-    title: '',
-    gender: 'male',
-    mobile: '',
-    email: '',
-    institution: '',
-    city: '',
-    nationality: 'national',
-    country: '',
-    affiliation: '',
-    ieeeMember: '',
-    ieeeNumber: '',
-    delegateService: '',
-    delegateName: '',
-    // middleName: '',
-    firstName: '',
-    lastName: '',
-    amount: '',
-    state:''
-  });
+  const [closeForm, setcloseForm] = useState(true)
+  // const [formData, setFormData] = useState({
+  //   associated: 'no',
+  //   enrollmentNo: '',
+  //   categoryType: '',
+  //   category: '',
+  //   subCategory: '',
+  //   paperId: '',
+  //   paperTitle: '',
+  //   presentationMode: 'offline',
+  //   service: '',
+  //   title: '',
+  //   gender: 'male',
+  //   mobile: '',
+  //   email: '',
+  //   institution: '',
+  //   city: '',
+  //   nationality: 'national',
+  //   country: '',
+  //   affiliation: '',
+  //   ieeeMember: '',
+  //   ieeeNumber: '',
+  //   delegateService: '',
+  //   delegateName: '',
+  //   // middleName: '',
+  //   firstName: '',
+  //   lastName: '',
+  //   amount: '',
+  //   state:''
+  // });
 
-  const [showFields, setShowFields] = useState(true);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPayment, setShowPayment] = useState(null);
-  const [pdfFile, setPdfFile] = useState(null);
-  const [uploading, setUploading] = useState(false);
-  const [isUploaded, setIsUploaded] = useState(false);
-  const [uploadError, setUploadError] = useState(null);
-  const [idFile, setIdFile] = useState(null); 
-  const [studentUpload, setStudentUpload] = useState(false);
+  // const [showFields, setShowFields] = useState(true);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [showPayment, setShowPayment] = useState(null);
+  // const [pdfFile, setPdfFile] = useState(null);
+  // const [uploading, setUploading] = useState(false);
+  // const [isUploaded, setIsUploaded] = useState(false);
+  // const [uploadError, setUploadError] = useState(null);
+  // const [idFile, setIdFile] = useState(null); 
+  // const [studentUpload, setStudentUpload] = useState(false);
 
-  useEffect(() => {
-    setShowFields(formData.associated === 'no');
-  }, [formData.associated]);
+  // useEffect(() => {
+  //   setShowFields(formData.associated === 'no');
+  // }, [formData.associated]);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    if(formData.nationality === 'international' && formData.associated === 'yes') {
-      setFormData(prevData => ({
-        ...prevData,
-        associated: 'no'
-      }));
-    }
-  },[formData.nationality])
+  // useEffect(() => {
+  //   if(formData.nationality === 'international' && formData.associated === 'yes') {
+  //     setFormData(prevData => ({
+  //       ...prevData,
+  //       associated: 'no'
+  //     }));
+  //   }
+  // },[formData.nationality])
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
 
-    let requiredFields;
-    if (formData.associated === 'yes') {
-      requiredFields = ['enrollmentNo', 'categoryType'];
-    } else {
-      requiredFields = [
-        'categoryType',
-        'paperId',
-        'paperTitle',
-        // 'presentationMode',
-        'firstName',
-        // 'middleName',
-        'lastName',
-        'gender',
-        'mobile',
-        'email',
-        'institution',
-        'city',
-        'nationality',
-        'ieeeMember',
-        'amount',
-        'state'
-      ];
-    }
+  //   let requiredFields;
+  //   if (formData.associated === 'yes') {
+  //     requiredFields = ['enrollmentNo', 'categoryType'];
+  //   } else {
+  //     requiredFields = [
+  //       'categoryType',
+  //       'paperId',
+  //       'paperTitle',
+  //       // 'presentationMode',
+  //       'firstName',
+  //       // 'middleName',
+  //       'lastName',
+  //       'gender',
+  //       'mobile',
+  //       'email',
+  //       'institution',
+  //       'city',
+  //       'nationality',
+  //       'ieeeMember',
+  //       'amount',
+  //       'state'
+  //     ];
+  //   }
 
-    const emptyFields = requiredFields.filter(field => !formData[field]);
+  //   const emptyFields = requiredFields.filter(field => !formData[field]);
 
-    if (emptyFields.length > 0) {
-      toast.error(`Please fill in all required fields: ${emptyFields.join(', ')}`);
-      setIsSubmitting(false);
-      return;
-    }
+  //   if (emptyFields.length > 0) {
+  //     toast.error(`Please fill in all required fields: ${emptyFields.join(', ')}`);
+  //     setIsSubmitting(false);
+  //     return;
+  //   }
 
-    if (formData.associated === 'no') {
-      const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(formData.mobile)) {
-      toast.error("Please enter a valid 10-digit phone number.");
-      setIsSubmitting(false);
-      return;
-    }
-      if (formData.nationality === 'international' && !formData.country) {
-        toast.error('Please select a country for international participants');
-        setIsSubmitting(false);
-        return;
-      }
+  //   if (formData.associated === 'no') {
+  //     const phoneRegex = /^\d{10}$/;
+  //   if (!phoneRegex.test(formData.mobile)) {
+  //     toast.error("Please enter a valid 10-digit phone number.");
+  //     setIsSubmitting(false);
+  //     return;
+  //   }
+  //     if (formData.nationality === 'international' && !formData.country) {
+  //       toast.error('Please select a country for international participants');
+  //       setIsSubmitting(false);
+  //       return;
+  //     }
       
-      if (formData.categoryType === "Research Scholar/ UG/PG Student" && !studentUpload) {
-        toast.error('Please upload your Student ID');
-        setIsSubmitting(false);
-        return;
-      }
+  //     if (formData.categoryType === "Research Scholar/ UG/PG Student" && !studentUpload) {
+  //       toast.error('Please upload your Student ID');
+  //       setIsSubmitting(false);
+  //       return;
+  //     }
 
 
-      if (formData.ieeeMember === 'yes' && !isUploaded) {
-        toast.error('Please upload your IEEE Membership document');
-        setIsSubmitting(false);
-        return;
-      }
-    }
+  //     if (formData.ieeeMember === 'yes' && !isUploaded) {
+  //       toast.error('Please upload your IEEE Membership document');
+  //       setIsSubmitting(false);
+  //       return;
+  //     }
+  //   }
 
-    try {
-      const docRef = await addDoc(collection(db, "formSubmissions"), {
-        ...formData,
-        createdAt: new Date(),
-      });
+  //   try {
+  //     const docRef = await addDoc(collection(db, "formSubmissions"), {
+  //       ...formData,
+  //       createdAt: new Date(),
+  //     });
 
-      toast.success("Form submitted successfully!");
-      if (docRef.id !== "") {
-        if (formData.nationality === 'national') {
+  //     toast.success("Form submitted successfully!");
+  //     if (docRef.id !== "") {
+  //       if (formData.nationality === 'national') {
           
-          navigate('/fee');
-        } else if (formData.nationality === 'international') {
+  //         navigate('/fee');
+  //       } else if (formData.nationality === 'international') {
          
-          if (docRef.id !== "") {
-            window.location.href = "https://wise.com/pay/me/rahuls1014";
-          }
-        }
-      }
-    } catch (error) {
-      console.error('Submission error:', error);
-      toast.error("There was a problem submitting your form.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //         if (docRef.id !== "") {
+  //           window.location.href = "https://wise.com/pay/me/rahuls1014";
+  //         }
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.error('Submission error:', error);
+  //     toast.error("There was a problem submitting your form.");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
 
   
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
-    //pdf
-    const handleFileChange = (event) => {
-      const file = event.target.files[0];
+  //   //pdf
+  //   const handleFileChange = (event) => {
+  //     const file = event.target.files[0];
     
-      if (file) {
-        const fileType = file.type;
+  //     if (file) {
+  //       const fileType = file.type;
 
 
-        console.log(fileType)
+  //       console.log(fileType)
     
      
-        if (fileType === "application/pdf" || fileType === "image/jpeg") {
-          setPdfFile(file);
-          setUploadError(null); 
-        } else {
-          setUploadError("Please upload a PDF or JPEG file."); 
-          setPdfFile(null); 
-        }
-      }
-    };
+  //       if (fileType === "application/pdf" || fileType === "image/jpeg" || fileType !== "image/svg" || fileType === "image/png") {
+  //         setPdfFile(file);
+  //         setUploadError(null); 
+  //       } else {
+  //         setUploadError("Please upload a PDF,PNG or JPEG file."); 
+  //         setPdfFile(null); 
+  //       }
+  //     }
+  //   };
     
 
 
-    const handleUpload = async () => {
+  //   const handleUpload = async () => {
     
-      if (!pdfFile) {
-        setUploadError("Please select a PDF or JPEG file first.");
-        return;
-      }
+  //     if (!pdfFile) {
+  //       setUploadError("Please select a PDF or JPEG file first.");
+  //       return;
+  //     }
     
 
-      const fileType = pdfFile.type;
-      if (fileType !== "application/pdf" && fileType !== "image/jpeg") {
-        setUploadError("Please upload a PDF or JPEG file.");
-        return;
-      }
+  //     const fileType = pdfFile.type;
+  //     if (fileType !== "application/pdf" && fileType !== "image/jpeg") {
+  //       setUploadError("Please upload a PDF or JPEG file.");
+  //       return;
+  //     }
     
     
-      setUploading(true);
-      setUploadError(null); 
+  //     setUploading(true);
+  //     setUploadError(null); 
   
     
 
-    const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
-    try {
-      const response = await storage.createFile(
-        bucketId,
-        ID.unique(),
-        pdfFile
-      );
-      setIsUploaded(true);
-      toast.success("PDF document uploaded successfully!");
-    } catch (error) {
-      console.error("Error uploading PDF:", error);
-      setUploadError(error.message);
-    } finally {
-      setUploading(false);
-    }
-  };
+  //   const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
+  //   try {
+  //     const response = await storage.createFile(
+  //       bucketId,
+  //       ID.unique(),
+  //       pdfFile
+  //     );
+  //     setIsUploaded(true);
+  //     toast.success("PDF document uploaded successfully!");
+  //   } catch (error) {
+  //     console.error("Error uploading PDF:", error);
+  //     setUploadError(error.message);
+  //   } finally {
+  //     setUploading(false);
+  //   }
+  // };
 
-  // ID 
-  const handleIdFileChange = (event) => {
-    setIdFile(event.target.files[0]);
-    setUploadError(null);
-  };
+  // // ID 
+  // const handleIdFileChange = (event) => {
+  //   const file = event.target.files[0];
+  //   if (file) {
+  //     const fileType = file.type;
+  //     if (fileType === "image/svg+xml"  || fileType !== "image/png") {
+  //       toast.error("Please upload a PDF,PNG or JPEG file.");
+  //       return;
+  //     }else{
+  //       setIdFile(event.target.files[0]);
+  //       setUploadError(null);
+  //     }
+  //   }
+  // };
  
-  const handleIdUpload = async () => {
-    if (!idFile) {
-      setUploadError("Please select an ID image first.");
-      return;
-    }
+  // const handleIdUpload = async () => {
+  //   if (!idFile) {
+  //     setUploadError("Please select an ID image first.");
+  //     return;
+  //   }
+    
 
-    setUploading(true);
-    setUploadError(null);
+  //   setUploading(true);
+  //   setUploadError(null);
 
-    const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
-    try {
-      const response = await storage.createFile(
-        bucketId,
-        ID.unique(),
-        idFile
-      );
-      setStudentUpload(true)
-      toast.success("ID Image uploaded successfully!");
-    } catch (error) {
-      console.error("Error uploading ID image:", error);
-      setUploadError(error.message);
-    } finally {
-      setUploading(false);
-    }
-  };
+  //   const bucketId = import.meta.env.VITE_REACT_APPWRITE_BUCKET_ID;
+  //   try {
+  //     const response = await storage.createFile(
+  //       bucketId,
+  //       ID.unique(),
+  //       idFile
+  //     );
+  //     setStudentUpload(true)
+  //     toast.success("ID Image uploaded successfully!");
+  //   } catch (error) {
+  //     console.error("Error uploading ID image:", error);
+  //     setUploadError(error.message);
+  //   } finally {
+  //     setUploading(false);
+  //   }
+  // };
 
-  const countries = [
-    "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
-    "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
-    "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Côte d'Ivoire", "Cabo Verde",
-    "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo",
-    "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic",
-    "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland",
-    "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
-    "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran",
-    "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati",
-    "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania",
-    "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius",
-    "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia",
-    "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway",
-    "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland",
-    "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino",
-    "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands",
-    "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
-    "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
-    "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu",
-    "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
-  ];
+  // const countries = [
+  //   "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
+  //   "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
+  //   "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Côte d'Ivoire", "Cabo Verde",
+  //   "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo",
+  //   "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+  //   "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland",
+  //   "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
+  //   "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran",
+  //   "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati",
+  //   "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania",
+  //   "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius",
+  //   "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia",
+  //   "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway",
+  //   "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland",
+  //   "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino",
+  //   "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands",
+  //   "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
+  //   "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
+  //   "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu",
+  //   "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+  // ];
 
   return (
     <div>
-
-<div className="mt-10 bg-yellow-300">
+      {
+        !closeForm ? (
+          <>
+            <div className="mt-10 bg-yellow-300">
   <div className="overflow-hidden">
     <div className="whitespace-nowrap animate-marquee-forward flex">
       <p className="text-red-600 text-lg font-semibold inline-block mr-32">
@@ -892,6 +906,10 @@ export default function Form() {
         )}
         <ToastContainer />
       </form>
+          </>
+        ) : <Closeform />
+      }
+
     </div>
   );
 }
