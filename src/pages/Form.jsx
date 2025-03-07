@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig";
-import { useNavigate } from 'react-router-dom';
-import { storage } from "../appwrite";
-import { ID } from 'appwrite';
+import { useState } from 'react';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import { collection, addDoc } from "firebase/firestore";
+// import { db } from "../firebaseConfig";
+// import { useNavigate } from 'react-router-dom';
+// import { storage } from "../appwrite";
+// import { ID } from 'appwrite';
 import ClosedRegistration from './closeform';
 
 export default function Form() {
