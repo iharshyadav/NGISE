@@ -50,8 +50,9 @@ const Speaker = () => {
           />
           <div className="text-center">
             <h3 className="text-3xl font-semibold text-gray-800 mb-1">Pavan Kumar Adepu</h3>
-            <p className="text-sm">Engineer Leader</p>
-            <p className="text-sm">Amazon, USA</p>
+            <p className="text-sm">GenAI/LLM Research Leader</p>
+            <p className="text-sm">Head of Engineering</p>
+            <p className="text-sm">Amazon.com LLC, United States of America</p>
           </div>
         </div>
 
