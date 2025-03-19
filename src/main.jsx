@@ -21,7 +21,7 @@ import PlaceToVisit from './pages/PlaceToVisit.jsx'
 import Form from './pages/Form.jsx'
 import FAQ from './pages/FAQ.jsx'
 import VisaInformation from './pages/VisaInformation.jsx'
-import VisaInfocontact from './pages/Visainfocontact.jsx'
+// import VisaInfocontact from './pages/Visainfocontact.jsx'
 
 
 
@@ -48,7 +48,7 @@ const router = createBrowserRouter(
         <Route path="/registrationform" element={<Form />} />
         <Route path="/locale/faq" element={<FAQ />} />
         <Route path="/locale/Visainformation" element={<VisaInformation />} />
-        <Route path="/locale/Visainformation/contact" element={<VisaInfocontact />} />
+        {/* <Route path="/locale/Visainformation/contact" element={<VisaInfocontact />} /> */}
     </Route>
   )
 )
