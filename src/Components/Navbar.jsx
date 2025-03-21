@@ -58,7 +58,7 @@ const Navbar = () => {
       }
     }
   }, [location]);
-  
+
   useEffect(() => {
     const hash = location.hash;
     if (hash === "#program-committee") {
@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <div className=" w-full sm:h-20 border border-gray-300 sticky bg-opacity- bg-[#fffce6] z-50">
-      <div className="mx-auto sm:h-20 flex max-w-7xl items-center lg:justify-between px-4 py-2">
+      <div className="mx-auto sm:h-20 flex max-w-7xl items-center lg:justify-between py-2">
         <Link to="/" className="inline-flex items-center space-x-2">
           <img
             className="md:w-[10vw] sm:[13vw] w-[25vw] bg-transparent"
@@ -80,7 +80,7 @@ const Navbar = () => {
           />
         </Link>
         <div className="hidden lg:block">
-          <ul className="inline-flex space-x-9">
+          <ul className="inline-flex space-x-7">
             <Link to="/">
               <li
                 className={`text-base font-semibold ${
@@ -111,7 +111,7 @@ const Navbar = () => {
               >
                 Call for Papers
               </li>
-              </Link>
+            </Link>
             {/* <li className="relative z-50 group">
               <button
                 className={`flex items-center text-lg font-semibold cursor-pointer ${
@@ -145,19 +145,19 @@ const Navbar = () => {
                 Paper Submission
               </li>
             </Link> */}
-               {/* Add Speakers Link */}
-          <Link to="/Speaker">
-            <li
-              className={`text-base font-semibold ${
-                currentPathname === "/Speaker"
-                  ? "text-[#46ce9c]"
-                  : "text-gray-800"
-              } hover:text-[#00cc99]`}
-            >
-              Speaker
-            </li>
-          </Link>
-           <li className="relative z-50 group">
+            {/* Add Speakers Link */}
+            <Link to="/Speaker">
+              <li
+                className={`text-base font-semibold ${
+                  currentPathname === "/Speaker"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Speaker
+              </li>
+            </Link>
+            <li className="relative z-50 group">
               <button
                 className={`flex items-center text-base font-semibold cursor-pointer ${
                   currentPathname === "/commitee"
@@ -175,7 +175,7 @@ const Navbar = () => {
                   <Link to="/organizingcommittee">Organizing Committee</Link>
                 </li>
               </ul>
-            </li> 
+            </li>
 
             {/* <Link to="/Speaker">
               <li
@@ -188,16 +188,44 @@ const Navbar = () => {
                 Speaker
               </li>
             </Link> */}
-           <li className="relative z-50">
-  <span
-    className={`flex items-center text-base font-semibold cursor-pointer ${
-      currentPathname === "/commitee" ? "text-[#46ce9c]" : "text-gray-800"
-    } hover:text-[#00cc99]`}
-    onClick={() => window.location.href = "/registration"}  // Direct navigation on click
-  >
-    Registration
-  </span>
-</li>
+             
+            <li className="relative z-50 group">
+              <span
+                className={`flex items-center text-base font-semibold cursor-pointer ${
+                  currentPathname === "/program"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+              >
+                Program <RiArrowDropDownLine className="text-2xl" />
+              </span>
+              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+                <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/program/programschedule">Program Schedule</Link>
+                </li>
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/program/trackschedule">Track Schedule</Link>
+                </li>
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/program/wieactivity">WIE Activity</Link>
+                </li>
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/program/posterpresentation">Poster Presentation Activity</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="relative z-50">
+              <span
+                className={`flex items-center text-base font-semibold cursor-pointer ${
+                  currentPathname === "/commitee"
+                    ? "text-[#46ce9c]"
+                    : "text-gray-800"
+                } hover:text-[#00cc99]`}
+                onClick={() => (window.location.href = "/registration")}
+              >
+                Registration
+              </span>
+            </li>
 
             <li className="relative z-50 group">
               <span
@@ -241,8 +269,8 @@ const Navbar = () => {
               >
                 Contact Us
                 {/* <RiArrowDropDownLine className="text-2xl" /> */}
-              {/* </Link> */}
-              {/* <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+                {/* </Link> */}
+                {/* <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
      <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
        <Link to="/contact/query">Query</Link>
      </li>
@@ -250,10 +278,8 @@ const Navbar = () => {
        <Link to="/contact">Reach Us</Link>
      </li>
    </ul> */}
-            </Link>
+              </Link>
             </li>
-
-          
           </ul>
         </div>
         <div className="">
@@ -322,15 +348,15 @@ const Navbar = () => {
                         Call for Papers
                       </li>
                     </Link>
-                     {/* Add Speakers Link */}
-                <Link to="/Speaker">
-                  <li
-                    onClick={() => setIsMenuOpen(false)}
-                    className="flex text-base font-semibold text-gray-800 hover:text-[#46ce9c]"
-                  >
-                    Speaker
-                  </li>
-                </Link>
+                    {/* Add Speakers Link */}
+                    <Link to="/Speaker">
+                      <li
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex text-base font-semibold text-gray-800 hover:text-[#46ce9c]"
+                      >
+                        Speaker
+                      </li>
+                    </Link>
 
                     {/* <Link to="/papersubmission">
                       <li
@@ -431,8 +457,10 @@ const Navbar = () => {
                         Locale <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
                       {isMenuOpen5 && (
-                        <ul className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg"
-                        onClick={() => setIsMenuOpen(false)} >
+                        <ul
+                          className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
                           {/* <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
@@ -449,14 +477,15 @@ const Navbar = () => {
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
                           >
-                            <Link to="/locale/Visainformation">Visa Information</Link>
+                            <Link to="/locale/Visainformation">
+                              Visa Information
+                            </Link>
                           </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen5(false)}
                           >
                             <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
-                            
                           </li>
                           {/* <li
                             className="py-2 px-4 font-medium hover:text-[#00cc99] lg:block"
@@ -464,13 +493,14 @@ const Navbar = () => {
                           >
                             <Link to="/locale/faq">FAQ</Link>
                           </li> */}
-                        
                         </ul>
                       )}
                     </li>
 
-                    <li className="relative z-10 flex "
-                    onClick={() => setIsMenuOpen(false)} >
+                    <li
+                      className="relative z-10 flex "
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       <Link
                         to="/contact"
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
@@ -498,7 +528,6 @@ const Navbar = () => {
       </ul>
     )} */}
                     </li>
-                  
                   </nav>
                 </div>
                 {/* <button

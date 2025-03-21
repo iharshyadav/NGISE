@@ -21,6 +21,11 @@ import PlaceToVisit from './pages/PlaceToVisit.jsx'
 import Form from './pages/Form.jsx'
 import FAQ from './pages/FAQ.jsx'
 import VisaInformation from './pages/VisaInformation.jsx'
+import Program from './pages/Program.jsx'
+import PosterPresentation from './pages/PosterPresentaion.jsx'
+import ProgramSchedule from './pages/ProgramSchedule.jsx'
+import TrackSchedule from './pages/TrackSchedule.jsx'
+import WieActivity from './pages/WieActivity.jsx'
 // import VisaInfocontact from './pages/Visainfocontact.jsx'
 
 
@@ -48,6 +53,11 @@ const router = createBrowserRouter(
         <Route path="/registrationform" element={<Form />} />
         <Route path="/locale/faq" element={<FAQ />} />
         <Route path="/locale/Visainformation" element={<VisaInformation />} />
+        <Route path="/program" element={<Program />} />
+        <Route path="/program/posterpresentation" element={<PosterPresentation />} />
+        <Route path="/program/programschedule" element={<ProgramSchedule />} />
+        <Route path="/program/trackschedule" element={<TrackSchedule />} />
+        <Route path="/program/wieactivity" element={<WieActivity />} />
         {/* <Route path="/locale/Visainformation/contact" element={<VisaInfocontact />} /> */}
     </Route>
   )
