@@ -84,7 +84,7 @@ export default function PosterPresentation() {
                 IEEE International Conference on Next Generation Information System Engineering
               </h1>
               <div className="w-24 h-1 bg-white mx-auto my-6"></div>
-              <h2 className="text-xl mb-6 text-center font-light">AKGEC 2025 - Poster Presentation</h2>
+              <h2 className="text-xl mb-6 text-center font-light">NGISE 2025 - Poster Presentation</h2>
               <p className="text-xl md:text-2xl font-medium text-center max-w-3xl mx-auto leading-relaxed">
                 Humanitarian Technology: Leveraging Innovation for a Better Future
               </p>
