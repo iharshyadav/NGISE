@@ -65,7 +65,7 @@ const Speaker = () => {
             <div className="text-center">
               <h3 className="text-3xl font-semibold text-gray-800 mb-1">Mr. Varun Kakar</h3>
               <p className="text-sm">Joint Secretary, IEEE U.P. Section</p>
-              <p className="text-sm">B. T. Kumaon Institute of Technology, Dwarahat</p>
+              <p className="text-sm">B. T. Kumaon Institute of Technology, Dwarahat,India</p>
             </div>
           </div>
 
