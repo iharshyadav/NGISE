@@ -21,7 +21,7 @@ const Speaker = () => {
           <div className="text-center">
             <h3 className="text-3xl font-semibold text-gray-800 mb-1">Salvatore Sinno</h3>
             <p className="text-sm">VP of Innovation at Unisys</p>
-            <p className="text-sm">University of Durham, United Kingdom</p>
+            <p className="text-sm">Austria</p>
           </div>
         </div>
 
@@ -63,9 +63,9 @@ const Speaker = () => {
               className="w-full h-60  mb-6 rounded-lg"
             />
             <div className="text-center">
-              <h3 className="text-3xl font-semibold text-gray-800 mb-1">Dr. Varun Kakkar</h3>
+              <h3 className="text-3xl font-semibold text-gray-800 mb-1">Mr. Varun Kakar</h3>
               <p className="text-sm">Joint Secretary, IEEE U.P. Section</p>
-              <p className="text-sm">B. T. Kumaon Institute of Technology, Dwarahat</p>
+              <p className="text-sm">B. T. Kumaon Institute of Technology, Dwarahat,India</p>
             </div>
           </div>
 
