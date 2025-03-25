@@ -26,10 +26,10 @@ const Navbar = () => {
   const toggleMenu3 = () => {
     setIsMenuOpen3(!isMenuOpen3);
   };
-  // const [isMenuOpen4, setIsMenuOpen4] = React.useState(false);
-  // const toggleMenu4 = () => {
-  //   setIsMenuOpen4(!isMenuOpen4);
-  // };
+  const [isMenuOpen4, setIsMenuOpen4] = React.useState(false);
+  const toggleMenu4 = () => {
+    setIsMenuOpen4(!isMenuOpen4);
+  };
 
   const [isMenuOpen5, setIsMenuOpen5] = React.useState(false);
   const toggleMenu5 = () => {
@@ -458,7 +458,7 @@ const Navbar = () => {
                       </span>
                       {isMenuOpen5 && (
                         <ul
-                          className="bg-white w-[34vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg"
+                          className="bg-white w-[65vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {/* <li
@@ -496,6 +496,66 @@ const Navbar = () => {
                         </ul>
                       )}
                     </li>
+
+                    <li className="relative flex">
+                            <span
+                            className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                            onClick={toggleMenu4}
+                            >
+                            Program
+                            <RiArrowDropDownLine className="text-2xl" />{" "}
+                            </span>
+                            {isMenuOpen4 && (
+                            <ul className="bg-white w-3/4 pb-2 ring-1 z-30 ring-white ring-opacity-20 absolute mt-8 font-semibold shadow-lg">
+                              <li
+                              className="py-1 px-2 hover:text-[#00cc99]"
+                              onClick={() => setIsMenuOpen(false)}
+                              >
+                              <Link
+                                to="/program/programschedule"
+                                onClick={() => {
+                                setIsMenuOpen4(false);
+                                }}
+                              >
+                                Program Schedule
+                              </Link>
+                              </li>
+                              <li
+                              className="py-1 px-2 hover:text-[#00cc99]"
+                              onClick={() => setIsMenuOpen(false)}
+                              >
+                              <Link
+                                to="/program/trackschedule"
+                                onClick={() => setIsMenuOpen4(false)}
+                              >
+                                Track Schedule
+                              </Link>
+                              </li>
+                              <li
+                              className="py-1 px-2 hover:text-[#00cc99]"
+                              onClick={() => setIsMenuOpen(false)}
+                              >
+                              <Link
+                                to="/program/wieactivity"
+                                onClick={() => setIsMenuOpen4(false)}
+                              >
+                                WIE Activity
+                              </Link>
+                              </li>
+                              <li
+                              className="py-1 px-2 hover:text-[#00cc99]"
+                              onClick={() => setIsMenuOpen(false)}
+                              >
+                              <Link
+                                to="/program/posterpresentation"
+                                onClick={() => setIsMenuOpen4(false)}
+                              >
+                                Poster Presentation Activity
+                              </Link>
+                              </li>
+                            </ul>
+                            )}
+                          </li>
 
                     <li
                       className="relative z-10 flex "
