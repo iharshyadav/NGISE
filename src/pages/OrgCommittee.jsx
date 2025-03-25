@@ -311,11 +311,11 @@ const Committee = () => {
           <li>Mr. Pradeep Tripathi, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
         </ul>
 
-        <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>Publicity and Web Chair</h2>
+        <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>Publicity & Web Chair</h2>
         <ul style={{ listStyleType: "none", padding: 0 }}>
           <li>Dr. Shivani Agarwal, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
           <li>Dr. Anju Mishra, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
-          <li>Ms. Tahira Majumdar, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
+          <li>Ms. Tahira Mazumder, Ajay Kumar Garg Engineering College, Ghaziabad, India</li>
         </ul>
 
         <h2 style={{ fontWeight: "bold",marginTop: "20px", fontSize: "20px" }}>Organizing Committee Members</h2>
