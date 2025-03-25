@@ -267,7 +267,7 @@ const ProgramSchedule = () => {
                 </div>
               </div>
               <div className='bg-white relative'>
-                <div className="absolute left-[120px] sm:left-[140px] top-0 bottom-0 w-0.5 bg-blue-200"></div>
+                <div className="absolute left-[120px] sm:left-[145px] top-0 bottom-0 w-0.5 bg-blue-200"></div>
                 
                 <ul className='divide-y divide-gray-100'>
                   {day1Schedule.map((item, index) => (
@@ -280,7 +280,7 @@ const ProgramSchedule = () => {
                     >
                       <div className='min-w-[110px] sm:min-w-[130px] pr-6 flex items-start relative z-10'>
                         <span className='text-sm font-semibold text-blue-700 whitespace-nowrap'>
-                          <IoTimeOutline className="inline mr-1.5" />
+                          <IoTimeOutline className="inline " />
                           {item.time}
                         </span>
                       </div>
