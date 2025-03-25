@@ -127,17 +127,30 @@ const Navbar = () => {
               </li>
             </Link> */}
             {/* Add Speakers Link */}
-            <Link to="/Speaker">
-              <li
-                className={`text-base font-semibold ${
+            {/* <Link to="/Speaker"> */}
+               <li className="relative z-50 group">
+              <span
+                className={`flex items-center text-base font-semibold cursor-pointer ${
                   currentPathname === "/Speaker"
                     ? "text-[#46ce9c]"
                     : "text-gray-800"
                 } hover:text-[#00cc99]`}
               >
-                Speaker
-              </li>
-            </Link>
+                Speakers <RiArrowDropDownLine className="text-2xl" />
+              </span>
+              <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+                <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/Speaker/chiefguest">Chief Guest</Link>
+                </li>
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/Speaker/guestofhonor">Guest of Honor</Link>
+                </li>
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/Speaker/keynotespeaker">Keynote Speaker</Link>
+                </li>
+              </ul>
+            </li>
+            {/* </Link> */}
             <li className="relative z-50 group">
               <button
                 className={`flex items-center text-base font-semibold cursor-pointer ${
@@ -149,10 +162,10 @@ const Navbar = () => {
                 Committee <RiArrowDropDownLine className="text-2xl" />
               </button>
               <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
-                <li className="py-[0.5vh] px-2 hover:text-[#00cc99]">
+                <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/programcommittee">Program Committee</Link>
                 </li>
-                <li className="py-2 px-2 hover:text-[#00cc99]">
+                <li className="py-2 px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/organizingcommittee">Organizing Committee</Link>
                 </li>
               </ul>
@@ -329,33 +342,60 @@ const Navbar = () => {
                         Call for Papers
                       </li>
                     </Link>
-                    {/* Add Speakers Link */}
-                    <Link to="/Speaker">
-                      <li
-                        onClick={() => setIsMenuOpen(false)}
-                        className="flex text-base font-semibold text-gray-800 hover:text-[#46ce9c]"
+                    <li className="relative z-50 flex">
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={() => toggleDropdown('speakers')}
                       >
-                        Speaker
-                      </li>
-                    </Link>
-
-                    {/* <Link to="/papersubmission">
-                      <li
-                        onClick={() => setIsMenuOpen(false)}
-                        className="flex text-base font-semibold hover:cursor-pointer  text-gray-800 hover:text-gray-900"
-                      >
-                        Paper Submission
-                      </li>
-                    </Link> */}
+                        Speakers <RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                      {activeDropdown === 'speakers' && (
+                        <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20 absolute mt-8 font-semibold shadow-lg">
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/Speaker/chiefguest"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              Chief Guest
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/Speaker/guestofhonor"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              Guest of Honor
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/Speaker/keynotespeaker"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              Keynote Speaker
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
                     <li className="relative z-40 flex ">
                       <span
-                        className={`flex items-center text-base font-medium cursor-pointer hover:text-[#00cc99] `}
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={() => toggleDropdown('committee')}
                       >
                         Committee <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
                       {activeDropdown === 'committee' && (
-                        <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
+                        <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20 absolute mt-8 font-semibold shadow-lg">
                           <li
                             className="py-1 px-2 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen(false)}
@@ -478,7 +518,7 @@ const Navbar = () => {
                       )}
                     </li>
 
-                    <li className="relative flex">
+                    <li className="relative z-10 flex">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
                         onClick={() => toggleDropdown('program')}
@@ -539,7 +579,7 @@ const Navbar = () => {
                     </li>
 
                     <li
-                      className="relative z-10 flex "
+                      className="relative flex"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <Link

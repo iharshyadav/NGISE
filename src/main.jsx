@@ -6,7 +6,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from './Layout.jsx'
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Speaker from './pages/Speaker';
+// import Speaker from './pages/Speaker';
 import About from './pages/About';
 import Accomodation from './pages/Accomodation';
 import CallForPaper from './pages/CallForPaper.jsx'
@@ -26,6 +26,9 @@ import PosterPresentation from './pages/PosterPresentaion.jsx'
 import ProgramSchedule from './pages/ProgramSchedule.jsx'
 import TrackSchedule from './pages/TrackSchedule.jsx'
 import WieActivity from './pages/WieActivity.jsx'
+import ChiefGuest from './pages/chiefguest.jsx'
+import Guestofhonor from './pages/guestofhonor.jsx'
+import Keynotespeaker from './pages/keynotespeaker.jsx'
 // import VisaInfocontact from './pages/Visainfocontact.jsx'
 
 
@@ -35,7 +38,7 @@ const router = createBrowserRouter(
     <Route path='/' element = {<Layout/>}>
         <Route path="" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/speaker" element={<Speaker />} />
+        {/* <Route path="/speaker" element={<Speaker />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/programcommittee" element={<ProgramCommitee/>} />
         <Route path="/organizingcommittee" element={<OrgCommitee/>} /> 
@@ -58,6 +61,9 @@ const router = createBrowserRouter(
         <Route path="/program/programschedule" element={<ProgramSchedule />} />
         <Route path="/program/trackschedule" element={<TrackSchedule />} />
         <Route path="/program/wieactivity" element={<WieActivity />} />
+        <Route path="/Speaker/chiefguest" element={<ChiefGuest />} />
+        <Route path="/Speaker/guestofhonor" element={<Guestofhonor />} />
+        <Route path="/Speaker/keynotespeaker" element={<Keynotespeaker />} />
         {/* <Route path="/locale/Visainformation/contact" element={<VisaInfocontact />} /> */}
     </Route>
   )
