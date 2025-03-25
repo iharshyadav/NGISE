@@ -6,7 +6,6 @@ const ProgramSchedule = () => {
   const [activeTab, setActiveTab] = useState('day1');
   const [expandedSession, setExpandedSession] = useState(null);
 
-  // Updated Schedule data for Day 1 (March 28, 2025) with latest timeline
   const day1Schedule = [
     { time: '08:30 - 09:15', activity: 'Registration / Morning Networking Tea', type: 'break' },
     { time: '09:15 - 09:25', activity: 'HODs, Professors, Faculty, Student to be Seated' },
@@ -55,7 +54,6 @@ const ProgramSchedule = () => {
     { time: '16:00 - 16:20', activity: 'Evening Tea', type: 'break' },
   ];
 
-  // Updated Schedule data for Day 2 (March 29, 2025) with revised timeline
   const day2Schedule = [
     { time: '08:45 - 09:15', activity: 'Morning Networking Tea', type: 'break' },
     { time: '09:15 - 09:30', activity: 'Faculty and participants to be Seated' },
@@ -99,7 +97,6 @@ const ProgramSchedule = () => {
     { time: '15:15 - 15:45', activity: 'Evening Tea', type: 'break' },
   ];
 
-  // Updated Day 2 Parallel Activities with revised timeline
   const day2ParallelActivities = [
     {
       time: '09:00 - 11:00',
@@ -205,7 +202,7 @@ const ProgramSchedule = () => {
           </div>
           
             <a 
-              href="/Minute to Minute Program 28th-29th March 25.pdf" 
+              href="/Minute to Minute Program 28th-29th March 25.docx" 
               download
               className="mt-4 inline-flex mb-5 items-center px-5 py-2.5 border cursor-pointer border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
