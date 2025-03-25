@@ -6,34 +6,15 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const location = useLocation();
+  
+  const [activeDropdown, setActiveDropdown] = React.useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const [isMenuOpen1, setIsMenuOpen1] = React.useState(false);
-
-  const toggleMenu1 = () => {
-    setIsMenuOpen1(!isMenuOpen1);
-  };
-
-  const [isMenuOpen2, setIsMenuOpen2] = React.useState(false);
-  const toggleMenu2 = () => {
-    setIsMenuOpen2(!isMenuOpen2);
-  };
-
-  const [isMenuOpen3, setIsMenuOpen3] = React.useState(false);
-  const toggleMenu3 = () => {
-    setIsMenuOpen3(!isMenuOpen3);
-  };
-  const [isMenuOpen4, setIsMenuOpen4] = React.useState(false);
-  const toggleMenu4 = () => {
-    setIsMenuOpen4(!isMenuOpen4);
-  };
-
-  const [isMenuOpen5, setIsMenuOpen5] = React.useState(false);
-  const toggleMenu5 = () => {
-    setIsMenuOpen5(!isMenuOpen5);
+  const toggleDropdown = (dropdownName) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
   useEffect(() => {
@@ -369,11 +350,11 @@ const Navbar = () => {
                     <li className="relative z-40 flex ">
                       <span
                         className={`flex items-center text-base font-medium cursor-pointer hover:text-[#00cc99] `}
-                        onClick={toggleMenu1}
+                        onClick={() => toggleDropdown('committee')}
                       >
                         Committee <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
-                      {isMenuOpen1 && (
+                      {activeDropdown === 'committee' && (
                         <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                           <li
                             className="py-1 px-2 hover:text-[#00cc99]"
@@ -381,7 +362,7 @@ const Navbar = () => {
                           >
                             <Link
                               to="/programcommittee"
-                              onClick={() => setIsMenuOpen1(false)}
+                              onClick={() => setActiveDropdown(null)}
                             >
                               Program Committee
                             </Link>
@@ -393,7 +374,7 @@ const Navbar = () => {
                             <Link
                               to="/organizingcommittee"
                               onClick={() => {
-                                setIsMenuOpen1(false);
+                                setActiveDropdown(null);
                               }}
                             >
                               {" "}
@@ -415,12 +396,12 @@ const Navbar = () => {
                     <li className="relative z-30 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
-                        onClick={toggleMenu3}
+                        onClick={() => toggleDropdown('registration')}
                       >
                         Registration
                         <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
-                      {isMenuOpen3 && (
+                      {activeDropdown === 'registration' && (
                         <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
                           <li
                             className="py-1 px-2 hover:text-[#00cc99]"
@@ -429,7 +410,7 @@ const Navbar = () => {
                             <Link
                               to="/registration"
                               onClick={() => {
-                                setIsMenuOpen3(false);
+                                setActiveDropdown(null);
                               }}
                             >
                               Registration Fees
@@ -441,7 +422,7 @@ const Navbar = () => {
                           >
                             <Link
                               to="/fee"
-                              onClick={() => setIsMenuOpen3(false)}
+                              onClick={() => setActiveDropdown(null)}
                             >
                               Payment Details
                             </Link>
@@ -452,11 +433,11 @@ const Navbar = () => {
                     <li className="relative z-20 flex ">
                       <span
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
-                        onClick={toggleMenu5}
+                        onClick={() => toggleDropdown('locale')}
                       >
                         Locale <RiArrowDropDownLine className="text-2xl" />{" "}
                       </span>
-                      {isMenuOpen5 && (
+                      {activeDropdown === 'locale' && (
                         <ul
                           className="bg-white w-[65vw] ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg"
                           onClick={() => setIsMenuOpen(false)}
@@ -469,13 +450,13 @@ const Navbar = () => {
                           </li> */}
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen5(false)}
+                            onClick={() => setActiveDropdown(null)}
                           >
                             <Link to="/locale/place">About The City</Link>
                           </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen5(false)}
+                            onClick={() => setActiveDropdown(null)}
                           >
                             <Link to="/locale/Visainformation">
                               Visa Information
@@ -483,7 +464,7 @@ const Navbar = () => {
                           </li>
                           <li
                             className="py-2 px-4 hover:text-[#00cc99]"
-                            onClick={() => setIsMenuOpen5(false)}
+                            onClick={() => setActiveDropdown(null)}
                           >
                             <Link to="/locale/nearby-hotel">Nearby Hotels</Link>
                           </li>
@@ -498,64 +479,64 @@ const Navbar = () => {
                     </li>
 
                     <li className="relative flex">
-                            <span
-                            className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
-                            onClick={toggleMenu4}
+                      <span
+                        className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
+                        onClick={() => toggleDropdown('program')}
+                      >
+                        Program
+                        <RiArrowDropDownLine className="text-2xl" />{" "}
+                      </span>
+                      {activeDropdown === 'program' && (
+                        <ul className="bg-white w-3/4 pb-2 ring-1 z-30 ring-white ring-opacity-20 absolute mt-8 font-semibold shadow-lg">
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/program/programschedule"
+                              onClick={() => {
+                                setActiveDropdown(null);
+                              }}
                             >
-                            Program
-                            <RiArrowDropDownLine className="text-2xl" />{" "}
-                            </span>
-                            {isMenuOpen4 && (
-                            <ul className="bg-white w-3/4 pb-2 ring-1 z-30 ring-white ring-opacity-20 absolute mt-8 font-semibold shadow-lg">
-                              <li
-                              className="py-1 px-2 hover:text-[#00cc99]"
-                              onClick={() => setIsMenuOpen(false)}
-                              >
-                              <Link
-                                to="/program/programschedule"
-                                onClick={() => {
-                                setIsMenuOpen4(false);
-                                }}
-                              >
-                                Program Schedule
-                              </Link>
-                              </li>
-                              <li
-                              className="py-1 px-2 hover:text-[#00cc99]"
-                              onClick={() => setIsMenuOpen(false)}
-                              >
-                              <Link
-                                to="/program/trackschedule"
-                                onClick={() => setIsMenuOpen4(false)}
-                              >
-                                Track Schedule
-                              </Link>
-                              </li>
-                              <li
-                              className="py-1 px-2 hover:text-[#00cc99]"
-                              onClick={() => setIsMenuOpen(false)}
-                              >
-                              <Link
-                                to="/program/wieactivity"
-                                onClick={() => setIsMenuOpen4(false)}
-                              >
-                                WIE Activity
-                              </Link>
-                              </li>
-                              <li
-                              className="py-1 px-2 hover:text-[#00cc99]"
-                              onClick={() => setIsMenuOpen(false)}
-                              >
-                              <Link
-                                to="/program/posterpresentation"
-                                onClick={() => setIsMenuOpen4(false)}
-                              >
-                                Poster Presentation Activity
-                              </Link>
-                              </li>
-                            </ul>
-                            )}
+                              Program Schedule
+                            </Link>
                           </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/program/trackschedule"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              Track Schedule
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/program/wieactivity"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              WIE Activity
+                            </Link>
+                          </li>
+                          <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/program/posterpresentation"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              Poster Presentation Activity
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
 
                     <li
                       className="relative z-10 flex "
@@ -564,29 +545,9 @@ const Navbar = () => {
                       <Link
                         to="/contact"
                         className={`flex items-center text-base font-semibold cursor-pointer hover:text-[#00cc99] `}
-                        onClick={toggleMenu2}
                       >
                         Contact Us
-                        {/* <RiArrowDropDownLine className="text-2xl" />{" "} */}
                       </Link>
-
-                      {/* {isMenuOpen2 && (
-      <ul className="bg-white w-3/4 ring-1 ring-white ring-opacity-20  absolute mt-8 font-semibold  shadow-lg">
-        <li
-          className="py-2 px-4 hover:text-[#00cc99]"
-          onClick={() => setIsMenuOpen2(false)}
-        >
-          <Link to="/contact/query">Query </Link>
-        </li>
-        <li
-          className="py-2 px-4 hover:text-[#00cc99]"
-          onClick={() => setIsMenuOpen2(false)}
-        >
-          <Link to="/contact">Reach Us</Link>
-        </li>
-       
-      </ul>
-    )} */}
                     </li>
                   </nav>
                 </div>
