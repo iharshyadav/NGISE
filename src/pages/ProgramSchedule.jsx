@@ -6,6 +6,7 @@ const ProgramSchedule = () => {
   const [activeTab, setActiveTab] = useState('day1');
   const [expandedSession, setExpandedSession] = useState(null);
 
+  // Updated Schedule data for Day 1 (March 28, 2025) with latest timeline
   const day1Schedule = [
     { time: '08:30 - 09:15', activity: 'Registration / Morning Networking Tea', type: 'break' },
     { time: '09:15 - 09:25', activity: 'HODs, Professors, Faculty, Student to be Seated' },
@@ -18,15 +19,14 @@ const ProgramSchedule = () => {
     { time: '10:30 - 10:45', activity: 'Address by the Chief Guest, Prof. (Dr.) Chuan-Yu Chang' },
     { time: '10:45 - 11:15', activity: 'Address by the Guest of Honor, Prof. Satish Kumar Singh' },
     { time: '11:15 - 11:20', activity: 'Release of Proceedings' },
-    { time: '11:20 - 11:25', activity: 'Signing of MoU', type: 'ceremony' },
-    { time: '11:25 - 11:30', activity: 'Presentation of Memento' },
+    { time: '11:20 - 11:30', activity: 'Presentation of Memento' },
     { time: '11:30 - 12:00', activity: 'High Tea', type: 'break' },
     { 
       time: '12:00 - 12:45', 
-      activity: 'Keynote Address I: Salvatore Sinno, VP of Innovation, Unisys, Austria', 
+      activity: 'Keynote Address I: Salvatore Sinno, VP of Innovation, Unisys, USA', 
       type: 'keynote',
       speaker: 'Salvatore Sinno',
-      affiliation: 'VP of Innovation, Unisys, Austria',
+      affiliation: 'VP of Innovation, Unisys, USA',
       abstract: 'This keynote will explore the latest trends in innovation and digital transformation.',
       image: 'https://via.placeholder.com/150'
     },
@@ -55,11 +55,12 @@ const ProgramSchedule = () => {
     { time: '16:00 - 16:20', activity: 'Evening Tea', type: 'break' },
   ];
 
+  // Updated Schedule data for Day 2 (March 29, 2025) with revised timeline
   const day2Schedule = [
     { time: '08:45 - 09:15', activity: 'Morning Networking Tea', type: 'break' },
     { time: '09:15 - 09:30', activity: 'Faculty and participants to be Seated' },
     { 
-      time: '09:30 - 10:45', 
+      time: '09:30 - 10:15', 
       activity: 'Keynote Address III: Pavan Kumar Adepu, GenAI/LLM Research Leader, Head of Engineering, Amazon.com LLC, USA', 
       type: 'keynote',
       speaker: 'Pavan Kumar Adepu',
@@ -68,42 +69,41 @@ const ProgramSchedule = () => {
       image: 'https://via.placeholder.com/150'
     },
     { 
-      time: '10:45 - 11:00', 
-      activity: 'Invited Talk by IEEE Young Professional: Prof. Varun Kakar, Joint Secretary, IEEE U.P. Section', 
-      type: 'talk',
-      speaker: 'Prof. Varun Kakar',
-      affiliation: 'Joint Secretary, IEEE U.P. Section',
-      abstract: 'Opportunities and challenges for young professionals in the IEEE community.',
-    },
-    { time: '11:00 - 11:30', activity: 'High Tea', type: 'break' },
-    { 
-      time: '11:30 - 12:30', 
+      time: '10:15 - 11:00', 
       activity: 'Panel Discussion', 
       type: 'networking',
       location: 'Admin Block-Main Seminar Hall',
       speakers: ['Dr. John Smith', 'Prof. Maria Rodriguez', 'Dr. Ahmed Hassan']
     },
-    { time: '12:30 - 13:30', activity: 'Lunch', type: 'break' },
-    { time: '13:30 - 13:35', activity: 'HODs, Professors, Faculty, Student to be Seated' },
-    { time: '13:35 - 13:40', activity: 'Arrival of Delegates' },
-    { time: '13:40 - 13:45', activity: 'Sapling Presentation to the Dignitaries' },
-    { time: '13:45 - 14:00', activity: 'Conference report presentation' },
+    { time: '11:00 - 11:30', activity: 'High Tea', type: 'break' },
+    { 
+      time: '11:30 - 13:00', 
+      activity: 'Visit to the Centres of Excellence', 
+      type: 'networking',
+      location: 'Various Locations'
+    },
+    { time: '13:00 - 13:45', activity: 'Lunch', type: 'break' },
+    { time: '13:45 - 13:50', activity: 'HODs, Professors, Faculty, Student to be Seated' },
+    { time: '13:50 - 13:55', activity: 'Arrival of Delegates' },
+    { time: '13:55 - 14:00', activity: 'Sapling Presentation to the Dignitaries' },
     { 
       time: '14:00 - 14:30', 
       activity: 'Address by the Chief Guest, Prof. Sri Niwas Singh',
       speaker: 'Prof. Sri Niwas Singh',
       affiliation: 'Chief Guest'
     },
-    { time: '14:30 - 14:50', activity: 'Certificate Distribution', type: 'ceremony' },
-    { time: '14:50 - 14:55', activity: 'Presentation of Memento' },
-    { time: '14:55 - 15:00', activity: 'Vote of Thanks by the General Chair, Dr. Rahul Sharma' },
-    { time: '15:00 - 15:30', activity: 'Evening Tea', type: 'break' },
+    { time: '14:30 - 14:45', activity: 'Conference report presentation' },
+    { time: '14:45 - 15:05', activity: 'Certificate Distribution', type: 'ceremony' },
+    { time: '15:05 - 15:10', activity: 'Presentation of Memento' },
+    { time: '15:10 - 15:15', activity: 'Vote of Thanks by the General Chair, Dr. Rahul Sharma' },
+    { time: '15:15 - 15:45', activity: 'Evening Tea', type: 'break' },
   ];
 
+  // Updated Day 2 Parallel Activities with revised timeline
   const day2ParallelActivities = [
     {
       time: '09:00 - 11:00',
-      activity: 'Technical Sessions',
+      activity: 'Technical Sessions (Morning)',
       type: 'session',
       locations: [
         'Admin Block-Mini seminar hall-1',
@@ -121,10 +121,16 @@ const ProgramSchedule = () => {
       ]
     },
     {
-      time: '11:30 - 12:30',
-      activity: 'Panel Discussion',
-      type: 'networking',
-      location: 'Admin Block-Main Seminar Hall'
+      time: '11:00 - 12:30',
+      activity: 'Technical Sessions (Continued)',
+      type: 'session',
+      locations: [
+        'Admin Block-Mini seminar hall-1',
+        'Admin Block-Mini seminar hall-2',
+        'CSIT Block-Lab-6 (5th floor)',
+        'CSIT Block-Lab-7 (5th floor)',
+        'CSIT seminar hall (1st floor)'
+      ]
     },
     {
       time: '11:30 - 12:30',
