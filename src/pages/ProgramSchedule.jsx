@@ -27,7 +27,7 @@ const ProgramSchedule = () => {
       speaker: 'Salvatore Sinno',
       affiliation: 'VP of Innovation, Unisys, USA',
       abstract: 'This keynote will explore the latest trends in innovation and digital transformation.',
-      image: 'https://via.placeholder.com/150'
+      image: 'https://ucarecdn.com/3473b0ea-d09a-4641-a15c-c848cbe17bc3/-/preview/398x304/'
     },
     { 
       time: '12:45 - 13:30', 
@@ -36,7 +36,7 @@ const ProgramSchedule = () => {
       speaker: 'Prof. Chuan-Yu Chang',
       affiliation: 'National Yunlin University of Science and Technology, Taiwan',
       abstract: 'A comprehensive look at emerging technologies and their impact on society.',
-      image: 'https://via.placeholder.com/150'
+      image: 'https://ucarecdn.com/8423d646-9fe7-44cb-b9e9-54e526f587e3/-/preview/457x305/'
     },
     { time: '13:30 - 14:30', activity: 'Lunch', type: 'break' },
     { 
@@ -64,7 +64,7 @@ const ProgramSchedule = () => {
       speaker: 'Pavan Kumar Adepu',
       affiliation: 'GenAI/LLM Research Leader, Head of Engineering, Amazon.com LLC, USA',
       abstract: 'Insights on the latest advancements in Generative AI and Large Language Models and their applications.',
-      image: 'https://via.placeholder.com/150'
+      image: 'https://ykyfn9m5nl.ufs.sh/f/DYj65IeXYQ4f3AJrojnLmKwaHBYRXjZnVf8kpTecI2PGQ46S'
     },
     { 
       time: '10:15 - 11:00', 
@@ -109,13 +109,13 @@ const ProgramSchedule = () => {
         'CSIT Block-Lab-7 (5th floor)',
         'CSIT seminar hall (1st floor)'
       ],
-      papers: [
-        'Artificial Intelligence and Machine Learning Applications',
-        'Information Security and Privacy',
-        'Cloud Computing and Big Data Analytics',
-        'IoT and Edge Computing Systems',
-        'Next Generation Network Technologies'
-      ]
+      // papers: [
+      //   'Artificial Intelligence and Machine Learning Applications',
+      //   'Information Security and Privacy',
+      //   'Cloud Computing and Big Data Analytics',
+      //   'IoT and Edge Computing Systems',
+      //   'Next Generation Network Technologies'
+      // ]
     },
     {
       time: '11:00 - 12:30',
