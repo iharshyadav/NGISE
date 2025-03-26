@@ -116,7 +116,7 @@ const TrackSchedule = () => {
                     </p>
                   </div>
                   <a
-                    href="/TS schedule of 29 march 1st (9.00-11.00).FINAL.pdf"
+                    href="/TS schedule of 29 march 1st (9.00-11.00).pdf"
                     download
                     className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-indigo-700 p-0.5 text-sm font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-purple-300"
                   >
