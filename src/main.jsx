@@ -29,6 +29,7 @@ import WieActivity from './pages/WieActivity.jsx'
 import ChiefGuest from './pages/chiefguest.jsx'
 import Guestofhonor from './pages/guestofhonor.jsx'
 import Keynotespeaker from './pages/keynotespeaker.jsx'
+import Ieeeobserver from './pages/ieeeobserver.jsx'
 // import VisaInfocontact from './pages/Visainfocontact.jsx'
 
 
@@ -64,6 +65,7 @@ const router = createBrowserRouter(
         <Route path="/Speaker/chiefguest" element={<ChiefGuest />} />
         <Route path="/Speaker/guestofhonor" element={<Guestofhonor />} />
         <Route path="/Speaker/keynotespeaker" element={<Keynotespeaker />} />
+        <Route path="/ieeeobserver" element={<Ieeeobserver />} />
         {/* <Route path="/locale/Visainformation/contact" element={<VisaInfocontact />} /> */}
     </Route>
   )

@@ -162,6 +162,9 @@ const Navbar = () => {
                 Committee <RiArrowDropDownLine className="text-2xl" />
               </button>
               <ul className="absolute w-56 left-0 hidden group-hover:block pt-2 bg-white shadow-lg">
+              <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
+                  <Link to="/ieeeobserver">IEEE observer committee</Link>
+                </li>
                 <li className="py-[0.5vh] px-2 font-medium hover:text-[#00cc99]">
                   <Link to="/programcommittee">Program Committee</Link>
                 </li>

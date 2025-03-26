@@ -202,7 +202,7 @@ const ProgramSchedule = () => {
           </div>
           
             <a 
-              href="/Minute to Minute Program 28th-29th March 25.docx" 
+              href="/Minute to Minute Program 28th-29th March 25.pdf" 
               download
               className="mt-4 inline-flex mb-5 items-center px-5 py-2.5 border cursor-pointer border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
