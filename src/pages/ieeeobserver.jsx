@@ -25,7 +25,7 @@ const Ieeeobserver = () => {
                     <h1 className="text-4xl font-bold mb-3 text-gray-800">IEEE Observers</h1>
                     <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Distinguished professionals supporting and guiding our IEEE student branch
+                        Distinguished professionals supporting and guiding our Conference 
                     </p>
                 </div>
 
