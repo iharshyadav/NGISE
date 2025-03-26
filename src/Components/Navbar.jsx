@@ -399,6 +399,17 @@ const Navbar = () => {
                       </span>
                       {activeDropdown === 'committee' && (
                         <ul className="bg-white w-3/4 pb-2 ring-1 ring-white ring-opacity-20 absolute mt-8 font-semibold shadow-lg">
+                           <li
+                            className="py-1 px-2 hover:text-[#00cc99]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <Link
+                              to="/ieeeobserver"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              IEEE observer committee
+                            </Link>
+                          </li>
                           <li
                             className="py-1 px-2 hover:text-[#00cc99]"
                             onClick={() => setIsMenuOpen(false)}
