@@ -134,7 +134,7 @@ const Committee = () => {
         className="w-full h-60 object-cover mb-4"
       />
       <div className="text-center w-full">
-        <h3 className="text-xl font-bold">Dr. Varun Kakkar</h3>
+        <h3 className="text-xl font-bold">Dr. Varun Kakar</h3>
         <p>B. T. Kumaon Institute of Technology, Dwarahat, India</p>
       </div>
     </div>
