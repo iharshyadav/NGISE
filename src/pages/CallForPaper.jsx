@@ -156,7 +156,7 @@ const CallForPaper = () => {
           not under review elsewhere.
           </li>
           <li>
-          Plagiarized papers will be rejected at any
+          Papers will be checked for plagiarism as per IEEE guidelines and plagarized papers will be rejected at any
           stage of review.
           </li>
           {/* <li>
