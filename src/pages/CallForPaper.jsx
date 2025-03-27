@@ -159,10 +159,10 @@ const CallForPaper = () => {
           Plagiarized papers will be rejected at any
           stage of review.
           </li>
-          <li>
+          {/* <li>
             Acknowledgments of research group members, colleagues, or
             collaborators should not be present in the paper.
-          </li>
+          </li> */}
           <li>
           As per the copyright transfer agreement, authors are
           individually and collectively responsible for their published content.
