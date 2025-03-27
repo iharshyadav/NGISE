@@ -38,9 +38,11 @@ const CallForPaper = () => {
         development of technology-driven solutions in today&apos;s fast-changing
         digital world through a diverse array of presentations, workshops, and
         discussions. The Conference will be conducted in <b>Hybrid-Mode</b>.
-        <b>All accepted, registered and presented papers will be
-          included in the conference proceedings and will be included in IEEE
-          Xplore, indexed by EI, SCOPUS etc.</b>
+        <b>
+          All accepted, registered and presented papers will be included in the
+          conference proceedings and will be included in IEEE Xplore, indexed by
+          EI, SCOPUS etc.
+        </b>
       </p>
 
       <div className="w-full flex flex-col items-center justify-center sm:px-20">
@@ -113,11 +115,15 @@ const CallForPaper = () => {
           conference during the NGISE review process. If a paper is accepted, at
           least one author must register for the conference, attend, and present
           the paper. Papers without a presenting author will not be included in
-          the proceedings. <b>All accepted, registered and presented papers will be
-          included in the conference proceedings and will be included in IEEE
-          Xplore, indexed by EI, SCOPUS etc.</b> Authors to ensure the originality
-          of their manuscript and strictly follow the IEEE guidelines in this
-          regard. Refer to the following link for these guidelines:{" "}
+          the proceedings.{" "}
+          <b>
+            All accepted, registered and presented papers will be included in
+            the conference proceedings and will be included in IEEE Xplore,
+            indexed by EI, SCOPUS etc.
+          </b>{" "}
+          Authors to ensure the originality of their manuscript and strictly
+          follow the IEEE guidelines in this regard. Refer to the following link
+          for these guidelines:{" "}
         </p>
         <div className="w-full mt-4 break-words">
           <a
@@ -133,6 +139,43 @@ const CallForPaper = () => {
 
       <div className="flex w-full items-center justify-center mt-20">
         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
+          Policy on Plagiarism
+        </h2>
+      </div>
+
+      <div className="mx-12 md:mx-28 mb-8 mt-10 text-justify text-base sm:text-lg flex flex-col">
+        <p>
+        Our plagiarism policy upholds the highest standards of academic integrity, ensuring all submissions are original and properly cited. Any detected plagiarism will result in rejection or necessary corrective actions.
+        </p>
+        <br />
+        <p className='font-bold underline text-2xl'>Guidelines:</p>
+
+        <ul className="list-disc mt-6 ml-10 space-y-2">
+          <li>
+          Authors must ensure their submissions are original, unpublished, and
+          not under review elsewhere.
+          </li>
+          <li>
+          Plagiarized papers will be rejected at any
+          stage of review.
+          </li>
+          <li>
+            Acknowledgments of research group members, colleagues, or
+            collaborators should not be present in the paper.
+          </li>
+          <li>
+          As per the copyright transfer agreement, authors are
+          individually and collectively responsible for their published content.
+          </li>
+          <li>
+          Every author must uphold the highest ethical standards to
+          prevent plagiarism.
+          </li>
+        </ul>
+      </div>
+
+      <div className="flex w-full items-center justify-center mt-20">
+        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
           Double-Blind Review
         </h2>
       </div>
@@ -141,8 +184,8 @@ const CallForPaper = () => {
         <p>
           NGISE-2025 will use a double-blind review process, meaning that the
           Program Committee members and reviewers will not be aware of the
-          authors&apos; identities. To maintain anonymity, authors must prepare their
-          manuscripts according to the following guidelines:{" "}
+          authors&apos; identities. To maintain anonymity, authors must prepare
+          their manuscripts according to the following guidelines:{" "}
         </p>
 
         <ul className="list-disc mt-6 ml-10 space-y-2">
@@ -160,11 +203,11 @@ const CallForPaper = () => {
           </li>
           <li>
             Care should be taken when naming source files to prevent revealing
-            the authors&apos; identities through metadata. All information that could
-            identify the author(s) must be removed from the manuscript and any
-            supplementary files. Additionally, author(s) should refer to their
-            previous work in the third person and ensure all relevant citations
-            are included.
+            the authors&apos; identities through metadata. All information that
+            could identify the author(s) must be removed from the manuscript and
+            any supplementary files. Additionally, author(s) should refer to
+            their previous work in the third person and ensure all relevant
+            citations are included.
           </li>
           <li>
             Submissions that have been previously uploaded as unrefereed
