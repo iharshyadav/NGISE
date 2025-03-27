@@ -148,7 +148,7 @@ const CallForPaper = () => {
         Our plagiarism policy upholds the highest standards of academic integrity, ensuring all submissions are original and properly cited. Any detected plagiarism will result in rejection or necessary corrective actions.
         </p>
         <br />
-        <p className='font-bold underline text-2xl'>Guidelines:</p>
+        <p className='font-semibold underline text-2xl'>Guidelines:</p>
 
         <ul className="list-disc mt-6 ml-10 space-y-2">
           <li>
