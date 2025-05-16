@@ -160,8 +160,8 @@ const CallForPaper = () => {
           stage of review.
           </li>
            <li>
-          As per IEEE guidelines a paper must have less than 10% plagiarism without refrences and less then 30% with refrences. 
-          The same criteria will be applicable for AI plagiarism.
+          As per IEEE guidelines a paper must have less than 10% plagiarism without references and less then 30% with references. 
+          The same criteria is applicable for AI plagiarism.
           </li>
           {/* <li>
             Acknowledgments of research group members, colleagues, or
