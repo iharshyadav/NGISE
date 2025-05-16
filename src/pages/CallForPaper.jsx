@@ -160,8 +160,8 @@ const CallForPaper = () => {
           stage of review.
           </li>
            <li>
-          The maximum allowable limit as per IEEE guidelines are "less than 10% without refrences and less then 30% with refrences. 
-          The same criteria will be applicable for AI plag.
+          As per IEEE guidelines a paper must have less than 10% plagiarism without refrences and less then 30% with refrences. 
+          The same criteria will be applicable for AI plagiarism.
           </li>
           {/* <li>
             Acknowledgments of research group members, colleagues, or
