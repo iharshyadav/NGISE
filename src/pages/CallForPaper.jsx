@@ -159,6 +159,10 @@ const CallForPaper = () => {
           Papers will be checked for plagiarism as per IEEE guidelines and plagarized papers will be rejected at any
           stage of review.
           </li>
+           <li>
+          The maximum allowable limit as per IEEE guidelines are "less than 10% without refrences and less then 30% with refrences. 
+          The same criteria will be applicable for AI plag.
+          </li>
           {/* <li>
             Acknowledgments of research group members, colleagues, or
             collaborators should not be present in the paper.
